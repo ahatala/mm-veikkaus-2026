@@ -83,13 +83,30 @@ function updateJumpDir() {
   else jumpDir.value = e.top + e.height / 2 < (b.top + b.bottom) / 2 ? 'up' : 'down'
 }
 
+// Size the list to ~viewport height minus the sticky tabs. This makes it fill the screen once the
+// header is scrolled off, while still leaving the page tall enough that you CAN scroll the header
+// away (a property we want to keep). BOTTOM_GAP = .card (14) + #app (16) bottom padding.
+const BOTTOM_GAP = 30
+function fitHeight() {
+  const box = scrollBox.value
+  if (!box) return
+  const tabs = document.querySelector('.tabs') as HTMLElement | null
+  const tabsH = tabs ? Math.round(tabs.getBoundingClientRect().height) : 56
+  box.style.maxHeight = `${Math.max(220, window.innerHeight - tabsH - BOTTOM_GAP)}px`
+}
+
 onMounted(async () => {
   await nextTick()
+  fitHeight()
   centerOnAnchor(false)
   updateJumpDir()
+  window.addEventListener('resize', fitHeight, { passive: true })
   scrollBox.value?.addEventListener('scroll', updateJumpDir, { passive: true })
 })
-onBeforeUnmount(() => scrollBox.value?.removeEventListener('scroll', updateJumpDir))
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', fitHeight)
+  scrollBox.value?.removeEventListener('scroll', updateJumpDir)
+})
 </script>
 
 <template>
@@ -221,7 +238,7 @@ onBeforeUnmount(() => scrollBox.value?.removeEventListener('scroll', updateJumpD
 .jump .arrow { font-size: 14px; line-height: 1; }
 
 .match-scroll {
-  max-height: min(74vh, 780px);
+  max-height: 80vh; /* fallback; JS sizes it to fill the viewport (see fitHeight) */
   overflow-y: auto;
   overflow-x: hidden; /* never scroll sideways on mobile */
   border: 1px solid var(--line);
@@ -270,8 +287,8 @@ onBeforeUnmount(() => scrollBox.value?.removeEventListener('scroll', updateJumpD
   display: grid;
   grid-template-columns: 1fr 3.4em 1fr;
   column-gap: 10px;
-  row-gap: 1px;
-  align-items: baseline;
+  row-gap: 2px;
+  align-items: center; /* center so team names + flag images line up (baseline breaks with images) */
 }
 .grid > * { min-width: 0; } /* let columns shrink instead of forcing horizontal overflow */
 .team { display: flex; align-items: center; gap: 6px; font-weight: 600; font-size: 14px; min-width: 0; }
@@ -292,4 +309,26 @@ onBeforeUnmount(() => scrollBox.value?.removeEventListener('scroll', updateJumpD
 
 .picks { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
 .picks .chip { font-size: 11px; padding: 2px 7px; }
+
+/* ---- narrow screens: date becomes a sticky header (no left column); 'Nyt' floats bottom-right ---- */
+@media (max-width: 560px) {
+  .day { display: block; }
+  .day + .day { border-top: none; }
+  .day-date {
+    z-index: 2;
+    align-self: stretch;
+    padding: 7px 12px;
+    background: var(--bg-elev2);
+    border-bottom: 1px solid var(--line);
+    white-space: normal;
+  }
+  .day-matches { padding: 8px 10px 12px; }
+  .jump {
+    left: auto;
+    right: 14px;
+    top: auto;
+    bottom: 14px;
+    transform: none;
+  }
+}
 </style>

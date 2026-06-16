@@ -102,29 +102,47 @@ const special = computed(() => c.value.special.map((s) => ({
 
   <div class="card">
     <h3>Erikoiskysymykset</h3>
-    <table>
-      <tbody>
-        <tr v-for="(s, i) in special" :key="i">
-          <td>{{ s.text }}</td>
-          <td style="width:4em" class="center"><strong>{{ s.pick }}</strong></td>
-          <td class="num"><span class="points" :class="{ zero: s.points === 0 }">{{ s.resolved ? pts(s.points) : '—' }}</span></td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="rows">
+      <div class="lrow" v-for="(s, i) in special" :key="i">
+        <span class="lmain">{{ s.text }}</span>
+        <span class="qpick">{{ s.pick }}</span>
+        <span class="points lpts" :class="{ zero: s.points === 0 }">{{ s.resolved ? pts(s.points) : '—' }}</span>
+      </div>
+    </div>
   </div>
 
   <div class="card">
     <h3>Pelatut alkulohko-ottelut</h3>
-    <table>
-      <thead><tr><th>Ottelu</th><th class="center">Veikkaus</th><th class="center">Tulos</th><th class="num">Pisteet</th></tr></thead>
-      <tbody>
-        <tr v-for="(m, i) in playedMatches" :key="i">
-          <td>{{ m.label }}</td>
-          <td class="center"><strong>{{ m.pick }}</strong></td>
-          <td class="center"><span class="sign" :class="`sign--${m.actual}`">{{ m.actual }}</span></td>
-          <td class="num"><span class="points" :class="{ zero: m.points === 0 }">{{ pts(m.points) }}</span></td>
-        </tr>
-      </tbody>
-    </table>
+    <p class="muted hint">veikkaus → tulos · pisteet</p>
+    <div class="rows">
+      <div class="lrow" v-for="(m, i) in playedMatches" :key="i">
+        <span class="lmain">{{ m.label }}</span>
+        <span class="signs">
+          <span class="sign" :class="`sign--${m.pick}`">{{ m.pick }}</span>
+          <span class="arrow">→</span>
+          <span class="sign" :class="`sign--${m.actual}`">{{ m.actual }}</span>
+        </span>
+        <span class="points lpts" :class="{ zero: m.points === 0 }">{{ pts(m.points) }}</span>
+      </div>
+    </div>
   </div>
 </template>
+
+<style scoped>
+.hint { font-size: 11.5px; margin: -4px 0 8px; }
+.rows { display: flex; flex-direction: column; }
+.lrow {
+  display: grid;
+  grid-template-columns: 1fr auto 2.6em;
+  gap: 10px;
+  align-items: center;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--line);
+}
+.lrow:last-child { border-bottom: none; }
+.lmain { min-width: 0; overflow-wrap: anywhere; font-size: 13px; }
+.signs { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; }
+.signs .arrow { color: var(--muted); font-weight: 400; }
+.lpts { text-align: right; }
+.qpick { font-weight: 700; }
+</style>
