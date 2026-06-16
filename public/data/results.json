@@ -1,23 +1,23 @@
 {
-  "lastUpdated": "2026-06-16T11:55:53.742Z",
-  "source": "openfootball",
+  "lastUpdated": "2026-06-16T11:59:26.170Z",
+  "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
     "g2": "1",
     "g3": "X",
+    "g4": "1",
     "g6": "X",
     "g7": "X",
     "g8": "2",
-    "g4": "1",
     "g5": "1",
     "g9": "1",
-    "g11": "1",
     "g10": "X",
+    "g11": "1",
     "g12": "1",
-    "g14": "X",
-    "g16": "X",
     "g13": "X",
-    "g15": "X"
+    "g14": "X",
+    "g15": "X",
+    "g16": "X"
   },
   "groupStandings": {},
   "groupTop2": {},
@@ -117,7 +117,15 @@
     "mohammad mohebbi": 1,
     "elijah just": 2,
     "abdulelah al-amri": 1,
-    "maxi araujo": 1
+    "maxi araujo": 1,
+    "in-beom hwang": 1,
+    "hyun-gyu oh": 1,
+    "gio reyna": 1,
+    "nestor irankunda": 1,
+    "felix kalu nmecha": 1,
+    "abdulelah al amri": 1,
+    "maximiliano araujo": 1,
+    "mohammad mohebi": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
