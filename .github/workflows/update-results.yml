@@ -1,9 +1,8 @@
 name: Update results
 
 on:
-  schedule:
-    # Every 10 min, offset off the hour boundary — GitHub delays/drops schedules near :00 under load.
-    - cron: '7,17,27,37,47,57 * * * *'
+  # Driven every ~10 min via the REST API (workflow_dispatch) by an external cron (cron-job.org).
+  # GitHub's own `schedule` trigger proved unreliable on this repo, so it was removed.
   workflow_dispatch:
 
 # Needs contents:write to commit results, and pages/id-token to deploy. Commits made by the built-in
