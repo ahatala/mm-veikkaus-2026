@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-16T20:20:47.511Z",
+  "lastUpdated": "2026-06-16T20:40:40.257Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -25,7 +25,7 @@
       "home": "Ranska",
       "away": "Senegal",
       "group": "I",
-      "homeScore": 0,
+      "homeScore": 1,
       "awayScore": 0,
       "minute": null,
       "status": "IN_PLAY"
@@ -556,7 +556,8 @@
     "felix kalu nmecha": 1,
     "abdulelah al amri": 1,
     "maximiliano araujo": 1,
-    "mohammad mohebi": 1
+    "mohammad mohebi": 1,
+    "kylian mbappe": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
