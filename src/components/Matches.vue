@@ -2,6 +2,7 @@
 import { computed, onMounted, onBeforeUnmount, nextTick, ref } from 'vue'
 import { store } from '../store'
 import type { MatchResult, GoalEvent, LiveResult } from '../scoring/types'
+import { flagUrl, flagCode } from '../flags'
 
 const participants = computed(() => store.bets!.participants)
 const live = computed(() => store.computed!.live)
@@ -97,9 +98,15 @@ onBeforeUnmount(() => scrollBox.value?.removeEventListener('scroll', updateJumpD
     <div v-for="l in live" :key="l.match.id" class="live-match">
       <div class="meta">Lohko {{ l.match.group }} · <strong>{{ l.minute ? `${l.minute}'` : 'LIVE' }}</strong></div>
       <div class="grid">
-        <span class="team home" :class="{ win: l.provisionalSign === '1' }">{{ l.match.home }}</span>
+        <span class="team home" :class="{ win: l.provisionalSign === '1' }">
+          <span class="tn">{{ l.match.home }}</span>
+          <img v-if="flagCode(l.match.home)" class="flag" :src="flagUrl(l.match.home)" alt="" loading="lazy" />
+        </span>
         <span class="score live-score">{{ l.homeScore }}–{{ l.awayScore }}</span>
-        <span class="team away" :class="{ win: l.provisionalSign === '2' }">{{ l.match.away }}</span>
+        <span class="team away" :class="{ win: l.provisionalSign === '2' }">
+          <img v-if="flagCode(l.match.away)" class="flag" :src="flagUrl(l.match.away)" alt="" loading="lazy" />
+          <span class="tn">{{ l.match.away }}</span>
+        </span>
       </div>
       <div class="picks">
         <span v-for="name in participants" :key="name" class="chip" :class="provChip(l, name)">
@@ -138,10 +145,16 @@ onBeforeUnmount(() => scrollBox.value?.removeEventListener('scroll', updateJumpD
             <div class="meta">Lohko {{ m.match.group }} · {{ m.match.time }}</div>
 
             <div class="grid">
-              <span class="team home" :class="{ win: m.actual === '1' }">{{ m.match.home }}</span>
+              <span class="team home" :class="{ win: m.actual === '1' }">
+                <span class="tn">{{ m.match.home }}</span>
+                <img v-if="flagCode(m.match.home)" class="flag" :src="flagUrl(m.match.home)" alt="" loading="lazy" />
+              </span>
               <span v-if="m.score" class="score">{{ m.score.home }}–{{ m.score.away }}</span>
               <span v-else class="score pending">–</span>
-              <span class="team away" :class="{ win: m.actual === '2' }">{{ m.match.away }}</span>
+              <span class="team away" :class="{ win: m.actual === '2' }">
+                <img v-if="flagCode(m.match.away)" class="flag" :src="flagUrl(m.match.away)" alt="" loading="lazy" />
+                <span class="tn">{{ m.match.away }}</span>
+              </span>
 
               <template v-if="m.actual && m.scorers.length">
                 <span class="scorers home">{{ scorersOn(m, 'home') }}</span>
@@ -261,10 +274,15 @@ onBeforeUnmount(() => scrollBox.value?.removeEventListener('scroll', updateJumpD
   align-items: baseline;
 }
 .grid > * { min-width: 0; } /* let columns shrink instead of forcing horizontal overflow */
-.team { font-weight: 600; font-size: 14px; overflow-wrap: anywhere; }
-.team.home { text-align: right; }
-.team.away { text-align: left; }
+.team { display: flex; align-items: center; gap: 6px; font-weight: 600; font-size: 14px; min-width: 0; }
+.team.home { justify-content: flex-end; text-align: right; }
+.team.away { justify-content: flex-start; text-align: left; }
 .team.win { color: var(--green); }
+.tn { min-width: 0; overflow-wrap: anywhere; }
+.flag {
+  width: 21px; height: 15px; flex: none; border-radius: 2px;
+  object-fit: cover; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.14);
+}
 .score { text-align: center; font-variant-numeric: tabular-nums; font-weight: 700; }
 .score.pending { color: var(--muted); font-weight: 500; }
 .scorers { font-size: 11.5px; color: var(--muted); overflow-wrap: anywhere; }
