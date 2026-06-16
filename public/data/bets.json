@@ -1,0 +1,2666 @@
+{
+  "meta": {
+    "title": "J&E-Veikkaus MM-Futis 2026",
+    "participantCount": 14,
+    "source": "VEIKKAUKSET"
+  },
+  "participants": [
+    "Julle",
+    "Eikku",
+    "Niina",
+    "Rasmus",
+    "Aaron",
+    "Dee",
+    "Pasi",
+    "Jone",
+    "Paula",
+    "Elmo",
+    "Elias",
+    "Oliver",
+    "Otso",
+    "Tomi&Kasper"
+  ],
+  "groupMatches": [
+    {
+      "id": "g1",
+      "date": "to 11.6.",
+      "group": "A",
+      "time": "22:00",
+      "home": "Meksiko",
+      "away": "Etelä-Afrikka",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "1",
+        "Niina": "1",
+        "Rasmus": "1",
+        "Aaron": "1",
+        "Dee": "1",
+        "Pasi": "1",
+        "Jone": "1",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g2",
+      "date": "pe 12.6.",
+      "group": "A",
+      "time": "04:00",
+      "home": "Etelä-Korea",
+      "away": "Tšekki",
+      "picks": {
+        "Julle": "X",
+        "Eikku": "1",
+        "Niina": "2",
+        "Rasmus": "1",
+        "Aaron": "1",
+        "Dee": "X",
+        "Pasi": "1",
+        "Jone": "1",
+        "Paula": "1",
+        "Elmo": "2",
+        "Elias": "1",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "X"
+      }
+    },
+    {
+      "id": "g3",
+      "date": "pe 12.6.",
+      "group": "B",
+      "time": "22:00",
+      "home": "Kanada",
+      "away": "Bosnia-Hertsegovina",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "1",
+        "Niina": "X",
+        "Rasmus": "X",
+        "Aaron": "X",
+        "Dee": "X",
+        "Pasi": "1",
+        "Jone": "1",
+        "Paula": "2",
+        "Elmo": "X",
+        "Elias": "2",
+        "Oliver": "X",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g4",
+      "date": "la 13.6.",
+      "group": "D",
+      "time": "04:00",
+      "home": "Yhdysvallat",
+      "away": "Paraguay",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "1",
+        "Niina": "1",
+        "Rasmus": "1",
+        "Aaron": "2",
+        "Dee": "X",
+        "Pasi": "2",
+        "Jone": "1",
+        "Paula": "2",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g5",
+      "date": "la 13.6.",
+      "group": "D",
+      "time": "07:00",
+      "home": "Australia",
+      "away": "Turkki",
+      "picks": {
+        "Julle": "X",
+        "Eikku": "2",
+        "Niina": "X",
+        "Rasmus": "2",
+        "Aaron": "2",
+        "Dee": "2",
+        "Pasi": "2",
+        "Jone": "1",
+        "Paula": "2",
+        "Elmo": "2",
+        "Elias": "2",
+        "Oliver": "X",
+        "Otso": "2",
+        "Tomi&Kasper": "2"
+      }
+    },
+    {
+      "id": "g6",
+      "date": "la 13.6.",
+      "group": "B",
+      "time": "22:00",
+      "home": "Qatar",
+      "away": "Sveitsi",
+      "picks": {
+        "Julle": "2",
+        "Eikku": "2",
+        "Niina": "2",
+        "Rasmus": "2",
+        "Aaron": "2",
+        "Dee": "2",
+        "Pasi": "2",
+        "Jone": "2",
+        "Paula": "2",
+        "Elmo": "2",
+        "Elias": "2",
+        "Oliver": "2",
+        "Otso": "2",
+        "Tomi&Kasper": "2"
+      }
+    },
+    {
+      "id": "g7",
+      "date": "su 14.6.",
+      "group": "C",
+      "time": "01:00",
+      "home": "Brasilia",
+      "away": "Marokko",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "1",
+        "Niina": "1",
+        "Rasmus": "1",
+        "Aaron": "1",
+        "Dee": "1",
+        "Pasi": "1",
+        "Jone": "1",
+        "Paula": "X",
+        "Elmo": "X",
+        "Elias": "X",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g8",
+      "date": "su 14.6.",
+      "group": "C",
+      "time": "04:00",
+      "home": "Haiti",
+      "away": "Skotlanti",
+      "picks": {
+        "Julle": "2",
+        "Eikku": "2",
+        "Niina": "2",
+        "Rasmus": "1",
+        "Aaron": "2",
+        "Dee": "2",
+        "Pasi": "2",
+        "Jone": "2",
+        "Paula": "2",
+        "Elmo": "2",
+        "Elias": "2",
+        "Oliver": "2",
+        "Otso": "2",
+        "Tomi&Kasper": "2"
+      }
+    },
+    {
+      "id": "g9",
+      "date": "su 14.6.",
+      "group": "E",
+      "time": "20:00",
+      "home": "Saksa",
+      "away": "Curaçao",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "1",
+        "Niina": "1",
+        "Rasmus": "1",
+        "Aaron": "1",
+        "Dee": "1",
+        "Pasi": "1",
+        "Jone": "1",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g10",
+      "date": "su 14.6.",
+      "group": "F",
+      "time": "23:00",
+      "home": "Hollanti",
+      "away": "Japani",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "1",
+        "Niina": "1",
+        "Rasmus": "X",
+        "Aaron": "1",
+        "Dee": "1",
+        "Pasi": "1",
+        "Jone": "1",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "X",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g11",
+      "date": "ma 15.6.",
+      "group": "E",
+      "time": "02:00",
+      "home": "Norsunluurannikko",
+      "away": "Ecuador",
+      "picks": {
+        "Julle": "X",
+        "Eikku": "X",
+        "Niina": "X",
+        "Rasmus": "X",
+        "Aaron": "X",
+        "Dee": "X",
+        "Pasi": "2",
+        "Jone": "X",
+        "Paula": "2",
+        "Elmo": "X",
+        "Elias": "2",
+        "Oliver": "2",
+        "Otso": "X",
+        "Tomi&Kasper": "X"
+      }
+    },
+    {
+      "id": "g12",
+      "date": "ma 15.6.",
+      "group": "F",
+      "time": "04:00",
+      "home": "Ruotsi",
+      "away": "Tunisia",
+      "picks": {
+        "Julle": "X",
+        "Eikku": "1",
+        "Niina": "2",
+        "Rasmus": "2",
+        "Aaron": "1",
+        "Dee": "X",
+        "Pasi": "X",
+        "Jone": "1",
+        "Paula": "X",
+        "Elmo": "1",
+        "Elias": "X",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g13",
+      "date": "ma 15.6.",
+      "group": "H",
+      "time": "19:00",
+      "home": "Espanja",
+      "away": "Kap Verde",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "1",
+        "Niina": "1",
+        "Rasmus": "1",
+        "Aaron": "1",
+        "Dee": "1",
+        "Pasi": "1",
+        "Jone": "1",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g14",
+      "date": "ma 15.6.",
+      "group": "G",
+      "time": "22:00",
+      "home": "Belgia",
+      "away": "Egypti",
+      "picks": {
+        "Julle": "X",
+        "Eikku": "1",
+        "Niina": "1",
+        "Rasmus": "1",
+        "Aaron": "X",
+        "Dee": "1",
+        "Pasi": "1",
+        "Jone": "1",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g15",
+      "date": "ti 16.6.",
+      "group": "H",
+      "time": "01:00",
+      "home": "Saudi-Arabia",
+      "away": "Uruguay",
+      "picks": {
+        "Julle": "X",
+        "Eikku": "2",
+        "Niina": "2",
+        "Rasmus": "1",
+        "Aaron": "2",
+        "Dee": "X",
+        "Pasi": "2",
+        "Jone": "2",
+        "Paula": "2",
+        "Elmo": "2",
+        "Elias": "2",
+        "Oliver": "2",
+        "Otso": "2",
+        "Tomi&Kasper": "2"
+      }
+    },
+    {
+      "id": "g16",
+      "date": "ti 16.6.",
+      "group": "G",
+      "time": "04:00",
+      "home": "Iran",
+      "away": "Uusi-Seelanti",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "1",
+        "Niina": "X",
+        "Rasmus": "2",
+        "Aaron": "2",
+        "Dee": "X",
+        "Pasi": "2",
+        "Jone": "X",
+        "Paula": "2",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g17",
+      "date": "ti 16.6.",
+      "group": "I",
+      "time": "22:00",
+      "home": "Ranska",
+      "away": "Senegal",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "1",
+        "Niina": "1",
+        "Rasmus": "1",
+        "Aaron": "1",
+        "Dee": "1",
+        "Pasi": "1",
+        "Jone": "1",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g18",
+      "date": "ke 17.6.",
+      "group": "I",
+      "time": "01:00",
+      "home": "Irak",
+      "away": "Norja",
+      "picks": {
+        "Julle": "2",
+        "Eikku": "2",
+        "Niina": "2",
+        "Rasmus": "X",
+        "Aaron": "2",
+        "Dee": "2",
+        "Pasi": "2",
+        "Jone": "2",
+        "Paula": "2",
+        "Elmo": "2",
+        "Elias": "2",
+        "Oliver": "2",
+        "Otso": "2",
+        "Tomi&Kasper": "2"
+      }
+    },
+    {
+      "id": "g19",
+      "date": "ke 17.6.",
+      "group": "J",
+      "time": "04:00",
+      "home": "Argentiina",
+      "away": "Algeria",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "1",
+        "Niina": "1",
+        "Rasmus": "1",
+        "Aaron": "1",
+        "Dee": "1",
+        "Pasi": "1",
+        "Jone": "1",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "X",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g20",
+      "date": "ke 17.6.",
+      "group": "J",
+      "time": "07:00",
+      "home": "Itävalta",
+      "away": "Jordania",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "1",
+        "Niina": "1",
+        "Rasmus": "1",
+        "Aaron": "1",
+        "Dee": "1",
+        "Pasi": "1",
+        "Jone": "1",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g21",
+      "date": "ke 17.6.",
+      "group": "K",
+      "time": "20:00",
+      "home": "Portugali",
+      "away": "Kongon DR",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "1",
+        "Niina": "1",
+        "Rasmus": "1",
+        "Aaron": "1",
+        "Dee": "1",
+        "Pasi": "1",
+        "Jone": "1",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g22",
+      "date": "ke 17.6.",
+      "group": "L",
+      "time": "23:00",
+      "home": "Englanti",
+      "away": "Kroatia",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "1",
+        "Niina": "X",
+        "Rasmus": "2",
+        "Aaron": "X",
+        "Dee": "1",
+        "Pasi": "X",
+        "Jone": "X",
+        "Paula": "1",
+        "Elmo": "X",
+        "Elias": "X",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g23",
+      "date": "to 18.6.",
+      "group": "L",
+      "time": "02:00",
+      "home": "Ghana",
+      "away": "Panama",
+      "picks": {
+        "Julle": "X",
+        "Eikku": "1",
+        "Niina": "1",
+        "Rasmus": "2",
+        "Aaron": "1",
+        "Dee": "1",
+        "Pasi": "1",
+        "Jone": "1",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g24",
+      "date": "to 18.6.",
+      "group": "K",
+      "time": "05:00",
+      "home": "Uzbekistan",
+      "away": "Kolumbia",
+      "picks": {
+        "Julle": "2",
+        "Eikku": "2",
+        "Niina": "2",
+        "Rasmus": "X",
+        "Aaron": "2",
+        "Dee": "2",
+        "Pasi": "2",
+        "Jone": "2",
+        "Paula": "2",
+        "Elmo": "2",
+        "Elias": "2",
+        "Oliver": "X",
+        "Otso": "2",
+        "Tomi&Kasper": "2"
+      }
+    },
+    {
+      "id": "g25",
+      "date": "to 18.6.",
+      "group": "A",
+      "time": "19:00",
+      "home": "Tšekki",
+      "away": "Etelä-Afrikka",
+      "picks": {
+        "Julle": "X",
+        "Eikku": "1",
+        "Niina": "X",
+        "Rasmus": "X",
+        "Aaron": "1",
+        "Dee": "1",
+        "Pasi": "1",
+        "Jone": "X",
+        "Paula": "X",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g26",
+      "date": "to 18.6.",
+      "group": "B",
+      "time": "22:00",
+      "home": "Sveitsi",
+      "away": "Bosnia-Hertsegovina",
+      "picks": {
+        "Julle": "X",
+        "Eikku": "1",
+        "Niina": "1",
+        "Rasmus": "1",
+        "Aaron": "X",
+        "Dee": "1",
+        "Pasi": "1",
+        "Jone": "1",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "X",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g27",
+      "date": "pe 19.6.",
+      "group": "A",
+      "time": "04:00",
+      "home": "Meksiko",
+      "away": "Etelä-Korea",
+      "picks": {
+        "Julle": "X",
+        "Eikku": "1",
+        "Niina": "1",
+        "Rasmus": "X",
+        "Aaron": "2",
+        "Dee": "X",
+        "Pasi": "2",
+        "Jone": "X",
+        "Paula": "2",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "X",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g28",
+      "date": "pe 19.6.",
+      "group": "B",
+      "time": "04:00",
+      "home": "Kanada",
+      "away": "Qatar",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "1",
+        "Niina": "1",
+        "Rasmus": "1",
+        "Aaron": "1",
+        "Dee": "1",
+        "Pasi": "1",
+        "Jone": "1",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g29",
+      "date": "pe 19.6.",
+      "group": "D",
+      "time": "22:00",
+      "home": "Yhdysvallat",
+      "away": "Australia",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "1",
+        "Niina": "2",
+        "Rasmus": "1",
+        "Aaron": "X",
+        "Dee": "X",
+        "Pasi": "1",
+        "Jone": "1",
+        "Paula": "X",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g30",
+      "date": "la 20.6.",
+      "group": "C",
+      "time": "01:00",
+      "home": "Skotlanti",
+      "away": "Marokko",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "2",
+        "Niina": "2",
+        "Rasmus": "2",
+        "Aaron": "2",
+        "Dee": "X",
+        "Pasi": "X",
+        "Jone": "2",
+        "Paula": "X",
+        "Elmo": "X",
+        "Elias": "2",
+        "Oliver": "X",
+        "Otso": "2",
+        "Tomi&Kasper": "2"
+      }
+    },
+    {
+      "id": "g31",
+      "date": "la 20.6.",
+      "group": "C",
+      "time": "04:00",
+      "home": "Brasilia",
+      "away": "Haiti",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "1",
+        "Niina": "1",
+        "Rasmus": "1",
+        "Aaron": "1",
+        "Dee": "1",
+        "Pasi": "1",
+        "Jone": "1",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g32",
+      "date": "la 20.6.",
+      "group": "D",
+      "time": "04:00",
+      "home": "Turkki",
+      "away": "Paraguay",
+      "picks": {
+        "Julle": "X",
+        "Eikku": "1",
+        "Niina": "X",
+        "Rasmus": "1",
+        "Aaron": "1",
+        "Dee": "X",
+        "Pasi": "1",
+        "Jone": "1",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g33",
+      "date": "la 20.6.",
+      "group": "F",
+      "time": "20:00",
+      "home": "Hollanti",
+      "away": "Ruotsi",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "1",
+        "Niina": "1",
+        "Rasmus": "1",
+        "Aaron": "1",
+        "Dee": "1",
+        "Pasi": "1",
+        "Jone": "1",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g34",
+      "date": "la 20.6.",
+      "group": "E",
+      "time": "23:00",
+      "home": "Saksa",
+      "away": "Norsunluurannikko",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "1",
+        "Niina": "1",
+        "Rasmus": "1",
+        "Aaron": "1",
+        "Dee": "1",
+        "Pasi": "1",
+        "Jone": "1",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "2",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g35",
+      "date": "su 21.6.",
+      "group": "E",
+      "time": "03:00",
+      "home": "Ecuador",
+      "away": "Curaçao",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "1",
+        "Niina": "1",
+        "Rasmus": "2",
+        "Aaron": "1",
+        "Dee": "1",
+        "Pasi": "1",
+        "Jone": "1",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g36",
+      "date": "su 21.6.",
+      "group": "F",
+      "time": "07:00",
+      "home": "Tunisia",
+      "away": "Japani",
+      "picks": {
+        "Julle": "2",
+        "Eikku": "2",
+        "Niina": "2",
+        "Rasmus": "2",
+        "Aaron": "2",
+        "Dee": "2",
+        "Pasi": "2",
+        "Jone": "2",
+        "Paula": "2",
+        "Elmo": "2",
+        "Elias": "2",
+        "Oliver": "2",
+        "Otso": "2",
+        "Tomi&Kasper": "2"
+      }
+    },
+    {
+      "id": "g37",
+      "date": "su 21.6.",
+      "group": "H",
+      "time": "19:00",
+      "home": "Espanja",
+      "away": "Saudi-Arabia",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "1",
+        "Niina": "1",
+        "Rasmus": "1",
+        "Aaron": "1",
+        "Dee": "1",
+        "Pasi": "1",
+        "Jone": "1",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g38",
+      "date": "su 21.6.",
+      "group": "G",
+      "time": "22:00",
+      "home": "Belgia",
+      "away": "Iran",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "1",
+        "Niina": "1",
+        "Rasmus": "1",
+        "Aaron": "1",
+        "Dee": "1",
+        "Pasi": "1",
+        "Jone": "1",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g39",
+      "date": "ma 22.6.",
+      "group": "H",
+      "time": "01:00",
+      "home": "Uruguay",
+      "away": "Kap Verde",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "1",
+        "Niina": "1",
+        "Rasmus": "2",
+        "Aaron": "1",
+        "Dee": "1",
+        "Pasi": "1",
+        "Jone": "1",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g40",
+      "date": "ma 22.6.",
+      "group": "G",
+      "time": "04:00",
+      "home": "Uusi-Seelanti",
+      "away": "Egypti",
+      "picks": {
+        "Julle": "2",
+        "Eikku": "2",
+        "Niina": "X",
+        "Rasmus": "2",
+        "Aaron": "X",
+        "Dee": "X",
+        "Pasi": "2",
+        "Jone": "X",
+        "Paula": "2",
+        "Elmo": "2",
+        "Elias": "2",
+        "Oliver": "X",
+        "Otso": "2",
+        "Tomi&Kasper": "2"
+      }
+    },
+    {
+      "id": "g41",
+      "date": "ma 22.6.",
+      "group": "J",
+      "time": "20:00",
+      "home": "Argentiina",
+      "away": "Itävalta",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "1",
+        "Niina": "1",
+        "Rasmus": "1",
+        "Aaron": "1",
+        "Dee": "1",
+        "Pasi": "1",
+        "Jone": "1",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g42",
+      "date": "ti 23.6.",
+      "group": "I",
+      "time": "00:00",
+      "home": "Ranska",
+      "away": "Irak",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "1",
+        "Niina": "1",
+        "Rasmus": "1",
+        "Aaron": "1",
+        "Dee": "1",
+        "Pasi": "1",
+        "Jone": "1",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g43",
+      "date": "ti 23.6.",
+      "group": "I",
+      "time": "03:00",
+      "home": "Norja",
+      "away": "Senegal",
+      "picks": {
+        "Julle": "X",
+        "Eikku": "1",
+        "Niina": "X",
+        "Rasmus": "X",
+        "Aaron": "2",
+        "Dee": "1",
+        "Pasi": "1",
+        "Jone": "X",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "X",
+        "Otso": "1",
+        "Tomi&Kasper": "X"
+      }
+    },
+    {
+      "id": "g44",
+      "date": "ti 23.6.",
+      "group": "J",
+      "time": "06:00",
+      "home": "Jordania",
+      "away": "Algeria",
+      "picks": {
+        "Julle": "2",
+        "Eikku": "2",
+        "Niina": "2",
+        "Rasmus": "X",
+        "Aaron": "2",
+        "Dee": "2",
+        "Pasi": "2",
+        "Jone": "X",
+        "Paula": "2",
+        "Elmo": "2",
+        "Elias": "2",
+        "Oliver": "X",
+        "Otso": "2",
+        "Tomi&Kasper": "2"
+      }
+    },
+    {
+      "id": "g45",
+      "date": "ti 23.6.",
+      "group": "K",
+      "time": "20:00",
+      "home": "Portugali",
+      "away": "Uzbekistan",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "1",
+        "Niina": "1",
+        "Rasmus": "1",
+        "Aaron": "1",
+        "Dee": "1",
+        "Pasi": "1",
+        "Jone": "1",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g46",
+      "date": "ti 23.6.",
+      "group": "L",
+      "time": "23:00",
+      "home": "Englanti",
+      "away": "Ghana",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "1",
+        "Niina": "1",
+        "Rasmus": "1",
+        "Aaron": "1",
+        "Dee": "1",
+        "Pasi": "1",
+        "Jone": "1",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "X",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g47",
+      "date": "ke 24.6.",
+      "group": "L",
+      "time": "02:00",
+      "home": "Panama",
+      "away": "Kroatia",
+      "picks": {
+        "Julle": "X",
+        "Eikku": "2",
+        "Niina": "2",
+        "Rasmus": "X",
+        "Aaron": "2",
+        "Dee": "X",
+        "Pasi": "2",
+        "Jone": "2",
+        "Paula": "2",
+        "Elmo": "2",
+        "Elias": "2",
+        "Oliver": "2",
+        "Otso": "2",
+        "Tomi&Kasper": "2"
+      }
+    },
+    {
+      "id": "g48",
+      "date": "ke 24.6.",
+      "group": "K",
+      "time": "05:00",
+      "home": "Kolumbia",
+      "away": "Kongon DR",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "1",
+        "Niina": "1",
+        "Rasmus": "1",
+        "Aaron": "1",
+        "Dee": "X",
+        "Pasi": "1",
+        "Jone": "1",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g49",
+      "date": "ke 24.6.",
+      "group": "B",
+      "time": "22:00",
+      "home": "Bosnia-Hertsegovina",
+      "away": "Qatar",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "1",
+        "Niina": "1",
+        "Rasmus": "X",
+        "Aaron": "1",
+        "Dee": "X",
+        "Pasi": "1",
+        "Jone": "X",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "2"
+      }
+    },
+    {
+      "id": "g50",
+      "date": "to 25.6.",
+      "group": "C",
+      "time": "01:00",
+      "home": "Skotlanti",
+      "away": "Brasilia",
+      "picks": {
+        "Julle": "X",
+        "Eikku": "2",
+        "Niina": "2",
+        "Rasmus": "2",
+        "Aaron": "2",
+        "Dee": "2",
+        "Pasi": "2",
+        "Jone": "2",
+        "Paula": "1",
+        "Elmo": "2",
+        "Elias": "2",
+        "Oliver": "2",
+        "Otso": "2",
+        "Tomi&Kasper": "2"
+      }
+    },
+    {
+      "id": "g51",
+      "date": "to 25.6.",
+      "group": "C",
+      "time": "01:00",
+      "home": "Marokko",
+      "away": "Haiti",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "1",
+        "Niina": "X",
+        "Rasmus": "1",
+        "Aaron": "1",
+        "Dee": "1",
+        "Pasi": "1",
+        "Jone": "1",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g52",
+      "date": "to 25.6.",
+      "group": "A",
+      "time": "04:00",
+      "home": "Tšekki",
+      "away": "Meksiko",
+      "picks": {
+        "Julle": "2",
+        "Eikku": "2",
+        "Niina": "2",
+        "Rasmus": "2",
+        "Aaron": "2",
+        "Dee": "X",
+        "Pasi": "X",
+        "Jone": "2",
+        "Paula": "2",
+        "Elmo": "2",
+        "Elias": "2",
+        "Oliver": "1",
+        "Otso": "2",
+        "Tomi&Kasper": "2"
+      }
+    },
+    {
+      "id": "g53",
+      "date": "to 25.6.",
+      "group": "A",
+      "time": "04:00",
+      "home": "Etelä-Afrikka",
+      "away": "Etelä-Korea",
+      "picks": {
+        "Julle": "2",
+        "Eikku": "2",
+        "Niina": "X",
+        "Rasmus": "1",
+        "Aaron": "2",
+        "Dee": "X",
+        "Pasi": "2",
+        "Jone": "2",
+        "Paula": "X",
+        "Elmo": "2",
+        "Elias": "2",
+        "Oliver": "2",
+        "Otso": "2",
+        "Tomi&Kasper": "2"
+      }
+    },
+    {
+      "id": "g54",
+      "date": "to 25.6.",
+      "group": "B",
+      "time": "04:00",
+      "home": "Sveitsi",
+      "away": "Kanada",
+      "picks": {
+        "Julle": "X",
+        "Eikku": "1",
+        "Niina": "1",
+        "Rasmus": "1",
+        "Aaron": "1",
+        "Dee": "1",
+        "Pasi": "X",
+        "Jone": "2",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g55",
+      "date": "to 25.6.",
+      "group": "E",
+      "time": "23:00",
+      "home": "Ecuador",
+      "away": "Saksa",
+      "picks": {
+        "Julle": "X",
+        "Eikku": "2",
+        "Niina": "2",
+        "Rasmus": "2",
+        "Aaron": "2",
+        "Dee": "2",
+        "Pasi": "2",
+        "Jone": "2",
+        "Paula": "2",
+        "Elmo": "X",
+        "Elias": "1",
+        "Oliver": "2",
+        "Otso": "2",
+        "Tomi&Kasper": "2"
+      }
+    },
+    {
+      "id": "g56",
+      "date": "to 25.6.",
+      "group": "E",
+      "time": "23:00",
+      "home": "Curaçao",
+      "away": "Norsunluurannikko",
+      "picks": {
+        "Julle": "2",
+        "Eikku": "2",
+        "Niina": "2",
+        "Rasmus": "2",
+        "Aaron": "2",
+        "Dee": "2",
+        "Pasi": "2",
+        "Jone": "X",
+        "Paula": "2",
+        "Elmo": "2",
+        "Elias": "2",
+        "Oliver": "2",
+        "Otso": "2",
+        "Tomi&Kasper": "2"
+      }
+    },
+    {
+      "id": "g57",
+      "date": "pe 26.6.",
+      "group": "F",
+      "time": "02:00",
+      "home": "Japani",
+      "away": "Ruotsi",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "1",
+        "Niina": "2",
+        "Rasmus": "1",
+        "Aaron": "X",
+        "Dee": "1",
+        "Pasi": "1",
+        "Jone": "X",
+        "Paula": "X",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "X",
+        "Otso": "1",
+        "Tomi&Kasper": "2"
+      }
+    },
+    {
+      "id": "g58",
+      "date": "pe 26.6.",
+      "group": "F",
+      "time": "02:00",
+      "home": "Tunisia",
+      "away": "Hollanti",
+      "picks": {
+        "Julle": "2",
+        "Eikku": "2",
+        "Niina": "2",
+        "Rasmus": "2",
+        "Aaron": "2",
+        "Dee": "2",
+        "Pasi": "2",
+        "Jone": "2",
+        "Paula": "2",
+        "Elmo": "2",
+        "Elias": "2",
+        "Oliver": "2",
+        "Otso": "2",
+        "Tomi&Kasper": "2"
+      }
+    },
+    {
+      "id": "g59",
+      "date": "pe 26.6.",
+      "group": "D",
+      "time": "05:00",
+      "home": "Turkki",
+      "away": "Yhdysvallat",
+      "picks": {
+        "Julle": "X",
+        "Eikku": "X",
+        "Niina": "X",
+        "Rasmus": "1",
+        "Aaron": "1",
+        "Dee": "1",
+        "Pasi": "X",
+        "Jone": "X",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "X",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g60",
+      "date": "pe 26.6.",
+      "group": "D",
+      "time": "05:00",
+      "home": "Paraguay",
+      "away": "Australia",
+      "picks": {
+        "Julle": "X",
+        "Eikku": "X",
+        "Niina": "X",
+        "Rasmus": "1",
+        "Aaron": "2",
+        "Dee": "X",
+        "Pasi": "1",
+        "Jone": "2",
+        "Paula": "2",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "X",
+        "Otso": "1",
+        "Tomi&Kasper": "X"
+      }
+    },
+    {
+      "id": "g61",
+      "date": "pe 26.6.",
+      "group": "I",
+      "time": "22:00",
+      "home": "Norja",
+      "away": "Ranska",
+      "picks": {
+        "Julle": "X",
+        "Eikku": "2",
+        "Niina": "2",
+        "Rasmus": "2",
+        "Aaron": "2",
+        "Dee": "2",
+        "Pasi": "2",
+        "Jone": "2",
+        "Paula": "2",
+        "Elmo": "2",
+        "Elias": "X",
+        "Oliver": "2",
+        "Otso": "2",
+        "Tomi&Kasper": "2"
+      }
+    },
+    {
+      "id": "g62",
+      "date": "pe 26.6.",
+      "group": "I",
+      "time": "22:00",
+      "home": "Senegal",
+      "away": "Irak",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "1",
+        "Niina": "1",
+        "Rasmus": "2",
+        "Aaron": "1",
+        "Dee": "1",
+        "Pasi": "1",
+        "Jone": "1",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g63",
+      "date": "la 27.6.",
+      "group": "H",
+      "time": "03:00",
+      "home": "Kap Verde",
+      "away": "Saudi-Arabia",
+      "picks": {
+        "Julle": "2",
+        "Eikku": "2",
+        "Niina": "X",
+        "Rasmus": "X",
+        "Aaron": "X",
+        "Dee": "X",
+        "Pasi": "X",
+        "Jone": "X",
+        "Paula": "2",
+        "Elmo": "2",
+        "Elias": "X",
+        "Oliver": "2",
+        "Otso": "1",
+        "Tomi&Kasper": "2"
+      }
+    },
+    {
+      "id": "g64",
+      "date": "la 27.6.",
+      "group": "H",
+      "time": "03:00",
+      "home": "Uruguay",
+      "away": "Espanja",
+      "picks": {
+        "Julle": "2",
+        "Eikku": "2",
+        "Niina": "2",
+        "Rasmus": "2",
+        "Aaron": "2",
+        "Dee": "2",
+        "Pasi": "2",
+        "Jone": "2",
+        "Paula": "2",
+        "Elmo": "2",
+        "Elias": "2",
+        "Oliver": "2",
+        "Otso": "2",
+        "Tomi&Kasper": "2"
+      }
+    },
+    {
+      "id": "g65",
+      "date": "la 27.6.",
+      "group": "G",
+      "time": "06:00",
+      "home": "Egypti",
+      "away": "Iran",
+      "picks": {
+        "Julle": "X",
+        "Eikku": "1",
+        "Niina": "1",
+        "Rasmus": "1",
+        "Aaron": "1",
+        "Dee": "X",
+        "Pasi": "1",
+        "Jone": "1",
+        "Paula": "1",
+        "Elmo": "2",
+        "Elias": "2",
+        "Oliver": "X",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g66",
+      "date": "la 27.6.",
+      "group": "G",
+      "time": "06:00",
+      "home": "Uusi-Seelanti",
+      "away": "Belgia",
+      "picks": {
+        "Julle": "2",
+        "Eikku": "2",
+        "Niina": "2",
+        "Rasmus": "2",
+        "Aaron": "2",
+        "Dee": "2",
+        "Pasi": "2",
+        "Jone": "2",
+        "Paula": "2",
+        "Elmo": "2",
+        "Elias": "2",
+        "Oliver": "2",
+        "Otso": "2",
+        "Tomi&Kasper": "2"
+      }
+    },
+    {
+      "id": "g67",
+      "date": "su 28.6.",
+      "group": "L",
+      "time": "00:00",
+      "home": "Panama",
+      "away": "Englanti",
+      "picks": {
+        "Julle": "2",
+        "Eikku": "2",
+        "Niina": "2",
+        "Rasmus": "2",
+        "Aaron": "2",
+        "Dee": "2",
+        "Pasi": "2",
+        "Jone": "2",
+        "Paula": "2",
+        "Elmo": "2",
+        "Elias": "2",
+        "Oliver": "2",
+        "Otso": "2",
+        "Tomi&Kasper": "2"
+      }
+    },
+    {
+      "id": "g68",
+      "date": "su 28.6.",
+      "group": "L",
+      "time": "00:00",
+      "home": "Kroatia",
+      "away": "Ghana",
+      "picks": {
+        "Julle": "X",
+        "Eikku": "1",
+        "Niina": "X",
+        "Rasmus": "1",
+        "Aaron": "1",
+        "Dee": "X",
+        "Pasi": "1",
+        "Jone": "2",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "1",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g69",
+      "date": "su 28.6.",
+      "group": "K",
+      "time": "02:00",
+      "home": "Kolumbia",
+      "away": "Portugali",
+      "picks": {
+        "Julle": "X",
+        "Eikku": "2",
+        "Niina": "2",
+        "Rasmus": "2",
+        "Aaron": "2",
+        "Dee": "2",
+        "Pasi": "2",
+        "Jone": "2",
+        "Paula": "2",
+        "Elmo": "2",
+        "Elias": "1",
+        "Oliver": "X",
+        "Otso": "X",
+        "Tomi&Kasper": "2"
+      }
+    },
+    {
+      "id": "g70",
+      "date": "su 28.6.",
+      "group": "K",
+      "time": "02:00",
+      "home": "Kongon DR",
+      "away": "Uzbekistan",
+      "picks": {
+        "Julle": "1",
+        "Eikku": "1",
+        "Niina": "X",
+        "Rasmus": "2",
+        "Aaron": "X",
+        "Dee": "X",
+        "Pasi": "X",
+        "Jone": "X",
+        "Paula": "1",
+        "Elmo": "1",
+        "Elias": "1",
+        "Oliver": "2",
+        "Otso": "1",
+        "Tomi&Kasper": "1"
+      }
+    },
+    {
+      "id": "g71",
+      "date": "su 28.6.",
+      "group": "J",
+      "time": "05:00",
+      "home": "Algeria",
+      "away": "Itävalta",
+      "picks": {
+        "Julle": "2",
+        "Eikku": "X",
+        "Niina": "X",
+        "Rasmus": "2",
+        "Aaron": "1",
+        "Dee": "X",
+        "Pasi": "2",
+        "Jone": "2",
+        "Paula": "1",
+        "Elmo": "2",
+        "Elias": "X",
+        "Oliver": "2",
+        "Otso": "2",
+        "Tomi&Kasper": "2"
+      }
+    },
+    {
+      "id": "g72",
+      "date": "su 28.6.",
+      "group": "J",
+      "time": "05:00",
+      "home": "Jordania",
+      "away": "Argentiina",
+      "picks": {
+        "Julle": "2",
+        "Eikku": "2",
+        "Niina": "2",
+        "Rasmus": "2",
+        "Aaron": "2",
+        "Dee": "2",
+        "Pasi": "2",
+        "Jone": "2",
+        "Paula": "2",
+        "Elmo": "2",
+        "Elias": "2",
+        "Oliver": "2",
+        "Otso": "2",
+        "Tomi&Kasper": "2"
+      }
+    }
+  ],
+  "groupTop2": [
+    {
+      "group": "A",
+      "order": [
+        "Meksiko",
+        "Tšekki"
+      ],
+      "label": "1. Meksiko, 2. Tšekki",
+      "picks": {
+        "Julle": "Ei",
+        "Eikku": "Ei",
+        "Niina": "Ei",
+        "Rasmus": "Ei",
+        "Aaron": "Ei",
+        "Dee": "Ei",
+        "Pasi": "Ei",
+        "Jone": "Ei",
+        "Paula": "Ei",
+        "Elmo": "Kyllä",
+        "Elias": "Ei",
+        "Oliver": "Ei",
+        "Otso": "Ei",
+        "Tomi&Kasper": "Ei"
+      }
+    },
+    {
+      "group": "B",
+      "order": [
+        "Sveitsi",
+        "Kanada"
+      ],
+      "label": "1. Sveitsi, 2. Kanada",
+      "picks": {
+        "Julle": "Ei",
+        "Eikku": "Kyllä",
+        "Niina": "Kyllä",
+        "Rasmus": "Ei",
+        "Aaron": "Kyllä",
+        "Dee": "Kyllä",
+        "Pasi": "Ei",
+        "Jone": "Kyllä",
+        "Paula": "Ei",
+        "Elmo": "Kyllä",
+        "Elias": "Ei",
+        "Oliver": "Kyllä",
+        "Otso": "Kyllä",
+        "Tomi&Kasper": "Ei"
+      }
+    },
+    {
+      "group": "C",
+      "order": [
+        "Brasilia",
+        "Marokko"
+      ],
+      "label": "1. Brasilia, 2. Marokko",
+      "picks": {
+        "Julle": "Ei",
+        "Eikku": "Kyllä",
+        "Niina": "Kyllä",
+        "Rasmus": "Kyllä",
+        "Aaron": "Kyllä",
+        "Dee": "Kyllä",
+        "Pasi": "Ei",
+        "Jone": "Kyllä",
+        "Paula": "Ei",
+        "Elmo": "Kyllä",
+        "Elias": "Ei",
+        "Oliver": "Kyllä",
+        "Otso": "Kyllä",
+        "Tomi&Kasper": "Kyllä"
+      }
+    },
+    {
+      "group": "D",
+      "order": [
+        "Yhdysvallat",
+        "Turkki"
+      ],
+      "label": "1. Yhdysvallat, 2. Turkki",
+      "picks": {
+        "Julle": "Ei",
+        "Eikku": "Kyllä",
+        "Niina": "Ei",
+        "Rasmus": "Ei",
+        "Aaron": "Ei",
+        "Dee": "Ei",
+        "Pasi": "Ei",
+        "Jone": "Ei",
+        "Paula": "Ei",
+        "Elmo": "Ei",
+        "Elias": "Ei",
+        "Oliver": "Ei",
+        "Otso": "Kyllä",
+        "Tomi&Kasper": "Ei"
+      }
+    },
+    {
+      "group": "E",
+      "order": [
+        "Saksa",
+        "Ecuador"
+      ],
+      "label": "1. Saksa, 2. Ecuador",
+      "picks": {
+        "Julle": "Kyllä",
+        "Eikku": "Kyllä",
+        "Niina": "Kyllä",
+        "Rasmus": "Ei",
+        "Aaron": "Kyllä",
+        "Dee": "Kyllä",
+        "Pasi": "Kyllä",
+        "Jone": "Kyllä",
+        "Paula": "Kyllä",
+        "Elmo": "Kyllä",
+        "Elias": "Ei",
+        "Oliver": "Ei",
+        "Otso": "Kyllä",
+        "Tomi&Kasper": "Kyllä"
+      }
+    },
+    {
+      "group": "F",
+      "order": [
+        "Hollanti",
+        "Japani"
+      ],
+      "label": "1. Hollanti, 2. Japani",
+      "picks": {
+        "Julle": "Kyllä",
+        "Eikku": "Kyllä",
+        "Niina": "Ei",
+        "Rasmus": "Kyllä",
+        "Aaron": "Ei",
+        "Dee": "Kyllä",
+        "Pasi": "Ei",
+        "Jone": "Kyllä",
+        "Paula": "Ei",
+        "Elmo": "Kyllä",
+        "Elias": "Kyllä",
+        "Oliver": "Kyllä",
+        "Otso": "Kyllä",
+        "Tomi&Kasper": "Ei"
+      }
+    },
+    {
+      "group": "G",
+      "order": [
+        "Belgia",
+        "Egypti"
+      ],
+      "label": "1. Belgia, 2. Egypti",
+      "picks": {
+        "Julle": "Kyllä",
+        "Eikku": "Kyllä",
+        "Niina": "Kyllä",
+        "Rasmus": "Kyllä",
+        "Aaron": "Kyllä",
+        "Dee": "Kyllä",
+        "Pasi": "Kyllä",
+        "Jone": "Ei",
+        "Paula": "Ei",
+        "Elmo": "Ei",
+        "Elias": "Ei",
+        "Oliver": "Ei",
+        "Otso": "Kyllä",
+        "Tomi&Kasper": "Kyllä"
+      }
+    },
+    {
+      "group": "H",
+      "order": [
+        "Espanja",
+        "Uruguay"
+      ],
+      "label": "1. Espanja, 2. Uruguay",
+      "picks": {
+        "Julle": "Ei",
+        "Eikku": "Kyllä",
+        "Niina": "Kyllä",
+        "Rasmus": "Kyllä",
+        "Aaron": "Kyllä",
+        "Dee": "Kyllä",
+        "Pasi": "Kyllä",
+        "Jone": "Kyllä",
+        "Paula": "Kyllä",
+        "Elmo": "Kyllä",
+        "Elias": "Kyllä",
+        "Oliver": "Kyllä",
+        "Otso": "Kyllä",
+        "Tomi&Kasper": "Kyllä"
+      }
+    },
+    {
+      "group": "I",
+      "order": [
+        "Ranska",
+        "Norja"
+      ],
+      "label": "1. Ranska, 2. Norja",
+      "picks": {
+        "Julle": "Kyllä",
+        "Eikku": "Kyllä",
+        "Niina": "Ei",
+        "Rasmus": "Ei",
+        "Aaron": "Ei",
+        "Dee": "Kyllä",
+        "Pasi": "Kyllä",
+        "Jone": "Ei",
+        "Paula": "Kyllä",
+        "Elmo": "Kyllä",
+        "Elias": "Ei",
+        "Oliver": "Ei",
+        "Otso": "Kyllä",
+        "Tomi&Kasper": "Ei"
+      }
+    },
+    {
+      "group": "J",
+      "order": [
+        "Argentiina",
+        "Itävalta"
+      ],
+      "label": "1. Argentina, 2. Itävalta",
+      "picks": {
+        "Julle": "Kyllä",
+        "Eikku": "Kyllä",
+        "Niina": "Kyllä",
+        "Rasmus": "Ei",
+        "Aaron": "Ei",
+        "Dee": "Kyllä",
+        "Pasi": "Ei",
+        "Jone": "Kyllä",
+        "Paula": "Kyllä",
+        "Elmo": "Kyllä",
+        "Elias": "Ei",
+        "Oliver": "Kyllä",
+        "Otso": "Kyllä",
+        "Tomi&Kasper": "Kyllä"
+      }
+    },
+    {
+      "group": "K",
+      "order": [
+        "Portugali",
+        "Kolumbia"
+      ],
+      "label": "1. Portugali, 2. Kolumbia",
+      "picks": {
+        "Julle": "Kyllä",
+        "Eikku": "Kyllä",
+        "Niina": "Kyllä",
+        "Rasmus": "Ei",
+        "Aaron": "Kyllä",
+        "Dee": "Kyllä",
+        "Pasi": "Kyllä",
+        "Jone": "Kyllä",
+        "Paula": "Kyllä",
+        "Elmo": "Kyllä",
+        "Elias": "Ei",
+        "Oliver": "Kyllä",
+        "Otso": "Kyllä",
+        "Tomi&Kasper": "Kyllä"
+      }
+    },
+    {
+      "group": "L",
+      "order": [
+        "Englanti",
+        "Kroatia"
+      ],
+      "label": "1. Englanti, 2. Kroatia",
+      "picks": {
+        "Julle": "Kyllä",
+        "Eikku": "Kyllä",
+        "Niina": "Kyllä",
+        "Rasmus": "Ei",
+        "Aaron": "Kyllä",
+        "Dee": "Ei",
+        "Pasi": "Kyllä",
+        "Jone": "Ei",
+        "Paula": "Ei",
+        "Elmo": "Kyllä",
+        "Elias": "Ei",
+        "Oliver": "Kyllä",
+        "Otso": "Kyllä",
+        "Tomi&Kasper": "Kyllä"
+      }
+    }
+  ],
+  "knockout": {
+    "quarterfinalists": {
+      "slots": 8,
+      "pointsPerTeam": 5,
+      "picks": {
+        "Julle": [
+          "Brasilia",
+          "Hollanti",
+          "Ranska",
+          "Englanti",
+          "Belgia",
+          "Espanja",
+          "Sveitsi",
+          "Argentiina"
+        ],
+        "Eikku": [
+          "Ranska",
+          "Espanja",
+          "Englanti",
+          "Argentiina",
+          "Brasilia",
+          "Saksa",
+          "Portugali",
+          "Hollanti"
+        ],
+        "Niina": [
+          "Brasilia",
+          "Saksa",
+          "Espanja",
+          "Ranska",
+          "Englanti",
+          "Sveitsi",
+          "Belgia",
+          "Hollanti"
+        ],
+        "Rasmus": [
+          "Argentiina",
+          "Espanja",
+          "Brasilia",
+          "Marokko",
+          "Ranska",
+          "Kroatia",
+          "Hollanti",
+          "Portugali"
+        ],
+        "Aaron": [
+          "Espanja",
+          "Ranska",
+          "Argentiina",
+          "Brasilia",
+          "Englanti",
+          "Turkki",
+          "Portugali",
+          "Hollanti"
+        ],
+        "Dee": [
+          "Ranska",
+          "Brasilia",
+          "Argentiina",
+          "Portugali",
+          "Englanti",
+          "Hollanti",
+          "Espanja",
+          "Sveitsi"
+        ],
+        "Pasi": [
+          "Espanja",
+          "Englanti",
+          "Ranska",
+          "Portugali",
+          "Kroatia",
+          "Argentiina",
+          "Saksa",
+          "Hollanti"
+        ],
+        "Jone": [
+          "Ranska",
+          "Argentiina",
+          "Espanja",
+          "Englanti",
+          "Kroatia",
+          "Portugali",
+          "Saksa",
+          "Brasilia"
+        ],
+        "Paula": [
+          "Norja",
+          "Ranska",
+          "Espanja",
+          "Japani",
+          "Englanti",
+          "Argentiina",
+          "Senegal",
+          "Marokko"
+        ],
+        "Elmo": [
+          "Ranska",
+          "Hollanti",
+          "Espanja",
+          "Turkki",
+          "Brasilia",
+          "Englanti",
+          "Portugali",
+          "Argentiina"
+        ],
+        "Elias": [
+          "Norja",
+          "Espanja",
+          "Ranska",
+          "Argentiina",
+          "Portugali",
+          "Ecuador",
+          "Hollanti",
+          "Englanti"
+        ],
+        "Oliver": [
+          "Saksa",
+          "Hollanti",
+          "Espanja",
+          "Turkki",
+          "Brasilia",
+          "Englanti",
+          "Argentiina",
+          "Portugali"
+        ],
+        "Otso": [
+          "Ranska",
+          "Espanja",
+          "Englanti",
+          "Argentiina",
+          "Brasilia",
+          "Saksa",
+          "Hollanti",
+          "Norja"
+        ],
+        "Tomi&Kasper": [
+          "Ranska",
+          "Hollanti",
+          "Espanja",
+          "Turkki",
+          "Brasilia",
+          "Englanti",
+          "Argentiina",
+          "Portugali"
+        ]
+      }
+    },
+    "semifinalists": {
+      "slots": 4,
+      "pointsPerTeam": 6,
+      "picks": {
+        "Julle": [
+          "Hollanti",
+          "Englanti",
+          "Espanja",
+          "Argentiina"
+        ],
+        "Eikku": [
+          "Ranska",
+          "Espanja",
+          "Englanti",
+          "Brasilia"
+        ],
+        "Niina": [
+          "Brasilia",
+          "Espanja",
+          "Ranska",
+          "Hollanti"
+        ],
+        "Rasmus": [
+          "Argentiina",
+          "Brasilia",
+          "Ranska",
+          "Espanja"
+        ],
+        "Aaron": [
+          "Espanja",
+          "Ranska",
+          "Argentiina",
+          "Brasilia"
+        ],
+        "Dee": [
+          "Ranska",
+          "Portugali",
+          "Argentiina",
+          "Espanja"
+        ],
+        "Pasi": [
+          "Espanja",
+          "Kroatia",
+          "Portugali",
+          "Hollanti"
+        ],
+        "Jone": [
+          "Ranska",
+          "Espanja",
+          "Englanti",
+          "Kroatia"
+        ],
+        "Paula": [
+          "Ranska",
+          "Espanja",
+          "Argentiina",
+          "Brasilia"
+        ],
+        "Elmo": [
+          "Ranska",
+          "Espanja",
+          "Englanti",
+          "Argentiina"
+        ],
+        "Elias": [
+          "Norja",
+          "Ranska",
+          "Espanja",
+          "Englanti"
+        ],
+        "Oliver": [
+          "Hollanti",
+          "Espanja",
+          "Brasilia",
+          "Portugali"
+        ],
+        "Otso": [
+          "Ranska",
+          "Espanja",
+          "Englanti",
+          "Argentiina"
+        ],
+        "Tomi&Kasper": [
+          "Hollanti",
+          "Espanja",
+          "Englanti",
+          "Argentiina"
+        ]
+      }
+    },
+    "finalists": {
+      "slots": 2,
+      "pointsPerTeam": 8,
+      "picks": {
+        "Julle": [
+          "Englanti",
+          "Espanja"
+        ],
+        "Eikku": [
+          "Ranska",
+          "Espanja"
+        ],
+        "Niina": [
+          "Espanja",
+          "Ranska"
+        ],
+        "Rasmus": [
+          "Brasilia",
+          "Ranska"
+        ],
+        "Aaron": [
+          "Espanja",
+          "Brasilia"
+        ],
+        "Dee": [
+          "Ranska",
+          "Espanja"
+        ],
+        "Pasi": [
+          "Portugali",
+          "Espanja"
+        ],
+        "Jone": [
+          "Ranska",
+          "Espanja"
+        ],
+        "Paula": [
+          "Espanja",
+          "Argentiina"
+        ],
+        "Elmo": [
+          "Ranska",
+          "Englanti"
+        ],
+        "Elias": [
+          "Ranska",
+          "Espanja"
+        ],
+        "Oliver": [
+          "Espanja",
+          "Brasilia"
+        ],
+        "Otso": [
+          "Espanja",
+          "Englanti"
+        ],
+        "Tomi&Kasper": [
+          "Espanja",
+          "Englanti"
+        ]
+      }
+    },
+    "champion": {
+      "pointsPerTeam": 12,
+      "picks": {
+        "Julle": "Espanja",
+        "Eikku": "Ranska",
+        "Niina": "Ranska",
+        "Rasmus": "Ranska",
+        "Aaron": "Espanja",
+        "Dee": "Ranska",
+        "Pasi": "Portugali",
+        "Jone": "Espanja",
+        "Paula": "Espanja",
+        "Elmo": "Ranska",
+        "Elias": "Espanja",
+        "Oliver": "Espanja",
+        "Otso": "Espanja",
+        "Tomi&Kasper": "Espanja"
+      }
+    }
+  },
+  "goldenBoot": {
+    "picksPerPlayer": 5,
+    "scoring": {
+      "firstGoal": 3,
+      "secondGoal": 2,
+      "subsequent": 1
+    },
+    "banned": [
+      "Mbappé",
+      "Kane",
+      "Haaland"
+    ],
+    "picks": {
+      "Julle": [
+        "Luis Diaz",
+        "Mikel Oyarzabal",
+        "Marcus Rashford",
+        "Julian Álvarez",
+        "Cody Gakpo"
+      ],
+      "Eikku": [
+        "Lamine Yamal",
+        "Julian Álvarez",
+        "Vinícius Júnior",
+        "Ousmane Dembele",
+        "Mikel Oyarzabal"
+      ],
+      "Niina": [
+        "Lamine Yamal",
+        "Vinícius Júnior",
+        "Raphinha",
+        "Jeremy Doku",
+        "Michael Olise"
+      ],
+      "Rasmus": [
+        "Ousmane Dembele",
+        "Lamine Yamal",
+        "Michael Olise",
+        "Mikel Oyarzabal",
+        "Raphinha"
+      ],
+      "Aaron": [
+        "Jude Bellingham",
+        "Lamine Yamal",
+        "Michael Olise",
+        "Lautaro Martínez",
+        "Vinícius Júnior"
+      ],
+      "Dee": [
+        "Michael Olise",
+        "Lamine Yamal",
+        "Raphinha",
+        "Mikel Oyarzabal",
+        "Ousmane Dembele"
+      ],
+      "Pasi": [
+        "Lamine Yamal",
+        "Jeremy Doku",
+        "Luis Diaz",
+        "Andrej Kramaric",
+        "Cody Gakpo"
+      ],
+      "Jone": [
+        "Vinícius Júnior",
+        "Ousmane Dembele",
+        "Lamine Yamal",
+        "Julian Álvarez",
+        "Kai Havertz"
+      ],
+      "Paula": [
+        "Ousmane Dembele",
+        "Arda Guler",
+        "Vinícius Júnior",
+        "Lamine Yamal",
+        "Mikel Oyarzabal"
+      ],
+      "Elmo": [
+        "Julian Álvarez",
+        "Christian Pulisic",
+        "Kenan Yildiz",
+        "Michael Olise",
+        "Lamine Yamal"
+      ],
+      "Elias": [
+        "Igor Thiago",
+        "Luis Diaz",
+        "Julian Álvarez",
+        "Ousmane Dembele",
+        "Cody Gakpo"
+      ],
+      "Oliver": [
+        "Mikel Oyarzabal",
+        "Ousmane Dembele",
+        "Donyell Malen",
+        "Breel Embolo",
+        "Matheus Cunha"
+      ],
+      "Otso": [
+        "Lamine Yamal",
+        "Mikel Oyarzabal",
+        "Julian Alvarez",
+        "Vinícius Júnior",
+        "Ousmane Dembele"
+      ],
+      "Tomi&Kasper": [
+        "Mikel Oyarzabal",
+        "Michael Olise",
+        "Cody Gakpo",
+        "Kai Havertz",
+        "Pedri"
+      ]
+    }
+  },
+  "specialQuestions": [
+    {
+      "id": "sq1",
+      "text": "Tuleeko avausottelussa (Meksiko–Etelä-Afrikka) 2+ maalia?",
+      "points": 3,
+      "picks": {
+        "Julle": "Ei",
+        "Eikku": "Kyllä",
+        "Niina": "Kyllä",
+        "Rasmus": "Ei",
+        "Aaron": "Kyllä",
+        "Dee": "Kyllä",
+        "Pasi": "Kyllä",
+        "Jone": "Kyllä",
+        "Paula": "Ei",
+        "Elmo": "Ei",
+        "Elias": "Kyllä",
+        "Oliver": "Kyllä",
+        "Otso": "Kyllä",
+        "Tomi&Kasper": "Kyllä"
+      }
+    },
+    {
+      "id": "sq2",
+      "text": "Selviääkö isäntämaista (Yhdysvallat, Kanada, Meksiko) vähintään kaksi pudotuspeleihin?",
+      "points": 3,
+      "picks": {
+        "Julle": "Kyllä",
+        "Eikku": "Kyllä",
+        "Niina": "Kyllä",
+        "Rasmus": "Ei",
+        "Aaron": "Kyllä",
+        "Dee": "Kyllä",
+        "Pasi": "Kyllä",
+        "Jone": "Kyllä",
+        "Paula": "Ei",
+        "Elmo": "Kyllä",
+        "Elias": "Kyllä",
+        "Oliver": "Kyllä",
+        "Otso": "Kyllä",
+        "Tomi&Kasper": "Kyllä"
+      }
+    },
+    {
+      "id": "sq3",
+      "text": "Voittaako hallitseva mestari Argentiina alkulohkonsa (lohko J)?",
+      "points": 3,
+      "picks": {
+        "Julle": "Kyllä",
+        "Eikku": "Kyllä",
+        "Niina": "Kyllä",
+        "Rasmus": "Ei",
+        "Aaron": "Kyllä",
+        "Dee": "Kyllä",
+        "Pasi": "Kyllä",
+        "Jone": "Kyllä",
+        "Paula": "Kyllä",
+        "Elmo": "Kyllä",
+        "Elias": "Kyllä",
+        "Oliver": "Kyllä",
+        "Otso": "Kyllä",
+        "Tomi&Kasper": "Kyllä"
+      }
+    },
+    {
+      "id": "sq4",
+      "text": "Päättyykö jokin pudotuspeliottelu rangaistuspotkukilpailuun?",
+      "points": 3,
+      "picks": {
+        "Julle": "Kyllä",
+        "Eikku": "Kyllä",
+        "Niina": "Kyllä",
+        "Rasmus": "Kyllä",
+        "Aaron": "Kyllä",
+        "Dee": "Kyllä",
+        "Pasi": "Kyllä",
+        "Jone": "Kyllä",
+        "Paula": "Kyllä",
+        "Elmo": "Kyllä",
+        "Elias": "Kyllä",
+        "Oliver": "Kyllä",
+        "Otso": "Kyllä",
+        "Tomi&Kasper": "Kyllä"
+      }
+    },
+    {
+      "id": "sq5",
+      "text": "Tekeekö jokin joukkue 5+ maalia yhdessä ottelussa?",
+      "points": 3,
+      "picks": {
+        "Julle": "Ei",
+        "Eikku": "Kyllä",
+        "Niina": "Kyllä",
+        "Rasmus": "Kyllä",
+        "Aaron": "Kyllä",
+        "Dee": "Kyllä",
+        "Pasi": "Kyllä",
+        "Jone": "Kyllä",
+        "Paula": "Kyllä",
+        "Elmo": "Kyllä",
+        "Elias": "Kyllä",
+        "Oliver": "Kyllä",
+        "Otso": "Kyllä",
+        "Tomi&Kasper": "Kyllä"
+      }
+    },
+    {
+      "id": "sq6",
+      "text": "Selviääkö jokin MM-debytantti (Curaçao, Kap Verde, Uzbekistan, Jordania) pudotuspeleihin?",
+      "points": 3,
+      "picks": {
+        "Julle": "Ei",
+        "Eikku": "Ei",
+        "Niina": "Ei",
+        "Rasmus": "Kyllä",
+        "Aaron": "Ei",
+        "Dee": "Ei",
+        "Pasi": "Ei",
+        "Jone": "Ei",
+        "Paula": "Ei",
+        "Elmo": "Ei",
+        "Elias": "Ei",
+        "Oliver": "Kyllä",
+        "Otso": "Kyllä",
+        "Tomi&Kasper": "Ei"
+      }
+    },
+    {
+      "id": "sq7",
+      "text": "Tekeekö Cristiano Ronaldo tai Lionel Messi maalin näissä kisoissa?",
+      "points": 3,
+      "picks": {
+        "Julle": "Kyllä",
+        "Eikku": "Kyllä",
+        "Niina": "Kyllä",
+        "Rasmus": "Kyllä",
+        "Aaron": "Kyllä",
+        "Dee": "Kyllä",
+        "Pasi": "Kyllä",
+        "Jone": "Kyllä",
+        "Paula": "Kyllä",
+        "Elmo": "Kyllä",
+        "Elias": "Kyllä",
+        "Oliver": "Kyllä",
+        "Otso": "Kyllä",
+        "Tomi&Kasper": "Kyllä"
+      }
+    },
+    {
+      "id": "sq8",
+      "text": "Voittaako jokin muu kuin Euroopan tai Etelä-Amerikan joukkue alkulohkonsa?",
+      "points": 3,
+      "picks": {
+        "Julle": "Kyllä",
+        "Eikku": "Kyllä",
+        "Niina": "Ei",
+        "Rasmus": "Kyllä",
+        "Aaron": "Kyllä",
+        "Dee": "Kyllä",
+        "Pasi": "Ei",
+        "Jone": "Ei",
+        "Paula": "Kyllä",
+        "Elmo": "Ei",
+        "Elias": "Kyllä",
+        "Oliver": "Kyllä",
+        "Otso": "Kyllä",
+        "Tomi&Kasper": "Kyllä"
+      }
+    },
+    {
+      "id": "sq9",
+      "text": "Ratkeaako mestaruus (finaali) jatkoajalla tai rangaistuspotkuilla?",
+      "points": 3,
+      "picks": {
+        "Julle": "Kyllä",
+        "Eikku": "Kyllä",
+        "Niina": "Kyllä",
+        "Rasmus": "Kyllä",
+        "Aaron": "Kyllä",
+        "Dee": "Ei",
+        "Pasi": "Ei",
+        "Jone": "Kyllä",
+        "Paula": "Kyllä",
+        "Elmo": "Ei",
+        "Elias": "Ei",
+        "Oliver": "Ei",
+        "Otso": "Ei",
+        "Tomi&Kasper": "Ei"
+      }
+    }
+  ]
+}

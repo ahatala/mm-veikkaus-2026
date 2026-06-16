@@ -1,0 +1,86 @@
+import { describe, it, expect } from 'vitest'
+import { readFileSync } from 'node:fs'
+import { dirname, resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
+import { compute, goldenPointsForGoals } from './engine'
+import type { Bets, Results, Overrides } from './types'
+
+const HERE = dirname(fileURLToPath(import.meta.url))
+const loadJson = (p: string) => JSON.parse(readFileSync(p, 'utf8'))
+
+const bets = loadJson(resolve(HERE, '../../public/data/bets.json')) as Bets
+// Stable snapshot oracle (the live results.json is overwritten by the fetcher, so we don't use it here).
+const results = loadJson(resolve(HERE, '__fixtures__/snapshot.results.json')) as Results
+const overrides = loadJson(resolve(HERE, '__fixtures__/snapshot.overrides.json')) as Overrides
+
+// The Google Sheet already computed the standings for the current snapshot. Feeding that same
+// snapshot (played group matches + Golden Boot goals + the two resolved special questions) into our
+// engine must reproduce the sheet's leaderboard exactly — both totals and tie-broken order.
+const EXPECTED_TOTALS: Record<string, number> = {
+  Julle: 10, Eikku: 15, Niina: 17, Rasmus: 11, Aaron: 18, Dee: 16, Pasi: 10,
+  Jone: 26, Paula: 13, Elmo: 12, Elias: 14, Oliver: 19, Otso: 15, 'Tomi&Kasper': 16,
+}
+const EXPECTED_ORDER = [
+  'Jone', 'Oliver', 'Aaron', 'Niina', 'Tomi&Kasper', 'Dee', 'Otso',
+  'Eikku', 'Elias', 'Paula', 'Elmo', 'Rasmus', 'Pasi', 'Julle',
+]
+
+describe('scoring engine vs. sheet snapshot', () => {
+  const c = compute(bets, results, overrides)
+  const byName = Object.fromEntries(c.standings.map((r) => [r.name, r]))
+
+  it('reproduces every participant total', () => {
+    const got = Object.fromEntries(c.standings.map((r) => [r.name, r.total]))
+    expect(got).toEqual(EXPECTED_TOTALS)
+  })
+
+  it('reproduces the ranked order (with the sheet tie-break)', () => {
+    expect(c.standings.map((r) => r.name)).toEqual(EXPECTED_ORDER)
+    expect(c.standings.map((r) => r.rank)).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14])
+  })
+
+  it('awards the contrarian bonus correctly', () => {
+    const auTr = c.matches.find((m) => m.match.home === 'Australia' && m.match.away === 'Turkki')!
+    expect(auTr.actual).toBe('1')
+    expect(auTr.bonus).toBe(true) // only Jone picked the winning sign
+    expect(auTr.points.Jone).toBe(3)
+
+    const belEgy = c.matches.find((m) => m.match.home === 'Belgia' && m.match.away === 'Egypti')!
+    expect(belEgy.actual).toBe('X')
+    expect(belEgy.bonus).toBe(true) // Julle + Aaron only
+    expect(belEgy.points.Julle).toBe(3)
+    expect(belEgy.points.Aaron).toBe(3)
+
+    const meksiko = c.matches.find((m) => m.match.id === 'g1')! // everyone picked 1 -> no bonus
+    expect(meksiko.bonus).toBe(false)
+    expect(meksiko.points.Jone).toBe(1)
+  })
+
+  it('scores the Golden Boot 3-2-1 correctly', () => {
+    expect(byName.Jone.breakdown.goldenBoot).toBe(8) // Vinícius (1g=3) + Havertz (2g=5)
+    expect(byName['Tomi&Kasper'].breakdown.goldenBoot).toBe(5) // Havertz 2g
+    const havertzBackers = c.goldenBoot.byName['Jone'].find((l) => l.player === 'Kai Havertz')!
+    expect(havertzBackers).toMatchObject({ goals: 2, points: 5 })
+  })
+
+  it('scores resolved special questions only', () => {
+    expect(c.special.filter((s) => s.resolved).map((s) => s.question.id).sort()).toEqual(['sq1', 'sq5'])
+    expect(byName.Julle.breakdown.specialQuestions).toBe(0) // got both wrong/Ei
+    expect(byName.Eikku.breakdown.specialQuestions).toBe(6) // both right
+  })
+
+  it('does not award unresolved categories (group stage not finished)', () => {
+    for (const r of c.standings) {
+      expect(r.breakdown.groupTop2).toBe(0)
+      expect(r.breakdown.quarterfinalists).toBe(0)
+      expect(r.breakdown.champion).toBe(0)
+    }
+  })
+})
+
+describe('goldenPointsForGoals', () => {
+  const s = { firstGoal: 3, secondGoal: 2, subsequent: 1 }
+  it('maps goals to points', () => {
+    expect([0, 1, 2, 3, 4, 5].map((g) => goldenPointsForGoals(g, s))).toEqual([0, 3, 5, 6, 7, 8])
+  })
+})

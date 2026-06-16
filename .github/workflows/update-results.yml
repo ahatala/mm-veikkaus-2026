@@ -1,0 +1,44 @@
+name: Update results
+
+on:
+  schedule:
+    - cron: '*/30 * * * *' # every 30 min (UTC); GitHub may delay scheduled runs
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Don't overlap result fetches.
+concurrency:
+  group: update-results
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+
+      # Uses football-data.org when FOOTBALL_DATA_TOKEN is set; otherwise falls back to
+      # openfootball/worldcup.json (no key required), so this works even before a token is added.
+      - name: Fetch results
+        env:
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+        run: node scripts/fetch-results.mjs
+
+      - name: Commit if results changed
+        run: |
+          git config user.name "results-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/results.json
+          if git diff --staged --quiet; then
+            echo "No changes."
+          else
+            git commit -m "Update results ($(date -u +%Y-%m-%dT%H:%MZ))"
+            git push
+          fi
