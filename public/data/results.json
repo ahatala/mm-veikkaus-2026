@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-16T22:40:32.967Z",
+  "lastUpdated": "2026-06-16T22:50:37.481Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -26,8 +26,8 @@
       "home": "Irak",
       "away": "Norja",
       "group": "I",
-      "homeScore": 0,
-      "awayScore": 1,
+      "homeScore": 1,
+      "awayScore": 2,
       "minute": null,
       "status": "IN_PLAY"
     }
@@ -81,8 +81,8 @@
       ]
     },
     "g3": {
-      "homeScore": 1,
-      "awayScore": 1,
+      "homeScore": null,
+      "awayScore": null,
       "scorers": [
         {
           "name": "Cyle Larin",
@@ -587,6 +587,7 @@
     "kylian mbappe": 2,
     "bradley barcola": 1,
     "ibrahim mbaye": 1,
+    "erling haaland": 2,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
     "gio reyna": 1,
@@ -596,7 +597,7 @@
     "maximiliano araujo": 1,
     "mohammad mohebi": 1,
     "ibrahim m'baye": 1,
-    "erling haaland": 1
+    "aymen hussein": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
