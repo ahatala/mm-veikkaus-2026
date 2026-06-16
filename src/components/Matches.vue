@@ -210,6 +210,7 @@ onBeforeUnmount(() => scrollBox.value?.removeEventListener('scroll', updateJumpD
 .match-scroll {
   max-height: min(74vh, 780px);
   overflow-y: auto;
+  overflow-x: hidden; /* never scroll sideways on mobile */
   border: 1px solid var(--line);
   border-radius: 10px;
   background: var(--bg);
@@ -259,13 +260,14 @@ onBeforeUnmount(() => scrollBox.value?.removeEventListener('scroll', updateJumpD
   row-gap: 1px;
   align-items: baseline;
 }
-.team { font-weight: 600; font-size: 14px; }
+.grid > * { min-width: 0; } /* let columns shrink instead of forcing horizontal overflow */
+.team { font-weight: 600; font-size: 14px; overflow-wrap: anywhere; }
 .team.home { text-align: right; }
 .team.away { text-align: left; }
 .team.win { color: var(--green); }
 .score { text-align: center; font-variant-numeric: tabular-nums; font-weight: 700; }
 .score.pending { color: var(--muted); font-weight: 500; }
-.scorers { font-size: 11.5px; color: var(--muted); }
+.scorers { font-size: 11.5px; color: var(--muted); overflow-wrap: anywhere; }
 .scorers.home { text-align: right; }
 .scorers.away { text-align: left; }
 .scorers.mid { text-align: center; opacity: 0.6; }
