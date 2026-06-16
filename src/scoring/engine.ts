@@ -125,7 +125,8 @@ export function compute(bets: Bets, results: Results, overrides: Overrides): Com
   const finalists = scoreTeamSet(bets, bets.knockout.finalists, ko.finalists ?? [])
   const champion = scoreChampion(bets, ko.champion ?? null)
   const goldenBoot = scoreGoldenBoot(bets, goals)
-  const special = scoreSpecial(bets, overrides.specialAnswers ?? {})
+  // Auto-resolved answers from the feed, with jury overrides taking precedence.
+  const special = scoreSpecial(bets, { ...(results.specialAnswers ?? {}), ...(overrides.specialAnswers ?? {}) })
 
   const matchPts = matches.map((m) => m.points)
   const top2Pts = top2.map((t) => t.points)

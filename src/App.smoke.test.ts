@@ -22,10 +22,9 @@ describe('App renders against live data', () => {
     const wrapper = mount(App, { global: { config: { errorHandler: (e) => errors.push(e) } } })
     await flushPromises()
 
-    // Leaderboard (default tab)
+    // Leaderboard (default tab) — render check only; exact totals are pinned by engine.test.ts.
     expect(wrapper.text()).toContain('Tulostaulukko')
     expect(wrapper.text()).toContain('Jone')
-    expect(wrapper.text()).toContain('26')
 
     // Click through every tab and ensure each view renders something without throwing.
     const tabs = wrapper.findAll('.tabs button')

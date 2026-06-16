@@ -70,6 +70,8 @@ export interface Results {
   }
   /** normalized player key -> goals (excl. shootout & own goals) */
   goldenBootGoals: Record<string, number>
+  /** auto-resolved special-question answers (sqId -> Kyllä/Ei); overrides take precedence */
+  specialAnswers?: Record<string, YesNo>
 }
 
 export interface Overrides {

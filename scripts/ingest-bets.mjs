@@ -263,12 +263,14 @@ const snapshotResults = {
   groupStandings: {},                               // group stage not finished yet
   knockout: { quarterfinalists: [], semifinalists: [], finalists: [], champion: null },
   goldenBootGoals: Object.fromEntries(Object.entries(SNAPSHOT_GOALS).map(([n, g]) => [key(n), g])),
+  specialAnswers: snapshotSpecialAnswers,           // auto-resolved at snapshot time (sq1, sq5)
 }
 
-// Overrides.json (dev seed): resolved special-question answers + empty corrections.
+// Overrides.json (dev seed): empty — special questions are auto-resolved into results.json now;
+// the jury uses this file only to override/correct.
 const overrides = {
-  specialAnswers: snapshotSpecialAnswers,           // { sqId: 'Kyllä'|'Ei' }
-  corrections: {},                                  // future jury overrides
+  specialAnswers: {},                               // jury overrides (win over auto-resolved answers)
+  corrections: {},                                  // future jury corrections
 }
 
 // --- write ---

@@ -14,6 +14,7 @@
 import { readFileSync, writeFileSync, existsSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { resolveSpecials } from './specials.mjs'
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const DATA = resolve(ROOT, 'public/data')
@@ -82,15 +83,22 @@ async function fromFootballData(token) {
     fetchJson(`${base}/standings`, headers).catch((e) => { console.warn('standings:', e.message); return { standings: [] } }),
     fetchJson(`${base}/scorers?limit=100`, headers).catch((e) => { console.warn('scorers:', e.message); return { scorers: [] } }),
   ])
-  const matches = (matchesRes.matches ?? []).map((m) => ({
-    stage: FD_STAGE[m.stage] ?? m.stage,
-    group: m.group ? m.group.replace(/^GROUP_/, '') : null,
-    home: toFinnish(m.homeTeam?.name),
-    away: toFinnish(m.awayTeam?.name),
-    homeScore: m.score?.fullTime?.home ?? null,
-    awayScore: m.score?.fullTime?.away ?? null,
-    finished: m.status === 'FINISHED',
-  }))
+  const matches = (matchesRes.matches ?? []).map((m) => {
+    const dur = (m.score?.duration ?? '').toUpperCase()
+    const decidedIn = /PENALT/.test(dur) || m.score?.penalties ? 'PENALTIES' : /EXTRA/.test(dur) ? 'EXTRA_TIME' : 'REGULAR'
+    const w = m.score?.winner
+    return {
+      stage: FD_STAGE[m.stage] ?? m.stage,
+      group: m.group ? m.group.replace(/^GROUP_/, '') : null,
+      home: toFinnish(m.homeTeam?.name),
+      away: toFinnish(m.awayTeam?.name),
+      homeScore: m.score?.fullTime?.home ?? null,
+      awayScore: m.score?.fullTime?.away ?? null,
+      finished: m.status === 'FINISHED',
+      winner: w === 'HOME_TEAM' ? 'HOME' : w === 'AWAY_TEAM' ? 'AWAY' : w === 'DRAW' ? 'DRAW' : null,
+      decidedIn,
+    }
+  })
   const standings = {}
   for (const s of standingsRes.standings ?? []) {
     if (s.type && s.type !== 'TOTAL') continue
@@ -119,14 +127,19 @@ async function fromOpenfootball() {
   const url = 'https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json'
   const data = await fetchJson(url, {})
   const scorers = {}
+  const side = (pair) => (pair[0] > pair[1] ? 'HOME' : pair[0] < pair[1] ? 'AWAY' : 'DRAW')
   const matches = (data.matches ?? []).map((m) => {
-    const ft = m.score?.ft
+    const sc = m.score ?? {}
+    const ft = sc.ft
     const finished = Array.isArray(ft) && ft.length === 2
     for (const g of [...(m.goals1 ?? []), ...(m.goals2 ?? [])]) {
       if (g.owngoal) continue // own goals don't count for the scorer; shootout goals aren't listed here
       const k = playerKey(g.name)
       scorers[k] = (scorers[k] ?? 0) + 1
     }
+    // ft = after 90', et = after extra time, p = penalty shootout. Use the deepest level for the winner.
+    const decidedIn = sc.p ? 'PENALTIES' : sc.et ? 'EXTRA_TIME' : 'REGULAR'
+    const winner = !finished ? null : sc.p ? side(sc.p) : sc.et ? side(sc.et) : side(ft)
     const stageStr = `${m.group ?? ''} ${m.round ?? ''}`
     return {
       stage: ofStage(stageStr),
@@ -136,6 +149,8 @@ async function fromOpenfootball() {
       homeScore: finished ? ft[0] : null,
       awayScore: finished ? ft[1] : null,
       finished,
+      winner,
+      decidedIn,
     }
   })
   return { matches, standings: null, scorers, _scorerCount: Object.keys(scorers).length }
@@ -192,13 +207,32 @@ function build(inter) {
     return set
   }
   const finalMatch = inter.matches.find((m) => m.stage === 'FINAL')
-  let champion = null
-  if (finalMatch?.finished) {
-    champion = finalMatch.homeScore > finalMatch.awayScore ? finalMatch.home
-      : finalMatch.homeScore < finalMatch.awayScore ? finalMatch.away : null
-  }
+  const champion = finalMatch?.finished
+    ? (finalMatch.winner === 'HOME' ? finalMatch.home : finalMatch.winner === 'AWAY' ? finalMatch.away : null)
+    : null
 
   const standings = inter.standings ?? deriveStandings(inter.matches)
+
+  // ---- context for auto-resolving the special questions ----
+  const groupLetters = [...new Set(inter.matches.filter((m) => m.stage === 'GROUP' && m.group).map((m) => m.group))]
+  const groupComplete = {}
+  for (const g of groupLetters) {
+    const ms = inter.matches.filter((m) => m.stage === 'GROUP' && m.group === g)
+    groupComplete[g] = ms.length >= 6 && ms.every((m) => m.finished)
+  }
+  const groupWinners = {}
+  for (const g of groupLetters) if (groupComplete[g] && standings[g]?.length) groupWinners[g] = standings[g][0]
+  const r32 = teamsInStage('R32')
+  const specialAnswers = resolveSpecials({
+    specialQuestions: bets.specialQuestions,
+    matches: inter.matches,
+    scorerKeys: Object.keys(inter.scorers),
+    groupWinners,
+    allGroupsComplete: groupLetters.length >= 12 && groupLetters.every((g) => groupComplete[g]),
+    r32,
+    r32Complete: r32.length >= 32,
+    allMatchesFinished: inter.matches.length > 0 && inter.matches.every((m) => m.finished),
+  })
 
   // Core result (no timestamp) — lastUpdated is added in main() only when this content actually changes.
   const results = {
@@ -212,6 +246,7 @@ function build(inter) {
       champion,
     },
     goldenBootGoals: inter.scorers,
+    specialAnswers,
   }
   const diagnostics = { unmatchedTeams: [...unmatchedTeams], unmatchedPairs, scorerCount: inter._scorerCount }
   return { results, diagnostics }
@@ -256,6 +291,7 @@ writeFileSync(file, JSON.stringify({ lastUpdated, ...results }, null, 2) + '\n')
 
 console.log(`wrote results.json — ${Object.keys(results.groupMatches).length} group results, ` +
   `${Object.keys(results.goldenBootGoals).length} scorers, ` +
-  `${results.knockout.quarterfinalists.length} QF teams, champion=${results.knockout.champion ?? '—'}`)
+  `${results.knockout.quarterfinalists.length} QF teams, champion=${results.knockout.champion ?? '—'}, ` +
+  `specials resolved: ${Object.entries(results.specialAnswers).map(([k, v]) => `${k}=${v}`).join(', ') || 'none'}`)
 if (d.unmatchedTeams.length) console.warn('⚠ unmatched team names:', d.unmatchedTeams.join(', '))
 if (d.unmatchedPairs.length) console.warn('⚠ unmatched fixtures:', d.unmatchedPairs.join(', '))
