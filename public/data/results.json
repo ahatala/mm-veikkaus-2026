@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-16T10:50:16.983Z",
+  "lastUpdated": "2026-06-16T11:10:06.370Z",
   "source": "openfootball",
   "groupMatches": {
     "g1": "1",
@@ -67,10 +67,5 @@
     "elijah just": 2,
     "abdulelah al-amri": 1,
     "maxi araujo": 1
-  },
-  "_diagnostics": {
-    "unmatchedTeams": [],
-    "unmatchedPairs": [],
-    "scorerCount": 40
   }
 }

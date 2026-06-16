@@ -11,7 +11,7 @@
 // Usage:  node scripts/fetch-results.mjs            # picks source by token presence
 //         node scripts/fetch-results.mjs --openfootball   # force fallback source
 
-import { readFileSync, writeFileSync } from 'node:fs'
+import { readFileSync, writeFileSync, existsSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -200,8 +200,8 @@ function build(inter) {
 
   const standings = inter.standings ?? deriveStandings(inter.matches)
 
-  return {
-    lastUpdated: new Date().toISOString(),
+  // Core result (no timestamp) — lastUpdated is added in main() only when this content actually changes.
+  const results = {
     source: inter._source,
     groupMatches,
     groupStandings: standings,
@@ -212,8 +212,9 @@ function build(inter) {
       champion,
     },
     goldenBootGoals: inter.scorers,
-    _diagnostics: { unmatchedTeams: [...unmatchedTeams], unmatchedPairs, scorerCount: inter._scorerCount },
   }
+  const diagnostics = { unmatchedTeams: [...unmatchedTeams], unmatchedPairs, scorerCount: inter._scorerCount }
+  return { results, diagnostics }
 }
 
 // ---------- main ----------
@@ -238,10 +239,21 @@ if (token && !forceOf) {
   inter._source = 'openfootball'
 }
 
-const results = build(inter)
-writeFileSync(resolve(DATA, 'results.json'), JSON.stringify(results, null, 2) + '\n')
+const { results, diagnostics: d } = build(inter)
 
-const d = results._diagnostics
+// Keep lastUpdated stable unless the actual data changed — avoids a pointless commit/redeploy every run.
+const file = resolve(DATA, 'results.json')
+let lastUpdated = new Date().toISOString()
+if (existsSync(file)) {
+  const prev = JSON.parse(readFileSync(file, 'utf8'))
+  const { lastUpdated: _prevTs, ...prevCore } = prev
+  if (JSON.stringify(prevCore) === JSON.stringify(results)) {
+    lastUpdated = prev.lastUpdated ?? lastUpdated
+    console.log('No data change — keeping previous lastUpdated.')
+  }
+}
+writeFileSync(file, JSON.stringify({ lastUpdated, ...results }, null, 2) + '\n')
+
 console.log(`wrote results.json — ${Object.keys(results.groupMatches).length} group results, ` +
   `${Object.keys(results.goldenBootGoals).length} scorers, ` +
   `${results.knockout.quarterfinalists.length} QF teams, champion=${results.knockout.champion ?? '—'}`)
