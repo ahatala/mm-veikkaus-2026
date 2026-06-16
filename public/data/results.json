@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-16T22:10:37.964Z",
+  "lastUpdated": "2026-06-16T22:40:32.967Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -27,7 +27,7 @@
       "away": "Norja",
       "group": "I",
       "homeScore": 0,
-      "awayScore": 0,
+      "awayScore": 1,
       "minute": null,
       "status": "IN_PLAY"
     }
@@ -595,7 +595,8 @@
     "abdulelah al amri": 1,
     "maximiliano araujo": 1,
     "mohammad mohebi": 1,
-    "ibrahim m'baye": 1
+    "ibrahim m'baye": 1,
+    "erling haaland": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
