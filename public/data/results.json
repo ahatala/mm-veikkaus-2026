@@ -1,23 +1,443 @@
 {
-  "lastUpdated": "2026-06-16T11:59:26.170Z",
-  "source": "football-data.org",
+  "lastUpdated": "2026-06-16T12:50:57.832Z",
+  "source": "openfootball",
   "groupMatches": {
     "g1": "1",
     "g2": "1",
     "g3": "X",
-    "g4": "1",
     "g6": "X",
     "g7": "X",
     "g8": "2",
+    "g4": "1",
     "g5": "1",
     "g9": "1",
-    "g10": "X",
     "g11": "1",
+    "g10": "X",
     "g12": "1",
-    "g13": "X",
     "g14": "X",
-    "g15": "X",
-    "g16": "X"
+    "g16": "X",
+    "g13": "X",
+    "g15": "X"
+  },
+  "live": [],
+  "matchResults": {
+    "g1": {
+      "homeScore": 2,
+      "awayScore": 0,
+      "scorers": [
+        {
+          "name": "Julián Quiñones",
+          "side": "home",
+          "minute": "9",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Raúl Jiménez",
+          "side": "home",
+          "minute": "67",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
+    },
+    "g2": {
+      "homeScore": 2,
+      "awayScore": 1,
+      "scorers": [
+        {
+          "name": "Hwang In-Beom",
+          "side": "home",
+          "minute": "67",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Oh Hyeon-Gyu",
+          "side": "home",
+          "minute": "80",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Ladislav Krejcí",
+          "side": "away",
+          "minute": "59",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
+    },
+    "g3": {
+      "homeScore": 1,
+      "awayScore": 1,
+      "scorers": [
+        {
+          "name": "Cyle Larin",
+          "side": "home",
+          "minute": "78",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Jovo Lukić",
+          "side": "away",
+          "minute": "21",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
+    },
+    "g6": {
+      "homeScore": 1,
+      "awayScore": 1,
+      "scorers": [
+        {
+          "name": "Boualem Khoukhi",
+          "side": "home",
+          "minute": "90+4",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Breel Embolo",
+          "side": "away",
+          "minute": "17",
+          "penalty": true,
+          "owngoal": false
+        }
+      ]
+    },
+    "g7": {
+      "homeScore": 1,
+      "awayScore": 1,
+      "scorers": [
+        {
+          "name": "Vinícius Júnior",
+          "side": "home",
+          "minute": "32",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Ismael Saibari",
+          "side": "away",
+          "minute": "21",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
+    },
+    "g8": {
+      "homeScore": 0,
+      "awayScore": 1,
+      "scorers": [
+        {
+          "name": "John McGinn",
+          "side": "away",
+          "minute": "28",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
+    },
+    "g4": {
+      "homeScore": 4,
+      "awayScore": 1,
+      "scorers": [
+        {
+          "name": "Damian Bobadilla",
+          "side": "home",
+          "minute": "7",
+          "penalty": false,
+          "owngoal": true
+        },
+        {
+          "name": "Folarin Balogun",
+          "side": "home",
+          "minute": "31",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Folarin Balogun",
+          "side": "home",
+          "minute": "45+5",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Giovanni Reyna",
+          "side": "home",
+          "minute": "90+8",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Mauricio",
+          "side": "away",
+          "minute": "73",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
+    },
+    "g5": {
+      "homeScore": 2,
+      "awayScore": 0,
+      "scorers": [
+        {
+          "name": "Nestory Irankunda",
+          "side": "home",
+          "minute": "27",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Connor Metcalfe",
+          "side": "home",
+          "minute": "75",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
+    },
+    "g9": {
+      "homeScore": 7,
+      "awayScore": 1,
+      "scorers": [
+        {
+          "name": "Felix Nmecha",
+          "side": "home",
+          "minute": "6",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Nico Schlotterbeck",
+          "side": "home",
+          "minute": "38",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Kai Havertz",
+          "side": "home",
+          "minute": "45+5",
+          "penalty": true,
+          "owngoal": false
+        },
+        {
+          "name": "Kai Havertz",
+          "side": "home",
+          "minute": "88",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Jamal Musiala",
+          "side": "home",
+          "minute": "47",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Nathaniel Brown",
+          "side": "home",
+          "minute": "68",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Deniz Undav",
+          "side": "home",
+          "minute": "78",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Livano Comenencia",
+          "side": "away",
+          "minute": "21",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
+    },
+    "g11": {
+      "homeScore": 1,
+      "awayScore": 0,
+      "scorers": [
+        {
+          "name": "Amad Diallo",
+          "side": "home",
+          "minute": "90",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
+    },
+    "g10": {
+      "homeScore": 2,
+      "awayScore": 2,
+      "scorers": [
+        {
+          "name": "Virgil van Dijk",
+          "side": "home",
+          "minute": "51",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Crysencio Summerville",
+          "side": "home",
+          "minute": "64",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Keito Nakamura",
+          "side": "away",
+          "minute": "57",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Daichi Kamada",
+          "side": "away",
+          "minute": "88",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
+    },
+    "g12": {
+      "homeScore": 5,
+      "awayScore": 1,
+      "scorers": [
+        {
+          "name": "Yasin Ayari",
+          "side": "home",
+          "minute": "7",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Alexander Isak",
+          "side": "home",
+          "minute": "30",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Viktor Gyökeres",
+          "side": "home",
+          "minute": "59",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Mattias Svanberg",
+          "side": "home",
+          "minute": "84",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Yasin Ayari",
+          "side": "home",
+          "minute": "90+6",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Omar Rekik",
+          "side": "away",
+          "minute": "43",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
+    },
+    "g14": {
+      "homeScore": 1,
+      "awayScore": 1,
+      "scorers": [
+        {
+          "name": "Mohamed Hany",
+          "side": "home",
+          "minute": "66",
+          "penalty": false,
+          "owngoal": true
+        },
+        {
+          "name": "Emam Ashour",
+          "side": "away",
+          "minute": "19",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
+    },
+    "g16": {
+      "homeScore": 2,
+      "awayScore": 2,
+      "scorers": [
+        {
+          "name": "Ramin Rezaeian",
+          "side": "home",
+          "minute": "32",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Mohammad Mohebbi",
+          "side": "home",
+          "minute": "64",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Elijah Just",
+          "side": "away",
+          "minute": "7",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Elijah Just",
+          "side": "away",
+          "minute": "54",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
+    },
+    "g13": {
+      "homeScore": 0,
+      "awayScore": 0,
+      "scorers": []
+    },
+    "g15": {
+      "homeScore": 1,
+      "awayScore": 1,
+      "scorers": [
+        {
+          "name": "Abdulelah Al-Amri",
+          "side": "home",
+          "minute": "41",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Maxi Araújo",
+          "side": "away",
+          "minute": "80",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
+    }
   },
   "groupStandings": {},
   "groupTop2": {},
@@ -117,15 +537,7 @@
     "mohammad mohebbi": 1,
     "elijah just": 2,
     "abdulelah al-amri": 1,
-    "maxi araujo": 1,
-    "in-beom hwang": 1,
-    "hyun-gyu oh": 1,
-    "gio reyna": 1,
-    "nestor irankunda": 1,
-    "felix kalu nmecha": 1,
-    "abdulelah al amri": 1,
-    "maximiliano araujo": 1,
-    "mohammad mohebi": 1
+    "maxi araujo": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",

@@ -1,6 +1,25 @@
 export type Sign = '1' | 'X' | '2'
 export type YesNo = 'Kyllä' | 'Ei'
 
+export interface GoalEvent {
+  name: string
+  side?: 'home' | 'away'
+  minute?: string | number | null
+  penalty?: boolean
+  owngoal?: boolean
+}
+
+export interface LiveMatch {
+  id: string
+  home: string
+  away: string
+  group: string
+  homeScore: number
+  awayScore: number
+  minute: string | number | null
+  status: string
+}
+
 export interface GroupMatch {
   id: string
   date: string
@@ -60,6 +79,10 @@ export interface Results {
   source?: string
   /** matchId -> actual 1/X/2 sign, only for finished matches */
   groupMatches: Record<string, Sign>
+  /** matchId -> final score + goalscorers, for finished group matches */
+  matchResults?: Record<string, { homeScore: number; awayScore: number; scorers?: GoalEvent[] }>
+  /** in-play group matches (live score + minute) */
+  live?: LiveMatch[]
   /** group letter -> final standings as an ordered list of team names (position 1 first); complete groups only */
   groupStandings: Record<string, string[]>
   /** group letter -> decided [1st, 2nd] (clinched early by points, or final) — drives Top-2 scoring */
@@ -116,6 +139,8 @@ export interface MatchResult {
   correctVoters: number
   bonus: boolean
   points: Record<string, number>
+  score: { home: number; away: number } | null
+  scorers: GoalEvent[]
 }
 
 export interface Top2Result {
@@ -161,9 +186,23 @@ export interface SpecialResult {
   points: Record<string, number>
 }
 
+export interface LiveResult {
+  match: GroupMatch
+  homeScore: number
+  awayScore: number
+  minute: string | number | null
+  status: string
+  provisionalSign: Sign
+  bonus: boolean
+  /** provisional points if the match ended right now */
+  points: Record<string, number>
+}
+
 export interface Computed {
   lastUpdated: string | null
   standings: StandingRow[]
+  /** in-play matches with provisional scoring (empty when nothing is live) */
+  live: LiveResult[]
   /** merged final group standings (group letter -> ordered team names) for display */
   groupStandings: Record<string, string[]>
   matches: MatchResult[]

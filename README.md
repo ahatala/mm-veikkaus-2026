@@ -28,8 +28,11 @@ changed). Manual edits to `overrides.json` (pushed as you) redeploy via `deploy.
 
 ## Data updates
 
-`.github/workflows/update-results.yml` runs every 30 min (and on demand). It runs
-`scripts/fetch-results.mjs`, which:
+`.github/workflows/update-results.yml` runs ~every 10 min (and on demand) and self-deploys when the
+data changed. The SPA also auto-refreshes its data every 90s, and shows a pulsing **"Käynnissä nyt"**
+card for in-play matches (live score + minute, football-data only) with provisional "if it ended now"
+scoring. This is near-live (~10-min granularity), not a real-time ticker — GitHub's scheduler and Pages
+caching set the floor. It runs `scripts/fetch-results.mjs`, which:
 
 - uses **football-data.org** when the repo secret `FOOTBALL_DATA_TOKEN` is set (live, official — it
   **is** set for this repo), or

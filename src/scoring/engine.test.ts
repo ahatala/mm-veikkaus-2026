@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest'
 import { readFileSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { compute, goldenPointsForGoals, scoreTop2 } from './engine'
+import { compute, goldenPointsForGoals, scoreTop2, scoreMatches, scoreLive } from './engine'
 import type { Bets, Results, Overrides } from './types'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
@@ -75,6 +75,43 @@ describe('scoring engine vs. sheet snapshot', () => {
       expect(r.breakdown.quarterfinalists).toBe(0)
       expect(r.breakdown.champion).toBe(0)
     }
+  })
+})
+
+describe('scoreMatches attaches score + goalscorers', () => {
+  const b = {
+    participants: ['P1', 'P2'],
+    groupMatches: [{ id: 'g1', date: 'to 11.6.', group: 'A', time: '22:00', home: 'X', away: 'Y', picks: { P1: '1', P2: '2' } }],
+  } as unknown as Bets
+
+  it('exposes the score and scorers for a finished match', () => {
+    const [r] = scoreMatches(b, { g1: '1' }, { g1: { homeScore: 2, awayScore: 1, scorers: [{ name: 'Foo', side: 'home', minute: '10' }] } })
+    expect(r.score).toEqual({ home: 2, away: 1 })
+    expect(r.scorers).toHaveLength(1)
+    expect(r.points).toEqual({ P1: 1, P2: 0 })
+  })
+  it('leaves score null and scorers empty when there is no result', () => {
+    const [r] = scoreMatches(b, {}, {})
+    expect(r.score).toBeNull()
+    expect(r.scorers).toEqual([])
+  })
+})
+
+describe('scoreLive (provisional "if it ended now")', () => {
+  const b = {
+    participants: ['P1', 'P2', 'P3'],
+    groupMatches: [{ id: 'g1', date: '', group: 'A', time: '', home: 'X', away: 'Y', picks: { P1: '1', P2: 'X', P3: '2' } }],
+  } as unknown as Bets
+
+  it('gives provisional points based on the current score', () => {
+    const [r] = scoreLive(b, [{ id: 'g1', home: 'X', away: 'Y', group: 'A', homeScore: 1, awayScore: 0, minute: 67, status: 'IN_PLAY' }])
+    expect(r.provisionalSign).toBe('1')
+    expect(r.minute).toBe(67)
+    expect(r.bonus).toBe(false) // 1 of 3 voters is not < 1/3
+    expect(r.points).toEqual({ P1: 1, P2: 0, P3: 0 })
+  })
+  it('returns nothing when no match is live', () => {
+    expect(scoreLive(b, [])).toEqual([])
   })
 })
 

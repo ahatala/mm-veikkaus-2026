@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { onMounted, ref, shallowRef, computed } from 'vue'
-import { store, loadData } from './store'
+import { onMounted, onBeforeUnmount, ref, shallowRef, computed } from 'vue'
+import { store, loadData, startAutoRefresh, stopAutoRefresh } from './store'
 import { formatUpdated } from './ui'
 import Leaderboard from './components/Leaderboard.vue'
 import PlayerDetail from './components/PlayerDetail.vue'
@@ -28,7 +28,11 @@ function select(id: string) {
 
 const updated = computed(() => formatUpdated(store.computed?.lastUpdated ?? null))
 
-onMounted(loadData)
+onMounted(async () => {
+  await loadData()
+  startAutoRefresh()
+})
+onBeforeUnmount(stopAutoRefresh)
 </script>
 
 <template>

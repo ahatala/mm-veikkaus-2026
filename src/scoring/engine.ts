@@ -2,16 +2,24 @@ import { key } from './normalize'
 import type {
   Bets, Results, Overrides, Sign, YesNo, Breakdown, StandingRow, MatchResult, Top2Result,
   TeamSetResult, ChampionResult, GoldenResult, GoldenPlayerLine, SpecialResult, Computed, TeamSet,
+  LiveResult,
 } from './types'
 
 const zero = (names: string[]): Record<string, number> =>
   Object.fromEntries(names.map((n) => [n, 0]))
 
 /** Group match 1/X/2: +1 for correct sign, +3 if correct AND fewer than 1/3 of voters picked it. */
-export function scoreMatches(bets: Bets, actual: Record<string, Sign>): MatchResult[] {
+export function scoreMatches(
+  bets: Bets,
+  actual: Record<string, Sign>,
+  matchResults: Results['matchResults'] = {},
+): MatchResult[] {
   return bets.groupMatches.map((match) => {
     const sign = actual[match.id] ?? null
     const points = zero(bets.participants)
+    const mr = matchResults?.[match.id]
+    const score = mr ? { home: mr.homeScore, away: mr.awayScore } : null
+    const scorers = mr?.scorers ?? []
     let voters = 0
     let correctVoters = 0
     if (sign) {
@@ -25,9 +33,9 @@ export function scoreMatches(bets: Bets, actual: Record<string, Sign>): MatchRes
       for (const name of bets.participants) {
         if (match.picks[name] === sign) points[name] = bonus ? 3 : 1
       }
-      return { match, actual: sign, voters, correctVoters, bonus, points }
+      return { match, actual: sign, voters, correctVoters, bonus, points, score, scorers }
     }
-    return { match, actual: null, voters, correctVoters, bonus: false, points }
+    return { match, actual: null, voters, correctVoters, bonus: false, points, score, scorers }
   })
 }
 
@@ -114,6 +122,28 @@ export function scoreGoldenBoot(bets: Bets, goals: Record<string, number>): Gold
   return { byName, points }
 }
 
+/** Provisional scoring for in-play matches — "if it ended right now" (same +1/+3 rule as final). */
+export function scoreLive(bets: Bets, live: Results['live'] = []): LiveResult[] {
+  return (live ?? [])
+    .map((L): LiveResult | null => {
+      const match = bets.groupMatches.find((m) => m.id === L.id)
+      if (!match) return null
+      const sign: Sign = L.homeScore > L.awayScore ? '1' : L.homeScore < L.awayScore ? '2' : 'X'
+      const points = zero(bets.participants)
+      let voters = 0
+      let correctVoters = 0
+      for (const name of bets.participants) {
+        const pick = match.picks[name]
+        if (pick) voters++
+        if (pick === sign) correctVoters++
+      }
+      const bonus = correctVoters > 0 && correctVoters < voters / 3
+      for (const name of bets.participants) if (match.picks[name] === sign) points[name] = bonus ? 3 : 1
+      return { match, homeScore: L.homeScore, awayScore: L.awayScore, minute: L.minute, status: L.status, provisionalSign: sign, bonus, points }
+    })
+    .filter((x): x is LiveResult => x !== null)
+}
+
 export function scoreSpecial(bets: Bets, answers: Record<string, YesNo>): SpecialResult[] {
   return bets.specialQuestions.map((q) => {
     const answer = answers[q.id] ?? null
@@ -144,7 +174,8 @@ export function compute(bets: Bets, results: Results, overrides: Overrides): Com
     if (!top2ByGroup[g] && order.length >= 2) top2ByGroup[g] = [order[0], order[1]]
   }
 
-  const matches = scoreMatches(bets, actualSigns)
+  const matches = scoreMatches(bets, actualSigns, results.matchResults ?? {})
+  const live = scoreLive(bets, results.live ?? [])
   const top2 = scoreTop2(bets, top2ByGroup, results.groupClinch ?? {})
   const quarterfinalists = scoreTeamSet(bets, bets.knockout.quarterfinalists, ko.quarterfinalists ?? [])
   const semifinalists = scoreTeamSet(bets, bets.knockout.semifinalists, ko.semifinalists ?? [])
@@ -186,6 +217,7 @@ export function compute(bets: Bets, results: Results, overrides: Overrides): Com
   return {
     lastUpdated: results.lastUpdated,
     standings: standingsOut,
+    live,
     groupStandings: standings,
     matches, top2, quarterfinalists, semifinalists, finalists, champion, goldenBoot, special,
   }

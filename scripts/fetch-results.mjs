@@ -96,6 +96,8 @@ async function fromFootballData(token) {
       homeScore: m.score?.fullTime?.home ?? null,
       awayScore: m.score?.fullTime?.away ?? null,
       finished: m.status === 'FINISHED',
+      status: m.status ?? null,
+      minute: m.minute ?? m.injuryTime ?? null,
       winner: w === 'HOME_TEAM' ? 'HOME' : w === 'AWAY_TEAM' ? 'AWAY' : w === 'DRAW' ? 'DRAW' : null,
       decidedIn,
     }
@@ -128,16 +130,22 @@ async function fromOpenfootball() {
   const url = 'https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json'
   const data = await fetchJson(url, {})
   const scorers = {}
+  const eventsByPair = {} // "home|away" (Finnish) -> [{name, side, minute, penalty, owngoal}]
   const side = (pair) => (pair[0] > pair[1] ? 'HOME' : pair[0] < pair[1] ? 'AWAY' : 'DRAW')
+  const event = (g, s) => ({ name: g.name, side: s, minute: g.minute ?? null, penalty: !!g.penalty, owngoal: !!g.owngoal })
   const matches = (data.matches ?? []).map((m) => {
     const sc = m.score ?? {}
     const ft = sc.ft
     const finished = Array.isArray(ft) && ft.length === 2
-    for (const g of [...(m.goals1 ?? []), ...(m.goals2 ?? [])]) {
+    const goals = [...(m.goals1 ?? []).map((g) => event(g, 'home')), ...(m.goals2 ?? []).map((g) => event(g, 'away'))]
+    for (const g of goals) {
       if (g.owngoal) continue // own goals don't count for the scorer; shootout goals aren't listed here
       const k = playerKey(g.name)
       scorers[k] = (scorers[k] ?? 0) + 1
     }
+    const home = toFinnish(m.team1)
+    const away = toFinnish(m.team2)
+    if (home && away && goals.length) eventsByPair[`${home}|${away}`] = goals
     // ft = after 90', et = after extra time, p = penalty shootout. Use the deepest level for the winner.
     const decidedIn = sc.p ? 'PENALTIES' : sc.et ? 'EXTRA_TIME' : 'REGULAR'
     const winner = !finished ? null : sc.p ? side(sc.p) : sc.et ? side(sc.et) : side(ft)
@@ -145,16 +153,17 @@ async function fromOpenfootball() {
     return {
       stage: ofStage(stageStr),
       group: /^Group ([A-L])/.exec(m.group ?? '')?.[1] ?? null,
-      home: toFinnish(m.team1),
-      away: toFinnish(m.team2),
+      home, away,
       homeScore: finished ? ft[0] : null,
       awayScore: finished ? ft[1] : null,
       finished,
+      status: finished ? 'FINISHED' : 'SCHEDULED', // openfootball has no in-play data
+      minute: null,
       winner,
       decidedIn,
     }
   })
-  return { matches, standings: null, scorers, _scorerCount: Object.keys(scorers).length }
+  return { matches, standings: null, scorers, eventsByPair, _scorerCount: Object.keys(scorers).length }
 }
 
 // ---------- derive standings from finished group matches (when a group is complete) ----------
@@ -190,13 +199,31 @@ function build(inter) {
   const byPair = new Map()
   for (const m of bets.groupMatches) byPair.set(`${m.home}|${m.away}`, m.id)
   const groupMatches = {}
+  const matchResults = {} // matchId -> { homeScore, awayScore, scorers } for finished group matches
+  const events = inter.eventsByPair ?? {}
   const unmatchedPairs = []
   for (const m of inter.matches) {
     if (m.stage !== 'GROUP' || !m.finished || !m.home || !m.away) continue
     const sign = m.homeScore > m.awayScore ? '1' : m.homeScore < m.awayScore ? '2' : 'X'
     const id = byPair.get(`${m.home}|${m.away}`)
-    if (id) groupMatches[id] = sign
-    else unmatchedPairs.push(`${m.home}–${m.away}`)
+    if (id) {
+      groupMatches[id] = sign
+      matchResults[id] = { homeScore: m.homeScore, awayScore: m.awayScore, scorers: events[`${m.home}|${m.away}`] ?? [] }
+    } else unmatchedPairs.push(`${m.home}–${m.away}`)
+  }
+
+  // In-play group matches (live score + minute) — football-data only; openfootball has none.
+  const live = []
+  for (const m of inter.matches) {
+    if (m.stage !== 'GROUP' || !m.home || !m.away) continue
+    if (m.status !== 'IN_PLAY' && m.status !== 'PAUSED') continue
+    const id = byPair.get(`${m.home}|${m.away}`)
+    if (!id) continue
+    live.push({
+      id, home: m.home, away: m.away, group: m.group,
+      homeScore: m.homeScore ?? 0, awayScore: m.awayScore ?? 0,
+      minute: m.minute ?? null, status: m.status,
+    })
   }
 
   const teamsInStage = (stage) => {
@@ -261,6 +288,8 @@ function build(inter) {
   const results = {
     source: inter._source,
     groupMatches,
+    live,                               // in-play group matches (score + minute), if any
+    matchResults,                       // per-match score + goalscorers (finished group matches)
     groupStandings: displayStandings,  // full table, complete groups only
     groupTop2,                          // decided 1st/2nd order (clinched or final) — used for Top-2 scoring
     groupClinch,                        // elimination sets for early "No" on Top-2 bets
@@ -285,14 +314,12 @@ if (token && !forceOf) {
   console.log('Source: football-data.org (live)')
   inter = await fromFootballData(token)
   inter._source = 'football-data.org'
-  // Free scorers endpoint can be length-capped; backfill from openfootball if it looks short.
+  // football-data's matches endpoint has scores but no goalscorers, and its free top-scorers list is
+  // short — so always pull openfootball for per-match goal events, and backfill missing picked players.
+  const of = await fromOpenfootball()
+  inter.eventsByPair = of.eventsByPair
   const pickedKeys = new Set(Object.values(bets.goldenBoot.picks).flat().map(playerKey))
-  const haveAll = [...pickedKeys].every((k) => k in inter.scorers)
-  if (!haveAll) {
-    console.warn('football-data scorers missing some picked players — backfilling from openfootball')
-    const of = await fromOpenfootball()
-    inter.scorers = { ...of.scorers, ...inter.scorers }
-  }
+  if (![...pickedKeys].every((k) => k in inter.scorers)) inter.scorers = { ...of.scorers, ...inter.scorers }
 } else {
   console.log('Source: openfootball/worldcup.json (no token)')
   inter = await fromOpenfootball()

@@ -2,7 +2,7 @@ name: Update results
 
 on:
   schedule:
-    - cron: '*/30 * * * *' # every 30 min (UTC); GitHub may delay scheduled runs
+    - cron: '*/10 * * * *' # ~every 10 min for near-live updates (GitHub may delay scheduled runs)
   workflow_dispatch:
 
 # Needs contents:write to commit results, and pages/id-token to deploy. Commits made by the built-in

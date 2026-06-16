@@ -34,6 +34,13 @@ describe('App renders against live data', () => {
       await flushPromises()
       expect(wrapper.find('.card').exists()).toBe(true)
     }
+
+    // Ottelut: the reworked match list renders in a scroll box with score cells.
+    await tabs.find((t) => t.text() === 'Ottelut')!.trigger('click')
+    await flushPromises()
+    expect(wrapper.find('.match-scroll').exists()).toBe(true)
+    expect(wrapper.findAll('.score').length).toBeGreaterThan(0)
+
     expect(errors).toEqual([])
   })
 })
