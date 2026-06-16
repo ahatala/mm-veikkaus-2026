@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-16T21:30:52.718Z",
+  "lastUpdated": "2026-06-16T22:10:37.964Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -20,7 +20,18 @@
     "g16": "X",
     "g17": "1"
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g18",
+      "home": "Irak",
+      "away": "Norja",
+      "group": "I",
+      "homeScore": 0,
+      "awayScore": 0,
+      "minute": null,
+      "status": "IN_PLAY"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
