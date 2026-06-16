@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-16T23:00:59.736Z",
+  "lastUpdated": "2026-06-16T23:20:44.347Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -29,7 +29,7 @@
       "homeScore": 1,
       "awayScore": 2,
       "minute": null,
-      "status": "PAUSED"
+      "status": "IN_PLAY"
     }
   ],
   "matchResults": {
