@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-16T12:52:45.657Z",
+  "lastUpdated": "2026-06-16T19:10:46.160Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -19,7 +19,18 @@
     "g15": "X",
     "g16": "X"
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g17",
+      "home": "Ranska",
+      "away": "Senegal",
+      "group": "I",
+      "homeScore": 0,
+      "awayScore": 0,
+      "minute": null,
+      "status": "IN_PLAY"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
