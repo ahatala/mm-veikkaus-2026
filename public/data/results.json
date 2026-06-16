@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-16T21:00:48.427Z",
+  "lastUpdated": "2026-06-16T21:10:40.926Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -17,20 +17,10 @@
     "g13": "X",
     "g14": "X",
     "g15": "X",
-    "g16": "X"
+    "g16": "X",
+    "g17": "1"
   },
-  "live": [
-    {
-      "id": "g17",
-      "home": "Ranska",
-      "away": "Senegal",
-      "group": "I",
-      "homeScore": 2,
-      "awayScore": 0,
-      "minute": null,
-      "status": "IN_PLAY"
-    }
-  ],
+  "live": [],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -448,6 +438,40 @@
           "owngoal": false
         }
       ]
+    },
+    "g17": {
+      "homeScore": 3,
+      "awayScore": 1,
+      "scorers": [
+        {
+          "name": "Kylian Mbappé",
+          "side": "home",
+          "minute": "66",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Bradley Barcola",
+          "side": "home",
+          "minute": "82",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Kylian Mbappé",
+          "side": "home",
+          "minute": "90+6",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Ibrahim Mbaye",
+          "side": "away",
+          "minute": "90+5",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
     }
   },
   "groupStandings": {},
@@ -549,6 +573,9 @@
     "elijah just": 2,
     "abdulelah al-amri": 1,
     "maxi araujo": 1,
+    "kylian mbappe": 2,
+    "bradley barcola": 1,
+    "ibrahim mbaye": 1,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
     "gio reyna": 1,
@@ -557,8 +584,7 @@
     "abdulelah al amri": 1,
     "maximiliano araujo": 1,
     "mohammad mohebi": 1,
-    "kylian mbappe": 1,
-    "bradley barcola": 1
+    "ibrahim m'baye": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
