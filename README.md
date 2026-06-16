@@ -22,7 +22,8 @@ public/data/maps/*.json          Finnish ↔ API name maps
 ```
 
 The app fetches the three JSON files at runtime and computes everything client-side — there is no
-server. Results updates are just commits to `results.json`, which trigger a Pages redeploy.
+server. The results workflow commits `results.json` and redeploys Pages itself (only when the data
+changed). Manual edits to `overrides.json` (pushed as you) redeploy via `deploy.yml`.
 
 ## Data updates
 
