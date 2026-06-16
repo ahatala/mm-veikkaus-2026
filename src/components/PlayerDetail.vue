@@ -1,10 +1,16 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { store } from '../store'
 import { CATEGORIES, pts } from '../ui'
 
+const STORAGE_KEY = 'mm-veikkaus-2026:pelaaja'
 const names = computed(() => store.bets!.participants)
-const sel = ref(store.computed!.standings[0].name) // default to the current leader
+
+// Remember the last-viewed player across visits (you'll keep checking your own results).
+const readStored = () => { try { return localStorage.getItem(STORAGE_KEY) } catch { return null } }
+const stored = readStored()
+const sel = ref(stored && names.value.includes(stored) ? stored : store.computed!.standings[0].name)
+watch(sel, (name) => { try { localStorage.setItem(STORAGE_KEY, name) } catch { /* ignore */ } })
 
 const c = computed(() => store.computed!)
 const row = computed(() => c.value.standings.find((r) => r.name === sel.value)!)
