@@ -39,7 +39,7 @@ const ALIASES = {
   Norsunluurannikko: ['Ivory Coast', "Côte d'Ivoire", 'Cote dIvoire'],
   Iran: ['Iran', 'IR Iran'],
   'Kongon DR': ['DR Congo', 'Congo DR', 'Democratic Republic of the Congo'],
-  'Kap Verde': ['Cape Verde', 'Cabo Verde'],
+  'Kap Verde': ['Cape Verde', 'Cape Verde Islands', 'Cabo Verde'],
 }
 const finnishByKey = new Map()
 for (const [fin, en] of Object.entries(teamsMap)) {
