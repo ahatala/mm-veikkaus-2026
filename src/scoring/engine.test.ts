@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest'
 import { readFileSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { compute, goldenPointsForGoals } from './engine'
+import { compute, goldenPointsForGoals, scoreTop2 } from './engine'
 import type { Bets, Results, Overrides } from './types'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
@@ -75,6 +75,34 @@ describe('scoring engine vs. sheet snapshot', () => {
       expect(r.breakdown.quarterfinalists).toBe(0)
       expect(r.breakdown.champion).toBe(0)
     }
+  })
+})
+
+describe('scoreTop2 (decided order + early impossibility)', () => {
+  const b = {
+    participants: ['P1', 'P2'],
+    groupTop2: [{ group: 'A', order: ['Espanja', 'Ranska'], label: '1. Espanja, 2. Ranska', picks: { P1: 'Kyllä', P2: 'Ei' } }],
+  } as unknown as Bets
+
+  it('awards Kyllä-backers when the decided order matches', () => {
+    const [r] = scoreTop2(b, { A: ['Espanja', 'Ranska'] })
+    expect(r.resolved).toBe(true)
+    expect(r.points).toEqual({ P1: 2, P2: 0 })
+  })
+  it('awards Ei-backers when the decided order differs', () => {
+    const [r] = scoreTop2(b, { A: ['Ranska', 'Espanja'] })
+    expect(r.points).toEqual({ P1: 0, P2: 2 })
+  })
+  it('resolves Ei early when the predicted winner can no longer win', () => {
+    const [r] = scoreTop2(b, {}, { A: { eliminatedFromFirst: ['Espanja'], eliminatedFromTop2: [] } })
+    expect(r.resolved).toBe(true)
+    expect(r.correctAnswer).toBe('Ei')
+    expect(r.points).toEqual({ P1: 0, P2: 2 })
+  })
+  it('stays unresolved with no decided order and no elimination', () => {
+    const [r] = scoreTop2(b, {}, {})
+    expect(r.resolved).toBe(false)
+    expect(r.points).toEqual({ P1: 0, P2: 0 })
   })
 })
 

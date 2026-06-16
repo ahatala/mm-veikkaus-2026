@@ -31,21 +31,41 @@ export function scoreMatches(bets: Bets, actual: Record<string, Sign>): MatchRes
   })
 }
 
-/** Group Top 2: +2 if the Kyllä/Ei answer about the stated exact 1st/2nd order is correct. */
-export function scoreTop2(bets: Bets, standings: Record<string, string[]>): Top2Result[] {
+/**
+ * Group Top 2: +2 if the Kyllä/Ei answer about the stated exact 1st/2nd order is correct.
+ * Resolves as soon as the order is mathematically decided (clinched early or final). Can also resolve
+ * "Ei" early when the predicted order has become impossible (predicted winner can't win, or predicted
+ * runner-up can't finish top 2).
+ */
+export function scoreTop2(
+  bets: Bets,
+  top2ByGroup: Record<string, string[]>,
+  clinchByGroup: Record<string, { eliminatedFromFirst: string[]; eliminatedFromTop2: string[] }> = {},
+): Top2Result[] {
   return bets.groupTop2.map((g) => {
-    const order = standings[g.group]
     const points = zero(bets.participants)
-    if (!order || order.length < 2) {
-      return { group: g.group, order: g.order, label: g.label, actualTop2: null, resolved: false, orderHolds: null, correctAnswer: null, points }
+    const order = top2ByGroup[g.group]
+    const clinch = clinchByGroup[g.group]
+    let resolved = false
+    let orderHolds: boolean | null = null
+    let actualTop2: string[] | null = null
+
+    if (order && order.length >= 2) {
+      actualTop2 = [order[0], order[1]]
+      orderHolds = key(order[0]) === key(g.order[0]) && key(order[1]) === key(g.order[1])
+      resolved = true
+    } else if (
+      clinch &&
+      ((clinch.eliminatedFromFirst ?? []).some((tm) => key(tm) === key(g.order[0])) ||
+        (clinch.eliminatedFromTop2 ?? []).some((tm) => key(tm) === key(g.order[1])))
+    ) {
+      orderHolds = false // predicted order can no longer happen
+      resolved = true
     }
-    const actualTop2 = [order[0], order[1]]
-    const orderHolds = key(actualTop2[0]) === key(g.order[0]) && key(actualTop2[1]) === key(g.order[1])
-    const correctAnswer: YesNo = orderHolds ? 'Kyllä' : 'Ei'
-    for (const name of bets.participants) {
-      if (g.picks[name] === correctAnswer) points[name] = 2
-    }
-    return { group: g.group, order: g.order, label: g.label, actualTop2, resolved: true, orderHolds, correctAnswer, points }
+
+    const correctAnswer: YesNo | null = resolved ? (orderHolds ? 'Kyllä' : 'Ei') : null
+    if (correctAnswer) for (const name of bets.participants) if (g.picks[name] === correctAnswer) points[name] = 2
+    return { group: g.group, order: g.order, label: g.label, actualTop2, resolved, orderHolds, correctAnswer, points }
   })
 }
 
@@ -118,8 +138,14 @@ export function compute(bets: Bets, results: Results, overrides: Overrides): Com
   const goals = { ...results.goldenBootGoals, ...(c.goldenBootGoals ?? {}) }
   const ko = { ...results.knockout, ...(c.knockout ?? {}) }
 
+  // Decided Top-2 order per group: explicit (clinched/final) wins, with full standings as a fallback.
+  const top2ByGroup: Record<string, string[]> = { ...(results.groupTop2 ?? {}), ...(c.groupTop2 ?? {}) }
+  for (const [g, order] of Object.entries(standings)) {
+    if (!top2ByGroup[g] && order.length >= 2) top2ByGroup[g] = [order[0], order[1]]
+  }
+
   const matches = scoreMatches(bets, actualSigns)
-  const top2 = scoreTop2(bets, standings)
+  const top2 = scoreTop2(bets, top2ByGroup, results.groupClinch ?? {})
   const quarterfinalists = scoreTeamSet(bets, bets.knockout.quarterfinalists, ko.quarterfinalists ?? [])
   const semifinalists = scoreTeamSet(bets, bets.knockout.semifinalists, ko.semifinalists ?? [])
   const finalists = scoreTeamSet(bets, bets.knockout.finalists, ko.finalists ?? [])

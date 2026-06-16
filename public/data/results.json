@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-16T11:49:04.294Z",
+  "lastUpdated": "2026-06-16T11:55:53.742Z",
   "source": "openfootball",
   "groupMatches": {
     "g1": "1",
@@ -20,6 +20,57 @@
     "g15": "X"
   },
   "groupStandings": {},
+  "groupTop2": {},
+  "groupClinch": {
+    "A": {
+      "eliminatedFromFirst": [],
+      "eliminatedFromTop2": []
+    },
+    "B": {
+      "eliminatedFromFirst": [],
+      "eliminatedFromTop2": []
+    },
+    "C": {
+      "eliminatedFromFirst": [],
+      "eliminatedFromTop2": []
+    },
+    "D": {
+      "eliminatedFromFirst": [],
+      "eliminatedFromTop2": []
+    },
+    "E": {
+      "eliminatedFromFirst": [],
+      "eliminatedFromTop2": []
+    },
+    "F": {
+      "eliminatedFromFirst": [],
+      "eliminatedFromTop2": []
+    },
+    "G": {
+      "eliminatedFromFirst": [],
+      "eliminatedFromTop2": []
+    },
+    "H": {
+      "eliminatedFromFirst": [],
+      "eliminatedFromTop2": []
+    },
+    "I": {
+      "eliminatedFromFirst": [],
+      "eliminatedFromTop2": []
+    },
+    "J": {
+      "eliminatedFromFirst": [],
+      "eliminatedFromTop2": []
+    },
+    "K": {
+      "eliminatedFromFirst": [],
+      "eliminatedFromTop2": []
+    },
+    "L": {
+      "eliminatedFromFirst": [],
+      "eliminatedFromTop2": []
+    }
+  },
   "knockout": {
     "quarterfinalists": [],
     "semifinalists": [],

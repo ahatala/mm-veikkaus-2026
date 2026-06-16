@@ -60,8 +60,12 @@ export interface Results {
   source?: string
   /** matchId -> actual 1/X/2 sign, only for finished matches */
   groupMatches: Record<string, Sign>
-  /** group letter -> final standings as an ordered list of team names (position 1 first) */
+  /** group letter -> final standings as an ordered list of team names (position 1 first); complete groups only */
   groupStandings: Record<string, string[]>
+  /** group letter -> decided [1st, 2nd] (clinched early by points, or final) — drives Top-2 scoring */
+  groupTop2?: Record<string, string[]>
+  /** group letter -> elimination sets, enabling early "No" on a Top-2 bet that's become impossible */
+  groupClinch?: Record<string, { eliminatedFromFirst: string[]; eliminatedFromTop2: string[] }>
   knockout: {
     quarterfinalists: string[]
     semifinalists: string[]
@@ -82,6 +86,7 @@ export interface Overrides {
     goldenBootGoals?: Record<string, number>
     knockout?: Partial<Results['knockout']>
     groupStandings?: Record<string, string[]>
+    groupTop2?: Record<string, string[]>
   }
 }
 

@@ -31,12 +31,17 @@ const KO_STAGES = new Set(['R32', 'R16', 'QF', 'SF', '3RD', 'FINAL'])
  * @returns { [sqId]: 'Kyllä' | 'Ei' } for the questions that can be confidently resolved.
  */
 export function resolveSpecials(ctx) {
-  const { specialQuestions, matches, scorerKeys, groupWinners, allGroupsComplete, r32, r32Complete, allMatchesFinished } = ctx
+  const {
+    specialQuestions, matches, scorerKeys, groupWinners, allGroupsComplete, r32, r32Complete,
+    allMatchesFinished, clinchedTop2 = [], eliminatedFromFirst = [],
+  } = ctx
   const out = {}
   const has = (id, kw) => (specialQuestions.find((q) => q.id === id)?.text ?? '').toLowerCase().includes(kw)
 
   const finished = matches.filter((m) => m.finished)
   const r32set = new Set(r32)
+  // Teams guaranteed into the knockouts: already drawn into the R32, OR mathematically certain top-2.
+  const intoKnockouts = new Set([...r32, ...clinchedTop2])
   const koReal = matches.filter((m) => KO_STAGES.has(m.stage) && m.home && m.away)
   const finalMatch = matches.find((m) => m.stage === 'FINAL')
 
@@ -48,14 +53,14 @@ export function resolveSpecials(ctx) {
 
   // sq2 — at least two hosts (USA/CAN/MEX) reach the knockouts
   if (has('sq2', 'isäntäma')) {
-    if (HOSTS.filter((h) => r32set.has(h)).length >= 2) out.sq2 = 'Kyllä'
-    else if (r32Complete) out.sq2 = 'Ei'
+    if (HOSTS.filter((h) => intoKnockouts.has(h)).length >= 2) out.sq2 = 'Kyllä'
+    else if (r32Complete) out.sq2 = HOSTS.filter((h) => r32set.has(h)).length >= 2 ? 'Kyllä' : 'Ei'
   }
 
   // sq3 — defending champion Argentina wins group J
   if (has('sq3', 'argentiina') || has('sq3', 'lohko j')) {
-    const w = groupWinners['J']
-    if (w) out.sq3 = w === 'Argentiina' ? 'Kyllä' : 'Ei'
+    if (groupWinners['J']) out.sq3 = groupWinners['J'] === 'Argentiina' ? 'Kyllä' : 'Ei'
+    else if (eliminatedFromFirst.includes('Argentiina')) out.sq3 = 'Ei' // can no longer win the group
   }
 
   // sq4 — any knockout match decided on penalties (note: sq9 also mentions penalties, so exclude the final-only one)
@@ -72,8 +77,8 @@ export function resolveSpecials(ctx) {
 
   // sq6 — any World Cup debutant reaches the knockouts
   if (has('sq6', 'debytantti')) {
-    if (DEBUTANTS.some((d) => r32set.has(d))) out.sq6 = 'Kyllä'
-    else if (r32Complete) out.sq6 = 'Ei'
+    if (DEBUTANTS.some((d) => intoKnockouts.has(d))) out.sq6 = 'Kyllä'
+    else if (r32Complete) out.sq6 = DEBUTANTS.some((d) => r32set.has(d)) ? 'Kyllä' : 'Ei'
   }
 
   // sq7 — Ronaldo or Messi scores (open play only; shootout goals aren't in the scorer feed)

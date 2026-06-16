@@ -15,6 +15,7 @@ import { readFileSync, writeFileSync, existsSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { resolveSpecials } from './specials.mjs'
+import { analyzeGroup } from './clinch.mjs'
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const DATA = resolve(ROOT, 'public/data')
@@ -213,22 +214,44 @@ function build(inter) {
 
   const standings = inter.standings ?? deriveStandings(inter.matches)
 
-  // ---- context for auto-resolving the special questions ----
-  const groupLetters = [...new Set(inter.matches.filter((m) => m.stage === 'GROUP' && m.group).map((m) => m.group))]
-  const groupComplete = {}
+  // ---- per-group clinch analysis: resolve positions the moment they're mathematically certain ----
+  const groupLetters = [...new Set(inter.matches.filter((m) => m.stage === 'GROUP' && m.group).map((m) => m.group))].sort()
+  const displayStandings = {}          // complete groups only -> full final order (for the table)
+  const groupTop2 = {}                 // group -> [first, second] once the exact order is decided
+  const groupClinch = {}               // group -> { eliminatedFromFirst, eliminatedFromTop2 } (for early "No")
+  const decidedWinners = {}            // group -> winner (clinched early, or final)
+  const clinchedTop2 = new Set()       // teams guaranteed top-2 (=> guaranteed into the Round of 32)
+  const eliminatedFromFirst = new Set()
+  let completeGroups = 0
   for (const g of groupLetters) {
-    const ms = inter.matches.filter((m) => m.stage === 'GROUP' && m.group === g)
-    groupComplete[g] = ms.length >= 6 && ms.every((m) => m.finished)
+    const gms = inter.matches.filter((m) => m.stage === 'GROUP' && m.group === g)
+    const c = analyzeGroup(gms)
+    groupClinch[g] = { eliminatedFromFirst: c.eliminatedFromFirst, eliminatedFromTop2: c.eliminatedFromTop2 }
+    c.clinchedTop2.forEach((t) => clinchedTop2.add(t))
+    c.eliminatedFromFirst.forEach((t) => eliminatedFromFirst.add(t))
+    if (c.complete && standings[g]?.length >= 2) {
+      // finished group: trust the real standings (full FIFA tiebreakers)
+      displayStandings[g] = standings[g]
+      decidedWinners[g] = standings[g][0]
+      groupTop2[g] = [standings[g][0], standings[g][1]]
+      completeGroups++
+    } else {
+      // in-progress: only what points alone make certain
+      if (c.clinchedFirst) decidedWinners[g] = c.clinchedFirst
+      if (c.top2OrderLocked) groupTop2[g] = c.top2OrderLocked
+    }
   }
-  const groupWinners = {}
-  for (const g of groupLetters) if (groupComplete[g] && standings[g]?.length) groupWinners[g] = standings[g][0]
+  const allGroupsComplete = groupLetters.length >= 12 && completeGroups === groupLetters.length
+
   const r32 = teamsInStage('R32')
   const specialAnswers = resolveSpecials({
     specialQuestions: bets.specialQuestions,
     matches: inter.matches,
     scorerKeys: Object.keys(inter.scorers),
-    groupWinners,
-    allGroupsComplete: groupLetters.length >= 12 && groupLetters.every((g) => groupComplete[g]),
+    groupWinners: decidedWinners,
+    clinchedTop2: [...clinchedTop2],
+    eliminatedFromFirst: [...eliminatedFromFirst],
+    allGroupsComplete,
     r32,
     r32Complete: r32.length >= 32,
     allMatchesFinished: inter.matches.length > 0 && inter.matches.every((m) => m.finished),
@@ -238,7 +261,9 @@ function build(inter) {
   const results = {
     source: inter._source,
     groupMatches,
-    groupStandings: standings,
+    groupStandings: displayStandings,  // full table, complete groups only
+    groupTop2,                          // decided 1st/2nd order (clinched or final) — used for Top-2 scoring
+    groupClinch,                        // elimination sets for early "No" on Top-2 bets
     knockout: {
       quarterfinalists: teamsInStage('QF'),
       semifinalists: teamsInStage('SF'),

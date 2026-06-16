@@ -15,6 +15,8 @@ const base = {
   matches: [] as any[],
   scorerKeys: [] as string[],
   groupWinners: {} as Record<string, string>,
+  clinchedTop2: [] as string[],
+  eliminatedFromFirst: [] as string[],
   allGroupsComplete: false,
   r32: [] as string[],
   r32Complete: false,
@@ -78,5 +80,18 @@ describe('resolveSpecials', () => {
     expect(run({ matches: [fin('EXTRA_TIME')] }).sq9).toBe('Kyllä')
     expect(run({ matches: [fin('PENALTIES')] }).sq9).toBe('Kyllä')
     expect(run({ matches: [fin('REGULAR')] }).sq9).toBe('Ei')
+  })
+
+  // ---- early resolution from clinch signals (before groups finish) ----
+  it('sq2 resolves Yes when two hosts have clinched top-2 (before R32 is drawn)', () => {
+    expect(run({ clinchedTop2: ['Yhdysvallat', 'Meksiko'] }).sq2).toBe('Kyllä')
+    expect(run({ clinchedTop2: ['Yhdysvallat'] }).sq2).toBeUndefined() // only one so far
+  })
+  it('sq6 resolves Yes when a debutant has clinched top-2', () => {
+    expect(run({ clinchedTop2: ['Curaçao'] }).sq6).toBe('Kyllä')
+  })
+  it('sq3 resolves No early once Argentina can no longer win group J', () => {
+    expect(run({ eliminatedFromFirst: ['Argentiina'] }).sq3).toBe('Ei')
+    expect(run({ groupWinners: { J: 'Argentiina' } }).sq3).toBe('Kyllä')
   })
 })

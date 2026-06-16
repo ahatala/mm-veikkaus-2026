@@ -13,8 +13,9 @@ scripts/source/veikkaukset.csv   (frozen bets, exported from the sheet)
         │  scripts/ingest-bets.mjs (run once)
         ▼
 public/data/bets.json            participants + every pick + tournament metadata
-public/data/results.json         match results, standings, knockout, goals  ← updated by the Action
-public/data/overrides.json       manual: special-question answers + jury corrections
+public/data/results.json         results, standings, decided Top-2, knockout, goals,  ← updated by the Action
+                                 auto-resolved special answers
+public/data/overrides.json       optional manual jury overrides & corrections
 public/data/maps/*.json          Finnish ↔ API name maps
         │  src/scoring/engine.ts  (pure, unit-tested)
         ▼
@@ -30,30 +31,48 @@ changed). Manual edits to `overrides.json` (pushed as you) redeploy via `deploy.
 `.github/workflows/update-results.yml` runs every 30 min (and on demand). It runs
 `scripts/fetch-results.mjs`, which:
 
-- uses **football-data.org** when the repo secret `FOOTBALL_DATA_TOKEN` is set (live, official), or
-- falls back to **openfootball/worldcup.json** (no key, ~daily) otherwise.
+- uses **football-data.org** when the repo secret `FOOTBALL_DATA_TOKEN` is set (live, official — it
+  **is** set for this repo), or
+- falls back to **openfootball/worldcup.json** (no key, ~daily) if the token is missing.
 
-So it works out of the box with no token; add the token later for live data:
+football-data's free top-scorers list is short, so player goals are backfilled from openfootball. To
+rotate the token: `gh secret set FOOTBALL_DATA_TOKEN --body "<token>"`.
 
-```
-gh secret set FOOTBALL_DATA_TOKEN --body "<your token from football-data.org>"
-```
+## Automatic resolution
 
-### Things only a human can set — `public/data/overrides.json`
+Everything that can be derived from the feed is resolved **the moment it's mathematically certain** —
+no waiting for the round to be played:
+
+- **Knockout teams** (Top 8 / Top 4 / Finalists / Champion) count as soon as a team is slotted into
+  that round's fixture, i.e. the instant it wins the previous round.
+- **Group winners & exact Top-2 order** resolve early via points-only *clinch* analysis
+  (`scripts/clinch.mjs`): when a position can't change regardless of remaining results. Cases that
+  depend on goal difference / head-to-head wait for the group to finish (then the real standings are
+  used). A Top-2 bet can also flip to "Ei" early once its predicted order becomes impossible.
+- **Special questions** (`scripts/specials.mjs`) — all 9 resolve from match/standings/scorer data:
+  "Kyllä" the moment it happens, "Ei" only once the deciding phase is fully played. Early-certain
+  cases use clinch too (e.g. *Argentina wins group J* the moment it's locked; *≥2 hosts reach the
+  knockouts* once two have clinched top-2). Ronaldo/Messi counts open-play goals only.
+
+### Overriding — `public/data/overrides.json`
+
+Special answers are automatic now; this file is only for the **jury (Julle & Dee)** to override or
+correct. Anything here wins over the feed.
 
 ```jsonc
 {
-  "specialAnswers": { "sq1": "Kyllä", "sq5": "Kyllä" },   // resolve the 9 special questions
-  "corrections": {                                         // jury (Julle & Dee) overrides; win over the API
+  "specialAnswers": { "sq4": "Kyllä" },                  // override an auto-resolved special question
+  "corrections": {
     "groupMatches":   { "g12": "1" },                      // force a match sign
     "goldenBootGoals": { "kai havertz": 3 },               // force a player's goals (normalized name key)
-    "groupStandings": { "A": ["Meksiko", "Tšekki", "..."] }
+    "groupTop2":      { "A": ["Meksiko", "Tšekki"] },      // force a group's 1st/2nd
+    "groupStandings": { "A": ["Meksiko", "Tšekki", "..."] } // force the displayed table
   }
 }
 ```
 
-Edit this file (locally or via the GitHub web editor) and commit — the site redeploys automatically.
-The special-question ids (`sq1`…`sq9`) and their texts are in `bets.json`.
+Edit it (locally or via the GitHub web editor) and commit — the site redeploys automatically. The
+special-question ids (`sq1`…`sq9`) and their texts are in `bets.json`.
 
 ## Scoring (mirrors the sheet)
 
@@ -73,7 +92,7 @@ The engine is pinned to the sheet's own computed leaderboard by a regression tes
 ```
 npm install
 npm run dev        # local dev server
-npm test           # scoring regression + UI smoke tests
+npm test           # scoring regression, clinch + special-question resolvers, UI smoke test
 npm run build      # type-check + production build
 npm run ingest     # regenerate bets.json from the CSV (one-time)
 npm run fetch      # fetch results.json now (openfootball unless FOOTBALL_DATA_TOKEN is set)
