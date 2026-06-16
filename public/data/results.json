@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-16T23:20:44.347Z",
+  "lastUpdated": "2026-06-16T23:50:37.746Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -27,7 +27,7 @@
       "away": "Norja",
       "group": "I",
       "homeScore": 1,
-      "awayScore": 2,
+      "awayScore": 3,
       "minute": null,
       "status": "IN_PLAY"
     }
@@ -597,7 +597,8 @@
     "maximiliano araujo": 1,
     "mohammad mohebi": 1,
     "ibrahim m'baye": 1,
-    "aymen hussein": 1
+    "aymen hussein": 1,
+    "leo østigard": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
