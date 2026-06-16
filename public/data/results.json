@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-16T22:50:37.481Z",
+  "lastUpdated": "2026-06-16T23:00:59.736Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -29,7 +29,7 @@
       "homeScore": 1,
       "awayScore": 2,
       "minute": null,
-      "status": "IN_PLAY"
+      "status": "PAUSED"
     }
   ],
   "matchResults": {
@@ -81,8 +81,8 @@
       ]
     },
     "g3": {
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 1,
       "scorers": [
         {
           "name": "Cyle Larin",
