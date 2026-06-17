@@ -1,23 +1,23 @@
 {
-  "lastUpdated": "2026-06-17T11:06:29.430Z",
-  "source": "openfootball",
+  "lastUpdated": "2026-06-17T11:08:04.542Z",
+  "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
     "g2": "1",
     "g3": "X",
+    "g4": "1",
     "g6": "X",
     "g7": "X",
     "g8": "2",
-    "g4": "1",
     "g5": "1",
     "g9": "1",
-    "g11": "1",
     "g10": "X",
+    "g11": "1",
     "g12": "1",
-    "g14": "X",
-    "g16": "X",
     "g13": "X",
+    "g14": "X",
     "g15": "X",
+    "g16": "X",
     "g17": "1",
     "g18": "2",
     "g19": "1",
@@ -92,6 +92,47 @@
         }
       ]
     },
+    "g4": {
+      "homeScore": 4,
+      "awayScore": 1,
+      "scorers": [
+        {
+          "name": "Damian Bobadilla",
+          "side": "home",
+          "minute": "7",
+          "penalty": false,
+          "owngoal": true
+        },
+        {
+          "name": "Folarin Balogun",
+          "side": "home",
+          "minute": "31",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Folarin Balogun",
+          "side": "home",
+          "minute": "45+5",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Giovanni Reyna",
+          "side": "home",
+          "minute": "90+8",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Mauricio",
+          "side": "away",
+          "minute": "73",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
+    },
     "g6": {
       "homeScore": 1,
       "awayScore": 1,
@@ -140,47 +181,6 @@
           "name": "John McGinn",
           "side": "away",
           "minute": "28",
-          "penalty": false,
-          "owngoal": false
-        }
-      ]
-    },
-    "g4": {
-      "homeScore": 4,
-      "awayScore": 1,
-      "scorers": [
-        {
-          "name": "Damian Bobadilla",
-          "side": "home",
-          "minute": "7",
-          "penalty": false,
-          "owngoal": true
-        },
-        {
-          "name": "Folarin Balogun",
-          "side": "home",
-          "minute": "31",
-          "penalty": false,
-          "owngoal": false
-        },
-        {
-          "name": "Folarin Balogun",
-          "side": "home",
-          "minute": "45+5",
-          "penalty": false,
-          "owngoal": false
-        },
-        {
-          "name": "Giovanni Reyna",
-          "side": "home",
-          "minute": "90+8",
-          "penalty": false,
-          "owngoal": false
-        },
-        {
-          "name": "Mauricio",
-          "side": "away",
-          "minute": "73",
           "penalty": false,
           "owngoal": false
         }
@@ -268,19 +268,6 @@
         }
       ]
     },
-    "g11": {
-      "homeScore": 1,
-      "awayScore": 0,
-      "scorers": [
-        {
-          "name": "Amad Diallo",
-          "side": "home",
-          "minute": "90",
-          "penalty": false,
-          "owngoal": false
-        }
-      ]
-    },
     "g10": {
       "homeScore": 2,
       "awayScore": 2,
@@ -310,6 +297,19 @@
           "name": "Daichi Kamada",
           "side": "away",
           "minute": "88",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
+    },
+    "g11": {
+      "homeScore": 1,
+      "awayScore": 0,
+      "scorers": [
+        {
+          "name": "Amad Diallo",
+          "side": "home",
+          "minute": "90",
           "penalty": false,
           "owngoal": false
         }
@@ -363,6 +363,11 @@
         }
       ]
     },
+    "g13": {
+      "homeScore": 0,
+      "awayScore": 0,
+      "scorers": []
+    },
     "g14": {
       "homeScore": 1,
       "awayScore": 1,
@@ -378,6 +383,26 @@
           "name": "Emam Ashour",
           "side": "away",
           "minute": "19",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
+    },
+    "g15": {
+      "homeScore": 1,
+      "awayScore": 1,
+      "scorers": [
+        {
+          "name": "Abdulelah Al-Amri",
+          "side": "home",
+          "minute": "41",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Maxi Araújo",
+          "side": "away",
+          "minute": "80",
           "penalty": false,
           "owngoal": false
         }
@@ -412,31 +437,6 @@
           "name": "Elijah Just",
           "side": "away",
           "minute": "54",
-          "penalty": false,
-          "owngoal": false
-        }
-      ]
-    },
-    "g13": {
-      "homeScore": 0,
-      "awayScore": 0,
-      "scorers": []
-    },
-    "g15": {
-      "homeScore": 1,
-      "awayScore": 1,
-      "scorers": [
-        {
-          "name": "Abdulelah Al-Amri",
-          "side": "home",
-          "minute": "41",
-          "penalty": false,
-          "owngoal": false
-        },
-        {
-          "name": "Maxi Araújo",
-          "side": "away",
-          "minute": "80",
           "penalty": false,
           "owngoal": false
         }
@@ -687,7 +687,16 @@
     "lionel messi": 3,
     "romano schmid": 1,
     "marko arnautovic": 1,
-    "ali olwan": 1
+    "ali olwan": 1,
+    "in-beom hwang": 1,
+    "hyun-gyu oh": 1,
+    "gio reyna": 1,
+    "nestor irankunda": 1,
+    "felix kalu nmecha": 1,
+    "abdulelah al amri": 1,
+    "maximiliano araujo": 1,
+    "mohammad mohebi": 1,
+    "ibrahim m'baye": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
