@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, onBeforeUnmount, ref, shallowRef, computed } from 'vue'
+import { onMounted, onBeforeUnmount, nextTick, ref, shallowRef, computed } from 'vue'
 import { store, loadData, startAutoRefresh, stopAutoRefresh } from './store'
 import { formatUpdated } from './ui'
 import Leaderboard from './components/Leaderboard.vue'
@@ -21,9 +21,14 @@ const tabs = [
 ]
 const active = ref(tabs[0].id)
 const current = shallowRef(tabs[0].comp)
+// Remember each tab's scroll position so switching tabs doesn't carry the page scroll across.
+const scrollByTab = new Map<string, number>()
 function select(id: string) {
+  if (id === active.value) return
+  scrollByTab.set(active.value, window.scrollY)
   active.value = id
   current.value = tabs.find((t) => t.id === id)!.comp
+  nextTick(() => window.scrollTo(0, scrollByTab.get(id) ?? 0))
 }
 
 const updated = computed(() => formatUpdated(store.computed?.lastUpdated ?? null))

@@ -1,22 +1,37 @@
 <script setup lang="ts">
 import { computed, onMounted, onBeforeUnmount, nextTick, ref } from 'vue'
 import { store } from '../store'
-import type { MatchResult, GoalEvent, LiveResult } from '../scoring/types'
+import type { MatchResult, GoalEvent } from '../scoring/types'
 import { flagUrl, flagCode } from '../flags'
 
 const participants = computed(() => store.bets!.participants)
-const live = computed(() => store.computed!.live)
 
-function provChip(l: LiveResult, name: string): string {
-  const pick = l.match.picks[name]
-  if (pick !== l.provisionalSign) return 'chip--wrong'
-  return l.bonus ? 'chip--bonus' : 'chip--correct'
-}
+// A list row is a match's finished/upcoming data, OR — when it's in play — overridden with the live
+// entry (same shape, provisional score/sign/points). Rendered by the exact same row template.
+type Row = MatchResult & { isLive: boolean; minute: string | number | null }
+
+const displayMatches = computed<Row[]>(() => {
+  const liveById = new Map(store.computed!.live.map((l) => [l.match.id, l]))
+  return store.computed!.matches.map((m): Row => {
+    const l = liveById.get(m.match.id)
+    if (!l) return { ...m, isLive: false, minute: null }
+    return {
+      ...m,
+      score: { home: l.homeScore, away: l.awayScore },
+      actual: l.provisionalSign,
+      bonus: l.bonus,
+      scorers: [],
+      points: l.points,
+      isLive: true,
+      minute: l.minute,
+    }
+  })
+})
 
 // Group matches by their date label, preserving chronological order.
 const byDay = computed(() => {
-  const groups: { date: string; matches: MatchResult[] }[] = []
-  for (const m of store.computed!.matches) {
+  const groups: { date: string; matches: Row[] }[] = []
+  for (const m of displayMatches.value) {
     const last = groups[groups.length - 1]
     if (last && last.date === m.match.date) last.matches.push(m)
     else groups.push({ date: m.match.date, matches: [m] })
@@ -24,17 +39,24 @@ const byDay = computed(() => {
   return groups
 })
 
-// Anchor = the next unplayed match (or the last match once the group stage is over).
+// Anchor = the live match if any, else the next unplayed (else the last match).
 const anchorId = computed(() => {
   const ms = store.computed!.matches
-  return (ms.find((m) => m.actual == null) ?? ms[ms.length - 1])?.match.id ?? null
+  const liveIds = new Set(store.computed!.live.map((l) => l.match.id))
+  const liveM = ms.find((m) => liveIds.has(m.match.id))
+  return (liveM ?? ms.find((m) => m.actual == null) ?? ms[ms.length - 1])?.match.id ?? null
 })
 
-function chipClass(m: MatchResult, name: string): string {
-  const pick = m.match.picks[name]
-  if (!m.actual) return 'chip--pending'
-  if (pick !== m.actual) return 'chip--wrong'
-  return m.bonus ? 'chip--bonus' : 'chip--correct'
+// --- picks grouped by sign into compact full-width rows (1 / X / 2) ---
+const SIGNS = ['1', 'X', '2'] as const
+const pickers = (m: MatchResult, s: string): string[] =>
+  participants.value.filter((n) => m.match.picks[n] === s)
+const signRows = (m: MatchResult) =>
+  SIGNS.map((s) => ({ s, names: pickers(m, s) })).filter((r) => r.names.length > 0)
+function colClass(m: MatchResult, s: string): string {
+  if (!m.actual) return 'pending'
+  if (s !== m.actual) return 'wrong'
+  return m.bonus ? 'bonus' : 'ok'
 }
 
 const minuteLabel = (g: GoalEvent) =>
@@ -57,109 +79,56 @@ function scorersOn(m: MatchResult, side: 'home' | 'away'): string {
     .join(' · ')
 }
 
-// Scroll box + "go to current" control.
-const scrollBox = ref<HTMLElement | null>(null)
-const jumpDir = ref<'up' | 'down' | null>(null) // shown only when the anchor is off-screen
+// "Go to current" control. The whole page scrolls (no nested scroll container), so the button is a
+// fixed pill that scrolls the window to the current match; it only shows when that match is off-screen.
+const jumpDir = ref<'up' | 'down' | null>(null)
+const anchorEl = () => document.querySelector('[data-anchor="true"]') as HTMLElement | null
 
-const anchorEl = () => scrollBox.value?.querySelector('[data-anchor="true"]') as HTMLElement | null
-
-function centerOnAnchor(smooth = false) {
-  const box = scrollBox.value
-  const el = anchorEl()
-  if (!box || !el) return
-  const offset = el.getBoundingClientRect().top - box.getBoundingClientRect().top + box.scrollTop
-  const top = Math.max(0, offset - box.clientHeight / 2 + el.clientHeight / 2)
-  if (smooth && typeof box.scrollTo === 'function') box.scrollTo({ top, behavior: 'smooth' })
-  else box.scrollTop = top
+function goToCurrent() {
+  anchorEl()?.scrollIntoView({ behavior: 'smooth', block: 'center' })
 }
 
 function updateJumpDir() {
-  const box = scrollBox.value
   const el = anchorEl()
-  if (!box || !el) { jumpDir.value = null; return }
-  const b = box.getBoundingClientRect()
-  const e = el.getBoundingClientRect()
-  if (e.bottom > b.top + 8 && e.top < b.bottom - 8) jumpDir.value = null // already in view
-  else jumpDir.value = e.top + e.height / 2 < (b.top + b.bottom) / 2 ? 'up' : 'down'
-}
-
-// Size the list to ~viewport height minus the sticky tabs. This makes it fill the screen once the
-// header is scrolled off, while still leaving the page tall enough that you CAN scroll the header
-// away (a property we want to keep). BOTTOM_GAP = .card (14) + #app (16) bottom padding.
-const BOTTOM_GAP = 30
-function fitHeight() {
-  const box = scrollBox.value
-  if (!box) return
+  if (!el) { jumpDir.value = null; return }
   const tabs = document.querySelector('.tabs') as HTMLElement | null
-  const tabsH = tabs ? Math.round(tabs.getBoundingClientRect().height) : 56
-  box.style.maxHeight = `${Math.max(220, window.innerHeight - tabsH - BOTTOM_GAP)}px`
+  const topLimit = tabs ? tabs.getBoundingClientRect().bottom : 56 // content hidden behind the sticky tabs
+  const r = el.getBoundingClientRect()
+  if (r.bottom <= topLimit + 8) jumpDir.value = 'up'
+  else if (r.top >= window.innerHeight - 8) jumpDir.value = 'down'
+  else jumpDir.value = null // visible
 }
 
 onMounted(async () => {
   await nextTick()
-  fitHeight()
-  centerOnAnchor(false)
   updateJumpDir()
-  window.addEventListener('resize', fitHeight, { passive: true })
-  scrollBox.value?.addEventListener('scroll', updateJumpDir, { passive: true })
+  window.addEventListener('scroll', updateJumpDir, { passive: true })
+  window.addEventListener('resize', updateJumpDir, { passive: true })
 })
 onBeforeUnmount(() => {
-  window.removeEventListener('resize', fitHeight)
-  scrollBox.value?.removeEventListener('scroll', updateJumpDir)
+  window.removeEventListener('scroll', updateJumpDir)
+  window.removeEventListener('resize', updateJumpDir)
 })
 </script>
 
 <template>
-  <div v-if="live.length" class="card live-card">
-    <div class="live-head"><span class="live-dot" /> Käynnissä nyt</div>
-    <div v-for="l in live" :key="l.match.id" class="live-match">
-      <div class="meta">Lohko {{ l.match.group }} · <strong>{{ l.minute ? `${l.minute}'` : 'LIVE' }}</strong></div>
-      <div class="grid">
-        <span class="team home" :class="{ win: l.provisionalSign === '1' }">
-          <span class="tn">{{ l.match.home }}</span>
-          <img v-if="flagCode(l.match.home)" class="flag" :src="flagUrl(l.match.home)" alt="" loading="lazy" />
-        </span>
-        <span class="score live-score">{{ l.homeScore }}–{{ l.awayScore }}</span>
-        <span class="team away" :class="{ win: l.provisionalSign === '2' }">
-          <img v-if="flagCode(l.match.away)" class="flag" :src="flagUrl(l.match.away)" alt="" loading="lazy" />
-          <span class="tn">{{ l.match.away }}</span>
-        </span>
-      </div>
-      <div class="picks">
-        <span v-for="name in participants" :key="name" class="chip" :class="provChip(l, name)">
-          {{ name }} <strong>{{ l.match.picks[name] ?? '–' }}</strong>
-        </span>
-      </div>
-      <div class="prov-note">alustavat pisteet — jos ottelu päättyisi nyt</div>
-    </div>
-  </div>
-
   <div class="card">
     <h2>Ottelut</h2>
-    <div class="legend">
-      <span class="chip chip--correct">oikein (+1)</span>
-      <span class="chip chip--bonus">oikein + rohkea (+3)</span>
-      <span class="chip chip--wrong">väärin</span>
-      <span class="chip chip--pending">pelaamatta</span>
-    </div>
 
-    <div class="match-scroll-wrap">
-      <button
-        v-if="jumpDir" class="jump" :title="'Siirry nykyhetkeen'"
-        @click="centerOnAnchor(true)"
-      >
-        <span class="arrow">{{ jumpDir === 'up' ? '↑' : '↓' }}</span> Nyt
-      </button>
-      <div class="match-scroll" ref="scrollBox">
-        <div class="day" v-for="day in byDay" :key="day.date">
+    <div class="days">
+      <div class="day" v-for="day in byDay" :key="day.date">
         <div class="day-date">{{ day.date }}</div>
         <div class="day-matches">
           <div
             v-for="m in day.matches" :key="m.match.id"
-            class="match" :class="{ anchor: m.match.id === anchorId, played: !!m.actual }"
+            class="match" :class="{ anchor: m.match.id === anchorId, played: !!m.actual && !m.isLive, live: m.isLive }"
             :data-anchor="m.match.id === anchorId"
           >
-            <div class="meta">Lohko {{ m.match.group }} · {{ m.match.time }}</div>
+            <div class="meta">
+              Lohko {{ m.match.group }} ·
+              <template v-if="m.isLive"><span class="live-dot"></span><span class="live-label">{{ m.minute ? `${m.minute}'` : 'LIVE' }}</span></template>
+              <template v-else>{{ m.match.time }}</template>
+            </div>
 
             <div class="grid">
               <span class="team home" :class="{ win: m.actual === '1' }">
@@ -180,71 +149,59 @@ onBeforeUnmount(() => {
               </template>
             </div>
 
-            <div class="picks">
-              <span v-for="name in participants" :key="name" class="chip" :class="chipClass(m, name)">
-                {{ name }} <strong>{{ m.match.picks[name] ?? '–' }}</strong>
-              </span>
+            <div class="picksrows">
+              <div class="prow" v-for="r in signRows(m)" :key="r.s" :class="colClass(m, r.s)">
+                <span class="sign prow-sign" :class="`sign--${r.s}`">{{ r.s }}</span>
+                <span class="prow-names">{{ r.names.join(', ') }}</span>
+                <span v-if="r.s === m.actual" class="prow-pts">+{{ m.bonus ? 3 : 1 }}</span>
+              </div>
             </div>
           </div>
-        </div>
         </div>
       </div>
     </div>
   </div>
+
+  <button v-if="jumpDir" class="jump" :title="'Siirry nykyhetkeen'" @click="goToCurrent">
+    <span class="arrow">{{ jumpDir === 'up' ? '↑' : '↓' }}</span> Nyt
+  </button>
 </template>
 
 <style scoped>
-/* ---- live "ongoing now" card ---- */
-.live-card { border-color: var(--red); }
-.live-head {
-  display: flex; align-items: center; gap: 8px;
-  font-weight: 700; font-size: 15px; color: var(--red); margin-bottom: 10px;
-}
+/* in-play indicator shown inline in a live match's meta line */
 .live-dot {
-  width: 9px; height: 9px; border-radius: 50%; background: var(--red);
-  box-shadow: 0 0 0 0 rgba(248, 113, 113, 0.7); animation: pulse 1.4s infinite;
+  display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--red);
+  vertical-align: middle; margin: 0 3px 1px 0; animation: pulse 1.4s infinite;
 }
+.live-label { color: var(--red); font-weight: 700; }
 @keyframes pulse {
   0% { box-shadow: 0 0 0 0 rgba(248, 113, 113, 0.6); }
-  70% { box-shadow: 0 0 0 8px rgba(248, 113, 113, 0); }
+  70% { box-shadow: 0 0 0 6px rgba(248, 113, 113, 0); }
   100% { box-shadow: 0 0 0 0 rgba(248, 113, 113, 0); }
 }
-.live-match + .live-match { border-top: 1px solid var(--line); padding-top: 10px; margin-top: 10px; }
-.live-score { color: var(--red); font-size: 16px; }
-.prov-note { font-size: 11px; color: var(--muted); font-style: italic; margin-top: 6px; }
 
-.match-scroll-wrap { position: relative; }
+/* fixed "go to current" pill (whole page scrolls) */
 .jump {
-  position: absolute;
-  left: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 3;
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 20;
   display: inline-flex;
   align-items: center;
   gap: 4px;
   font: inherit;
-  font-size: 12px;
+  font-size: 12.5px;
   font-weight: 700;
   color: #0b1020;
   background: var(--accent);
   border: none;
   border-radius: 999px;
-  padding: 7px 13px;
+  padding: 9px 15px;
   cursor: pointer;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
 }
 .jump:hover { filter: brightness(1.08); }
 .jump .arrow { font-size: 14px; line-height: 1; }
-
-.match-scroll {
-  max-height: 80vh; /* fallback; JS sizes it to fill the viewport (see fitHeight) */
-  overflow-y: auto;
-  overflow-x: hidden; /* never scroll sideways on mobile */
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  background: var(--bg);
-}
 
 .day {
   display: grid;
@@ -252,10 +209,8 @@ onBeforeUnmount(() => {
 }
 .day + .day { border-top: 1px solid var(--line); }
 .day-date {
-  position: sticky;
-  top: 0;
   align-self: start;
-  padding: 12px 8px 12px 12px;
+  padding: 12px 8px 12px 4px;
   font-weight: 700;
   font-size: 14px;
   color: var(--accent);
@@ -278,7 +233,9 @@ onBeforeUnmount(() => {
 }
 /* Completed matches get a subtle fill; upcoming stay fully transparent (outline only). */
 .match.played { background: rgba(255, 255, 255, 0.03); }
+.match.live { border-color: var(--red); box-shadow: 0 0 0 1px var(--red); }
 .match.anchor { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+.match.live.anchor { border-color: var(--red); box-shadow: 0 0 0 1px var(--red); }
 
 .meta { color: var(--muted); font-size: 11.5px; margin-bottom: 3px; }
 
@@ -307,8 +264,31 @@ onBeforeUnmount(() => {
 .scorers.away { text-align: left; }
 .scorers.mid { text-align: center; opacity: 0.6; }
 
-.picks { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
-.picks .chip { font-size: 11px; padding: 2px 7px; }
+/* picks grouped by sign into compact full-width rows */
+.picksrows {
+  margin-top: 11px;
+  padding: 7px 9px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.prow {
+  display: flex; gap: 8px; font-size: 12.5px; line-height: 1.45; align-items: baseline;
+  padding: 4px 8px; border: 1px solid transparent; border-radius: 8px;
+}
+.prow.ok { background: rgba(52, 211, 153, 0.10); border-color: rgba(52, 211, 153, 0.30); }
+.prow.bonus { background: rgba(251, 191, 36, 0.12); border-color: rgba(251, 191, 36, 0.35); }
+.prow-sign { flex: none; width: 1.2em; font-weight: 700; text-align: center; }
+.prow-names { flex: 1; min-width: 0; overflow-wrap: anywhere; color: var(--muted); }
+.prow-pts { flex: none; font-weight: 700; font-variant-numeric: tabular-nums; }
+.prow.ok .prow-pts { color: var(--green); }
+.prow.bonus .prow-pts { color: var(--gold); }
+.prow.ok .prow-names { color: var(--green); }
+.prow.bonus .prow-names { color: var(--gold); font-weight: 600; }
+.prow.wrong .prow-names { opacity: 0.5; }
+.prow.pending .prow-names { color: var(--muted); }
 
 /* ---- narrow screens: date becomes a sticky header (no left column); 'Nyt' floats bottom-right ---- */
 @media (max-width: 560px) {
@@ -323,12 +303,5 @@ onBeforeUnmount(() => {
     white-space: normal;
   }
   .day-matches { padding: 8px 10px 12px; }
-  .jump {
-    left: auto;
-    right: 14px;
-    top: auto;
-    bottom: 14px;
-    transform: none;
-  }
 }
 </style>
