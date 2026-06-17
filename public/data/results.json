@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-17T17:10:41.281Z",
+  "lastUpdated": "2026-06-17T17:20:35.089Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -29,7 +29,7 @@
       "home": "Portugali",
       "away": "Kongon DR",
       "group": "K",
-      "homeScore": 0,
+      "homeScore": 1,
       "awayScore": 0,
       "minute": null,
       "status": "IN_PLAY"
