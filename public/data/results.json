@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-17T01:40:37.952Z",
+  "lastUpdated": "2026-06-17T01:50:33.189Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -21,7 +21,18 @@
     "g17": "1",
     "g18": "2"
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g19",
+      "home": "Argentiina",
+      "away": "Algeria",
+      "group": "J",
+      "homeScore": 1,
+      "awayScore": 0,
+      "minute": null,
+      "status": "IN_PLAY"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
