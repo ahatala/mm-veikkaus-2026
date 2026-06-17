@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-17T03:00:46.341Z",
+  "lastUpdated": "2026-06-17T03:10:30.666Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -19,20 +19,10 @@
     "g15": "X",
     "g16": "X",
     "g17": "1",
-    "g18": "2"
+    "g18": "2",
+    "g19": "1"
   },
-  "live": [
-    {
-      "id": "g19",
-      "home": "Argentiina",
-      "away": "Algeria",
-      "group": "J",
-      "homeScore": 3,
-      "awayScore": 0,
-      "minute": null,
-      "status": "IN_PLAY"
-    }
-  ],
+  "live": [],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -82,8 +72,8 @@
       ]
     },
     "g3": {
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 1,
       "scorers": [
         {
           "name": "Cyle Larin",
@@ -523,6 +513,33 @@
           "minute": "90+6",
           "penalty": false,
           "owngoal": true
+        }
+      ]
+    },
+    "g19": {
+      "homeScore": 3,
+      "awayScore": 0,
+      "scorers": [
+        {
+          "name": "Lionel Messi",
+          "side": "home",
+          "minute": "17",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Lionel Messi",
+          "side": "home",
+          "minute": "60",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Lionel Messi",
+          "side": "home",
+          "minute": "76",
+          "penalty": false,
+          "owngoal": false
         }
       ]
     }
