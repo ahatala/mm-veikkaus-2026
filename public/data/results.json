@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-17T05:00:53.479Z",
+  "lastUpdated": "2026-06-17T05:20:39.252Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -31,7 +31,7 @@
       "homeScore": 1,
       "awayScore": 0,
       "minute": null,
-      "status": "PAUSED"
+      "status": "IN_PLAY"
     }
   ],
   "matchResults": {
@@ -670,7 +670,8 @@
     "maximiliano araujo": 1,
     "mohammad mohebi": 1,
     "ibrahim m'baye": 1,
-    "romano schmid": 1
+    "romano schmid": 1,
+    "ali olwan": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
