@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-17T05:30:46.859Z",
+  "lastUpdated": "2026-06-17T05:40:41.175Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -28,7 +28,7 @@
       "home": "Itävalta",
       "away": "Jordania",
       "group": "J",
-      "homeScore": 1,
+      "homeScore": 2,
       "awayScore": 1,
       "minute": null,
       "status": "IN_PLAY"
