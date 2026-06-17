@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-17T17:20:35.089Z",
+  "lastUpdated": "2026-06-17T18:00:58.964Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -30,9 +30,9 @@
       "away": "Kongon DR",
       "group": "K",
       "homeScore": 1,
-      "awayScore": 0,
+      "awayScore": 1,
       "minute": null,
-      "status": "IN_PLAY"
+      "status": "PAUSED"
     }
   ],
   "matchResults": {
@@ -708,7 +708,8 @@
     "maximiliano araujo": 1,
     "mohammad mohebi": 1,
     "ibrahim m'baye": 1,
-    "joao neves": 1
+    "joao neves": 1,
+    "yoane wissa": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
