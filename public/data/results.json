@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-17T22:20:41.483Z",
+  "lastUpdated": "2026-06-17T23:10:39.163Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -25,7 +25,18 @@
     "g21": "X",
     "g22": "1"
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g23",
+      "home": "Ghana",
+      "away": "Panama",
+      "group": "L",
+      "homeScore": 0,
+      "awayScore": 0,
+      "minute": null,
+      "status": "IN_PLAY"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -75,8 +86,8 @@
       ]
     },
     "g3": {
-      "homeScore": 1,
-      "awayScore": 1,
+      "homeScore": null,
+      "awayScore": null,
       "scorers": [
         {
           "name": "Cyle Larin",
