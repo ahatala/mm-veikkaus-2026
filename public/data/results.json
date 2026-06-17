@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-17T18:20:42.535Z",
+  "lastUpdated": "2026-06-17T19:10:39.646Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -21,20 +21,10 @@
     "g17": "1",
     "g18": "2",
     "g19": "1",
-    "g20": "1"
+    "g20": "1",
+    "g21": "X"
   },
-  "live": [
-    {
-      "id": "g21",
-      "home": "Portugali",
-      "away": "Kongon DR",
-      "group": "K",
-      "homeScore": 1,
-      "awayScore": 1,
-      "minute": null,
-      "status": "IN_PLAY"
-    }
-  ],
+  "live": [],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -588,6 +578,26 @@
           "owngoal": false
         }
       ]
+    },
+    "g21": {
+      "homeScore": 1,
+      "awayScore": 1,
+      "scorers": [
+        {
+          "name": "João Neves",
+          "side": "home",
+          "minute": "6",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Yoane Wissa",
+          "side": "away",
+          "minute": "45+5",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
     }
   },
   "groupStandings": {},
@@ -699,6 +709,8 @@
     "romano schmid": 1,
     "marko arnautovic": 1,
     "ali olwan": 1,
+    "joao neves": 1,
+    "yoane wissa": 1,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
     "gio reyna": 1,
@@ -707,9 +719,7 @@
     "abdulelah al amri": 1,
     "maximiliano araujo": 1,
     "mohammad mohebi": 1,
-    "ibrahim m'baye": 1,
-    "joao neves": 1,
-    "yoane wissa": 1
+    "ibrahim m'baye": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
