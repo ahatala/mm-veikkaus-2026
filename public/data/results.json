@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-17T20:50:36.892Z",
+  "lastUpdated": "2026-06-17T21:10:41.819Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -31,9 +31,9 @@
       "away": "Kroatia",
       "group": "L",
       "homeScore": 2,
-      "awayScore": 1,
+      "awayScore": 2,
       "minute": null,
-      "status": "IN_PLAY"
+      "status": "PAUSED"
     }
   ],
   "matchResults": {
@@ -732,7 +732,8 @@
     "maximiliano araujo": 1,
     "mohammad mohebi": 1,
     "ibrahim m'baye": 1,
-    "martin baturina": 1
+    "martin baturina": 1,
+    "petar musa": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
