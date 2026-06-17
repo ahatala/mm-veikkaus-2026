@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-17T06:10:37.562Z",
+  "lastUpdated": "2026-06-17T06:20:33.563Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -20,20 +20,10 @@
     "g16": "X",
     "g17": "1",
     "g18": "2",
-    "g19": "1"
+    "g19": "1",
+    "g20": "1"
   },
-  "live": [
-    {
-      "id": "g20",
-      "home": "Itävalta",
-      "away": "Jordania",
-      "group": "J",
-      "homeScore": 2,
-      "awayScore": 1,
-      "minute": null,
-      "status": "IN_PLAY"
-    }
-  ],
+  "live": [],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -553,6 +543,40 @@
           "owngoal": false
         }
       ]
+    },
+    "g20": {
+      "homeScore": 3,
+      "awayScore": 1,
+      "scorers": [
+        {
+          "name": "Romano Schmid",
+          "side": "home",
+          "minute": "21",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Yazan Al-Arab",
+          "side": "home",
+          "minute": "76",
+          "penalty": false,
+          "owngoal": true
+        },
+        {
+          "name": "Marko Arnautovic",
+          "side": "home",
+          "minute": "90+12",
+          "penalty": true,
+          "owngoal": false
+        },
+        {
+          "name": "Ali Olwan",
+          "side": "away",
+          "minute": "50",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
     }
   },
   "groupStandings": {},
@@ -661,6 +685,9 @@
     "erling haaland": 2,
     "leo østigard": 1,
     "lionel messi": 3,
+    "romano schmid": 1,
+    "marko arnautovic": 1,
+    "ali olwan": 1,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
     "gio reyna": 1,
@@ -669,10 +696,7 @@
     "abdulelah al amri": 1,
     "maximiliano araujo": 1,
     "mohammad mohebi": 1,
-    "ibrahim m'baye": 1,
-    "romano schmid": 1,
-    "ali olwan": 1,
-    "marko arnautovic": 1
+    "ibrahim m'baye": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
