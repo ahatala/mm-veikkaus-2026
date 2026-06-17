@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-17T01:20:40.858Z",
+  "lastUpdated": "2026-06-17T01:30:39.470Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -27,8 +27,8 @@
       "home": "Argentiina",
       "away": "Algeria",
       "group": "J",
-      "homeScore": 0,
-      "awayScore": 1,
+      "homeScore": 1,
+      "awayScore": 0,
       "minute": null,
       "status": "IN_PLAY"
     }
@@ -640,10 +640,12 @@
     "abdulelah al amri": 1,
     "maximiliano araujo": 1,
     "mohammad mohebi": 1,
-    "ibrahim m'baye": 1
+    "ibrahim m'baye": 1,
+    "lionel messi": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
-    "sq5": "Kyllä"
+    "sq5": "Kyllä",
+    "sq7": "Kyllä"
   }
 }
