@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-17T04:10:33.315Z",
+  "lastUpdated": "2026-06-17T04:30:46.594Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -28,7 +28,7 @@
       "home": "Itävalta",
       "away": "Jordania",
       "group": "J",
-      "homeScore": 0,
+      "homeScore": 1,
       "awayScore": 0,
       "minute": null,
       "status": "IN_PLAY"
@@ -669,7 +669,8 @@
     "abdulelah al amri": 1,
     "maximiliano araujo": 1,
     "mohammad mohebi": 1,
-    "ibrahim m'baye": 1
+    "ibrahim m'baye": 1,
+    "romano schmid": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
