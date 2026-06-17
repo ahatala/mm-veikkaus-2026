@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-17T02:30:38.377Z",
+  "lastUpdated": "2026-06-17T02:50:41.958Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -27,7 +27,7 @@
       "home": "Argentiina",
       "away": "Algeria",
       "group": "J",
-      "homeScore": 2,
+      "homeScore": 3,
       "awayScore": 0,
       "minute": null,
       "status": "IN_PLAY"
@@ -632,7 +632,7 @@
     "aymen hussein": 1,
     "erling haaland": 2,
     "leo østigard": 1,
-    "lionel messi": 2,
+    "lionel messi": 3,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
     "gio reyna": 1,
