@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-17T05:20:39.252Z",
+  "lastUpdated": "2026-06-17T05:30:46.859Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -29,7 +29,7 @@
       "away": "Jordania",
       "group": "J",
       "homeScore": 1,
-      "awayScore": 0,
+      "awayScore": 1,
       "minute": null,
       "status": "IN_PLAY"
     }
