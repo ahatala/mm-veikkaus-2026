@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-17T15:30:49.208Z",
+  "lastUpdated": "2026-06-17T17:10:41.281Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -23,7 +23,18 @@
     "g19": "1",
     "g20": "1"
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g21",
+      "home": "Portugali",
+      "away": "Kongon DR",
+      "group": "K",
+      "homeScore": 0,
+      "awayScore": 0,
+      "minute": null,
+      "status": "IN_PLAY"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -696,7 +707,8 @@
     "abdulelah al amri": 1,
     "maximiliano araujo": 1,
     "mohammad mohebi": 1,
-    "ibrahim m'baye": 1
+    "ibrahim m'baye": 1,
+    "joao neves": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
