@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-17T22:01:00.080Z",
+  "lastUpdated": "2026-06-17T22:10:36.066Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -22,20 +22,10 @@
     "g18": "2",
     "g19": "1",
     "g20": "1",
-    "g21": "X"
+    "g21": "X",
+    "g22": "1"
   },
-  "live": [
-    {
-      "id": "g22",
-      "home": "Englanti",
-      "away": "Kroatia",
-      "group": "L",
-      "homeScore": 4,
-      "awayScore": 2,
-      "minute": null,
-      "status": "IN_PLAY"
-    }
-  ],
+  "live": [],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -609,6 +599,11 @@
           "owngoal": false
         }
       ]
+    },
+    "g22": {
+      "homeScore": 4,
+      "awayScore": 2,
+      "scorers": []
     }
   },
   "groupStandings": {},
