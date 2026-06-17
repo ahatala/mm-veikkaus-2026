@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-16T23:50:37.746Z",
+  "lastUpdated": "2026-06-17T00:10:38.453Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -18,20 +18,10 @@
     "g14": "X",
     "g15": "X",
     "g16": "X",
-    "g17": "1"
+    "g17": "1",
+    "g18": "2"
   },
-  "live": [
-    {
-      "id": "g18",
-      "home": "Irak",
-      "away": "Norja",
-      "group": "I",
-      "homeScore": 1,
-      "awayScore": 3,
-      "minute": null,
-      "status": "IN_PLAY"
-    }
-  ],
+  "live": [],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -483,6 +473,47 @@
           "owngoal": false
         }
       ]
+    },
+    "g18": {
+      "homeScore": 1,
+      "awayScore": 4,
+      "scorers": [
+        {
+          "name": "Aymen Hussein",
+          "side": "home",
+          "minute": "39",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Erling Haaland",
+          "side": "away",
+          "minute": "29",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Erling Haaland",
+          "side": "away",
+          "minute": "43",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Leo Østigard",
+          "side": "away",
+          "minute": "76",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Aymen Hussein",
+          "side": "away",
+          "minute": "90+6",
+          "penalty": false,
+          "owngoal": true
+        }
+      ]
     }
   },
   "groupStandings": {},
@@ -587,7 +618,9 @@
     "kylian mbappe": 2,
     "bradley barcola": 1,
     "ibrahim mbaye": 1,
+    "aymen hussein": 1,
     "erling haaland": 2,
+    "leo østigard": 1,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
     "gio reyna": 1,
@@ -597,8 +630,7 @@
     "maximiliano araujo": 1,
     "mohammad mohebi": 1,
     "ibrahim m'baye": 1,
-    "aymen hussein": 1,
-    "leo østigard": 1
+    "kristian thorstvedt": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
