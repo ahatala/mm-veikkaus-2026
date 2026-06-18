@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-18T02:30:41.416Z",
+  "lastUpdated": "2026-06-18T02:50:33.965Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -23,17 +23,26 @@
     "g19": "1",
     "g20": "1",
     "g21": "X",
-    "g22": "1",
-    "g23": "1"
+    "g22": "1"
   },
   "live": [
+    {
+      "id": "g23",
+      "home": "Ghana",
+      "away": "Panama",
+      "group": "L",
+      "homeScore": 1,
+      "awayScore": 0,
+      "minute": null,
+      "status": "IN_PLAY"
+    },
     {
       "id": "g24",
       "home": "Uzbekistan",
       "away": "Kolumbia",
       "group": "K",
       "homeScore": 0,
-      "awayScore": 0,
+      "awayScore": 1,
       "minute": null,
       "status": "IN_PLAY"
     }
@@ -659,19 +668,6 @@
           "owngoal": false
         }
       ]
-    },
-    "g23": {
-      "homeScore": 1,
-      "awayScore": 0,
-      "scorers": [
-        {
-          "name": "Caleb Yirenkyi",
-          "side": "home",
-          "minute": "90+5",
-          "penalty": false,
-          "owngoal": false
-        }
-      ]
     }
   },
   "groupStandings": {},
@@ -799,7 +795,8 @@
     "abdulelah al amri": 1,
     "maximiliano araujo": 1,
     "mohammad mohebi": 1,
-    "ibrahim m'baye": 1
+    "ibrahim m'baye": 1,
+    "daniel munoz": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
