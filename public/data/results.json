@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-18T03:50:47.474Z",
+  "lastUpdated": "2026-06-18T04:10:33.962Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -24,20 +24,10 @@
     "g20": "1",
     "g21": "X",
     "g22": "1",
-    "g23": "1"
+    "g23": "1",
+    "g24": "2"
   },
-  "live": [
-    {
-      "id": "g24",
-      "home": "Uzbekistan",
-      "away": "Kolumbia",
-      "group": "K",
-      "homeScore": 1,
-      "awayScore": 2,
-      "minute": null,
-      "status": "IN_PLAY"
-    }
-  ],
+  "live": [],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -672,6 +662,11 @@
           "owngoal": false
         }
       ]
+    },
+    "g24": {
+      "homeScore": 1,
+      "awayScore": 3,
+      "scorers": []
     }
   },
   "groupStandings": {},
@@ -802,7 +797,8 @@
     "ibrahim m'baye": 1,
     "daniel munoz": 1,
     "abbosbek fayzullaev": 1,
-    "luis diaz": 1
+    "luis diaz": 1,
+    "jaminton campaz": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
