@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-18T20:50:32.817Z",
+  "lastUpdated": "2026-06-18T21:10:32.930Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -26,20 +26,10 @@
     "g22": "1",
     "g23": "1",
     "g24": "2",
-    "g25": "X"
+    "g25": "X",
+    "g26": "1"
   },
-  "live": [
-    {
-      "id": "g26",
-      "home": "Sveitsi",
-      "away": "Bosnia-Hertsegovina",
-      "group": "B",
-      "homeScore": 1,
-      "awayScore": 0,
-      "minute": null,
-      "status": "IN_PLAY"
-    }
-  ],
+  "live": [],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -728,6 +718,47 @@
           "owngoal": false
         }
       ]
+    },
+    "g26": {
+      "homeScore": 4,
+      "awayScore": 1,
+      "scorers": [
+        {
+          "name": "Johan Manzambi",
+          "side": "home",
+          "minute": "74",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Rubén Vargas",
+          "side": "home",
+          "minute": "84",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Johan Manzambi",
+          "side": "home",
+          "minute": "90",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Granit Xhaka",
+          "side": "home",
+          "minute": "90+7",
+          "penalty": true,
+          "owngoal": false
+        },
+        {
+          "name": "Ermin Mahmic",
+          "side": "away",
+          "minute": "90+3",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
     }
   },
   "groupStandings": {},
@@ -800,6 +831,10 @@
     "jovo lukic": 1,
     "boualem khoukhi": 1,
     "breel embolo": 1,
+    "johan manzambi": 2,
+    "ruben vargas": 1,
+    "granit xhaka": 1,
+    "ermin mahmic": 1,
     "vinicius junior": 1,
     "ismael saibari": 1,
     "john mcginn": 1,
@@ -853,7 +888,6 @@
     "martin baturina": 1,
     "petar musa": 1,
     "caleb yirenkyi": 1,
-    "johan manzambi": 2,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
     "gio reyna": 1,
@@ -862,8 +896,7 @@
     "abdulelah al amri": 1,
     "maximiliano araujo": 1,
     "mohammad mohebi": 1,
-    "ibrahim m'baye": 1,
-    "ruben vargas": 1
+    "ibrahim m'baye": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
