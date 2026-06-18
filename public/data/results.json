@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-18T01:50:40.969Z",
+  "lastUpdated": "2026-06-18T02:10:43.249Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -26,7 +26,18 @@
     "g22": "1",
     "g23": "1"
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g24",
+      "home": "Uzbekistan",
+      "away": "Kolumbia",
+      "group": "K",
+      "homeScore": 0,
+      "awayScore": 0,
+      "minute": null,
+      "status": "IN_PLAY"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
