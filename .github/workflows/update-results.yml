@@ -5,71 +5,39 @@ on:
   # GitHub's own `schedule` trigger proved unreliable on this repo, so it was removed.
   workflow_dispatch:
 
-# Needs contents:write to commit results, and pages/id-token to deploy. Commits made by the built-in
-# GITHUB_TOKEN do NOT trigger other workflows (loop protection), so this workflow deploys itself
-# rather than relying on deploy.yml's push trigger.
+# Only needs to commit results.json. No deploy: the app reads live data from raw.githubusercontent,
+# which updates the moment this commit lands — so a data update never needs a Pages rebuild.
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
-# Share the "pages" concurrency group with deploy.yml so deploys never overlap.
 concurrency:
-  group: pages
+  group: update-results
   cancel-in-progress: false
 
 jobs:
-  fetch-build:
+  fetch:
     runs-on: ubuntu-latest
-    outputs:
-      changed: ${{ steps.commit.outputs.changed }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-          cache: npm
-      - run: npm ci
 
-      # Uses football-data.org when FOOTBALL_DATA_TOKEN is set; otherwise falls back to
-      # openfootball/worldcup.json (no key required).
+      # fetch-results.mjs is pure Node (global fetch, no dependencies) — no npm install needed.
+      # Uses football-data.org when FOOTBALL_DATA_TOKEN is set; otherwise openfootball (no key).
       - name: Fetch results
         env:
           FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
         run: node scripts/fetch-results.mjs
 
       - name: Commit if results changed
-        id: commit
         run: |
           git config user.name "results-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add public/data/results.json
           if git diff --staged --quiet; then
             echo "No changes."
-            echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "Update results ($(date -u +%Y-%m-%dT%H:%MZ))"
             git push
-            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
-
-      # Only rebuild/redeploy when the data actually changed.
-      - if: steps.commit.outputs.changed == 'true'
-        run: npm run build
-      - if: steps.commit.outputs.changed == 'true'
-        uses: actions/configure-pages@v5
-      - if: steps.commit.outputs.changed == 'true'
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
-
-  deploy:
-    needs: fetch-build
-    if: needs.fetch-build.outputs.changed == 'true'
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4

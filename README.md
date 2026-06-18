@@ -22,17 +22,20 @@ public/data/maps/*.json          Finnish ↔ API name maps
         Vue SPA renders leaderboard + breakdowns (src/components/*)
 ```
 
-The app fetches the three JSON files at runtime and computes everything client-side — there is no
-server. The results workflow commits `results.json` and redeploys Pages itself (only when the data
-changed). Manual edits to `overrides.json` (pushed as you) redeploy via `deploy.yml`.
+The app computes everything client-side — there is no server. In production it reads the live JSON
+straight from **raw.githubusercontent.com** (the committed files on `main`), which updates the moment
+the results bot commits and bypasses the Pages CDN; it falls back to the Pages-bundled copy if raw is
+unreachable. A code change still goes through `deploy.yml` (build + Pages deploy); a data change is
+just a commit — no rebuild.
 
 ## Data updates
 
-`.github/workflows/update-results.yml` runs ~every 10 min (and on demand) and self-deploys when the
-data changed. The SPA also auto-refreshes its data every 90s, and shows a pulsing **"Käynnissä nyt"**
-card for in-play matches (live score + minute, football-data only) with provisional "if it ended now"
-scoring. This is near-live (~10-min granularity), not a real-time ticker — GitHub's scheduler and Pages
-caching set the floor. It runs `scripts/fetch-results.mjs`, which:
+`.github/workflows/update-results.yml` runs ~every 10 min (and on demand). It just runs
+`scripts/fetch-results.mjs` and commits `results.json` — no build/deploy, since the app reads the data
+from raw.githubusercontent. The SPA polls every 90s and on tab focus, and shows an inline live row for
+in-play matches (live score + minute, football-data only) with provisional "if it ended now" scoring.
+This is near-live (~10-min granularity, set by the cron interval + football-data's free-tier delay),
+not a real-time ticker. `fetch-results.mjs`:
 
 - uses **football-data.org** when the repo secret `FOOTBALL_DATA_TOKEN` is set (live, official — it
   **is** set for this repo), or
