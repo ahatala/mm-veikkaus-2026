@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-18T04:10:33.962Z",
+  "lastUpdated": "2026-06-18T04:20:38.016Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -666,7 +666,36 @@
     "g24": {
       "homeScore": 1,
       "awayScore": 3,
-      "scorers": []
+      "scorers": [
+        {
+          "name": "Abbosbek Fayzullaev",
+          "side": "home",
+          "minute": "60",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Daniel Muñoz",
+          "side": "away",
+          "minute": "40",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Luis Díaz",
+          "side": "away",
+          "minute": "65",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Jáminton Campaz",
+          "side": "away",
+          "minute": "90+9",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
     }
   },
   "groupStandings": {},
@@ -780,6 +809,10 @@
     "ali olwan": 1,
     "joao neves": 1,
     "yoane wissa": 1,
+    "abbosbek fayzullaev": 1,
+    "daniel munoz": 1,
+    "luis diaz": 1,
+    "jaminton campaz": 1,
     "harry kane": 2,
     "jude bellingham": 1,
     "marcus rashford": 1,
@@ -794,11 +827,7 @@
     "abdulelah al amri": 1,
     "maximiliano araujo": 1,
     "mohammad mohebi": 1,
-    "ibrahim m'baye": 1,
-    "daniel munoz": 1,
-    "abbosbek fayzullaev": 1,
-    "luis diaz": 1,
-    "jaminton campaz": 1
+    "ibrahim m'baye": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
