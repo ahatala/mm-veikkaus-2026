@@ -33,11 +33,20 @@ function select(id: string) {
 
 const updated = computed(() => formatUpdated(store.computed?.lastUpdated ?? null))
 
+function onVisible() {
+  if (document.visibilityState === 'visible') void loadData(true)
+}
 onMounted(async () => {
   await loadData()
   startAutoRefresh()
+  document.addEventListener('visibilitychange', onVisible)
+  window.addEventListener('focus', onVisible)
 })
-onBeforeUnmount(stopAutoRefresh)
+onBeforeUnmount(() => {
+  stopAutoRefresh()
+  document.removeEventListener('visibilitychange', onVisible)
+  window.removeEventListener('focus', onVisible)
+})
 </script>
 
 <template>
