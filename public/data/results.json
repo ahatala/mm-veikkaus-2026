@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-18T17:50:31.293Z",
+  "lastUpdated": "2026-06-18T18:10:31.715Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -25,20 +25,10 @@
     "g21": "X",
     "g22": "1",
     "g23": "1",
-    "g24": "2"
+    "g24": "2",
+    "g25": "X"
   },
-  "live": [
-    {
-      "id": "g25",
-      "home": "Tšekki",
-      "away": "Etelä-Afrikka",
-      "group": "A",
-      "homeScore": 1,
-      "awayScore": 1,
-      "minute": null,
-      "status": "IN_PLAY"
-    }
-  ],
+  "live": [],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -707,6 +697,26 @@
           "owngoal": false
         }
       ]
+    },
+    "g25": {
+      "homeScore": 1,
+      "awayScore": 1,
+      "scorers": [
+        {
+          "name": "Michal Sadílek",
+          "side": "home",
+          "minute": "6",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Teboho Mokoena",
+          "side": "away",
+          "minute": "83",
+          "penalty": true,
+          "owngoal": false
+        }
+      ]
     }
   },
   "groupStandings": {},
@@ -773,6 +783,8 @@
     "hwang in-beom": 1,
     "oh hyeon-gyu": 1,
     "ladislav krejci": 1,
+    "michal sadilek": 1,
+    "teboho mokoena": 1,
     "cyle larin": 1,
     "jovo lukic": 1,
     "boualem khoukhi": 1,
@@ -838,9 +850,7 @@
     "abdulelah al amri": 1,
     "maximiliano araujo": 1,
     "mohammad mohebi": 1,
-    "ibrahim m'baye": 1,
-    "michal sadilek": 1,
-    "teboho mokoena": 1
+    "ibrahim m'baye": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
