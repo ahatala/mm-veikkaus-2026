@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-18T01:40:33.012Z",
+  "lastUpdated": "2026-06-18T01:50:40.969Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -23,20 +23,10 @@
     "g19": "1",
     "g20": "1",
     "g21": "X",
-    "g22": "1"
+    "g22": "1",
+    "g23": "1"
   },
-  "live": [
-    {
-      "id": "g23",
-      "home": "Ghana",
-      "away": "Panama",
-      "group": "L",
-      "homeScore": 1,
-      "awayScore": 0,
-      "minute": null,
-      "status": "IN_PLAY"
-    }
-  ],
+  "live": [],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -654,6 +644,19 @@
           "name": "Petar Musa",
           "side": "away",
           "minute": "45+5",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
+    },
+    "g23": {
+      "homeScore": 1,
+      "awayScore": 0,
+      "scorers": [
+        {
+          "name": "Caleb Yirenkyi",
+          "side": "home",
+          "minute": "90+5",
           "penalty": false,
           "owngoal": false
         }
