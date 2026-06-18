@@ -17,7 +17,8 @@ const RAW = 'https://raw.githubusercontent.com/ahatala/mm-veikkaus-2026/main/pub
 const LOCAL = import.meta.env.BASE_URL + 'data/'
 
 async function fetchJson<T>(baseUrl: string, file: string): Promise<T> {
-  const res = await fetch(baseUrl + file, { cache: 'no-cache' })
+  // Time out a stalled request so it can't linger; the next poll just tries again.
+  const res = await fetch(baseUrl + file, { cache: 'no-cache', signal: AbortSignal.timeout(15_000) })
   if (!res.ok) throw new Error(`${file}: ${res.status}`)
   return res.json() as Promise<T>
 }
@@ -31,8 +32,11 @@ async function getJson<T>(file: string): Promise<T> {
   }
 }
 
+let inFlight = false
 // silent = background refresh: don't show the loading state or clobber the view on a transient error.
 export async function loadData(silent = false): Promise<void> {
+  if (silent && inFlight) return // don't let background refreshes pile up / race each other
+  inFlight = true
   if (!silent) store.loading = true
   store.error = ''
   try {
@@ -46,6 +50,7 @@ export async function loadData(silent = false): Promise<void> {
   } catch (e) {
     if (!silent) store.error = e instanceof Error ? e.message : String(e)
   } finally {
+    inFlight = false
     if (!silent) store.loading = false
   }
 }
