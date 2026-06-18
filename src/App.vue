@@ -33,23 +33,46 @@ function select(id: string) {
 
 const updated = computed(() => formatUpdated(store.computed?.lastUpdated ?? null))
 
-function onVisible() {
-  if (document.visibilityState === 'visible') void loadData(true)
+// Detect when a newer build is deployed: compare the deployed index.html's hashed asset references
+// to the ones this page loaded. (Empty in dev, where there are no hashed assets — so no banner.)
+const newVersion = ref(false)
+const assetSig = (html: string) => (html.match(/assets\/[A-Za-z0-9_-]+\.js/g) ?? []).sort().join(',')
+const currentSig = assetSig(document.documentElement.innerHTML)
+async function checkVersion() {
+  if (newVersion.value || !currentSig) return
+  try {
+    const res = await fetch(import.meta.env.BASE_URL, { cache: 'no-cache' })
+    if (!res.ok) return
+    const sig = assetSig(await res.text())
+    if (sig && sig !== currentSig) newVersion.value = true
+  } catch { /* ignore — try again next tick */ }
 }
+const reload = () => location.reload()
+
+function onVisible() {
+  if (document.visibilityState !== 'visible') return
+  void loadData(true)
+  void checkVersion()
+}
+let versionTimer: ReturnType<typeof setInterval> | undefined
 onMounted(async () => {
   await loadData()
   startAutoRefresh()
+  versionTimer = setInterval(checkVersion, 120_000)
   document.addEventListener('visibilitychange', onVisible)
   window.addEventListener('focus', onVisible)
 })
 onBeforeUnmount(() => {
   stopAutoRefresh()
+  if (versionTimer) clearInterval(versionTimer)
   document.removeEventListener('visibilitychange', onVisible)
   window.removeEventListener('focus', onVisible)
 })
 </script>
 
 <template>
+  <button v-if="newVersion" class="version-banner" @click="reload">↻ Uusi versio – päivitä</button>
+
   <header class="app-header">
     <h1>MM-Veikkaus 2026 — J&amp;E</h1>
     <div class="sub">Päivitetty: {{ updated }}</div>
