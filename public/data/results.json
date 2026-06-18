@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-18T11:20:28.867Z",
+  "lastUpdated": "2026-06-18T16:10:33.364Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -27,7 +27,18 @@
     "g23": "1",
     "g24": "2"
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g25",
+      "home": "Tšekki",
+      "away": "Etelä-Afrikka",
+      "group": "A",
+      "homeScore": 0,
+      "awayScore": 0,
+      "minute": null,
+      "status": "IN_PLAY"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -827,7 +838,8 @@
     "abdulelah al amri": 1,
     "maximiliano araujo": 1,
     "mohammad mohebi": 1,
-    "ibrahim m'baye": 1
+    "ibrahim m'baye": 1,
+    "michal sadilek": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
