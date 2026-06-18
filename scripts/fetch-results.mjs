@@ -16,6 +16,7 @@ import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { resolveSpecials } from './specials.mjs'
 import { analyzeGroup } from './clinch.mjs'
+import { isStaleLive, isLiveNow } from './matchstate.mjs'
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const DATA = resolve(ROOT, 'public/data')
@@ -97,6 +98,7 @@ async function fromFootballData(token) {
       awayScore: m.score?.fullTime?.away ?? null,
       finished: m.status === 'FINISHED',
       status: m.status ?? null,
+      utcDate: m.utcDate ?? null,
       minute: m.minute ?? m.injuryTime ?? null,
       winner: w === 'HOME_TEAM' ? 'HOME' : w === 'AWAY_TEAM' ? 'AWAY' : w === 'DRAW' ? 'DRAW' : null,
       decidedIn,
@@ -202,28 +204,42 @@ function build(inter) {
   const matchResults = {} // matchId -> { homeScore, awayScore, scorers } for finished group matches
   const events = inter.eventsByPair ?? {}
   const unmatchedPairs = []
-  for (const m of inter.matches) {
-    if (m.stage !== 'GROUP' || !m.finished || !m.home || !m.away) continue
-    const sign = m.homeScore > m.awayScore ? '1' : m.homeScore < m.awayScore ? '2' : 'X'
-    const id = byPair.get(`${m.home}|${m.away}`)
-    if (id) {
-      groupMatches[id] = sign
-      matchResults[id] = { homeScore: m.homeScore, awayScore: m.awayScore, scorers: events[`${m.home}|${m.away}`] ?? [] }
-    } else unmatchedPairs.push(`${m.home}–${m.away}`)
+  const now = Date.now()
+  const sign = (h, a) => (h > a ? '1' : h < a ? '2' : 'X')
+
+  // Reliable "this match is over" results from the secondary source (openfootball), keyed by team pair.
+  // football-data's free tier sometimes sticks at IN_PLAY long after a match ends, so we trust these.
+  const ofFinished = {}
+  for (const m of inter.secondaryMatches ?? []) {
+    if (m.stage === 'GROUP' && m.finished && m.home && m.away && m.homeScore != null) {
+      ofFinished[`${m.home}|${m.away}`] = { homeScore: m.homeScore, awayScore: m.awayScore }
+    }
   }
 
-  // In-play group matches (live score + minute) — football-data only; openfootball has none.
   const live = []
   for (const m of inter.matches) {
     if (m.stage !== 'GROUP' || !m.home || !m.away) continue
-    if (m.status !== 'IN_PLAY' && m.status !== 'PAUSED') continue
-    const id = byPair.get(`${m.home}|${m.away}`)
-    if (!id) continue
-    live.push({
-      id, home: m.home, away: m.away, group: m.group,
-      homeScore: m.homeScore ?? 0, awayScore: m.awayScore ?? 0,
-      minute: m.minute ?? null, status: m.status,
-    })
+    const pair = `${m.home}|${m.away}`
+    const id = byPair.get(pair)
+    if (!id) { unmatchedPairs.push(`${m.home}–${m.away}`); continue }
+
+    // Result, in order of trust: football-data FINISHED, then openfootball's final, then a
+    // football-data in-play score that's stale (stuck past the live window).
+    let result = null
+    if (m.finished && m.homeScore != null) result = { homeScore: m.homeScore, awayScore: m.awayScore }
+    else if (ofFinished[pair]) result = ofFinished[pair]
+    else if (isStaleLive(m, now) && m.homeScore != null) result = { homeScore: m.homeScore, awayScore: m.awayScore }
+
+    if (result) {
+      groupMatches[id] = sign(result.homeScore, result.awayScore)
+      matchResults[id] = { ...result, scorers: events[pair] ?? [] }
+    } else if (isLiveNow(m, now) && !ofFinished[pair]) {
+      live.push({
+        id, home: m.home, away: m.away, group: m.group,
+        homeScore: m.homeScore ?? 0, awayScore: m.awayScore ?? 0,
+        minute: m.minute ?? null, status: m.status,
+      })
+    }
   }
 
   const teamsInStage = (stage) => {
@@ -318,6 +334,7 @@ if (token && !forceOf) {
   // short — so always pull openfootball for per-match goal events, and backfill missing picked players.
   const of = await fromOpenfootball()
   inter.eventsByPair = of.eventsByPair
+  inter.secondaryMatches = of.matches // openfootball finals — trusted when football-data sticks at IN_PLAY
   const pickedKeys = new Set(Object.values(bets.goldenBoot.picks).flat().map(playerKey))
   if (![...pickedKeys].every((k) => k in inter.scorers)) inter.scorers = { ...of.scorers, ...inter.scorers }
 } else {
