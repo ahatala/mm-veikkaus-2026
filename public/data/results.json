@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-18T17:20:32.898Z",
+  "lastUpdated": "2026-06-18T17:50:31.293Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -34,7 +34,7 @@
       "away": "Etelä-Afrikka",
       "group": "A",
       "homeScore": 1,
-      "awayScore": 0,
+      "awayScore": 1,
       "minute": null,
       "status": "IN_PLAY"
     }
@@ -839,7 +839,8 @@
     "maximiliano araujo": 1,
     "mohammad mohebi": 1,
     "ibrahim m'baye": 1,
-    "michal sadilek": 1
+    "michal sadilek": 1,
+    "teboho mokoena": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
