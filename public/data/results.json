@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-18T18:10:31.715Z",
+  "lastUpdated": "2026-06-18T20:10:27.843Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -28,7 +28,18 @@
     "g24": "2",
     "g25": "X"
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g26",
+      "home": "Sveitsi",
+      "away": "Bosnia-Hertsegovina",
+      "group": "B",
+      "homeScore": 0,
+      "awayScore": 0,
+      "minute": null,
+      "status": "IN_PLAY"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
