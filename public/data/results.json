@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-18T01:00:49.874Z",
+  "lastUpdated": "2026-06-18T01:10:44.305Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -31,7 +31,7 @@
       "home": "Ghana",
       "away": "Panama",
       "group": "L",
-      "homeScore": 0,
+      "homeScore": 1,
       "awayScore": 0,
       "minute": null,
       "status": "IN_PLAY"
@@ -776,6 +776,7 @@
     "marcus rashford": 1,
     "martin baturina": 1,
     "petar musa": 1,
+    "caleb yirenkyi": 1,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
     "gio reyna": 1,
@@ -784,8 +785,7 @@
     "abdulelah al amri": 1,
     "maximiliano araujo": 1,
     "mohammad mohebi": 1,
-    "ibrahim m'baye": 1,
-    "caleb yirenkyi": 1
+    "ibrahim m'baye": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
