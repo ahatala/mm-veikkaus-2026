@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-18T23:40:33.703Z",
+  "lastUpdated": "2026-06-18T23:50:33.139Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -35,7 +35,7 @@
       "home": "Kanada",
       "away": "Qatar",
       "group": "B",
-      "homeScore": 4,
+      "homeScore": 5,
       "awayScore": 0,
       "minute": null,
       "status": "IN_PLAY"
