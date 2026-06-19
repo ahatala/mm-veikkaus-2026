@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-19T00:10:33.687Z",
+  "lastUpdated": "2026-06-19T01:10:30.251Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -30,7 +30,18 @@
     "g26": "1",
     "g28": "1"
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g27",
+      "home": "Meksiko",
+      "away": "Etelä-Korea",
+      "group": "A",
+      "homeScore": 0,
+      "awayScore": 0,
+      "minute": null,
+      "status": "IN_PLAY"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
