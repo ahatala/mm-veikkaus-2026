@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-19T03:10:27.674Z",
+  "lastUpdated": "2026-06-19T19:10:40.658Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -31,7 +31,18 @@
     "g28": "1",
     "g27": "1"
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g29",
+      "home": "Yhdysvallat",
+      "away": "Australia",
+      "group": "D",
+      "homeScore": 0,
+      "awayScore": 0,
+      "minute": null,
+      "status": "IN_PLAY"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
