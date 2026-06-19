@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-19T21:10:29.593Z",
+  "lastUpdated": "2026-06-19T22:10:31.211Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -32,7 +32,18 @@
     "g27": "1",
     "g29": "1"
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g30",
+      "home": "Skotlanti",
+      "away": "Marokko",
+      "group": "C",
+      "homeScore": 0,
+      "awayScore": 1,
+      "minute": null,
+      "status": "IN_PLAY"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -926,7 +937,7 @@
     "jonathan david": 3,
     "nathan saliba": 1,
     "vinicius junior": 1,
-    "ismael saibari": 1,
+    "ismael saibari": 2,
     "john mcginn": 1,
     "folarin balogun": 2,
     "giovanni reyna": 1,
