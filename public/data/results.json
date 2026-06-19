@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-19T20:20:32.635Z",
+  "lastUpdated": "2026-06-19T21:10:29.593Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -29,20 +29,10 @@
     "g25": "X",
     "g26": "1",
     "g28": "1",
-    "g27": "1"
+    "g27": "1",
+    "g29": "1"
   },
-  "live": [
-    {
-      "id": "g29",
-      "home": "Yhdysvallat",
-      "away": "Australia",
-      "group": "D",
-      "homeScore": 2,
-      "awayScore": 0,
-      "minute": null,
-      "status": "IN_PLAY"
-    }
-  ],
+  "live": [],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -833,6 +823,26 @@
           "owngoal": false
         }
       ]
+    },
+    "g29": {
+      "homeScore": 2,
+      "awayScore": 0,
+      "scorers": [
+        {
+          "name": "Cameron Burgess",
+          "side": "home",
+          "minute": "11",
+          "penalty": false,
+          "owngoal": true
+        },
+        {
+          "name": "Alex Freeman",
+          "side": "home",
+          "minute": "43",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
     }
   },
   "groupStandings": {},
@@ -923,6 +933,7 @@
     "mauricio": 1,
     "nestory irankunda": 1,
     "connor metcalfe": 1,
+    "alex freeman": 1,
     "felix nmecha": 1,
     "nico schlotterbeck": 1,
     "kai havertz": 2,
@@ -977,8 +988,7 @@
     "maximiliano araujo": 1,
     "mohammad mohebi": 1,
     "ibrahim m'baye": 1,
-    "nathan-dylan saliba": 1,
-    "alex freeman": 1
+    "nathan-dylan saliba": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
