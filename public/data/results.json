@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-18T23:50:33.139Z",
+  "lastUpdated": "2026-06-19T00:00:47.656Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -35,7 +35,7 @@
       "home": "Kanada",
       "away": "Qatar",
       "group": "B",
-      "homeScore": 5,
+      "homeScore": 6,
       "awayScore": 0,
       "minute": null,
       "status": "IN_PLAY"
@@ -899,7 +899,7 @@
     "martin baturina": 1,
     "petar musa": 1,
     "caleb yirenkyi": 1,
-    "jonathan david": 2,
+    "jonathan david": 3,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
     "gio reyna": 1,
