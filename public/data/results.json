@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-19T02:20:29.188Z",
+  "lastUpdated": "2026-06-19T03:10:27.674Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -28,20 +28,10 @@
     "g24": "2",
     "g25": "X",
     "g26": "1",
-    "g28": "1"
+    "g28": "1",
+    "g27": "1"
   },
-  "live": [
-    {
-      "id": "g27",
-      "home": "Meksiko",
-      "away": "Etelä-Korea",
-      "group": "A",
-      "homeScore": 1,
-      "awayScore": 0,
-      "minute": null,
-      "status": "IN_PLAY"
-    }
-  ],
+  "live": [],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -819,13 +809,29 @@
           "owngoal": false
         }
       ]
+    },
+    "g27": {
+      "homeScore": 1,
+      "awayScore": 0,
+      "scorers": [
+        {
+          "name": "Luis Romo",
+          "side": "home",
+          "minute": "50",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
     }
   },
   "groupStandings": {},
   "groupTop2": {},
   "groupClinch": {
     "A": {
-      "eliminatedFromFirst": [],
+      "eliminatedFromFirst": [
+        "Etelä-Afrikka",
+        "Tšekki"
+      ],
       "eliminatedFromTop2": []
     },
     "B": {
@@ -887,6 +893,7 @@
     "ladislav krejci": 1,
     "michal sadilek": 1,
     "teboho mokoena": 1,
+    "luis romo": 1,
     "cyle larin": 2,
     "jovo lukic": 1,
     "boualem khoukhi": 1,
@@ -959,8 +966,7 @@
     "maximiliano araujo": 1,
     "mohammad mohebi": 1,
     "ibrahim m'baye": 1,
-    "nathan-dylan saliba": 1,
-    "luis romo": 1
+    "nathan-dylan saliba": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
