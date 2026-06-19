@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-19T00:00:47.656Z",
+  "lastUpdated": "2026-06-19T00:10:33.687Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -27,20 +27,10 @@
     "g23": "1",
     "g24": "2",
     "g25": "X",
-    "g26": "1"
+    "g26": "1",
+    "g28": "1"
   },
-  "live": [
-    {
-      "id": "g28",
-      "home": "Kanada",
-      "away": "Qatar",
-      "group": "B",
-      "homeScore": 6,
-      "awayScore": 0,
-      "minute": null,
-      "status": "IN_PLAY"
-    }
-  ],
+  "live": [],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -770,6 +760,54 @@
           "owngoal": false
         }
       ]
+    },
+    "g28": {
+      "homeScore": 6,
+      "awayScore": 0,
+      "scorers": [
+        {
+          "name": "Cyle Larin",
+          "side": "home",
+          "minute": "16",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Jonathan David",
+          "side": "home",
+          "minute": "29",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Jonathan David",
+          "side": "home",
+          "minute": "45+3",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Nathan Saliba",
+          "side": "home",
+          "minute": "64",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Mohamed Manai",
+          "side": "home",
+          "minute": "75",
+          "penalty": false,
+          "owngoal": true
+        },
+        {
+          "name": "Jonathan David",
+          "side": "home",
+          "minute": "90+2",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
     }
   },
   "groupStandings": {},
@@ -846,6 +884,8 @@
     "ruben vargas": 1,
     "granit xhaka": 1,
     "ermin mahmic": 1,
+    "jonathan david": 3,
+    "nathan saliba": 1,
     "vinicius junior": 1,
     "ismael saibari": 1,
     "john mcginn": 1,
@@ -899,7 +939,6 @@
     "martin baturina": 1,
     "petar musa": 1,
     "caleb yirenkyi": 1,
-    "jonathan david": 3,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
     "gio reyna": 1,
