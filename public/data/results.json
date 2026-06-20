@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-20T19:00:48.694Z",
+  "lastUpdated": "2026-06-20T19:10:31.649Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -33,20 +33,10 @@
     "g29": "1",
     "g30": "2",
     "g31": "1",
-    "g32": "2"
+    "g32": "2",
+    "g33": "1"
   },
-  "live": [
-    {
-      "id": "g33",
-      "home": "Hollanti",
-      "away": "Ruotsi",
-      "group": "F",
-      "homeScore": 5,
-      "awayScore": 1,
-      "minute": null,
-      "status": "IN_PLAY"
-    }
-  ],
+  "live": [],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -910,6 +900,54 @@
           "owngoal": false
         }
       ]
+    },
+    "g33": {
+      "homeScore": 5,
+      "awayScore": 1,
+      "scorers": [
+        {
+          "name": "Brian Brobbey",
+          "side": "home",
+          "minute": "5",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Brian Brobbey",
+          "side": "home",
+          "minute": "17",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Cody Gakpo",
+          "side": "home",
+          "minute": "47",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Cody Gakpo",
+          "side": "home",
+          "minute": "54",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Crysencio Summerville",
+          "side": "home",
+          "minute": "89",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Anthony Elanga",
+          "side": "away",
+          "minute": "59",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
     }
   },
   "groupStandings": {},
@@ -1025,6 +1063,9 @@
     "viktor gyokeres": 1,
     "mattias svanberg": 1,
     "omar rekik": 1,
+    "brian brobbey": 2,
+    "cody gakpo": 2,
+    "anthony elanga": 1,
     "emam ashour": 1,
     "ramin rezaeian": 1,
     "mohammad mohebbi": 1,
@@ -1053,8 +1094,6 @@
     "martin baturina": 1,
     "petar musa": 1,
     "caleb yirenkyi": 1,
-    "brian brobbey": 2,
-    "cody gakpo": 2,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
     "gio reyna": 1,
@@ -1066,7 +1105,6 @@
     "mohammad mohebi": 1,
     "ibrahim m'baye": 1,
     "nathan-dylan saliba": 1,
-    "anthony elanga": 1,
     "memphis depay": 1
   },
   "specialAnswers": {
