@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-20T01:00:43.156Z",
+  "lastUpdated": "2026-06-20T01:10:32.904Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -39,7 +39,7 @@
       "home": "Brasilia",
       "away": "Haiti",
       "group": "C",
-      "homeScore": 0,
+      "homeScore": 1,
       "awayScore": 0,
       "minute": null,
       "status": "IN_PLAY"
@@ -1004,6 +1004,7 @@
     "martin baturina": 1,
     "petar musa": 1,
     "caleb yirenkyi": 1,
+    "matheus cunha": 2,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
     "gio reyna": 1,
@@ -1013,8 +1014,7 @@
     "maximiliano araujo": 1,
     "mohammad mohebi": 1,
     "ibrahim m'baye": 1,
-    "nathan-dylan saliba": 1,
-    "matheus cunha": 1
+    "nathan-dylan saliba": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
