@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-20T05:20:28.990Z",
+  "lastUpdated": "2026-06-20T05:30:37.145Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -890,7 +890,15 @@
     "g32": {
       "homeScore": 0,
       "awayScore": 1,
-      "scorers": []
+      "scorers": [
+        {
+          "name": "Matías Galarza",
+          "side": "away",
+          "minute": "2",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
     }
   },
   "groupStandings": {},
@@ -989,6 +997,7 @@
     "nestory irankunda": 1,
     "connor metcalfe": 1,
     "alex freeman": 1,
+    "matias galarza": 1,
     "felix nmecha": 1,
     "nico schlotterbeck": 1,
     "kai havertz": 2,
@@ -1043,8 +1052,7 @@
     "maximiliano araujo": 1,
     "mohammad mohebi": 1,
     "ibrahim m'baye": 1,
-    "nathan-dylan saliba": 1,
-    "matias galarza": 1
+    "nathan-dylan saliba": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
