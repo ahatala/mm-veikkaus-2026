@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-20T02:10:28.640Z",
+  "lastUpdated": "2026-06-20T02:40:28.046Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -31,20 +31,10 @@
     "g28": "1",
     "g27": "1",
     "g29": "1",
-    "g30": "2"
+    "g30": "2",
+    "g31": "1"
   },
-  "live": [
-    {
-      "id": "g31",
-      "home": "Brasilia",
-      "away": "Haiti",
-      "group": "C",
-      "homeScore": 3,
-      "awayScore": 0,
-      "minute": null,
-      "status": "IN_PLAY"
-    }
-  ],
+  "live": [],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -868,6 +858,33 @@
           "owngoal": false
         }
       ]
+    },
+    "g31": {
+      "homeScore": 3,
+      "awayScore": 0,
+      "scorers": [
+        {
+          "name": "Matheus Cunha",
+          "side": "home",
+          "minute": "23",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Matheus Cunha",
+          "side": "home",
+          "minute": "36",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Vinícius Júnior",
+          "side": "home",
+          "minute": "45+3",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
     }
   },
   "groupStandings": {},
@@ -885,8 +902,12 @@
       "eliminatedFromTop2": []
     },
     "C": {
-      "eliminatedFromFirst": [],
-      "eliminatedFromTop2": []
+      "eliminatedFromFirst": [
+        "Haiti"
+      ],
+      "eliminatedFromTop2": [
+        "Haiti"
+      ]
     },
     "D": {
       "eliminatedFromFirst": [],
@@ -953,6 +974,7 @@
     "vinicius junior": 2,
     "ismael saibari": 2,
     "john mcginn": 1,
+    "matheus cunha": 2,
     "folarin balogun": 2,
     "giovanni reyna": 1,
     "mauricio": 1,
@@ -1004,7 +1026,6 @@
     "martin baturina": 1,
     "petar musa": 1,
     "caleb yirenkyi": 1,
-    "matheus cunha": 2,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
     "gio reyna": 1,
