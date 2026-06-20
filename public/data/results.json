@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-20T04:20:29.222Z",
+  "lastUpdated": "2026-06-20T05:20:28.990Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -32,20 +32,10 @@
     "g27": "1",
     "g29": "1",
     "g30": "2",
-    "g31": "1"
+    "g31": "1",
+    "g32": "2"
   },
-  "live": [
-    {
-      "id": "g32",
-      "home": "Turkki",
-      "away": "Paraguay",
-      "group": "D",
-      "homeScore": 0,
-      "awayScore": 1,
-      "minute": null,
-      "status": "IN_PLAY"
-    }
-  ],
+  "live": [],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -896,6 +886,11 @@
           "owngoal": false
         }
       ]
+    },
+    "g32": {
+      "homeScore": 0,
+      "awayScore": 1,
+      "scorers": []
     }
   },
   "groupStandings": {},
@@ -921,7 +916,9 @@
       ]
     },
     "D": {
-      "eliminatedFromFirst": [],
+      "eliminatedFromFirst": [
+        "Turkki"
+      ],
       "eliminatedFromTop2": []
     },
     "E": {
