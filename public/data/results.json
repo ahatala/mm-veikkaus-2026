@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-20T01:20:32.164Z",
+  "lastUpdated": "2026-06-20T01:30:35.443Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -39,10 +39,10 @@
       "home": "Brasilia",
       "away": "Haiti",
       "group": "C",
-      "homeScore": 2,
+      "homeScore": 3,
       "awayScore": 0,
       "minute": null,
-      "status": "IN_PLAY"
+      "status": "PAUSED"
     }
   ],
   "matchResults": {
@@ -950,7 +950,7 @@
     "ermin mahmic": 1,
     "jonathan david": 3,
     "nathan saliba": 1,
-    "vinicius junior": 1,
+    "vinicius junior": 2,
     "ismael saibari": 2,
     "john mcginn": 1,
     "folarin balogun": 2,
