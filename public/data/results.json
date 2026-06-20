@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-20T11:00:42.996Z",
+  "lastUpdated": "2026-06-20T17:10:35.318Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -35,7 +35,18 @@
     "g31": "1",
     "g32": "2"
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g33",
+      "home": "Hollanti",
+      "away": "Ruotsi",
+      "group": "F",
+      "homeScore": 1,
+      "awayScore": 0,
+      "minute": null,
+      "status": "IN_PLAY"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -1041,18 +1052,7 @@
     "marcus rashford": 1,
     "martin baturina": 1,
     "petar musa": 1,
-    "caleb yirenkyi": 1,
-    "in-beom hwang": 1,
-    "hyun-gyu oh": 1,
-    "gio reyna": 1,
-    "boualem khoukhi": 1,
-    "nestor irankunda": 1,
-    "felix kalu nmecha": 1,
-    "abdulelah al amri": 1,
-    "maximiliano araujo": 1,
-    "mohammad mohebi": 1,
-    "ibrahim m'baye": 1,
-    "nathan-dylan saliba": 1
+    "caleb yirenkyi": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
