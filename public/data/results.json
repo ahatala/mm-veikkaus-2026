@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-20T02:40:28.046Z",
+  "lastUpdated": "2026-06-20T03:10:34.003Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -34,7 +34,18 @@
     "g30": "2",
     "g31": "1"
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g32",
+      "home": "Turkki",
+      "away": "Paraguay",
+      "group": "D",
+      "homeScore": 0,
+      "awayScore": 1,
+      "minute": null,
+      "status": "IN_PLAY"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -1035,7 +1046,8 @@
     "maximiliano araujo": 1,
     "mohammad mohebi": 1,
     "ibrahim m'baye": 1,
-    "nathan-dylan saliba": 1
+    "nathan-dylan saliba": 1,
+    "matias galarza": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
