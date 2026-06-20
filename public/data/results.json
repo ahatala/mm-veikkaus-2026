@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-20T19:10:31.649Z",
+  "lastUpdated": "2026-06-20T20:10:28.011Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -36,7 +36,18 @@
     "g32": "2",
     "g33": "1"
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g34",
+      "home": "Saksa",
+      "away": "Norsunluurannikko",
+      "group": "E",
+      "homeScore": 0,
+      "awayScore": 0,
+      "minute": null,
+      "status": "IN_PLAY"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
