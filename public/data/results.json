@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-20T17:30:45.169Z",
+  "lastUpdated": "2026-06-20T18:20:30.310Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -41,7 +41,7 @@
       "home": "Hollanti",
       "away": "Ruotsi",
       "group": "F",
-      "homeScore": 2,
+      "homeScore": 4,
       "awayScore": 0,
       "minute": null,
       "status": "IN_PLAY"
@@ -1054,6 +1054,7 @@
     "petar musa": 1,
     "caleb yirenkyi": 1,
     "brian brobbey": 2,
+    "cody gakpo": 2,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
     "gio reyna": 1,
