@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-20T05:30:37.145Z",
+  "lastUpdated": "2026-06-20T11:00:42.996Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -150,11 +150,11 @@
       "awayScore": 1,
       "scorers": [
         {
-          "name": "Boualem Khoukhi",
+          "name": "Miro Muheim",
           "side": "home",
           "minute": "90+4",
           "penalty": false,
-          "owngoal": false
+          "owngoal": true
         },
         {
           "name": "Breel Embolo",
@@ -979,7 +979,6 @@
     "luis romo": 1,
     "cyle larin": 2,
     "jovo lukic": 1,
-    "boualem khoukhi": 1,
     "breel embolo": 1,
     "johan manzambi": 2,
     "ruben vargas": 1,
@@ -1046,6 +1045,7 @@
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
     "gio reyna": 1,
+    "boualem khoukhi": 1,
     "nestor irankunda": 1,
     "felix kalu nmecha": 1,
     "abdulelah al amri": 1,
