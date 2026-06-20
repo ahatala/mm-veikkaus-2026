@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-20T00:10:30.440Z",
+  "lastUpdated": "2026-06-20T00:40:31.422Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -33,7 +33,18 @@
     "g29": "1",
     "g30": "2"
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g31",
+      "home": "Brasilia",
+      "away": "Haiti",
+      "group": "C",
+      "homeScore": 0,
+      "awayScore": 0,
+      "minute": null,
+      "status": "IN_PLAY"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
