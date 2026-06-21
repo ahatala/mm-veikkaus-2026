@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-21T17:20:29.591Z",
+  "lastUpdated": "2026-06-21T18:10:28.568Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -37,20 +37,10 @@
     "g33": "1",
     "g34": "1",
     "g35": "X",
-    "g36": "2"
+    "g36": "2",
+    "g37": "1"
   },
-  "live": [
-    {
-      "id": "g37",
-      "home": "Espanja",
-      "away": "Saudi-Arabia",
-      "group": "H",
-      "homeScore": 4,
-      "awayScore": 0,
-      "minute": null,
-      "status": "IN_PLAY"
-    }
-  ],
+  "live": [],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -1028,6 +1018,40 @@
           "owngoal": false
         }
       ]
+    },
+    "g37": {
+      "homeScore": 5,
+      "awayScore": 0,
+      "scorers": [
+        {
+          "name": "Lamine Yamal",
+          "side": "home",
+          "minute": "10",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Mikel Oyarzabal",
+          "side": "home",
+          "minute": "21",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Mikel Oyarzabal",
+          "side": "home",
+          "minute": "24",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Hassan Al-Tambakti",
+          "side": "home",
+          "minute": "49",
+          "penalty": false,
+          "owngoal": true
+        }
+      ]
     }
   },
   "groupStandings": {},
@@ -1162,6 +1186,8 @@
     "elijah just": 2,
     "abdulelah al-amri": 1,
     "maxi araujo": 1,
+    "lamine yamal": 1,
+    "mikel oyarzabal": 2,
     "kylian mbappe": 2,
     "bradley barcola": 1,
     "ibrahim mbaye": 1,
@@ -1184,7 +1210,6 @@
     "martin baturina": 1,
     "petar musa": 1,
     "caleb yirenkyi": 1,
-    "mikel oyarzabal": 2,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
     "gio reyna": 1,
@@ -1196,8 +1221,7 @@
     "mohammad mohebi": 1,
     "ibrahim m'baye": 1,
     "nathan-dylan saliba": 1,
-    "memphis depay": 1,
-    "lamine yamal": 1
+    "memphis depay": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
