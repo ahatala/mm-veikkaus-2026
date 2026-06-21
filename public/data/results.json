@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-21T17:00:46.548Z",
+  "lastUpdated": "2026-06-21T17:20:29.591Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -45,10 +45,10 @@
       "home": "Espanja",
       "away": "Saudi-Arabia",
       "group": "H",
-      "homeScore": 3,
+      "homeScore": 4,
       "awayScore": 0,
       "minute": null,
-      "status": "PAUSED"
+      "status": "IN_PLAY"
     }
   ],
   "matchResults": {
