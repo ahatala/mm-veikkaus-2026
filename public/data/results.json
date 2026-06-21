@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-21T20:20:30.115Z",
+  "lastUpdated": "2026-06-21T20:40:27.137Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -1031,7 +1031,7 @@
       ]
     },
     "g37": {
-      "homeScore": 5,
+      "homeScore": 4,
       "awayScore": 0,
       "scorers": [
         {
