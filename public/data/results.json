@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-21T22:30:37.867Z",
+  "lastUpdated": "2026-06-21T22:50:30.331Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -47,7 +47,7 @@
       "home": "Uruguay",
       "away": "Kap Verde",
       "group": "H",
-      "homeScore": 0,
+      "homeScore": 1,
       "awayScore": 1,
       "minute": null,
       "status": "IN_PLAY"
@@ -1227,6 +1227,7 @@
     "martin baturina": 1,
     "petar musa": 1,
     "caleb yirenkyi": 1,
+    "maximiliano araujo": 2,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
     "gio reyna": 1,
@@ -1234,7 +1235,6 @@
     "nestor irankunda": 1,
     "felix kalu nmecha": 1,
     "abdulelah al amri": 1,
-    "maximiliano araujo": 1,
     "mohammad mohebi": 1,
     "ibrahim m'baye": 1,
     "nathan-dylan saliba": 1,
