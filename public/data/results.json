@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-21T22:50:30.331Z",
+  "lastUpdated": "2026-06-21T23:00:43.301Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -47,10 +47,10 @@
       "home": "Uruguay",
       "away": "Kap Verde",
       "group": "H",
-      "homeScore": 1,
+      "homeScore": 2,
       "awayScore": 1,
       "minute": null,
-      "status": "IN_PLAY"
+      "status": "PAUSED"
     }
   ],
   "matchResults": {
@@ -1239,7 +1239,8 @@
     "ibrahim m'baye": 1,
     "nathan-dylan saliba": 1,
     "memphis depay": 1,
-    "kevin pina": 1
+    "kevin pina": 1,
+    "agustin canobbio": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
