@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-21T18:10:28.568Z",
+  "lastUpdated": "2026-06-21T19:10:28.368Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -40,7 +40,18 @@
     "g36": "2",
     "g37": "1"
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g38",
+      "home": "Belgia",
+      "away": "Iran",
+      "group": "G",
+      "homeScore": 0,
+      "awayScore": 0,
+      "minute": null,
+      "status": "IN_PLAY"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
