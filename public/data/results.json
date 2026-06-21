@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-21T05:40:29.634Z",
+  "lastUpdated": "2026-06-21T05:50:28.592Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -45,7 +45,7 @@
       "away": "Japani",
       "group": "F",
       "homeScore": 0,
-      "awayScore": 3,
+      "awayScore": 4,
       "minute": null,
       "status": "IN_PLAY"
     }
@@ -1143,6 +1143,7 @@
     "martin baturina": 1,
     "petar musa": 1,
     "caleb yirenkyi": 1,
+    "ayase ueda": 2,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
     "gio reyna": 1,
@@ -1155,7 +1156,6 @@
     "ibrahim m'baye": 1,
     "nathan-dylan saliba": 1,
     "memphis depay": 1,
-    "ayase ueda": 1,
     "junya ito": 1
   },
   "specialAnswers": {
