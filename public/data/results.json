@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-21T02:00:42.351Z",
+  "lastUpdated": "2026-06-21T04:10:29.314Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -38,7 +38,18 @@
     "g34": "1",
     "g35": "X"
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g36",
+      "home": "Tunisia",
+      "away": "Japani",
+      "group": "F",
+      "homeScore": 0,
+      "awayScore": 0,
+      "minute": null,
+      "status": "IN_PLAY"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -1095,7 +1106,7 @@
     "virgil van dijk": 1,
     "crysencio summerville": 1,
     "keito nakamura": 1,
-    "daichi kamada": 1,
+    "daichi kamada": 2,
     "yasin ayari": 2,
     "alexander isak": 1,
     "viktor gyokeres": 1,
