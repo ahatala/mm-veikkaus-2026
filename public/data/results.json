@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-20T22:10:28.936Z",
+  "lastUpdated": "2026-06-21T00:10:31.120Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -37,7 +37,18 @@
     "g33": "1",
     "g34": "1"
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g35",
+      "home": "Ecuador",
+      "away": "Curaçao",
+      "group": "E",
+      "homeScore": 0,
+      "awayScore": 0,
+      "minute": null,
+      "status": "IN_PLAY"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
