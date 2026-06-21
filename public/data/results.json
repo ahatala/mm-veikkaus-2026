@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-21T16:20:32.222Z",
+  "lastUpdated": "2026-06-21T16:30:34.972Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -45,7 +45,7 @@
       "home": "Espanja",
       "away": "Saudi-Arabia",
       "group": "H",
-      "homeScore": 1,
+      "homeScore": 2,
       "awayScore": 0,
       "minute": null,
       "status": "IN_PLAY"
@@ -1184,6 +1184,7 @@
     "martin baturina": 1,
     "petar musa": 1,
     "caleb yirenkyi": 1,
+    "mikel oyarzabal": 2,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
     "gio reyna": 1,
