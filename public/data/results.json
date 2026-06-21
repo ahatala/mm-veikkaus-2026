@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-21T05:50:28.592Z",
+  "lastUpdated": "2026-06-21T06:10:28.959Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -36,20 +36,10 @@
     "g32": "2",
     "g33": "1",
     "g34": "1",
-    "g35": "X"
+    "g35": "X",
+    "g36": "2"
   },
-  "live": [
-    {
-      "id": "g36",
-      "home": "Tunisia",
-      "away": "Japani",
-      "group": "F",
-      "homeScore": 0,
-      "awayScore": 4,
-      "minute": null,
-      "status": "IN_PLAY"
-    }
-  ],
+  "live": [],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -993,6 +983,40 @@
       "homeScore": 0,
       "awayScore": 0,
       "scorers": []
+    },
+    "g36": {
+      "homeScore": 0,
+      "awayScore": 4,
+      "scorers": [
+        {
+          "name": "Daichi Kamada",
+          "side": "away",
+          "minute": "4",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Ayase Ueda",
+          "side": "away",
+          "minute": "31",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Junya Ito",
+          "side": "away",
+          "minute": "69",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Ayase Ueda",
+          "side": "away",
+          "minute": "83",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
     }
   },
   "groupStandings": {},
@@ -1031,8 +1055,12 @@
       "eliminatedFromTop2": []
     },
     "F": {
-      "eliminatedFromFirst": [],
-      "eliminatedFromTop2": []
+      "eliminatedFromFirst": [
+        "Tunisia"
+      ],
+      "eliminatedFromTop2": [
+        "Tunisia"
+      ]
     },
     "G": {
       "eliminatedFromFirst": [],
@@ -1115,6 +1143,8 @@
     "brian brobbey": 2,
     "cody gakpo": 2,
     "anthony elanga": 1,
+    "ayase ueda": 2,
+    "junya ito": 1,
     "emam ashour": 1,
     "ramin rezaeian": 1,
     "mohammad mohebbi": 1,
@@ -1143,7 +1173,6 @@
     "martin baturina": 1,
     "petar musa": 1,
     "caleb yirenkyi": 1,
-    "ayase ueda": 2,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
     "gio reyna": 1,
@@ -1155,8 +1184,7 @@
     "mohammad mohebi": 1,
     "ibrahim m'baye": 1,
     "nathan-dylan saliba": 1,
-    "memphis depay": 1,
-    "junya ito": 1
+    "memphis depay": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
