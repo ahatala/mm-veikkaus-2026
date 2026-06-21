@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-21T04:20:27.979Z",
+  "lastUpdated": "2026-06-21T04:40:32.006Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -45,7 +45,7 @@
       "away": "Japani",
       "group": "F",
       "homeScore": 0,
-      "awayScore": 1,
+      "awayScore": 2,
       "minute": null,
       "status": "IN_PLAY"
     }
@@ -1154,7 +1154,8 @@
     "mohammad mohebi": 1,
     "ibrahim m'baye": 1,
     "nathan-dylan saliba": 1,
-    "memphis depay": 1
+    "memphis depay": 1,
+    "ayase ueda": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
