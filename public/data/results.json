@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-21T23:30:37.759Z",
+  "lastUpdated": "2026-06-21T23:40:30.539Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -48,7 +48,7 @@
       "away": "Kap Verde",
       "group": "H",
       "homeScore": 2,
-      "awayScore": 1,
+      "awayScore": 2,
       "minute": null,
       "status": "IN_PLAY"
     }
