@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-21T21:10:28.535Z",
+  "lastUpdated": "2026-06-21T22:10:27.891Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -41,7 +41,18 @@
     "g37": "1",
     "g38": "X"
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g39",
+      "home": "Uruguay",
+      "away": "Kap Verde",
+      "group": "H",
+      "homeScore": 0,
+      "awayScore": 0,
+      "minute": null,
+      "status": "IN_PLAY"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
