@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-21T01:20:28.627Z",
+  "lastUpdated": "2026-06-21T02:00:42.351Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -35,20 +35,10 @@
     "g31": "1",
     "g32": "2",
     "g33": "1",
-    "g34": "1"
+    "g34": "1",
+    "g35": "X"
   },
-  "live": [
-    {
-      "id": "g35",
-      "home": "Ecuador",
-      "away": "Curaçao",
-      "group": "E",
-      "homeScore": 0,
-      "awayScore": 0,
-      "minute": null,
-      "status": "IN_PLAY"
-    }
-  ],
+  "live": [],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -987,6 +977,11 @@
           "owngoal": false
         }
       ]
+    },
+    "g35": {
+      "homeScore": 0,
+      "awayScore": 0,
+      "scorers": []
     }
   },
   "groupStandings": {},
@@ -1018,7 +1013,10 @@
       "eliminatedFromTop2": []
     },
     "E": {
-      "eliminatedFromFirst": [],
+      "eliminatedFromFirst": [
+        "Curaçao",
+        "Ecuador"
+      ],
       "eliminatedFromTop2": []
     },
     "F": {
