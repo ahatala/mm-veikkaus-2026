@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-22T21:20:33.985Z",
+  "lastUpdated": "2026-06-22T21:30:40.520Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -50,7 +50,7 @@
       "home": "Ranska",
       "away": "Irak",
       "group": "I",
-      "homeScore": 0,
+      "homeScore": 1,
       "awayScore": 0,
       "minute": null,
       "status": "IN_PLAY"
