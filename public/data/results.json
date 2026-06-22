@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-22T02:30:36.895Z",
+  "lastUpdated": "2026-06-22T02:40:27.658Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -49,7 +49,7 @@
       "away": "Egypti",
       "group": "G",
       "homeScore": 1,
-      "awayScore": 1,
+      "awayScore": 2,
       "minute": null,
       "status": "IN_PLAY"
     }
