@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-22T02:20:31.808Z",
+  "lastUpdated": "2026-06-22T02:30:36.895Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -49,7 +49,7 @@
       "away": "Egypti",
       "group": "G",
       "homeScore": 1,
-      "awayScore": 0,
+      "awayScore": 1,
       "minute": null,
       "status": "IN_PLAY"
     }
@@ -1279,7 +1279,8 @@
     "memphis depay": 1,
     "agustin canobbio": 1,
     "finn surman": 1,
-    "mostafa ziko": 1
+    "mostafa ziko": 1,
+    "mohamed salah": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
