@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-22T19:00:51.109Z",
+  "lastUpdated": "2026-06-22T19:10:32.755Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -41,20 +41,10 @@
     "g37": "1",
     "g38": "X",
     "g39": "X",
-    "g40": "2"
+    "g40": "2",
+    "g41": "1"
   },
-  "live": [
-    {
-      "id": "g41",
-      "home": "Argentiina",
-      "away": "Itävalta",
-      "group": "J",
-      "homeScore": 1,
-      "awayScore": 0,
-      "minute": null,
-      "status": "IN_PLAY"
-    }
-  ],
+  "live": [],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -1139,6 +1129,26 @@
           "owngoal": false
         }
       ]
+    },
+    "g41": {
+      "homeScore": 2,
+      "awayScore": 0,
+      "scorers": [
+        {
+          "name": "Lionel Messi",
+          "side": "home",
+          "minute": "38",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Lionel Messi",
+          "side": "home",
+          "minute": "90+5",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
     }
   },
   "groupStandings": {},
@@ -1560,24 +1570,24 @@
     "J": [
       {
         "team": "Argentiina",
-        "played": 1,
-        "won": 1,
+        "played": 2,
+        "won": 2,
         "drawn": 0,
         "lost": 0,
-        "gf": 3,
+        "gf": 5,
         "ga": 0,
-        "gd": 3,
-        "points": 3
+        "gd": 5,
+        "points": 6
       },
       {
         "team": "Itävalta",
-        "played": 1,
+        "played": 2,
         "won": 1,
         "drawn": 0,
-        "lost": 0,
+        "lost": 1,
         "gf": 3,
-        "ga": 1,
-        "gd": 2,
+        "ga": 3,
+        "gd": 0,
         "points": 3
       },
       {
@@ -1764,7 +1774,9 @@
       "eliminatedFromTop2": []
     },
     "J": {
-      "eliminatedFromFirst": [],
+      "eliminatedFromFirst": [
+        "Algeria"
+      ],
       "eliminatedFromTop2": []
     },
     "K": {
