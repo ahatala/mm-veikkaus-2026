@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
 import { store } from '../store'
+import { key } from '../scoring/normalize'
 import { CATEGORIES, pts } from '../ui'
 
 const STORAGE_KEY = 'mm-veikkaus-2026:pelaaja'
@@ -14,6 +15,9 @@ watch(sel, (name) => { try { localStorage.setItem(STORAGE_KEY, name) } catch { /
 
 const c = computed(() => store.computed!)
 const row = computed(() => c.value.standings.find((r) => r.name === sel.value)!)
+// Teams out of the tournament — a knockout pick on one can no longer score.
+const eliminated = computed(() => new Set(c.value.eliminated.map((t) => key(t))))
+const isDead = (team: string) => eliminated.value.has(key(team))
 
 const playedMatches = computed(() =>
   c.value.matches.filter((m) => m.actual).map((m) => ({
@@ -85,7 +89,8 @@ const special = computed(() => c.value.special.map((s) => ({
     <div v-for="r in koRounds" :key="r.key" style="margin-bottom:8px">
       <span class="muted" style="font-size:12px">{{ r.label }} ({{ r.points }} p)</span>
       <div class="chips" style="margin-top:3px">
-        <span v-for="team in r.picks" :key="team" class="chip" :class="{ 'chip--correct': r.correct.includes(team) }">{{ team }}</span>
+        <span v-for="team in r.picks" :key="team" class="chip"
+          :class="{ 'chip--correct': r.correct.includes(team), 'chip--dead': !r.correct.includes(team) && isDead(team) }">{{ team }}</span>
       </div>
     </div>
   </div>

@@ -12,6 +12,15 @@ function chipClass(s: SpecialResult, name: string): string {
 }
 </script>
 
+<style scoped>
+.special-reason {
+  margin: -2px 0 10px;
+  font-size: 12.5px;
+  border-left: 2px solid var(--line);
+  padding-left: 10px;
+}
+</style>
+
 <template>
   <div class="card">
     <h2>Erikoiskysymykset</h2>
@@ -24,6 +33,7 @@ function chipClass(s: SpecialResult, name: string): string {
       <span class="pill" v-if="!s.resolved">ratkeamatta</span>
       <span class="pill" v-else :style="{ color: 'var(--green)' }">Vastaus: {{ s.answer }}</span>
     </h2>
+    <p v-if="s.reason" class="muted special-reason">{{ s.reason }}</p>
     <div class="chips">
       <span v-for="name in participants" :key="name" class="chip" :class="chipClass(s, name)">
         {{ name }} <strong>{{ s.question.picks[name] ?? '–' }}</strong>

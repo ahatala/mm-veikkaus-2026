@@ -144,7 +144,11 @@ export function scoreLive(bets: Bets, live: Results['live'] = []): LiveResult[] 
     .filter((x): x is LiveResult => x !== null)
 }
 
-export function scoreSpecial(bets: Bets, answers: Record<string, YesNo>): SpecialResult[] {
+export function scoreSpecial(
+  bets: Bets,
+  answers: Record<string, YesNo>,
+  reasons: Record<string, string> = {},
+): SpecialResult[] {
   return bets.specialQuestions.map((q) => {
     const answer = answers[q.id] ?? null
     const points = zero(bets.participants)
@@ -153,7 +157,7 @@ export function scoreSpecial(bets: Bets, answers: Record<string, YesNo>): Specia
         if (q.picks[name] === answer) points[name] = q.points
       }
     }
-    return { question: q, answer, resolved: answer != null, points }
+    return { question: q, answer, resolved: answer != null, reason: reasons[q.id] ?? null, points }
   })
 }
 
@@ -182,8 +186,15 @@ export function compute(bets: Bets, results: Results, overrides: Overrides): Com
   const finalists = scoreTeamSet(bets, bets.knockout.finalists, ko.finalists ?? [])
   const champion = scoreChampion(bets, ko.champion ?? null)
   const goldenBoot = scoreGoldenBoot(bets, goals)
-  // Auto-resolved answers from the feed, with jury overrides taking precedence.
-  const special = scoreSpecial(bets, { ...(results.specialAnswers ?? {}), ...(overrides.specialAnswers ?? {}) })
+  // Auto-resolved answers from the feed, with jury overrides taking precedence. A justification is
+  // kept only when the displayed answer is still the auto-resolved one (a jury override drops it).
+  const autoAnswers = results.specialAnswers ?? {}
+  const specialAnswers = { ...autoAnswers, ...(overrides.specialAnswers ?? {}) }
+  const specialReasons: Record<string, string> = {}
+  for (const [id, reason] of Object.entries(results.specialReasons ?? {})) {
+    if (specialAnswers[id] === autoAnswers[id]) specialReasons[id] = reason
+  }
+  const special = scoreSpecial(bets, specialAnswers, specialReasons)
 
   const matchPts = matches.map((m) => m.points)
   const top2Pts = top2.map((t) => t.points)
@@ -219,6 +230,8 @@ export function compute(bets: Bets, results: Results, overrides: Overrides): Com
     standings: standingsOut,
     live,
     groupStandings: standings,
+    groupTable: results.groupTable ?? {},
+    eliminated: results.eliminatedTeams ?? [],
     matches, top2, quarterfinalists, semifinalists, finalists, champion, goldenBoot, special,
   }
 }

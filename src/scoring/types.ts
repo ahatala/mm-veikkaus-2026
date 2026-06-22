@@ -37,6 +37,18 @@ export interface GroupTop2 {
   picks: Record<string, YesNo | null>
 }
 
+export interface GroupTableRow {
+  team: string
+  played: number
+  won: number
+  drawn: number
+  lost: number
+  gf: number
+  ga: number
+  gd: number
+  points: number
+}
+
 export interface TeamSet {
   slots: number
   pointsPerTeam: number
@@ -85,10 +97,14 @@ export interface Results {
   live?: LiveMatch[]
   /** group letter -> final standings as an ordered list of team names (position 1 first); complete groups only */
   groupStandings: Record<string, string[]>
+  /** group letter -> current standings rows (every group, incl. in-progress) for display */
+  groupTable?: Record<string, GroupTableRow[]>
   /** group letter -> decided [1st, 2nd] (clinched early by points, or final) — drives Top-2 scoring */
   groupTop2?: Record<string, string[]>
   /** group letter -> elimination sets, enabling early "No" on a Top-2 bet that's become impossible */
   groupClinch?: Record<string, { eliminatedFromFirst: string[]; eliminatedFromTop2: string[] }>
+  /** teams out of the tournament (group-stage certain-last, or knockout losers) — lost causes for knockout picks */
+  eliminatedTeams?: string[]
   knockout: {
     quarterfinalists: string[]
     semifinalists: string[]
@@ -99,6 +115,8 @@ export interface Results {
   goldenBootGoals: Record<string, number>
   /** auto-resolved special-question answers (sqId -> Kyllä/Ei); overrides take precedence */
   specialAnswers?: Record<string, YesNo>
+  /** human-readable justification per auto-resolved answer (sqId -> reason) */
+  specialReasons?: Record<string, string>
 }
 
 export interface Overrides {
@@ -183,6 +201,8 @@ export interface SpecialResult {
   question: SpecialQuestion
   answer: YesNo | null
   resolved: boolean
+  /** justification for the auto-resolved answer (null if jury-set or unresolved) */
+  reason: string | null
   points: Record<string, number>
 }
 
@@ -205,6 +225,10 @@ export interface Computed {
   live: LiveResult[]
   /** merged final group standings (group letter -> ordered team names) for display */
   groupStandings: Record<string, string[]>
+  /** current standings rows per group (every group, incl. in-progress) for display */
+  groupTable: Record<string, GroupTableRow[]>
+  /** teams out of the tournament — lost causes for knockout picks */
+  eliminated: string[]
   matches: MatchResult[]
   top2: Top2Result[]
   quarterfinalists: TeamSetResult

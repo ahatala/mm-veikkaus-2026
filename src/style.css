@@ -106,6 +106,8 @@ tbody tr:last-child td { border-bottom: none; }
 .chip--bonus { background: rgba(251, 191, 36, .18); color: var(--gold); border-color: rgba(251,191,36,.4); font-weight: 600; }
 .chip--wrong { background: var(--bg-elev2); color: var(--muted); opacity: .6; }
 .chip--pending { background: var(--bg-elev2); color: var(--muted); }
+/* a pick that can no longer score — the team is out of the tournament */
+.chip--dead { background: var(--bg-elev2); color: var(--red); opacity: .65; text-decoration: line-through; }
 
 .legend { display: flex; gap: 12px; flex-wrap: wrap; font-size: 12px; color: var(--muted); margin-bottom: 10px; }
 .legend .chip { cursor: default; }
@@ -137,6 +139,18 @@ select {
 .breakdown-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 6px 16px; padding: 4px 0; }
 .breakdown-grid .row { display: flex; justify-content: space-between; font-size: 13px; }
 .breakdown-grid .row .lbl { color: var(--muted); }
+
+/* ---- group standings table (Lohkot / Top 2) ---- */
+.gtable { margin-bottom: 14px; }
+.gtable th, .gtable td { padding: 6px 8px; }
+.gtable .gt-pos { color: var(--muted); width: 1.5em; font-variant-numeric: tabular-nums; }
+.gtable .gt-team { font-weight: 600; }
+/* top two qualify directly — subtle green marker on the position */
+.gtable .gt-adv .gt-pos { color: var(--green); font-weight: 700; }
+.gtable .gt-adv .gt-team { color: var(--text); }
+/* eliminated (certain last / knocked out) */
+.gtable .gt-dead .gt-team { color: var(--red); text-decoration: line-through; }
+.gtable .gt-dead td { opacity: .7; }
 
 /* "new version available" pill (bottom-left; the Ottelut "Nyt" pill sits bottom-right) */
 .version-banner {

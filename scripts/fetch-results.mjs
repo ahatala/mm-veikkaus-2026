@@ -195,6 +195,41 @@ function deriveStandings(matches) {
   return out
 }
 
+// ---------- current standings table (every group, including in-progress) for display ----------
+// Provisional: ordered by points, then head-to-head points among level teams (2026 order), then
+// overall goal difference / goals. (For finished groups the bet truth still uses the official
+// standings; this table is just the live picture shown in the UI.)
+function groupTables(effMatches) {
+  const groups = {}
+  for (const m of effMatches) {
+    if (!m.group || !m.home || !m.away) continue
+    ;(groups[m.group] ??= []).push(m)
+  }
+  const out = {}
+  for (const [g, ms] of Object.entries(groups)) {
+    const tbl = {}
+    const row = (t) => (tbl[t] ??= { team: t, played: 0, won: 0, drawn: 0, lost: 0, gf: 0, ga: 0, gd: 0, points: 0, h2h: {} })
+    for (const m of ms) { row(m.home); row(m.away) } // every team appears, even with 0 played
+    for (const m of ms) {
+      if (!m.finished) continue
+      const h = row(m.home), a = row(m.away)
+      h.played++; a.played++
+      h.gf += m.homeScore; h.ga += m.awayScore; h.gd += m.homeScore - m.awayScore
+      a.gf += m.awayScore; a.ga += m.homeScore; a.gd += m.awayScore - m.homeScore
+      if (m.homeScore > m.awayScore) { h.won++; a.lost++; h.points += 3; h.h2h[m.away] = (h.h2h[m.away] ?? 0) + 3 }
+      else if (m.homeScore < m.awayScore) { a.won++; h.lost++; a.points += 3; a.h2h[m.home] = (a.h2h[m.home] ?? 0) + 3 }
+      else { h.drawn++; a.drawn++; h.points++; a.points++; h.h2h[m.away] = (h.h2h[m.away] ?? 0) + 1; a.h2h[m.home] = (a.h2h[m.home] ?? 0) + 1 }
+    }
+    out[g] = Object.values(tbl)
+      .sort((x, y) =>
+        y.points - x.points ||
+        (y.h2h[x.team] ?? 0) - (x.h2h[y.team] ?? 0) ||
+        y.gd - x.gd || y.gf - x.gf || x.team.localeCompare(y.team, 'fi'))
+      .map(({ h2h, ...r }) => r)
+  }
+  return out
+}
+
 // ---------- fold intermediate into results.json ----------
 function build(inter) {
   // group match signs, mapped to bets match ids by team pair
@@ -217,11 +252,12 @@ function build(inter) {
   }
 
   const live = []
+  // Effective per-match outcomes, used for standings + clinch so they always agree with the scores we
+  // actually show (a stuck football-data status can't desync the table from the displayed results).
+  const effGroupMatches = []
   for (const m of inter.matches) {
     if (m.stage !== 'GROUP' || !m.home || !m.away) continue
     const pair = `${m.home}|${m.away}`
-    const id = byPair.get(pair)
-    if (!id) { unmatchedPairs.push(`${m.home}–${m.away}`); continue }
 
     // Result, in order of trust: football-data FINISHED, then openfootball's final, then a
     // football-data in-play score that's stale (stuck past the live window).
@@ -229,6 +265,16 @@ function build(inter) {
     if (m.finished && m.homeScore != null) result = { homeScore: m.homeScore, awayScore: m.awayScore }
     else if (ofFinished[pair]) result = ofFinished[pair]
     else if (isStaleLive(m, now) && m.homeScore != null) result = { homeScore: m.homeScore, awayScore: m.awayScore }
+
+    effGroupMatches.push({
+      home: m.home, away: m.away, group: m.group,
+      finished: !!result,
+      homeScore: result?.homeScore ?? null,
+      awayScore: result?.awayScore ?? null,
+    })
+
+    const id = byPair.get(pair)
+    if (!id) { unmatchedPairs.push(`${m.home}–${m.away}`); continue }
 
     if (result) {
       groupMatches[id] = sign(result.homeScore, result.awayScore)
@@ -256,22 +302,25 @@ function build(inter) {
     : null
 
   const standings = inter.standings ?? deriveStandings(inter.matches)
+  const groupTable = groupTables(effGroupMatches) // current standings (every group), for display
 
   // ---- per-group clinch analysis: resolve positions the moment they're mathematically certain ----
-  const groupLetters = [...new Set(inter.matches.filter((m) => m.stage === 'GROUP' && m.group).map((m) => m.group))].sort()
+  const groupLetters = [...new Set(effGroupMatches.map((m) => m.group).filter(Boolean))].sort()
   const displayStandings = {}          // complete groups only -> full final order (for the table)
   const groupTop2 = {}                 // group -> [first, second] once the exact order is decided
   const groupClinch = {}               // group -> { eliminatedFromFirst, eliminatedFromTop2 } (for early "No")
   const decidedWinners = {}            // group -> winner (clinched early, or final)
   const clinchedTop2 = new Set()       // teams guaranteed top-2 (=> guaranteed into the Round of 32)
   const eliminatedFromFirst = new Set()
+  const eliminatedFromTop3 = new Set() // can't even reach 3rd -> certain last -> out of the tournament
   let completeGroups = 0
   for (const g of groupLetters) {
-    const gms = inter.matches.filter((m) => m.stage === 'GROUP' && m.group === g)
+    const gms = effGroupMatches.filter((m) => m.group === g)
     const c = analyzeGroup(gms)
     groupClinch[g] = { eliminatedFromFirst: c.eliminatedFromFirst, eliminatedFromTop2: c.eliminatedFromTop2 }
     c.clinchedTop2.forEach((t) => clinchedTop2.add(t))
     c.eliminatedFromFirst.forEach((t) => eliminatedFromFirst.add(t))
+    c.eliminatedFromTop3.forEach((t) => eliminatedFromTop3.add(t))
     if (c.complete && standings[g]?.length >= 2) {
       // finished group: trust the real standings (full FIFA tiebreakers)
       displayStandings[g] = standings[g]
@@ -287,7 +336,24 @@ function build(inter) {
   const allGroupsComplete = groupLetters.length >= 12 && completeGroups === groupLetters.length
 
   const r32 = teamsInStage('R32')
-  const specialAnswers = resolveSpecials({
+
+  // Teams that are out of the tournament — shown as "lost causes" against knockout picks. Group stage:
+  // once the Round of 32 is set we know it exactly (anyone not in it); before that, anyone who can't
+  // reach their group's top 3 is already certain to finish last. Plus any knockout loser.
+  const allGroupTeams = [...new Set(effGroupMatches.flatMap((m) => [m.home, m.away]).filter(Boolean))]
+  const eliminatedTeams = new Set()
+  if (r32.length >= 32) {
+    const inR32 = new Set(r32)
+    for (const t of allGroupTeams) if (!inR32.has(t)) eliminatedTeams.add(t)
+  } else {
+    eliminatedFromTop3.forEach((t) => eliminatedTeams.add(t))
+  }
+  for (const m of inter.matches) {
+    if (m.stage === 'GROUP' || !m.finished || !m.home || !m.away) continue
+    const loser = m.winner === 'HOME' ? m.away : m.winner === 'AWAY' ? m.home : null
+    if (loser) eliminatedTeams.add(loser)
+  }
+  const { answers: specialAnswers, reasons: specialReasons } = resolveSpecials({
     specialQuestions: bets.specialQuestions,
     matches: inter.matches,
     scorerKeys: Object.keys(inter.scorers),
@@ -307,8 +373,10 @@ function build(inter) {
     live,                               // in-play group matches (score + minute), if any
     matchResults,                       // per-match score + goalscorers (finished group matches)
     groupStandings: displayStandings,  // full table, complete groups only
+    groupTable,                         // current standings of every group (for display)
     groupTop2,                          // decided 1st/2nd order (clinched or final) — used for Top-2 scoring
     groupClinch,                        // elimination sets for early "No" on Top-2 bets
+    eliminatedTeams: [...eliminatedTeams], // teams out of the tournament (lost causes for knockout picks)
     knockout: {
       quarterfinalists: teamsInStage('QF'),
       semifinalists: teamsInStage('SF'),
@@ -317,6 +385,7 @@ function build(inter) {
     },
     goldenBootGoals: inter.scorers,
     specialAnswers,
+    specialReasons,                     // human-readable justification per auto-resolved answer
   }
   const diagnostics = { unmatchedTeams: [...unmatchedTeams], unmatchedPairs, scorerCount: inter._scorerCount }
   return { results, diagnostics }

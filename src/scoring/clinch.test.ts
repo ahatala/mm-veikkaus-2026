@@ -39,6 +39,28 @@ describe('analyzeGroup', () => {
     expect(sorted(r.eliminatedFromTop2)).toEqual(['C', 'D'])
   })
 
+  it('uses head-to-head (2026 order) for both elimination and clinching', () => {
+    // Real Group D shape: USA 6, PAR 3, AUS 3, TUR 0; remaining TUR–USA and PAR–AUS.
+    // TUR's ceiling is 3, USA is locked above, and PAR/AUS play each other so one always clears 3.
+    // TUR also lost to BOTH PAR and AUS head-to-head, so any tie on points still leaves it below them
+    // (2026 applies head-to-head before goal difference) → TUR is certain 4th, out of the tournament.
+    // USA can only be tied (not passed) on points, but beat BOTH PAR and AUS head-to-head, so it wins
+    // any such tie → USA has clinched 1st, and PAR/AUS can no longer finish 1st.
+    const r = analyzeGroup([
+      P('USA', 'PAR', 1, 0), P('AUS', 'TUR', 1, 0), P('USA', 'AUS', 1, 0), P('TUR', 'PAR', 0, 1),
+      U('TUR', 'USA'), U('PAR', 'AUS'),
+    ])
+    expect(r.eliminatedFromTop2).toContain('TUR')
+    expect(r.eliminatedFromTop3).toContain('TUR') // lost cause
+    expect(sorted(r.eliminatedFromFirst)).toEqual(['AUS', 'PAR', 'TUR'])
+    expect(r.clinchedFirst).toBe('USA')
+    expect(r.clinchedTop2).toEqual(['USA'])
+    expect(r.top2OrderLocked).toBeNull() // 2nd place still open between PAR and AUS
+    // PAR and AUS can still finish top 2, so neither is a lost cause.
+    expect(r.eliminatedFromTop3).not.toContain('PAR')
+    expect(r.eliminatedFromTop3).not.toContain('AUS')
+  })
+
   it('on a finished group: locks exact 1st/2nd order', () => {
     const r = analyzeGroup([
       P('A', 'B', 1, 0), P('A', 'C', 1, 0), P('A', 'D', 1, 0),

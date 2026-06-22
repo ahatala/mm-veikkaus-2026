@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { store } from '../store'
+import { key } from '../scoring/normalize'
 import type { TeamSetResult } from '../scoring/types'
 
 const participants = computed(() => store.bets!.participants)
@@ -18,6 +19,9 @@ function picksOf(key: 'quarterfinalists' | 'semifinalists' | 'finalists', name: 
 function isCorrect(set: TeamSetResult, name: string, team: string): boolean {
   return (set.correctByName[name] ?? []).includes(team)
 }
+// Teams already out of the tournament: a pick on one can no longer score (a "lost cause").
+const eliminated = computed(() => new Set(c.value.eliminated.map((t) => key(t))))
+const isDead = (team: string) => eliminated.value.has(key(team))
 const championActual = computed(() => c.value.champion.actual)
 </script>
 
@@ -40,7 +44,7 @@ const championActual = computed(() => c.value.champion.actual)
           <td>
             <div class="chips">
               <span v-for="team in picksOf(r.key, name)" :key="team" class="chip"
-                :class="{ 'chip--correct': isCorrect(r.set, name, team) }">{{ team }}</span>
+                :class="{ 'chip--correct': isCorrect(r.set, name, team), 'chip--dead': !isCorrect(r.set, name, team) && isDead(team) }">{{ team }}</span>
             </div>
           </td>
           <td class="num"><span class="points" :class="{ zero: r.set.points[name] === 0 }">{{ r.set.points[name] }}</span></td>
@@ -59,7 +63,10 @@ const championActual = computed(() => c.value.champion.actual)
         <tr v-for="name in participants" :key="name">
           <td>{{ name }}</td>
           <td>
-            <span class="chip" :class="{ 'chip--correct': championActual && store.bets!.knockout.champion.picks[name] === championActual }">
+            <span class="chip" :class="{
+                'chip--correct': championActual && store.bets!.knockout.champion.picks[name] === championActual,
+                'chip--dead': championActual !== store.bets!.knockout.champion.picks[name] && isDead(store.bets!.knockout.champion.picks[name]),
+              }">
               {{ store.bets!.knockout.champion.picks[name] }}
             </span>
           </td>

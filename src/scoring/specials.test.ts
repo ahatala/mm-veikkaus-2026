@@ -22,7 +22,7 @@ const base = {
   r32Complete: false,
   allMatchesFinished: false,
 }
-const run = (over: Partial<typeof base>) => resolveSpecials({ ...base, ...over })
+const run = (over: Partial<typeof base>) => resolveSpecials({ ...base, ...over }).answers
 const M = (o: any) => ({ stage: 'GROUP', group: 'A', home: 'X', away: 'Y', homeScore: 0, awayScore: 0, finished: true, winner: 'DRAW', decidedIn: 'REGULAR', ...o })
 
 describe('resolveSpecials', () => {
