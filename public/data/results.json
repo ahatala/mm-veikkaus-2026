@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-22T02:00:42.861Z",
+  "lastUpdated": "2026-06-22T02:20:31.808Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -51,7 +51,7 @@
       "homeScore": 1,
       "awayScore": 0,
       "minute": null,
-      "status": "PAUSED"
+      "status": "IN_PLAY"
     }
   ],
   "matchResults": {
@@ -1278,7 +1278,8 @@
     "nathan-dylan saliba": 1,
     "memphis depay": 1,
     "agustin canobbio": 1,
-    "finn surman": 1
+    "finn surman": 1,
+    "mostafa ziko": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
