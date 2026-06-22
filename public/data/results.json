@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-22T00:20:29.915Z",
+  "lastUpdated": "2026-06-22T01:10:29.037Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -42,7 +42,18 @@
     "g38": "X",
     "g39": "X"
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g40",
+      "home": "Uusi-Seelanti",
+      "away": "Egypti",
+      "group": "G",
+      "homeScore": 0,
+      "awayScore": 0,
+      "minute": null,
+      "status": "IN_PLAY"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
