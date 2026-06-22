@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-22T17:10:31.321Z",
+  "lastUpdated": "2026-06-22T17:50:32.449Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -49,7 +49,7 @@
       "home": "Argentiina",
       "away": "Itävalta",
       "group": "J",
-      "homeScore": 0,
+      "homeScore": 1,
       "awayScore": 0,
       "minute": null,
       "status": "IN_PLAY"
@@ -2246,7 +2246,7 @@
     "aymen hussein": 1,
     "erling haaland": 2,
     "leo østigard": 1,
-    "lionel messi": 3,
+    "lionel messi": 4,
     "romano schmid": 1,
     "marko arnautovic": 1,
     "ali olwan": 1,
