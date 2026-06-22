@@ -90,6 +90,7 @@ async function fromFootballData(token) {
     const decidedIn = /PENALT/.test(dur) || m.score?.penalties ? 'PENALTIES' : /EXTRA/.test(dur) ? 'EXTRA_TIME' : 'REGULAR'
     const w = m.score?.winner
     return {
+      id: m.id ?? null,
       stage: FD_STAGE[m.stage] ?? m.stage,
       group: m.group ? m.group.replace(/^GROUP_/, '') : null,
       home: toFinnish(m.homeTeam?.name),
@@ -119,9 +120,11 @@ async function fromFootballData(token) {
   return { matches, standings: Object.keys(standings).length ? standings : null, scorers, _scorerCount: (scorersRes.scorers ?? []).length }
 }
 
+// Order matters: "Semi-final"/"Quarter-final" both contain "final", so match those (and "third")
+// before the bare /final/ rule, or QF/SF would be mislabeled FINAL.
 const OF_STAGE = [
-  [/third/i, '3RD'], [/final/i, 'FINAL'], [/semi/i, 'SF'], [/quarter/i, 'QF'],
-  [/round of 16|last 16/i, 'R16'], [/round of 32|last 32/i, 'R32'],
+  [/third/i, '3RD'], [/semi/i, 'SF'], [/quarter/i, 'QF'],
+  [/round of 16|last 16/i, 'R16'], [/round of 32|last 32/i, 'R32'], [/final/i, 'FINAL'],
 ]
 const ofStage = (s) => {
   for (const [re, v] of OF_STAGE) if (re.test(s)) return v
@@ -153,6 +156,7 @@ async function fromOpenfootball() {
     const winner = !finished ? null : sc.p ? side(sc.p) : sc.et ? side(sc.et) : side(ft)
     const stageStr = `${m.group ?? ''} ${m.round ?? ''}`
     return {
+      id: m.num ?? null,
       stage: ofStage(stageStr),
       group: /^Group ([A-L])/.exec(m.group ?? '')?.[1] ?? null,
       home, away,
@@ -160,6 +164,8 @@ async function fromOpenfootball() {
       awayScore: finished ? ft[1] : null,
       finished,
       status: finished ? 'FINISHED' : 'SCHEDULED', // openfootball has no in-play data
+      date: m.date ?? null,
+      time: m.time ?? null,
       minute: null,
       winner,
       decidedIn,
@@ -194,6 +200,42 @@ function deriveStandings(matches) {
   }
   return out
 }
+
+// ---------- knockout kickoff → Finnish time/date, matching the group-match style ----------
+// football-data gives a UTC ISO (utcDate). openfootball gives a date plus a local time WITH offset,
+// e.g. "12:00 UTC-7" — we parse that into a real instant. Everything is then rendered in Helsinki time,
+// so the displayed clock (and even the calendar day, for late kickoffs) is Finnish.
+const FI_WD = { Sun: 'su', Mon: 'ma', Tue: 'ti', Wed: 'ke', Thu: 'to', Fri: 'pe', Sat: 'la' }
+function instantOf(m) {
+  if (m.utcDate) return { iso: m.utcDate, hasTime: true }
+  if (!m.date) return { iso: null, hasTime: false }
+  const t = /^(\d{1,2}):(\d{2})\s*UTC([+-]\d{1,2})(?::?(\d{2}))?/.exec(m.time ?? '')
+  if (!t) return { iso: `${m.date}T12:00:00Z`, hasTime: false } // date-only: noon-UTC anchor, no clock shown
+  const [, hh, mm, offH, offM] = t
+  const sign = offH.startsWith('-') ? '-' : '+'
+  const oh = String(Math.abs(Number(offH))).padStart(2, '0')
+  return { iso: `${m.date}T${hh.padStart(2, '0')}:${mm}:00${sign}${oh}:${(offM ?? '00').padStart(2, '0')}`, hasTime: true }
+}
+function fiDateTime(m) {
+  const { iso, hasTime } = instantOf(m)
+  if (!iso) return { date: m.date ?? '', time: null }
+  const d = new Date(iso)
+  if (Number.isNaN(d.getTime())) return { date: m.date ?? '', time: null }
+  const tz = 'Europe/Helsinki'
+  const wd = new Intl.DateTimeFormat('en-US', { timeZone: tz, weekday: 'short' }).format(d)
+  const day = new Intl.DateTimeFormat('en-CA', { timeZone: tz, day: 'numeric' }).format(d)
+  const mon = new Intl.DateTimeFormat('en-CA', { timeZone: tz, month: 'numeric' }).format(d)
+  const date = `${FI_WD[wd] ?? ''} ${day}.${mon}.`.trim()
+  const time = hasTime
+    ? new Intl.DateTimeFormat('en-GB', { timeZone: tz, hour: '2-digit', minute: '2-digit', hour12: false }).format(d)
+    : null
+  return { date, time }
+}
+const tsOf = (m) => {
+  const t = Date.parse(instantOf(m).iso ?? '')
+  return Number.isNaN(t) ? 0 : t
+}
+const KO_STAGE_ORDER = { R32: 1, R16: 2, QF: 3, SF: 4, '3RD': 5, FINAL: 6 }
 
 // ---------- current standings table (every group, including in-progress) for display ----------
 // Provisional: ordered by points, then head-to-head points among level teams (2026 order), then
@@ -301,6 +343,25 @@ function build(inter) {
     ? (finalMatch.winner === 'HOME' ? finalMatch.home : finalMatch.winner === 'AWAY' ? finalMatch.away : null)
     : null
 
+  // Knockout fixtures (R32→Final) for the Ottelut tab. Teams are null until the bracket fills in; the
+  // app shows them as upcoming until then. No 1/X/2 bets here — the UI maps the teams to knockout picks.
+  const koRaw = inter.matches.filter((m) => KO_STAGE_ORDER[m.stage])
+  koRaw.sort((a, b) => (tsOf(a) - tsOf(b)) || (KO_STAGE_ORDER[a.stage] - KO_STAGE_ORDER[b.stage]))
+  const knockoutMatches = koRaw.map((m, i) => {
+    const { date, time } = fiDateTime(m)
+    return {
+      id: `k${m.id ?? i}`,
+      stage: m.stage,
+      date, time,
+      home: m.home ?? null,
+      away: m.away ?? null,
+      homeScore: m.finished ? (m.homeScore ?? null) : null,
+      awayScore: m.finished ? (m.awayScore ?? null) : null,
+      finished: !!m.finished,
+      winner: m.winner === 'HOME' || m.winner === 'AWAY' ? m.winner : null,
+    }
+  })
+
   const standings = inter.standings ?? deriveStandings(inter.matches)
   const groupTable = groupTables(effGroupMatches) // current standings (every group), for display
 
@@ -377,6 +438,7 @@ function build(inter) {
     groupTop2,                          // decided 1st/2nd order (clinched or final) — used for Top-2 scoring
     groupClinch,                        // elimination sets for early "No" on Top-2 bets
     eliminatedTeams: [...eliminatedTeams], // teams out of the tournament (lost causes for knockout picks)
+    knockoutMatches,                    // R32→Final fixtures (for the Ottelut tab)
     knockout: {
       quarterfinalists: teamsInStage('QF'),
       semifinalists: teamsInStage('SF'),

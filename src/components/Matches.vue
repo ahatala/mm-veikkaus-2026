@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted, onBeforeUnmount, nextTick, ref } from 'vue'
 import { store } from '../store'
-import type { MatchResult, GoalEvent } from '../scoring/types'
+import type { MatchResult, GoalEvent, KnockoutMatchResult, KnockoutBacker } from '../scoring/types'
 import { flagUrl, flagCode } from '../flags'
 
 const participants = computed(() => store.bets!.participants)
@@ -28,15 +28,34 @@ const displayMatches = computed<Row[]>(() => {
   })
 })
 
-// Group matches by their date label, preserving chronological order.
+const KO_LABEL: Record<string, string> = {
+  R32: 'Kahdeksannesvälierä', R16: 'Neljännesvälierä', QF: 'Puolivälierä',
+  SF: 'Välierä', '3RD': 'Pronssiottelu', FINAL: 'Finaali',
+}
+const backerText = (b: KnockoutBacker) => (b.points != null ? `${b.name} +${b.points}` : b.name)
+const koPending = (stage: string) =>
+  stage === 'R32' ? 'Ottelupari ratkeaa lohkovaiheen jälkeen' : 'Ottelupari ratkeaa edellisistä otteluista'
+// Mirror the group-match rows: once decided, the winner's row is highlighted (gold), the loser dimmed.
+function koRowClass(k: KnockoutMatchResult, side: 'HOME' | 'AWAY'): string {
+  if (!k.winner) return ''
+  return k.winner === side ? 'bonus' : 'wrong'
+}
+
+// One chronological list of group + knockout matches, grouped by date label. Group matches come first
+// (they're earlier); the day they share with the first knockout round merges into one day block.
+type ListItem = { type: 'group'; g: Row } | { type: 'ko'; k: KnockoutMatchResult }
 const byDay = computed(() => {
-  const groups: { date: string; matches: Row[] }[] = []
-  for (const m of displayMatches.value) {
-    const last = groups[groups.length - 1]
-    if (last && last.date === m.match.date) last.matches.push(m)
-    else groups.push({ date: m.match.date, matches: [m] })
+  const items: { date: string; item: ListItem }[] = [
+    ...displayMatches.value.map((g) => ({ date: g.match.date, item: { type: 'group', g } as ListItem })),
+    ...store.computed!.knockoutMatches.map((k) => ({ date: k.date, item: { type: 'ko', k } as ListItem })),
+  ]
+  const days: { date: string; items: ListItem[] }[] = []
+  for (const { date, item } of items) {
+    const last = days[days.length - 1]
+    if (last && last.date === date) last.items.push(item)
+    else days.push({ date, items: [item] })
   }
-  return groups
+  return days
 })
 
 // Anchor = the live match if any, else the next unplayed (else the last match).
@@ -119,44 +138,82 @@ onBeforeUnmount(() => {
       <div class="day" v-for="day in byDay" :key="day.date">
         <div class="day-date">{{ day.date }}</div>
         <div class="day-matches">
-          <div
-            v-for="m in day.matches" :key="m.match.id"
-            class="match" :class="{ anchor: m.match.id === anchorId, played: !!m.actual && !m.isLive, live: m.isLive }"
-            :data-anchor="m.match.id === anchorId"
-          >
-            <div class="meta">
-              Lohko {{ m.match.group }} ·
-              <template v-if="m.isLive"><span class="live-dot"></span><span class="live-label">{{ m.minute ? `${m.minute}'` : 'LIVE' }}</span></template>
-              <template v-else>{{ m.match.time }}</template>
-            </div>
+          <template v-for="it in day.items">
+            <!-- group match: 1/X/2 picks -->
+            <div
+              v-if="it.type === 'group'" :key="it.g.match.id"
+              class="match" :class="{ anchor: it.g.match.id === anchorId, played: !!it.g.actual && !it.g.isLive, live: it.g.isLive }"
+              :data-anchor="it.g.match.id === anchorId"
+            >
+              <div class="meta">
+                Lohko {{ it.g.match.group }} ·
+                <template v-if="it.g.isLive"><span class="live-dot"></span><span class="live-label">{{ it.g.minute ? `${it.g.minute}'` : 'LIVE' }}</span></template>
+                <template v-else>{{ it.g.match.time }}</template>
+              </div>
 
-            <div class="grid">
-              <span class="team home" :class="{ win: m.actual === '1' }">
-                <span class="tn">{{ m.match.home }}</span>
-                <img v-if="flagCode(m.match.home)" class="flag" :src="flagUrl(m.match.home)" alt="" loading="lazy" />
-              </span>
-              <span v-if="m.score" class="score">{{ m.score.home }}–{{ m.score.away }}</span>
-              <span v-else class="score pending">–</span>
-              <span class="team away" :class="{ win: m.actual === '2' }">
-                <img v-if="flagCode(m.match.away)" class="flag" :src="flagUrl(m.match.away)" alt="" loading="lazy" />
-                <span class="tn">{{ m.match.away }}</span>
-              </span>
+              <div class="grid">
+                <span class="team home" :class="{ win: it.g.actual === '1' }">
+                  <span class="tn">{{ it.g.match.home }}</span>
+                  <img v-if="flagCode(it.g.match.home)" class="flag" :src="flagUrl(it.g.match.home)" alt="" loading="lazy" />
+                </span>
+                <span v-if="it.g.score" class="score">{{ it.g.score.home }}–{{ it.g.score.away }}</span>
+                <span v-else class="score pending">–</span>
+                <span class="team away" :class="{ win: it.g.actual === '2' }">
+                  <img v-if="flagCode(it.g.match.away)" class="flag" :src="flagUrl(it.g.match.away)" alt="" loading="lazy" />
+                  <span class="tn">{{ it.g.match.away }}</span>
+                </span>
 
-              <template v-if="m.actual && m.scorers.length">
-                <span class="scorers home">{{ scorersOn(m, 'home') }}</span>
-                <span class="scorers mid">⚽</span>
-                <span class="scorers away">{{ scorersOn(m, 'away') }}</span>
-              </template>
-            </div>
+                <template v-if="it.g.actual && it.g.scorers.length">
+                  <span class="scorers home">{{ scorersOn(it.g, 'home') }}</span>
+                  <span class="scorers mid">⚽</span>
+                  <span class="scorers away">{{ scorersOn(it.g, 'away') }}</span>
+                </template>
+              </div>
 
-            <div class="picksrows">
-              <div class="prow" v-for="r in signRows(m)" :key="r.s" :class="colClass(m, r.s)">
-                <span class="sign prow-sign" :class="`sign--${r.s}`">{{ r.s }}</span>
-                <span class="prow-names">{{ r.names.join(', ') }}</span>
-                <span v-if="r.s === m.actual" class="prow-pts">+{{ m.bonus ? 3 : 1 }}</span>
+              <div class="picksrows">
+                <div class="prow" v-for="r in signRows(it.g)" :key="r.s" :class="colClass(it.g, r.s)">
+                  <span class="sign prow-sign" :class="`sign--${r.s}`">{{ r.s }}</span>
+                  <span class="prow-names">{{ r.names.join(', ') }}</span>
+                  <span v-if="r.s === it.g.actual" class="prow-pts">+{{ it.g.bonus ? 3 : 1 }}</span>
+                </div>
               </div>
             </div>
-          </div>
+
+            <!-- knockout match: no 1/X/2; show who benefits per team -->
+            <div
+              v-else :key="it.k.id"
+              class="match ko" :class="{ played: it.k.finished }"
+            >
+              <div class="meta">{{ KO_LABEL[it.k.stage] }}<template v-if="it.k.time"> · {{ it.k.time }}</template></div>
+
+              <div class="grid">
+                <span class="team home" :class="{ win: it.k.winner === 'HOME' }">
+                  <span class="tn">{{ it.k.home ?? 'TBD' }}</span>
+                  <img v-if="it.k.home && flagCode(it.k.home)" class="flag" :src="flagUrl(it.k.home)" alt="" loading="lazy" />
+                </span>
+                <span v-if="it.k.homeScore != null" class="score">{{ it.k.homeScore }}–{{ it.k.awayScore }}</span>
+                <span v-else class="score pending">–</span>
+                <span class="team away" :class="{ win: it.k.winner === 'AWAY' }">
+                  <img v-if="it.k.away && flagCode(it.k.away)" class="flag" :src="flagUrl(it.k.away)" alt="" loading="lazy" />
+                  <span class="tn">{{ it.k.away ?? 'TBD' }}</span>
+                </span>
+              </div>
+
+              <p v-if="!it.k.home && !it.k.away" class="ko-muted">{{ koPending(it.k.stage) }}</p>
+              <div v-else class="picksrows">
+                <div v-if="it.k.home" class="prow" :class="koRowClass(it.k, 'HOME')">
+                  <span class="sign prow-sign sign--1">1</span>
+                  <span class="prow-names">{{ it.k.homeBackers.length ? it.k.homeBackers.map(backerText).join(', ') : 'ei veikkauksia' }}</span>
+                  <span v-if="it.k.winner === 'HOME' && it.k.prize && it.k.homeBackers.length" class="prow-pts">+{{ it.k.prize.points }}</span>
+                </div>
+                <div v-if="it.k.away" class="prow" :class="koRowClass(it.k, 'AWAY')">
+                  <span class="sign prow-sign sign--2">2</span>
+                  <span class="prow-names">{{ it.k.awayBackers.length ? it.k.awayBackers.map(backerText).join(', ') : 'ei veikkauksia' }}</span>
+                  <span v-if="it.k.winner === 'AWAY' && it.k.prize && it.k.awayBackers.length" class="prow-pts">+{{ it.k.prize.points }}</span>
+                </div>
+              </div>
+            </div>
+          </template>
         </div>
       </div>
     </div>
@@ -289,6 +346,11 @@ onBeforeUnmount(() => {
 .prow.bonus .prow-names { color: var(--gold); font-weight: 600; }
 .prow.wrong .prow-names { opacity: 0.5; }
 .prow.pending .prow-names { color: var(--muted); }
+
+/* ---- knockout match: reuses the group .picksrows/.prow styling (1/2 rows, winner highlighted) ---- */
+.match.ko { border-style: dashed; }
+.match.ko.played { border-style: solid; }
+.ko-muted { color: var(--muted); font-size: 12px; margin: 8px 0 0; font-style: italic; }
 
 /* ---- narrow screens: date becomes a sticky header (no left column); 'Nyt' floats bottom-right ---- */
 @media (max-width: 560px) {

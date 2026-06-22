@@ -2,7 +2,7 @@ import { key } from './normalize'
 import type {
   Bets, Results, Overrides, Sign, YesNo, Breakdown, StandingRow, MatchResult, Top2Result,
   TeamSetResult, ChampionResult, GoldenResult, GoldenPlayerLine, SpecialResult, Computed, TeamSet,
-  LiveResult,
+  LiveResult, KnockoutMatch, KnockoutMatchResult, KnockoutBacker, KnockoutStage,
 } from './types'
 
 const zero = (names: string[]): Record<string, number> =>
@@ -144,6 +144,60 @@ export function scoreLive(bets: Bets, live: Results['live'] = []): LiveResult[] 
     .filter((x): x is LiveResult => x !== null)
 }
 
+// Knockout categories, in advancing order. `key` indexes bets.knockout; `short` tags the R32 view.
+type KoCatKey = 'quarterfinalists' | 'semifinalists' | 'finalists' | 'champion'
+const KO_CATS: { key: KoCatKey; label: string }[] = [
+  { key: 'quarterfinalists', label: 'Top 8' },
+  { key: 'semifinalists', label: 'Top 4' },
+  { key: 'finalists', label: 'Finalisti' },
+  { key: 'champion', label: 'Mestari' },
+]
+// The category that winning each round scores (R32 has no prize — its backers just stay alive).
+const KO_PRIZE: Partial<Record<KnockoutStage, KoCatKey>> = {
+  R16: 'quarterfinalists', QF: 'semifinalists', SF: 'finalists', FINAL: 'champion',
+}
+
+function koPoints(bets: Bets, cat: KoCatKey): number {
+  return cat === 'champion' ? bets.knockout.champion.pointsPerTeam : bets.knockout[cat].pointsPerTeam
+}
+function koBackers(bets: Bets, cat: KoCatKey, team: string): string[] {
+  const tk = key(team)
+  if (cat === 'champion') return bets.participants.filter((n) => key(bets.knockout.champion.picks[n] ?? '') === tk)
+  return bets.participants.filter((n) => (bets.knockout[cat].picks[n] ?? []).some((t) => key(t) === tk))
+}
+
+/**
+ * Knockout fixtures with "who benefits" per team: for a prize round (R16/QF/SF/Final) the backers who
+ * would SCORE that round's category by their team winning; for R32 (no prize) everyone who holds the
+ * team in any future round, tagged with the category. No 1/X/2 bets here.
+ */
+export function scoreKnockoutMatches(bets: Bets, matches: KnockoutMatch[] = []): KnockoutMatchResult[] {
+  const prizeCat = (stage: KnockoutStage) => KO_PRIZE[stage] ?? null
+  const backersFor = (stage: KnockoutStage, team: string | null): KnockoutBacker[] => {
+    if (!team) return []
+    const prize = prizeCat(stage)
+    if (prize) return koBackers(bets, prize, team).map((name) => ({ name, points: null }))
+    if (stage !== 'R32') return [] // 3rd-place match: no betting relevance
+    // Sum each backer's still-attainable points from this team across every future-round pick, sort by it.
+    const future = new Map<string, number>()
+    for (const c of KO_CATS) for (const name of koBackers(bets, c.key, team)) {
+      future.set(name, (future.get(name) ?? 0) + koPoints(bets, c.key))
+    }
+    return [...future]
+      .map(([name, points]) => ({ name, points }))
+      .sort((a, b) => b.points - a.points || a.name.localeCompare(b.name, 'fi'))
+  }
+  return matches.map((m) => {
+    const prize = prizeCat(m.stage)
+    return {
+      ...m,
+      prize: prize ? { label: KO_CATS.find((c) => c.key === prize)!.label, points: koPoints(bets, prize) } : null,
+      homeBackers: backersFor(m.stage, m.home),
+      awayBackers: backersFor(m.stage, m.away),
+    }
+  })
+}
+
 export function scoreSpecial(
   bets: Bets,
   answers: Record<string, YesNo>,
@@ -233,5 +287,6 @@ export function compute(bets: Bets, results: Results, overrides: Overrides): Com
     groupTable: results.groupTable ?? {},
     eliminated: results.eliminatedTeams ?? [],
     matches, top2, quarterfinalists, semifinalists, finalists, champion, goldenBoot, special,
+    knockoutMatches: scoreKnockoutMatches(bets, results.knockoutMatches ?? []),
   }
 }

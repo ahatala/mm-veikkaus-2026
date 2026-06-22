@@ -30,6 +30,22 @@ export interface GroupMatch {
   picks: Record<string, Sign | null>
 }
 
+export type KnockoutStage = 'R32' | 'R16' | 'QF' | 'SF' | '3RD' | 'FINAL'
+
+/** A knockout fixture from the feed (teams null until the bracket fills in). No 1/X/2 bets. */
+export interface KnockoutMatch {
+  id: string
+  stage: KnockoutStage
+  date: string
+  time: string | null
+  home: string | null
+  away: string | null
+  homeScore: number | null
+  awayScore: number | null
+  finished: boolean
+  winner: 'HOME' | 'AWAY' | null
+}
+
 export interface GroupTop2 {
   group: string
   order: string[]
@@ -105,6 +121,8 @@ export interface Results {
   groupClinch?: Record<string, { eliminatedFromFirst: string[]; eliminatedFromTop2: string[] }>
   /** teams out of the tournament (group-stage certain-last, or knockout losers) — lost causes for knockout picks */
   eliminatedTeams?: string[]
+  /** knockout fixtures (R32→Final) for the Ottelut tab */
+  knockoutMatches?: KnockoutMatch[]
   knockout: {
     quarterfinalists: string[]
     semifinalists: string[]
@@ -206,6 +224,30 @@ export interface SpecialResult {
   points: Record<string, number>
 }
 
+/** A backer of one of a knockout match's teams. */
+export interface KnockoutBacker {
+  name: string
+  /** R32: total points still attainable from this team across the backer's picks (drives sort). null in prize rounds. */
+  points: number | null
+}
+
+export interface KnockoutMatchResult {
+  id: string
+  stage: KnockoutStage
+  date: string
+  time: string | null
+  home: string | null
+  away: string | null
+  homeScore: number | null
+  awayScore: number | null
+  finished: boolean
+  winner: 'HOME' | 'AWAY' | null
+  /** what winning this match scores its backers (null for R32 and the 3rd-place match) */
+  prize: { label: string; points: number } | null
+  homeBackers: KnockoutBacker[]
+  awayBackers: KnockoutBacker[]
+}
+
 export interface LiveResult {
   match: GroupMatch
   homeScore: number
@@ -230,6 +272,8 @@ export interface Computed {
   /** teams out of the tournament — lost causes for knockout picks */
   eliminated: string[]
   matches: MatchResult[]
+  /** knockout fixtures (R32→Final) with per-team backers, for the Ottelut tab */
+  knockoutMatches: KnockoutMatchResult[]
   top2: Top2Result[]
   quarterfinalists: TeamSetResult
   semifinalists: TeamSetResult
