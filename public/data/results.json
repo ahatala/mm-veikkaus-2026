@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-22T03:10:28.926Z",
+  "lastUpdated": "2026-06-22T03:20:28.932Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -1098,7 +1098,36 @@
     "g40": {
       "homeScore": 1,
       "awayScore": 3,
-      "scorers": []
+      "scorers": [
+        {
+          "name": "Finn Surman",
+          "side": "home",
+          "minute": "15",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Mostafa Zico",
+          "side": "away",
+          "minute": "58",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Mohamed Salah",
+          "side": "away",
+          "minute": "67",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Trézéguet",
+          "side": "away",
+          "minute": "82",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
     }
   },
   "groupStandings": {},
@@ -1231,6 +1260,10 @@
     "ramin rezaeian": 1,
     "mohammad mohebbi": 1,
     "elijah just": 2,
+    "finn surman": 1,
+    "mostafa zico": 1,
+    "mohamed salah": 1,
+    "trezeguet": 1,
     "abdulelah al-amri": 1,
     "maxi araujo": 2,
     "lamine yamal": 1,
@@ -1273,10 +1306,7 @@
     "nathan-dylan saliba": 1,
     "memphis depay": 1,
     "agustin canobbio": 1,
-    "finn surman": 1,
-    "mostafa ziko": 1,
-    "mohamed salah": 1,
-    "trezeguet": 1
+    "mostafa ziko": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
