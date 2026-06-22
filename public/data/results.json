@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-21T23:40:30.539Z",
+  "lastUpdated": "2026-06-22T00:20:29.915Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -39,20 +39,10 @@
     "g35": "X",
     "g36": "2",
     "g37": "1",
-    "g38": "X"
+    "g38": "X",
+    "g39": "X"
   },
-  "live": [
-    {
-      "id": "g39",
-      "home": "Uruguay",
-      "away": "Kap Verde",
-      "group": "H",
-      "homeScore": 2,
-      "awayScore": 2,
-      "minute": null,
-      "status": "IN_PLAY"
-    }
-  ],
+  "live": [],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -1069,6 +1059,40 @@
       "homeScore": 0,
       "awayScore": 0,
       "scorers": []
+    },
+    "g39": {
+      "homeScore": 2,
+      "awayScore": 2,
+      "scorers": [
+        {
+          "name": "Maxi Araújo",
+          "side": "home",
+          "minute": "44",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Agustín Cano",
+          "side": "home",
+          "minute": "45+6",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Kevin Pina",
+          "side": "away",
+          "minute": "21",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Hélio Varela",
+          "side": "away",
+          "minute": "61",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
     }
   },
   "groupStandings": {},
@@ -1202,9 +1226,12 @@
     "mohammad mohebbi": 1,
     "elijah just": 2,
     "abdulelah al-amri": 1,
-    "maxi araujo": 1,
+    "maxi araujo": 2,
     "lamine yamal": 1,
     "mikel oyarzabal": 2,
+    "agustin cano": 1,
+    "kevin pina": 1,
+    "helio varela": 1,
     "kylian mbappe": 2,
     "bradley barcola": 1,
     "ibrahim mbaye": 1,
@@ -1239,9 +1266,7 @@
     "ibrahim m'baye": 1,
     "nathan-dylan saliba": 1,
     "memphis depay": 1,
-    "kevin pina": 1,
-    "agustin canobbio": 1,
-    "helio varela": 1
+    "agustin canobbio": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
