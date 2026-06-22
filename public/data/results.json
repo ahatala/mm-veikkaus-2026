@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-22T19:10:32.755Z",
+  "lastUpdated": "2026-06-22T21:10:33.020Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -44,7 +44,18 @@
     "g40": "2",
     "g41": "1"
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g42",
+      "home": "Ranska",
+      "away": "Irak",
+      "group": "I",
+      "homeScore": 0,
+      "awayScore": 0,
+      "minute": null,
+      "status": "IN_PLAY"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
