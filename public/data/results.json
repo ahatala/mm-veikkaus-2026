@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-22T11:37:51.792Z",
+  "lastUpdated": "2026-06-22T17:10:31.321Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -43,7 +43,18 @@
     "g39": "X",
     "g40": "2"
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g41",
+      "home": "Argentiina",
+      "away": "Itävalta",
+      "group": "J",
+      "homeScore": 0,
+      "awayScore": 0,
+      "minute": null,
+      "status": "IN_PLAY"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
