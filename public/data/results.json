@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-23T00:10:31.306Z",
+  "lastUpdated": "2026-06-23T00:20:31.121Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -50,7 +50,7 @@
       "home": "Ranska",
       "away": "Irak",
       "group": "I",
-      "homeScore": 1,
+      "homeScore": 2,
       "awayScore": 0,
       "minute": null,
       "status": "IN_PLAY"
@@ -2273,7 +2273,7 @@
     "agustin cano": 1,
     "kevin pina": 1,
     "helio varela": 1,
-    "kylian mbappe": 3,
+    "kylian mbappe": 4,
     "bradley barcola": 1,
     "ibrahim mbaye": 1,
     "aymen hussein": 1,
