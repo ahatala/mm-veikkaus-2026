@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-22T22:00:45.899Z",
+  "lastUpdated": "2026-06-23T00:10:31.306Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -53,7 +53,17 @@
       "homeScore": 1,
       "awayScore": 0,
       "minute": null,
-      "status": "PAUSED"
+      "status": "IN_PLAY"
+    },
+    {
+      "id": "g43",
+      "home": "Norja",
+      "away": "Senegal",
+      "group": "I",
+      "homeScore": 0,
+      "awayScore": 0,
+      "minute": null,
+      "status": "IN_PLAY"
     }
   ],
   "matchResults": {
