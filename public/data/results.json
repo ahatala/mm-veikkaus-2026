@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-23T17:00:52.816Z",
+  "lastUpdated": "2026-06-23T17:10:32.657Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -47,7 +47,18 @@
     "g43": "1",
     "g44": "2"
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g45",
+      "home": "Portugali",
+      "away": "Uzbekistan",
+      "group": "K",
+      "homeScore": 0,
+      "awayScore": 0,
+      "minute": null,
+      "status": "IN_PLAY"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -2403,7 +2414,8 @@
     "agustin canobbio": 1,
     "mostafa ziko": 1,
     "marcus pedersen": 1,
-    "nizar al rashdan": 1
+    "nizar al rashdan": 1,
+    "cristiano ronaldo": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
@@ -2418,7 +2430,7 @@
     "sq2": "Jatkoon: Yhdysvallat, Meksiko",
     "sq3": "Argentiina voitti lohkon J",
     "sq5": "Saksa–Curaçao 7–1",
-    "sq7": "Messi teki maalin",
+    "sq7": "Messi ja Ronaldo teki maalin",
     "sq8": "Lohkovoittaja Euroopan/Etelä-Amerikan ulkopuolelta: Meksiko (lohko A), Yhdysvallat (lohko D)"
   }
 }
