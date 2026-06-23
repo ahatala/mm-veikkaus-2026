@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-23T01:10:29.239Z",
+  "lastUpdated": "2026-06-23T01:20:31.774Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -51,10 +51,10 @@
       "home": "Norja",
       "away": "Senegal",
       "group": "I",
-      "homeScore": 1,
-      "awayScore": 0,
+      "homeScore": 2,
+      "awayScore": 1,
       "minute": null,
-      "status": "PAUSED"
+      "status": "IN_PLAY"
     }
   ],
   "matchResults": {
@@ -2275,7 +2275,7 @@
     "bradley barcola": 1,
     "ibrahim mbaye": 1,
     "aymen hussein": 1,
-    "erling haaland": 3,
+    "erling haaland": 4,
     "leo østigard": 1,
     "lionel messi": 5,
     "romano schmid": 1,
@@ -2308,7 +2308,8 @@
     "agustin canobbio": 1,
     "mostafa ziko": 1,
     "ousmane dembele": 1,
-    "marcus pedersen": 1
+    "marcus pedersen": 1,
+    "ismaila sarr": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
