@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-23T19:00:54.993Z",
+  "lastUpdated": "2026-06-23T19:10:35.769Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -45,20 +45,10 @@
     "g41": "1",
     "g42": "1",
     "g43": "1",
-    "g44": "2"
+    "g44": "2",
+    "g45": "1"
   },
-  "live": [
-    {
-      "id": "g45",
-      "home": "Portugali",
-      "away": "Uzbekistan",
-      "group": "K",
-      "homeScore": 5,
-      "awayScore": 0,
-      "minute": null,
-      "status": "IN_PLAY"
-    }
-  ],
+  "live": [],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -1258,6 +1248,47 @@
           "owngoal": false
         }
       ]
+    },
+    "g45": {
+      "homeScore": 5,
+      "awayScore": 0,
+      "scorers": [
+        {
+          "name": "Cristiano Ronaldo",
+          "side": "home",
+          "minute": "6",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Nuno Mendes",
+          "side": "home",
+          "minute": "17",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Cristiano Ronaldo",
+          "side": "home",
+          "minute": "39",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Abduvohid Nematov",
+          "side": "home",
+          "minute": "60",
+          "penalty": false,
+          "owngoal": true
+        },
+        {
+          "name": "Rafael Leão",
+          "side": "home",
+          "minute": "87",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
     }
   },
   "groupStandings": {},
@@ -1724,6 +1755,17 @@
     ],
     "K": [
       {
+        "team": "Portugali",
+        "played": 2,
+        "won": 1,
+        "drawn": 1,
+        "lost": 0,
+        "gf": 6,
+        "ga": 1,
+        "gd": 5,
+        "points": 4
+      },
+      {
         "team": "Kolumbia",
         "played": 1,
         "won": 1,
@@ -1746,25 +1788,14 @@
         "points": 1
       },
       {
-        "team": "Portugali",
-        "played": 1,
-        "won": 0,
-        "drawn": 1,
-        "lost": 0,
-        "gf": 1,
-        "ga": 1,
-        "gd": 0,
-        "points": 1
-      },
-      {
         "team": "Uzbekistan",
-        "played": 1,
+        "played": 2,
         "won": 0,
         "drawn": 0,
-        "lost": 1,
+        "lost": 2,
         "gf": 1,
-        "ga": 3,
-        "gd": -2,
+        "ga": 8,
+        "gd": -7,
         "points": 0
       }
     ],
@@ -1899,8 +1930,12 @@
       ]
     },
     "K": {
-      "eliminatedFromFirst": [],
-      "eliminatedFromTop2": []
+      "eliminatedFromFirst": [
+        "Uzbekistan"
+      ],
+      "eliminatedFromTop2": [
+        "Uzbekistan"
+      ]
     },
     "L": {
       "eliminatedFromFirst": [],
@@ -2394,6 +2429,9 @@
     "daniel munoz": 1,
     "luis diaz": 1,
     "jaminton campaz": 1,
+    "cristiano ronaldo": 2,
+    "nuno mendes": 1,
+    "rafael leao": 1,
     "harry kane": 2,
     "jude bellingham": 1,
     "marcus rashford": 1,
@@ -2401,7 +2439,6 @@
     "petar musa": 1,
     "caleb yirenkyi": 1,
     "maximiliano araujo": 2,
-    "cristiano ronaldo": 2,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
     "gio reyna": 1,
@@ -2415,10 +2452,7 @@
     "agustin canobbio": 1,
     "mostafa ziko": 1,
     "marcus pedersen": 1,
-    "nizar al rashdan": 1,
-    "nuno mendes": 1,
-    "abduvakhid nematov": 1,
-    "rafael leao": 1
+    "nizar al rashdan": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
