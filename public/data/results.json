@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-23T00:30:38.914Z",
+  "lastUpdated": "2026-06-23T00:50:30.821Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -51,7 +51,7 @@
       "home": "Norja",
       "away": "Senegal",
       "group": "I",
-      "homeScore": 0,
+      "homeScore": 1,
       "awayScore": 0,
       "minute": null,
       "status": "IN_PLAY"
@@ -2307,7 +2307,8 @@
     "memphis depay": 1,
     "agustin canobbio": 1,
     "mostafa ziko": 1,
-    "ousmane dembele": 1
+    "ousmane dembele": 1,
+    "marcus pedersen": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
