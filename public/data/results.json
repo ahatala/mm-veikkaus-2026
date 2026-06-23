@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-23T01:50:33.319Z",
+  "lastUpdated": "2026-06-23T02:00:48.059Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -52,9 +52,9 @@
       "away": "Senegal",
       "group": "I",
       "homeScore": 3,
-      "awayScore": 1,
+      "awayScore": 2,
       "minute": null,
-      "status": "PAUSED"
+      "status": "IN_PLAY"
     }
   ],
   "matchResults": {
@@ -1864,7 +1864,7 @@
       "stage": "R32",
       "date": "ma 29.6.",
       "time": "23:30",
-      "home": "Saksa",
+      "home": null,
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -1912,7 +1912,7 @@
       "stage": "R32",
       "date": "ke 1.7.",
       "time": "04:00",
-      "home": "Meksiko",
+      "home": null,
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -1948,7 +1948,7 @@
       "stage": "R32",
       "date": "to 2.7.",
       "time": "03:00",
-      "home": "Yhdysvallat",
+      "home": null,
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -2317,6 +2317,7 @@
     "petar musa": 1,
     "caleb yirenkyi": 1,
     "maximiliano araujo": 2,
+    "ismaila sarr": 2,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
     "gio reyna": 1,
@@ -2330,8 +2331,7 @@
     "memphis depay": 1,
     "agustin canobbio": 1,
     "mostafa ziko": 1,
-    "marcus pedersen": 1,
-    "ismaila sarr": 1
+    "marcus pedersen": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
