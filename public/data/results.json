@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-23T20:50:32.717Z",
+  "lastUpdated": "2026-06-23T21:00:51.580Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -48,7 +48,18 @@
     "g44": "2",
     "g45": "1"
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g46",
+      "home": "Englanti",
+      "away": "Ghana",
+      "group": "L",
+      "homeScore": 0,
+      "awayScore": 0,
+      "minute": null,
+      "status": "PAUSED"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -1978,7 +1989,7 @@
       "stage": "R32",
       "date": "ma 29.6.",
       "time": "23:30",
-      "home": "Saksa",
+      "home": null,
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -2026,7 +2037,7 @@
       "stage": "R32",
       "date": "ke 1.7.",
       "time": "04:00",
-      "home": "Meksiko",
+      "home": null,
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -2062,7 +2073,7 @@
       "stage": "R32",
       "date": "to 2.7.",
       "time": "03:00",
-      "home": "Yhdysvallat",
+      "home": null,
       "away": null,
       "homeScore": null,
       "awayScore": null,
