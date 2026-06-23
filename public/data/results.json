@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-23T18:40:39.145Z",
+  "lastUpdated": "2026-06-23T19:00:54.993Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -53,7 +53,7 @@
       "home": "Portugali",
       "away": "Uzbekistan",
       "group": "K",
-      "homeScore": 4,
+      "homeScore": 5,
       "awayScore": 0,
       "minute": null,
       "status": "IN_PLAY"
@@ -2416,7 +2416,9 @@
     "mostafa ziko": 1,
     "marcus pedersen": 1,
     "nizar al rashdan": 1,
-    "nuno mendes": 1
+    "nuno mendes": 1,
+    "abduvakhid nematov": 1,
+    "rafael leao": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
