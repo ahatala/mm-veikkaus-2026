@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-23T00:20:31.121Z",
+  "lastUpdated": "2026-06-23T00:30:38.914Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -42,19 +42,10 @@
     "g38": "X",
     "g39": "X",
     "g40": "2",
-    "g41": "1"
+    "g41": "1",
+    "g42": "1"
   },
   "live": [
-    {
-      "id": "g42",
-      "home": "Ranska",
-      "away": "Irak",
-      "group": "I",
-      "homeScore": 2,
-      "awayScore": 0,
-      "minute": null,
-      "status": "IN_PLAY"
-    },
     {
       "id": "g43",
       "home": "Norja",
@@ -1170,6 +1161,11 @@
           "owngoal": false
         }
       ]
+    },
+    "g42": {
+      "homeScore": 3,
+      "awayScore": 0,
+      "scorers": []
     }
   },
   "groupStandings": {},
@@ -1544,6 +1540,17 @@
     ],
     "I": [
       {
+        "team": "Ranska",
+        "played": 2,
+        "won": 2,
+        "drawn": 0,
+        "lost": 0,
+        "gf": 6,
+        "ga": 1,
+        "gd": 5,
+        "points": 6
+      },
+      {
         "team": "Norja",
         "played": 1,
         "won": 1,
@@ -1552,17 +1559,6 @@
         "gf": 4,
         "ga": 1,
         "gd": 3,
-        "points": 3
-      },
-      {
-        "team": "Ranska",
-        "played": 1,
-        "won": 1,
-        "drawn": 0,
-        "lost": 0,
-        "gf": 3,
-        "ga": 1,
-        "gd": 2,
         "points": 3
       },
       {
@@ -1578,13 +1574,13 @@
       },
       {
         "team": "Irak",
-        "played": 1,
+        "played": 2,
         "won": 0,
         "drawn": 0,
-        "lost": 1,
+        "lost": 2,
         "gf": 1,
-        "ga": 4,
-        "gd": -3,
+        "ga": 7,
+        "gd": -6,
         "points": 0
       }
     ],
@@ -1791,7 +1787,9 @@
       "eliminatedFromTop2": []
     },
     "I": {
-      "eliminatedFromFirst": [],
+      "eliminatedFromFirst": [
+        "Irak"
+      ],
       "eliminatedFromTop2": []
     },
     "J": {
@@ -2308,7 +2306,8 @@
     "nathan-dylan saliba": 1,
     "memphis depay": 1,
     "agustin canobbio": 1,
-    "mostafa ziko": 1
+    "mostafa ziko": 1,
+    "ousmane dembele": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
