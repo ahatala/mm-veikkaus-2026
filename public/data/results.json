@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-23T04:40:27.800Z",
+  "lastUpdated": "2026-06-23T04:50:28.773Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -1910,7 +1910,7 @@
       "stage": "R32",
       "date": "ma 29.6.",
       "time": "23:30",
-      "home": null,
+      "home": "Saksa",
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -1958,7 +1958,7 @@
       "stage": "R32",
       "date": "ke 1.7.",
       "time": "04:00",
-      "home": null,
+      "home": "Meksiko",
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -1994,7 +1994,7 @@
       "stage": "R32",
       "date": "to 2.7.",
       "time": "03:00",
-      "home": null,
+      "home": "Yhdysvallat",
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -2380,7 +2380,8 @@
     "mostafa ziko": 1,
     "marcus pedersen": 1,
     "nizar al rashdan": 1,
-    "nadhir benbouali": 1
+    "nadhir benbouali": 1,
+    "amine gouiri": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
