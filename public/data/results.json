@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-23T17:30:42.356Z",
+  "lastUpdated": "2026-06-23T17:40:34.323Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -54,7 +54,7 @@
       "away": "Uzbekistan",
       "group": "K",
       "homeScore": 2,
-      "awayScore": 0,
+      "awayScore": 1,
       "minute": null,
       "status": "IN_PLAY"
     }
@@ -1943,7 +1943,7 @@
       "stage": "R32",
       "date": "ma 29.6.",
       "time": "23:30",
-      "home": null,
+      "home": "Saksa",
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -1991,7 +1991,7 @@
       "stage": "R32",
       "date": "ke 1.7.",
       "time": "04:00",
-      "home": null,
+      "home": "Meksiko",
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -2027,7 +2027,7 @@
       "stage": "R32",
       "date": "to 2.7.",
       "time": "03:00",
-      "home": null,
+      "home": "Yhdysvallat",
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -2401,6 +2401,7 @@
     "petar musa": 1,
     "caleb yirenkyi": 1,
     "maximiliano araujo": 2,
+    "cristiano ronaldo": 2,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
     "gio reyna": 1,
@@ -2415,9 +2416,7 @@
     "mostafa ziko": 1,
     "marcus pedersen": 1,
     "nizar al rashdan": 1,
-    "cristiano ronaldo": 1,
-    "nuno mendes": 1,
-    "azizjon ganiev": 1
+    "nuno mendes": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
