@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-24T22:10:31.270Z",
+  "lastUpdated": "2026-06-24T22:13:32.134Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -1750,7 +1750,14 @@
       ]
     }
   },
-  "groupStandings": {},
+  "groupStandings": {
+    "B": [
+      "Sveitsi",
+      "Kanada",
+      "Bosnia-Hertsegovina",
+      "Qatar"
+    ]
+  },
   "groupTable": {
     "A": [
       {
@@ -2305,7 +2312,12 @@
       }
     ]
   },
-  "groupTop2": {},
+  "groupTop2": {
+    "B": [
+      "Sveitsi",
+      "Kanada"
+    ]
+  },
   "groupClinch": {
     "A": {
       "eliminatedFromFirst": [
