@@ -297,6 +297,9 @@ function build(inter) {
   // Effective per-match outcomes, used for standings + clinch so they always agree with the scores we
   // actually show (a stuck football-data status can't desync the table from the displayed results).
   const effGroupMatches = []
+  // Authoritative kickoff per group match (Finnish time), from the feed — bets.json's static times had
+  // at least one wrong entry, so the feed's schedule overrides them in the UI.
+  const matchSchedule = {}
   for (const m of inter.matches) {
     if (m.stage !== 'GROUP' || !m.home || !m.away) continue
     const pair = `${m.home}|${m.away}`
@@ -317,6 +320,9 @@ function build(inter) {
 
     const id = byPair.get(pair)
     if (!id) { unmatchedPairs.push(`${m.home}–${m.away}`); continue }
+
+    const sched = fiDateTime(m)
+    if (sched.date) matchSchedule[id] = { ...sched, ts: tsOf(m) }
 
     if (result) {
       groupMatches[id] = sign(result.homeScore, result.awayScore)
@@ -431,6 +437,7 @@ function build(inter) {
   const results = {
     source: inter._source,
     groupMatches,
+    matchSchedule,                      // id -> { date, time } (Finnish), authoritative kickoff from the feed
     live,                               // in-play group matches (score + minute), if any
     matchResults,                       // per-match score + goalscorers (finished group matches)
     groupStandings: displayStandings,  // full table, complete groups only

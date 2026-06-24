@@ -286,6 +286,7 @@ export function compute(bets: Bets, results: Results, overrides: Overrides): Com
     groupStandings: standings,
     groupTable: results.groupTable ?? {},
     eliminated: results.eliminatedTeams ?? [],
+    matchSchedule: results.matchSchedule ?? {},
     matches, top2, quarterfinalists, semifinalists, finalists, champion, goldenBoot, special,
     knockoutMatches: scoreKnockoutMatches(bets, results.knockoutMatches ?? []),
   }

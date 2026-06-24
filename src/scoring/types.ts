@@ -107,6 +107,8 @@ export interface Results {
   source?: string
   /** matchId -> actual 1/X/2 sign, only for finished matches */
   groupMatches: Record<string, Sign>
+  /** matchId -> authoritative kickoff (Finnish + epoch ts for sorting), from the feed; overrides bets.json times */
+  matchSchedule?: Record<string, { date: string; time: string | null; ts?: number }>
   /** matchId -> final score + goalscorers, for finished group matches */
   matchResults?: Record<string, { homeScore: number; awayScore: number; scorers?: GoalEvent[] }>
   /** in-play group matches (live score + minute) */
@@ -272,6 +274,8 @@ export interface Computed {
   /** teams out of the tournament — lost causes for knockout picks */
   eliminated: string[]
   matches: MatchResult[]
+  /** matchId -> authoritative kickoff (Finnish + epoch ts) from the feed; the UI prefers this over bets.json times */
+  matchSchedule: Record<string, { date: string; time: string | null; ts?: number }>
   /** knockout fixtures (R32→Final) with per-team backers, for the Ottelut tab */
   knockoutMatches: KnockoutMatchResult[]
   top2: Top2Result[]

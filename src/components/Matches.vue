@@ -8,13 +8,19 @@ const participants = computed(() => store.bets!.participants)
 
 // A list row is a match's finished/upcoming data, OR — when it's in play — overridden with the live
 // entry (same shape, provisional score/sign/points). Rendered by the exact same row template.
-type Row = MatchResult & { isLive: boolean; minute: string | number | null }
+// date/time/ts come from the feed schedule (authoritative) when present, else bets.json.
+type Row = MatchResult & { isLive: boolean; minute: string | number | null; date: string; time: string | null; ts: number | null }
 
 const displayMatches = computed<Row[]>(() => {
   const liveById = new Map(store.computed!.live.map((l) => [l.match.id, l]))
+  const sched = store.computed!.matchSchedule
   return store.computed!.matches.map((m): Row => {
+    const s = sched[m.match.id]
+    const date = s?.date ?? m.match.date
+    const time = s?.time ?? m.match.time
+    const ts = s?.ts ?? null
     const l = liveById.get(m.match.id)
-    if (!l) return { ...m, isLive: false, minute: null }
+    if (!l) return { ...m, isLive: false, minute: null, date, time, ts }
     return {
       ...m,
       score: { home: l.homeScore, away: l.awayScore },
@@ -24,6 +30,7 @@ const displayMatches = computed<Row[]>(() => {
       points: l.points,
       isLive: true,
       minute: l.minute,
+      date, time, ts,
     }
   })
 })
@@ -41,16 +48,18 @@ function koRowClass(k: KnockoutMatchResult, side: 'HOME' | 'AWAY'): string {
   return k.winner === side ? 'bonus' : 'wrong'
 }
 
-// One chronological list of group + knockout matches, grouped by date label. Group matches come first
-// (they're earlier); the day they share with the first knockout round merges into one day block.
+// One chronological list of group + knockout matches, grouped by date label. Group rows are sorted by
+// actual kickoff (a corrected time can move a match to another day); knockouts follow (they're later),
+// sharing the 28.6 block with the last group matches.
 type ListItem = { type: 'group'; g: Row } | { type: 'ko'; k: KnockoutMatchResult }
 const byDay = computed(() => {
-  const items: { date: string; item: ListItem }[] = [
-    ...displayMatches.value.map((g) => ({ date: g.match.date, item: { type: 'group', g } as ListItem })),
-    ...store.computed!.knockoutMatches.map((k) => ({ date: k.date, item: { type: 'ko', k } as ListItem })),
-  ]
+  const groupRows = displayMatches.value
+    .map((g, i) => ({ g, key: g.ts ?? 1e15 + i })) // fall back to bets order when a kickoff is unknown
+    .sort((a, b) => a.key - b.key)
+    .map(({ g }) => ({ date: g.date, item: { type: 'group', g } as ListItem }))
+  const koRows = store.computed!.knockoutMatches.map((k) => ({ date: k.date, item: { type: 'ko', k } as ListItem }))
   const days: { date: string; items: ListItem[] }[] = []
-  for (const { date, item } of items) {
+  for (const { date, item } of [...groupRows, ...koRows]) {
     const last = days[days.length - 1]
     if (last && last.date === date) last.items.push(item)
     else days.push({ date, items: [item] })
@@ -148,7 +157,7 @@ onBeforeUnmount(() => {
               <div class="meta">
                 Lohko {{ it.g.match.group }} ·
                 <template v-if="it.g.isLive"><span class="live-dot"></span><span class="live-label">{{ it.g.minute ? `${it.g.minute}'` : 'LIVE' }}</span></template>
-                <template v-else>{{ it.g.match.time }}</template>
+                <template v-else>{{ it.g.time }}</template>
               </div>
 
               <div class="grid">
