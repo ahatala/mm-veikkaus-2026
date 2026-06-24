@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-24T23:20:29.792Z",
+  "lastUpdated": "2026-06-24T23:30:40.490Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -432,7 +432,7 @@
       "away": "Brasilia",
       "group": "C",
       "homeScore": 0,
-      "awayScore": 2,
+      "awayScore": 3,
       "minute": null,
       "status": "IN_PLAY"
     }
@@ -2866,7 +2866,7 @@
     "vinicius junior": 4,
     "ismael saibari": 3,
     "john mcginn": 1,
-    "matheus cunha": 2,
+    "matheus cunha": 3,
     "folarin balogun": 2,
     "giovanni reyna": 1,
     "mauricio": 1,
