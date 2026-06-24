@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-24T23:30:40.490Z",
+  "lastUpdated": "2026-06-24T23:50:27.904Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -421,7 +421,7 @@
       "home": "Marokko",
       "away": "Haiti",
       "group": "C",
-      "homeScore": 2,
+      "homeScore": 3,
       "awayScore": 2,
       "minute": null,
       "status": "IN_PLAY"
@@ -434,7 +434,7 @@
       "homeScore": 0,
       "awayScore": 3,
       "minute": null,
-      "status": "IN_PLAY"
+      "status": "PAUSED"
     }
   ],
   "matchResults": {
