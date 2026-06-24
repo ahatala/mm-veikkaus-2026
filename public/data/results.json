@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-24T20:20:31.668Z",
+  "lastUpdated": "2026-06-24T20:30:43.503Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -419,7 +419,7 @@
       "home": "Sveitsi",
       "away": "Kanada",
       "group": "B",
-      "homeScore": 1,
+      "homeScore": 2,
       "awayScore": 0,
       "minute": null,
       "status": "IN_PLAY"
