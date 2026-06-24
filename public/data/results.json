@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-24T20:40:34.160Z",
+  "lastUpdated": "2026-06-24T20:50:30.101Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -429,7 +429,7 @@
       "home": "Bosnia-Hertsegovina",
       "away": "Qatar",
       "group": "B",
-      "homeScore": 2,
+      "homeScore": 3,
       "awayScore": 1,
       "minute": null,
       "status": "IN_PLAY"
@@ -2778,7 +2778,7 @@
     "johan manzambi": 3,
     "ruben vargas": 2,
     "granit xhaka": 1,
-    "ermin mahmic": 1,
+    "ermin mahmic": 2,
     "jonathan david": 3,
     "nathan saliba": 1,
     "vinicius junior": 2,
