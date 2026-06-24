@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-24T20:10:29.813Z",
+  "lastUpdated": "2026-06-24T20:20:31.668Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -432,7 +432,7 @@
       "homeScore": 2,
       "awayScore": 1,
       "minute": null,
-      "status": "PAUSED"
+      "status": "IN_PLAY"
     }
   ],
   "matchResults": {
@@ -2775,7 +2775,7 @@
     "cyle larin": 2,
     "jovo lukic": 1,
     "breel embolo": 1,
-    "johan manzambi": 2,
+    "johan manzambi": 3,
     "ruben vargas": 2,
     "granit xhaka": 1,
     "ermin mahmic": 1,
