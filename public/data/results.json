@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-24T20:30:43.503Z",
+  "lastUpdated": "2026-06-24T20:40:34.160Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -420,7 +420,7 @@
       "away": "Kanada",
       "group": "B",
       "homeScore": 2,
-      "awayScore": 0,
+      "awayScore": 1,
       "minute": null,
       "status": "IN_PLAY"
     },
@@ -2877,7 +2877,7 @@
     "mostafa ziko": 1,
     "marcus pedersen": 1,
     "nizar al rashdan": 1,
-    "kerim alajbegovic": 1
+    "promise akinpelu": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
