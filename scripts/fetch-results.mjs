@@ -388,11 +388,17 @@ function build(inter) {
     c.clinchedTop2.forEach((t) => clinchedTop2.add(t))
     c.eliminatedFromFirst.forEach((t) => eliminatedFromFirst.add(t))
     c.eliminatedFromTop3.forEach((t) => eliminatedFromTop3.add(t))
-    if (c.complete && standings[g]?.length >= 2) {
-      // finished group: trust the real standings (full FIFA tiebreakers)
-      displayStandings[g] = standings[g]
-      decidedWinners[g] = standings[g][0]
-      groupTop2[g] = [standings[g][0], standings[g][1]]
+    // Final order: prefer football-data's official standings (full FIFA tiebreakers), but fall back to
+    // our own computed table (points → h2h → goal difference) when that endpoint lags behind the
+    // played matches — otherwise a finished group's Top-2 bet can't resolve (e.g. a 2nd place decided
+    // only by goal difference, which the points/h2h clinch won't call).
+    const finalOrder = standings[g]?.length >= 2
+      ? standings[g]
+      : (groupTable[g]?.length >= 2 ? groupTable[g].map((r) => r.team) : null)
+    if (c.complete && finalOrder) {
+      displayStandings[g] = finalOrder
+      decidedWinners[g] = finalOrder[0]
+      groupTop2[g] = [finalOrder[0], finalOrder[1]]
       completeGroups++
     } else {
       // in-progress: only what points alone make certain
