@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-24T15:40:33.967Z",
+  "lastUpdated": "2026-06-24T15:50:36.296Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -717,6 +717,13 @@
           "owngoal": false
         },
         {
+          "name": "Yasin Ayari",
+          "side": "home",
+          "minute": "90+6",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
           "name": "Alexander Isak",
           "side": "home",
           "minute": "30",
@@ -734,13 +741,6 @@
           "name": "Mattias Svanberg",
           "side": "home",
           "minute": "84",
-          "penalty": false,
-          "owngoal": false
-        },
-        {
-          "name": "Yasin Ayari",
-          "side": "home",
-          "minute": "90+6",
           "penalty": false,
           "owngoal": false
         },
@@ -844,16 +844,16 @@
           "owngoal": false
         },
         {
-          "name": "Bradley Barcola",
+          "name": "Kylian Mbappé",
           "side": "home",
-          "minute": "82",
+          "minute": "90+6",
           "penalty": false,
           "owngoal": false
         },
         {
-          "name": "Kylian Mbappé",
+          "name": "Bradley Barcola",
           "side": "home",
-          "minute": "90+6",
+          "minute": "82",
           "penalty": false,
           "owngoal": false
         },
@@ -1115,16 +1115,16 @@
           "owngoal": false
         },
         {
-          "name": "Rubén Vargas",
+          "name": "Johan Manzambi",
           "side": "home",
-          "minute": "84",
+          "minute": "90",
           "penalty": false,
           "owngoal": false
         },
         {
-          "name": "Johan Manzambi",
+          "name": "Rubén Vargas",
           "side": "home",
-          "minute": "90",
+          "minute": "84",
           "penalty": false,
           "owngoal": false
         },
@@ -1377,16 +1377,16 @@
           "owngoal": false
         },
         {
-          "name": "Junya Ito",
+          "name": "Ayase Ueda",
           "side": "away",
-          "minute": "69",
+          "minute": "83",
           "penalty": false,
           "owngoal": false
         },
         {
-          "name": "Ayase Ueda",
+          "name": "Junya Ito",
           "side": "away",
-          "minute": "83",
+          "minute": "69",
           "penalty": false,
           "owngoal": false
         }
@@ -1626,16 +1626,16 @@
           "owngoal": false
         },
         {
-          "name": "Nuno Mendes",
+          "name": "Cristiano Ronaldo",
           "side": "home",
-          "minute": "17",
+          "minute": "39",
           "penalty": false,
           "owngoal": false
         },
         {
-          "name": "Cristiano Ronaldo",
+          "name": "Nuno Mendes",
           "side": "home",
-          "minute": "39",
+          "minute": "17",
           "penalty": false,
           "owngoal": false
         },
