@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-24T00:50:28.653Z",
+  "lastUpdated": "2026-06-24T01:00:44.671Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -47,7 +47,8 @@
     "g43": "1",
     "g44": "2",
     "g45": "1",
-    "g46": "X"
+    "g46": "X",
+    "g47": "2"
   },
   "live": [],
   "matchResults": {
@@ -1295,6 +1296,11 @@
       "homeScore": 0,
       "awayScore": 0,
       "scorers": []
+    },
+    "g47": {
+      "homeScore": 0,
+      "awayScore": 1,
+      "scorers": []
     }
   },
   "groupStandings": {},
@@ -1829,24 +1835,24 @@
         "points": 4
       },
       {
-        "team": "Panama",
-        "played": 1,
-        "won": 0,
+        "team": "Kroatia",
+        "played": 2,
+        "won": 1,
         "drawn": 0,
         "lost": 1,
-        "gf": 0,
-        "ga": 1,
+        "gf": 3,
+        "ga": 4,
         "gd": -1,
-        "points": 0
+        "points": 3
       },
       {
-        "team": "Kroatia",
-        "played": 1,
+        "team": "Panama",
+        "played": 2,
         "won": 0,
         "drawn": 0,
-        "lost": 1,
-        "gf": 2,
-        "ga": 4,
+        "lost": 2,
+        "gf": 0,
+        "ga": 2,
         "gd": -2,
         "points": 0
       }
@@ -1944,15 +1950,20 @@
       ]
     },
     "L": {
-      "eliminatedFromFirst": [],
-      "eliminatedFromTop2": []
+      "eliminatedFromFirst": [
+        "Panama"
+      ],
+      "eliminatedFromTop2": [
+        "Panama"
+      ]
     }
   },
   "eliminatedTeams": [
     "Haiti",
     "Turkki",
     "Tunisia",
-    "Jordania"
+    "Jordania",
+    "Panama"
   ],
   "knockoutMatches": [
     {
