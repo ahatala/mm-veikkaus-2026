@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-24T00:40:31.857Z",
+  "lastUpdated": "2026-06-24T00:50:28.653Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -1984,7 +1984,7 @@
       "stage": "R32",
       "date": "ma 29.6.",
       "time": "23:30",
-      "home": null,
+      "home": "Saksa",
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -2032,7 +2032,7 @@
       "stage": "R32",
       "date": "ke 1.7.",
       "time": "04:00",
-      "home": null,
+      "home": "Meksiko",
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -2068,7 +2068,7 @@
       "stage": "R32",
       "date": "to 2.7.",
       "time": "03:00",
-      "home": null,
+      "home": "Yhdysvallat",
       "away": null,
       "homeScore": null,
       "awayScore": null,
