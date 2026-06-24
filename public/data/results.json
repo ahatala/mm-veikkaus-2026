@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-24T22:50:34.420Z",
+  "lastUpdated": "2026-06-24T23:00:50.301Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -415,7 +415,28 @@
       "ts": 1782612000000
     }
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g51",
+      "home": "Marokko",
+      "away": "Haiti",
+      "group": "C",
+      "homeScore": 2,
+      "awayScore": 2,
+      "minute": null,
+      "status": "PAUSED"
+    },
+    {
+      "id": "g50",
+      "home": "Skotlanti",
+      "away": "Brasilia",
+      "group": "C",
+      "homeScore": 0,
+      "awayScore": 2,
+      "minute": null,
+      "status": "PAUSED"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
