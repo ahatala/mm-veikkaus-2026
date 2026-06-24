@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-24T20:50:30.101Z",
+  "lastUpdated": "2026-06-24T21:00:44.966Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -49,7 +49,8 @@
     "g45": "1",
     "g46": "X",
     "g47": "2",
-    "g48": "1"
+    "g48": "1",
+    "g54": "1"
   },
   "matchSchedule": {
     "g1": {
@@ -414,16 +415,6 @@
     }
   },
   "live": [
-    {
-      "id": "g54",
-      "home": "Sveitsi",
-      "away": "Kanada",
-      "group": "B",
-      "homeScore": 2,
-      "awayScore": 1,
-      "minute": null,
-      "status": "IN_PLAY"
-    },
     {
       "id": "g49",
       "home": "Bosnia-Hertsegovina",
@@ -1706,6 +1697,33 @@
           "owngoal": false
         }
       ]
+    },
+    "g54": {
+      "homeScore": 2,
+      "awayScore": 1,
+      "scorers": [
+        {
+          "name": "Rubén Vargas",
+          "side": "home",
+          "minute": "46",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Johan Manzambi",
+          "side": "home",
+          "minute": "57",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Promise David",
+          "side": "away",
+          "minute": "76",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
     }
   },
   "groupStandings": {},
@@ -1758,25 +1776,25 @@
     ],
     "B": [
       {
-        "team": "Kanada",
-        "played": 2,
-        "won": 1,
+        "team": "Sveitsi",
+        "played": 3,
+        "won": 2,
         "drawn": 1,
         "lost": 0,
         "gf": 7,
-        "ga": 1,
-        "gd": 6,
-        "points": 4
+        "ga": 3,
+        "gd": 4,
+        "points": 7
       },
       {
-        "team": "Sveitsi",
-        "played": 2,
+        "team": "Kanada",
+        "played": 3,
         "won": 1,
         "drawn": 1,
-        "lost": 0,
-        "gf": 5,
-        "ga": 2,
-        "gd": 3,
+        "lost": 1,
+        "gf": 8,
+        "ga": 3,
+        "gd": 5,
         "points": 4
       },
       {
@@ -2275,10 +2293,13 @@
     },
     "B": {
       "eliminatedFromFirst": [
+        "Kanada",
         "Bosnia-Hertsegovina",
         "Qatar"
       ],
-      "eliminatedFromTop2": []
+      "eliminatedFromTop2": [
+        "Qatar"
+      ]
     },
     "C": {
       "eliminatedFromFirst": [
@@ -2781,6 +2802,7 @@
     "ermin mahmic": 2,
     "jonathan david": 3,
     "nathan saliba": 1,
+    "promise david": 1,
     "vinicius junior": 2,
     "ismael saibari": 2,
     "john mcginn": 1,
