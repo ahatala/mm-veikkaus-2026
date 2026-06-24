@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-24T21:00:44.966Z",
+  "lastUpdated": "2026-06-24T21:10:27.743Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -50,7 +50,8 @@
     "g46": "X",
     "g47": "2",
     "g48": "1",
-    "g54": "1"
+    "g54": "1",
+    "g49": "1"
   },
   "matchSchedule": {
     "g1": {
@@ -414,18 +415,7 @@
       "ts": 1782612000000
     }
   },
-  "live": [
-    {
-      "id": "g49",
-      "home": "Bosnia-Hertsegovina",
-      "away": "Qatar",
-      "group": "B",
-      "homeScore": 3,
-      "awayScore": 1,
-      "minute": null,
-      "status": "IN_PLAY"
-    }
-  ],
+  "live": [],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -1724,6 +1714,40 @@
           "owngoal": false
         }
       ]
+    },
+    "g49": {
+      "homeScore": 3,
+      "awayScore": 1,
+      "scorers": [
+        {
+          "name": "Kerim Alajbegovic",
+          "side": "home",
+          "minute": "29",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Mahmoud Abunada",
+          "side": "home",
+          "minute": "34",
+          "penalty": false,
+          "owngoal": true
+        },
+        {
+          "name": "Ermin Mahmic",
+          "side": "home",
+          "minute": "80",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Hassan Al-Haydos",
+          "side": "away",
+          "minute": "42",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
     }
   },
   "groupStandings": {},
@@ -1799,24 +1823,24 @@
       },
       {
         "team": "Bosnia-Hertsegovina",
-        "played": 2,
-        "won": 0,
+        "played": 3,
+        "won": 1,
         "drawn": 1,
         "lost": 1,
-        "gf": 2,
-        "ga": 5,
-        "gd": -3,
-        "points": 1
+        "gf": 5,
+        "ga": 6,
+        "gd": -1,
+        "points": 4
       },
       {
         "team": "Qatar",
-        "played": 2,
+        "played": 3,
         "won": 0,
         "drawn": 1,
-        "lost": 1,
-        "gf": 1,
-        "ga": 7,
-        "gd": -6,
+        "lost": 2,
+        "gf": 2,
+        "ga": 10,
+        "gd": -8,
         "points": 1
       }
     ],
@@ -2386,6 +2410,7 @@
     }
   },
   "eliminatedTeams": [
+    "Qatar",
     "Haiti",
     "Turkki",
     "Tunisia",
@@ -2803,6 +2828,8 @@
     "jonathan david": 3,
     "nathan saliba": 1,
     "promise david": 1,
+    "kerim alajbegovic": 1,
+    "hassan al-haydos": 1,
     "vinicius junior": 2,
     "ismael saibari": 2,
     "john mcginn": 1,
