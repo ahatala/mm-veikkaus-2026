@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-24T03:00:45.833Z",
+  "lastUpdated": "2026-06-24T03:20:30.225Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -50,18 +50,7 @@
     "g46": "X",
     "g47": "2"
   },
-  "live": [
-    {
-      "id": "g48",
-      "home": "Kolumbia",
-      "away": "Kongon DR",
-      "group": "K",
-      "homeScore": 0,
-      "awayScore": 0,
-      "minute": null,
-      "status": "PAUSED"
-    }
-  ],
+  "live": [],
   "matchResults": {
     "g1": {
       "homeScore": 2,
