@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-24T00:00:50.920Z",
+  "lastUpdated": "2026-06-24T00:10:32.134Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -49,18 +49,7 @@
     "g45": "1",
     "g46": "X"
   },
-  "live": [
-    {
-      "id": "g47",
-      "home": "Panama",
-      "away": "Kroatia",
-      "group": "L",
-      "homeScore": 0,
-      "awayScore": 0,
-      "minute": null,
-      "status": "PAUSED"
-    }
-  ],
+  "live": [],
   "matchResults": {
     "g1": {
       "homeScore": 2,
