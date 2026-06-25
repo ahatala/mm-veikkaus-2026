@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-25T00:00:51.189Z",
+  "lastUpdated": "2026-06-25T00:10:32.089Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -51,7 +51,9 @@
     "g47": "2",
     "g48": "1",
     "g54": "1",
-    "g49": "1"
+    "g49": "1",
+    "g51": "1",
+    "g50": "2"
   },
   "matchSchedule": {
     "g1": {
@@ -415,28 +417,7 @@
       "ts": 1782612000000
     }
   },
-  "live": [
-    {
-      "id": "g51",
-      "home": "Marokko",
-      "away": "Haiti",
-      "group": "C",
-      "homeScore": 4,
-      "awayScore": 2,
-      "minute": null,
-      "status": "IN_PLAY"
-    },
-    {
-      "id": "g50",
-      "home": "Skotlanti",
-      "away": "Brasilia",
-      "group": "C",
-      "homeScore": 0,
-      "awayScore": 3,
-      "minute": null,
-      "status": "PAUSED"
-    }
-  ],
+  "live": [],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -1769,6 +1750,81 @@
           "owngoal": false
         }
       ]
+    },
+    "g51": {
+      "homeScore": 4,
+      "awayScore": 2,
+      "scorers": [
+        {
+          "name": "Achraf Hakimi",
+          "side": "home",
+          "minute": "39",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Ismael Saibari",
+          "side": "home",
+          "minute": "45+1",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Soufiane Rahimi",
+          "side": "home",
+          "minute": "78",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Gessime Yassine",
+          "side": "home",
+          "minute": "89",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Yassine Bounou",
+          "side": "away",
+          "minute": "10",
+          "penalty": false,
+          "owngoal": true
+        },
+        {
+          "name": "Wilson Isidor",
+          "side": "away",
+          "minute": "43",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
+    },
+    "g50": {
+      "homeScore": 0,
+      "awayScore": 3,
+      "scorers": [
+        {
+          "name": "Vinícius Júnior",
+          "side": "away",
+          "minute": "7",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Vinícius Júnior",
+          "side": "away",
+          "minute": "45+3",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Matheus Cunha",
+          "side": "away",
+          "minute": "60",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
     }
   },
   "groupStandings": {
@@ -1777,6 +1833,12 @@
       "Kanada",
       "Bosnia-Hertsegovina",
       "Qatar"
+    ],
+    "C": [
+      "Brasilia",
+      "Marokko",
+      "Skotlanti",
+      "Haiti"
     ]
   },
   "groupTable": {
@@ -1921,46 +1983,46 @@
     "C": [
       {
         "team": "Brasilia",
-        "played": 2,
-        "won": 1,
+        "played": 3,
+        "won": 2,
         "drawn": 1,
         "lost": 0,
-        "gf": 4,
+        "gf": 7,
         "ga": 1,
-        "gd": 3,
-        "points": 4
+        "gd": 6,
+        "points": 7
       },
       {
         "team": "Marokko",
-        "played": 2,
-        "won": 1,
+        "played": 3,
+        "won": 2,
         "drawn": 1,
         "lost": 0,
-        "gf": 2,
-        "ga": 1,
-        "gd": 1,
-        "points": 4
+        "gf": 6,
+        "ga": 3,
+        "gd": 3,
+        "points": 7
       },
       {
         "team": "Skotlanti",
-        "played": 2,
+        "played": 3,
         "won": 1,
         "drawn": 0,
-        "lost": 1,
+        "lost": 2,
         "gf": 1,
-        "ga": 1,
-        "gd": 0,
+        "ga": 4,
+        "gd": -3,
         "points": 3
       },
       {
         "team": "Haiti",
-        "played": 2,
+        "played": 3,
         "won": 0,
         "drawn": 0,
-        "lost": 2,
-        "gf": 0,
-        "ga": 4,
-        "gd": -4,
+        "lost": 3,
+        "gf": 2,
+        "ga": 8,
+        "gd": -6,
         "points": 0
       }
     ],
@@ -2337,6 +2399,10 @@
     "B": [
       "Sveitsi",
       "Kanada"
+    ],
+    "C": [
+      "Brasilia",
+      "Marokko"
     ]
   },
   "groupClinch": {
@@ -2360,10 +2426,12 @@
     },
     "C": {
       "eliminatedFromFirst": [
-        "Haiti"
+        "Haiti",
+        "Skotlanti"
       ],
       "eliminatedFromTop2": [
-        "Haiti"
+        "Haiti",
+        "Skotlanti"
       ]
     },
     "D": {
@@ -2867,6 +2935,10 @@
     "ismael saibari": 3,
     "john mcginn": 1,
     "matheus cunha": 3,
+    "achraf hakimi": 1,
+    "soufiane rahimi": 1,
+    "gessime yassine": 1,
+    "wilson isidor": 1,
     "folarin balogun": 2,
     "giovanni reyna": 1,
     "mauricio": 1,
