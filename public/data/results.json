@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-25T21:50:27.294Z",
+  "lastUpdated": "2026-06-25T22:10:32.370Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -55,7 +55,9 @@
     "g51": "1",
     "g50": "2",
     "g52": "2",
-    "g53": "1"
+    "g53": "1",
+    "g55": "1",
+    "g56": "2"
   },
   "matchSchedule": {
     "g1": {
@@ -1867,6 +1869,53 @@
           "owngoal": false
         }
       ]
+    },
+    "g55": {
+      "homeScore": 2,
+      "awayScore": 1,
+      "scorers": [
+        {
+          "name": "Nilson Angulo",
+          "side": "home",
+          "minute": "9",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Gonzalo Plata",
+          "side": "home",
+          "minute": "77",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Leroy Sané",
+          "side": "away",
+          "minute": "2",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
+    },
+    "g56": {
+      "homeScore": 0,
+      "awayScore": 2,
+      "scorers": [
+        {
+          "name": "Nicolas Pépé",
+          "side": "away",
+          "minute": "7",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Nicolas Pépé",
+          "side": "away",
+          "minute": "64",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
     }
   },
   "groupStandings": {
@@ -1887,6 +1936,12 @@
       "Marokko",
       "Skotlanti",
       "Haiti"
+    ],
+    "E": [
+      "Saksa",
+      "Norsunluurannikko",
+      "Ecuador",
+      "Curaçao"
     ]
   },
   "groupTable": {
@@ -2077,46 +2132,46 @@
     "E": [
       {
         "team": "Saksa",
-        "played": 2,
+        "played": 3,
         "won": 2,
         "drawn": 0,
-        "lost": 0,
-        "gf": 9,
-        "ga": 2,
-        "gd": 7,
+        "lost": 1,
+        "gf": 10,
+        "ga": 4,
+        "gd": 6,
         "points": 6
       },
       {
         "team": "Norsunluurannikko",
-        "played": 2,
-        "won": 1,
+        "played": 3,
+        "won": 2,
         "drawn": 0,
+        "lost": 1,
+        "gf": 4,
+        "ga": 2,
+        "gd": 2,
+        "points": 6
+      },
+      {
+        "team": "Ecuador",
+        "played": 3,
+        "won": 1,
+        "drawn": 1,
         "lost": 1,
         "gf": 2,
         "ga": 2,
         "gd": 0,
-        "points": 3
-      },
-      {
-        "team": "Ecuador",
-        "played": 2,
-        "won": 0,
-        "drawn": 1,
-        "lost": 1,
-        "gf": 0,
-        "ga": 1,
-        "gd": -1,
-        "points": 1
+        "points": 4
       },
       {
         "team": "Curaçao",
-        "played": 2,
+        "played": 3,
         "won": 0,
         "drawn": 1,
-        "lost": 1,
+        "lost": 2,
         "gf": 1,
-        "ga": 7,
-        "gd": -6,
+        "ga": 9,
+        "gd": -8,
         "points": 1
       }
     ],
@@ -2455,6 +2510,10 @@
     "C": [
       "Brasilia",
       "Marokko"
+    ],
+    "E": [
+      "Saksa",
+      "Norsunluurannikko"
     ]
   },
   "groupClinch": {
@@ -2505,7 +2564,10 @@
         "Norsunluurannikko",
         "Ecuador"
       ],
-      "eliminatedFromTop2": []
+      "eliminatedFromTop2": [
+        "Curaçao",
+        "Ecuador"
+      ]
     },
     "F": {
       "eliminatedFromFirst": [
@@ -2570,6 +2632,7 @@
     "Qatar",
     "Haiti",
     "Turkki",
+    "Curaçao",
     "Tunisia",
     "Jordania",
     "Panama"
@@ -3014,6 +3077,10 @@
     "livano comenencia": 1,
     "amad diallo": 1,
     "franck kessie": 1,
+    "nicolas pepe": 2,
+    "nilson angulo": 1,
+    "gonzalo plata": 1,
+    "leroy sane": 1,
     "virgil van dijk": 1,
     "crysencio summerville": 2,
     "keito nakamura": 1,
@@ -3076,7 +3143,6 @@
     "caleb yirenkyi": 1,
     "ante budimir": 1,
     "maximiliano araujo": 2,
-    "nicolas pepe": 2,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
     "gio reyna": 1,
