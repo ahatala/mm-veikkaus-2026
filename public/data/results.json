@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-25T01:00:44.348Z",
+  "lastUpdated": "2026-06-25T01:10:30.995Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -417,7 +417,28 @@
       "ts": 1782612000000
     }
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g52",
+      "home": "Tšekki",
+      "away": "Meksiko",
+      "group": "A",
+      "homeScore": 0,
+      "awayScore": 0,
+      "minute": null,
+      "status": "IN_PLAY"
+    },
+    {
+      "id": "g53",
+      "home": "Etelä-Afrikka",
+      "away": "Etelä-Korea",
+      "group": "A",
+      "homeScore": 0,
+      "awayScore": 0,
+      "minute": null,
+      "status": "IN_PLAY"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
