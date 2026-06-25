@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-25T02:20:31.956Z",
+  "lastUpdated": "2026-06-25T02:30:38.554Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -424,7 +424,7 @@
       "away": "Meksiko",
       "group": "A",
       "homeScore": 0,
-      "awayScore": 1,
+      "awayScore": 2,
       "minute": null,
       "status": "IN_PLAY"
     },
@@ -433,7 +433,7 @@
       "home": "Etelä-Afrikka",
       "away": "Etelä-Korea",
       "group": "A",
-      "homeScore": 0,
+      "homeScore": 1,
       "awayScore": 0,
       "minute": null,
       "status": "IN_PLAY"
@@ -2932,7 +2932,7 @@
     "champion": null
   },
   "goldenBootGoals": {
-    "julian quinones": 1,
+    "julian quinones": 2,
     "raul jimenez": 1,
     "hwang in-beom": 1,
     "oh hyeon-gyu": 1,
