@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-25T02:10:29.547Z",
+  "lastUpdated": "2026-06-25T02:20:31.956Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -424,9 +424,9 @@
       "away": "Meksiko",
       "group": "A",
       "homeScore": 0,
-      "awayScore": 0,
+      "awayScore": 1,
       "minute": null,
-      "status": "PAUSED"
+      "status": "IN_PLAY"
     },
     {
       "id": "g53",
@@ -436,7 +436,7 @@
       "homeScore": 0,
       "awayScore": 0,
       "minute": null,
-      "status": "PAUSED"
+      "status": "IN_PLAY"
     }
   ],
   "matchResults": {
