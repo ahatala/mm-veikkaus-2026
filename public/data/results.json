@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-25T23:10:26.575Z",
+  "lastUpdated": "2026-06-25T23:20:29.340Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -428,7 +428,7 @@
       "away": "Hollanti",
       "group": "F",
       "homeScore": 0,
-      "awayScore": 1,
+      "awayScore": 2,
       "minute": null,
       "status": "IN_PLAY"
     },
