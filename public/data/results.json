@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-25T21:20:27.213Z",
+  "lastUpdated": "2026-06-25T21:30:41.529Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -436,7 +436,7 @@
       "away": "Norsunluurannikko",
       "group": "E",
       "homeScore": 0,
-      "awayScore": 1,
+      "awayScore": 2,
       "minute": null,
       "status": "IN_PLAY"
     }
@@ -3097,6 +3097,7 @@
     "caleb yirenkyi": 1,
     "ante budimir": 1,
     "maximiliano araujo": 2,
+    "nicolas pepe": 2,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
     "gio reyna": 1,
@@ -3110,8 +3111,7 @@
     "agustin canobbio": 1,
     "mostafa ziko": 1,
     "marcus pedersen": 1,
-    "nizar al rashdan": 1,
-    "promise akinpelu": 1
+    "nizar al rashdan": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
