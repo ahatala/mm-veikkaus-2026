@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-25T01:30:38.111Z",
+  "lastUpdated": "2026-06-25T01:40:29.055Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -417,7 +417,28 @@
       "ts": 1782612000000
     }
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g52",
+      "home": "Tšekki",
+      "away": "Meksiko",
+      "group": "A",
+      "homeScore": 0,
+      "awayScore": 0,
+      "minute": null,
+      "status": "IN_PLAY"
+    },
+    {
+      "id": "g53",
+      "home": "Etelä-Afrikka",
+      "away": "Etelä-Korea",
+      "group": "A",
+      "homeScore": 0,
+      "awayScore": 0,
+      "minute": null,
+      "status": "IN_PLAY"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -2548,7 +2569,7 @@
       "stage": "R32",
       "date": "ma 29.6.",
       "time": "23:30",
-      "home": "Saksa",
+      "home": null,
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -2596,7 +2617,7 @@
       "stage": "R32",
       "date": "ke 1.7.",
       "time": "04:00",
-      "home": "Meksiko",
+      "home": null,
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -2632,7 +2653,7 @@
       "stage": "R32",
       "date": "to 2.7.",
       "time": "03:00",
-      "home": "Yhdysvallat",
+      "home": null,
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -2692,7 +2713,7 @@
       "stage": "R32",
       "date": "la 4.7.",
       "time": "01:00",
-      "home": "Argentiina",
+      "home": null,
       "away": null,
       "homeScore": null,
       "awayScore": null,
