@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-25T03:00:43.778Z",
+  "lastUpdated": "2026-06-25T03:10:34.719Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -53,7 +53,9 @@
     "g54": "1",
     "g49": "1",
     "g51": "1",
-    "g50": "2"
+    "g50": "2",
+    "g52": "2",
+    "g53": "1"
   },
   "matchSchedule": {
     "g1": {
@@ -417,28 +419,7 @@
       "ts": 1782612000000
     }
   },
-  "live": [
-    {
-      "id": "g52",
-      "home": "Tšekki",
-      "away": "Meksiko",
-      "group": "A",
-      "homeScore": 0,
-      "awayScore": 3,
-      "minute": null,
-      "status": "IN_PLAY"
-    },
-    {
-      "id": "g53",
-      "home": "Etelä-Afrikka",
-      "away": "Etelä-Korea",
-      "group": "A",
-      "homeScore": 1,
-      "awayScore": 0,
-      "minute": null,
-      "status": "IN_PLAY"
-    }
-  ],
+  "live": [],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -1846,9 +1827,55 @@
           "owngoal": false
         }
       ]
+    },
+    "g52": {
+      "homeScore": 0,
+      "awayScore": 3,
+      "scorers": [
+        {
+          "name": "Mateo Chávez",
+          "side": "away",
+          "minute": "55",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Julián Quiñones",
+          "side": "away",
+          "minute": "61",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Álvaro Fidalgo",
+          "side": "away",
+          "minute": "90+4",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
+    },
+    "g53": {
+      "homeScore": 1,
+      "awayScore": 0,
+      "scorers": [
+        {
+          "name": "Thapelo Maseko",
+          "side": "home",
+          "minute": "63",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
     }
   },
   "groupStandings": {
+    "A": [
+      "Meksiko",
+      "Etelä-Afrikka",
+      "Etelä-Korea",
+      "Tšekki"
+    ],
     "B": [
       "Sveitsi",
       "Kanada",
@@ -1866,46 +1893,46 @@
     "A": [
       {
         "team": "Meksiko",
-        "played": 2,
-        "won": 2,
+        "played": 3,
+        "won": 3,
         "drawn": 0,
         "lost": 0,
-        "gf": 3,
+        "gf": 6,
         "ga": 0,
-        "gd": 3,
-        "points": 6
+        "gd": 6,
+        "points": 9
       },
       {
-        "team": "Etelä-Korea",
-        "played": 2,
+        "team": "Etelä-Afrikka",
+        "played": 3,
         "won": 1,
-        "drawn": 0,
-        "lost": 1,
-        "gf": 2,
-        "ga": 2,
-        "gd": 0,
-        "points": 3
-      },
-      {
-        "team": "Tšekki",
-        "played": 2,
-        "won": 0,
         "drawn": 1,
         "lost": 1,
         "gf": 2,
         "ga": 3,
         "gd": -1,
-        "points": 1
+        "points": 4
       },
       {
-        "team": "Etelä-Afrikka",
-        "played": 2,
+        "team": "Etelä-Korea",
+        "played": 3,
+        "won": 1,
+        "drawn": 0,
+        "lost": 2,
+        "gf": 2,
+        "ga": 3,
+        "gd": -1,
+        "points": 3
+      },
+      {
+        "team": "Tšekki",
+        "played": 3,
         "won": 0,
         "drawn": 1,
-        "lost": 1,
-        "gf": 1,
-        "ga": 3,
-        "gd": -2,
+        "lost": 2,
+        "gf": 2,
+        "ga": 6,
+        "gd": -4,
         "points": 1
       }
     ],
@@ -2417,6 +2444,10 @@
     ]
   },
   "groupTop2": {
+    "A": [
+      "Meksiko",
+      "Etelä-Afrikka"
+    ],
     "B": [
       "Sveitsi",
       "Kanada"
@@ -2433,7 +2464,10 @@
         "Etelä-Korea",
         "Tšekki"
       ],
-      "eliminatedFromTop2": []
+      "eliminatedFromTop2": [
+        "Etelä-Korea",
+        "Tšekki"
+      ]
     },
     "B": {
       "eliminatedFromFirst": [
@@ -2532,6 +2566,7 @@
     }
   },
   "eliminatedTeams": [
+    "Tšekki",
     "Qatar",
     "Haiti",
     "Turkki",
@@ -2940,6 +2975,9 @@
     "michal sadilek": 1,
     "teboho mokoena": 1,
     "luis romo": 1,
+    "mateo chavez": 1,
+    "alvaro fidalgo": 1,
+    "thapelo maseko": 1,
     "cyle larin": 2,
     "jovo lukic": 1,
     "breel embolo": 1,
