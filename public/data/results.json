@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T04:00:44.259Z",
+  "lastUpdated": "2026-06-26T04:10:30.846Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -59,7 +59,9 @@
     "g55": "1",
     "g56": "2",
     "g58": "2",
-    "g57": "X"
+    "g57": "X",
+    "g59": "1",
+    "g60": "X"
   },
   "matchSchedule": {
     "g1": {
@@ -423,28 +425,7 @@
       "ts": 1782612000000
     }
   },
-  "live": [
-    {
-      "id": "g59",
-      "home": "Turkki",
-      "away": "Yhdysvallat",
-      "group": "D",
-      "homeScore": 2,
-      "awayScore": 2,
-      "minute": null,
-      "status": "IN_PLAY"
-    },
-    {
-      "id": "g60",
-      "home": "Paraguay",
-      "away": "Australia",
-      "group": "D",
-      "homeScore": 0,
-      "awayScore": 0,
-      "minute": null,
-      "status": "IN_PLAY"
-    }
-  ],
+  "live": [],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -1993,6 +1974,16 @@
           "owngoal": false
         }
       ]
+    },
+    "g59": {
+      "homeScore": 3,
+      "awayScore": 2,
+      "scorers": []
+    },
+    "g60": {
+      "homeScore": 0,
+      "awayScore": 0,
+      "scorers": []
     }
   },
   "groupStandings": {
@@ -2013,6 +2004,12 @@
       "Marokko",
       "Skotlanti",
       "Haiti"
+    ],
+    "D": [
+      "Yhdysvallat",
+      "Australia",
+      "Paraguay",
+      "Turkki"
     ],
     "E": [
       "Saksa",
@@ -2123,47 +2120,47 @@
     "D": [
       {
         "team": "Yhdysvallat",
-        "played": 2,
+        "played": 3,
         "won": 2,
         "drawn": 0,
-        "lost": 0,
-        "gf": 6,
-        "ga": 1,
-        "gd": 5,
+        "lost": 1,
+        "gf": 8,
+        "ga": 4,
+        "gd": 4,
         "points": 6
       },
       {
         "team": "Australia",
-        "played": 2,
+        "played": 3,
         "won": 1,
-        "drawn": 0,
+        "drawn": 1,
         "lost": 1,
         "gf": 2,
         "ga": 2,
         "gd": 0,
-        "points": 3
+        "points": 4
       },
       {
         "team": "Paraguay",
-        "played": 2,
+        "played": 3,
         "won": 1,
-        "drawn": 0,
+        "drawn": 1,
         "lost": 1,
         "gf": 2,
         "ga": 4,
         "gd": -2,
-        "points": 3
+        "points": 4
       },
       {
         "team": "Turkki",
-        "played": 2,
-        "won": 0,
+        "played": 3,
+        "won": 1,
         "drawn": 0,
         "lost": 2,
-        "gf": 0,
-        "ga": 3,
-        "gd": -3,
-        "points": 0
+        "gf": 3,
+        "ga": 5,
+        "gd": -2,
+        "points": 3
       }
     ],
     "C": [
@@ -2593,6 +2590,10 @@
     "C": [
       "Brasilia",
       "Marokko"
+    ],
+    "D": [
+      "Yhdysvallat",
+      "Australia"
     ],
     "E": [
       "Saksa",
