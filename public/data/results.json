@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T02:00:43.766Z",
+  "lastUpdated": "2026-06-26T02:10:27.527Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -423,7 +423,28 @@
       "ts": 1782612000000
     }
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g59",
+      "home": "Turkki",
+      "away": "Yhdysvallat",
+      "group": "D",
+      "homeScore": 0,
+      "awayScore": 1,
+      "minute": null,
+      "status": "IN_PLAY"
+    },
+    {
+      "id": "g60",
+      "home": "Paraguay",
+      "away": "Australia",
+      "group": "D",
+      "homeScore": 0,
+      "awayScore": 0,
+      "minute": null,
+      "status": "IN_PLAY"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
