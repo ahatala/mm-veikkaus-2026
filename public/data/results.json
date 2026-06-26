@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T00:20:28.673Z",
+  "lastUpdated": "2026-06-26T00:30:40.043Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -428,7 +428,7 @@
       "away": "Hollanti",
       "group": "F",
       "homeScore": 1,
-      "awayScore": 2,
+      "awayScore": 3,
       "minute": null,
       "status": "IN_PLAY"
     },
@@ -437,8 +437,8 @@
       "home": "Japani",
       "away": "Ruotsi",
       "group": "F",
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": 1,
+      "awayScore": 1,
       "minute": null,
       "status": "IN_PLAY"
     }
@@ -3113,7 +3113,7 @@
     "omar rekik": 1,
     "brian brobbey": 3,
     "cody gakpo": 2,
-    "anthony elanga": 1,
+    "anthony elanga": 2,
     "ayase ueda": 2,
     "junya ito": 1,
     "emam ashour": 1,
