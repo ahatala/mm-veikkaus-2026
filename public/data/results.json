@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T00:10:31.998Z",
+  "lastUpdated": "2026-06-26T00:20:28.673Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -423,6 +423,16 @@
   },
   "live": [
     {
+      "id": "g58",
+      "home": "Tunisia",
+      "away": "Hollanti",
+      "group": "F",
+      "homeScore": 1,
+      "awayScore": 2,
+      "minute": null,
+      "status": "IN_PLAY"
+    },
+    {
       "id": "g57",
       "home": "Japani",
       "away": "Ruotsi",
@@ -430,7 +440,7 @@
       "homeScore": 0,
       "awayScore": 0,
       "minute": null,
-      "status": "PAUSED"
+      "status": "IN_PLAY"
     }
   ],
   "matchResults": {
