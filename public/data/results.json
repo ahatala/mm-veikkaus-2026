@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T02:40:27.477Z",
+  "lastUpdated": "2026-06-26T02:50:26.520Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -423,7 +423,28 @@
       "ts": 1782612000000
     }
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g59",
+      "home": "Turkki",
+      "away": "Yhdysvallat",
+      "group": "D",
+      "homeScore": 2,
+      "awayScore": 1,
+      "minute": null,
+      "status": "IN_PLAY"
+    },
+    {
+      "id": "g60",
+      "home": "Paraguay",
+      "away": "Australia",
+      "group": "D",
+      "homeScore": 0,
+      "awayScore": 0,
+      "minute": null,
+      "status": "IN_PLAY"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -2736,7 +2757,7 @@
       "stage": "R32",
       "date": "ma 29.6.",
       "time": "23:30",
-      "home": null,
+      "home": "Saksa",
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -2784,7 +2805,7 @@
       "stage": "R32",
       "date": "ke 1.7.",
       "time": "04:00",
-      "home": null,
+      "home": "Meksiko",
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -2820,7 +2841,7 @@
       "stage": "R32",
       "date": "to 2.7.",
       "time": "03:00",
-      "home": null,
+      "home": "Yhdysvallat",
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -2880,7 +2901,7 @@
       "stage": "R32",
       "date": "la 4.7.",
       "time": "01:00",
-      "home": null,
+      "home": "Argentiina",
       "away": null,
       "homeScore": null,
       "awayScore": null,
