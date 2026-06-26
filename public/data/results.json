@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T01:00:42.222Z",
+  "lastUpdated": "2026-06-26T01:10:31.269Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -58,7 +58,8 @@
     "g53": "1",
     "g55": "1",
     "g56": "2",
-    "g58": "2"
+    "g58": "2",
+    "g57": "X"
   },
   "matchSchedule": {
     "g1": {
@@ -422,18 +423,7 @@
       "ts": 1782612000000
     }
   },
-  "live": [
-    {
-      "id": "g57",
-      "home": "Japani",
-      "away": "Ruotsi",
-      "group": "F",
-      "homeScore": 1,
-      "awayScore": 1,
-      "minute": null,
-      "status": "IN_PLAY"
-    }
-  ],
+  "live": [],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -1962,6 +1952,26 @@
           "owngoal": false
         }
       ]
+    },
+    "g57": {
+      "homeScore": 1,
+      "awayScore": 1,
+      "scorers": [
+        {
+          "name": "Daizen Maeda",
+          "side": "home",
+          "minute": "56",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Anthony Elanga",
+          "side": "away",
+          "minute": "62",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
     }
   },
   "groupStandings": {
@@ -1988,6 +1998,12 @@
       "Norsunluurannikko",
       "Ecuador",
       "Curaçao"
+    ],
+    "F": [
+      "Hollanti",
+      "Japani",
+      "Ruotsi",
+      "Tunisia"
     ]
   },
   "groupTable": {
@@ -2235,25 +2251,25 @@
       },
       {
         "team": "Japani",
-        "played": 2,
+        "played": 3,
         "won": 1,
-        "drawn": 1,
+        "drawn": 2,
         "lost": 0,
-        "gf": 6,
-        "ga": 2,
+        "gf": 7,
+        "ga": 3,
         "gd": 4,
-        "points": 4
+        "points": 5
       },
       {
         "team": "Ruotsi",
-        "played": 2,
+        "played": 3,
         "won": 1,
-        "drawn": 0,
+        "drawn": 1,
         "lost": 1,
-        "gf": 6,
-        "ga": 6,
+        "gf": 7,
+        "ga": 7,
         "gd": 0,
-        "points": 3
+        "points": 4
       },
       {
         "team": "Tunisia",
@@ -2560,6 +2576,10 @@
     "E": [
       "Saksa",
       "Norsunluurannikko"
+    ],
+    "F": [
+      "Hollanti",
+      "Japani"
     ]
   },
   "groupClinch": {
@@ -2617,10 +2637,12 @@
     },
     "F": {
       "eliminatedFromFirst": [
+        "Japani",
         "Ruotsi",
         "Tunisia"
       ],
       "eliminatedFromTop2": [
+        "Ruotsi",
         "Tunisia"
       ]
     },
@@ -2714,7 +2736,7 @@
       "stage": "R32",
       "date": "ma 29.6.",
       "time": "23:30",
-      "home": "Saksa",
+      "home": null,
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -2762,7 +2784,7 @@
       "stage": "R32",
       "date": "ke 1.7.",
       "time": "04:00",
-      "home": "Meksiko",
+      "home": null,
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -2798,7 +2820,7 @@
       "stage": "R32",
       "date": "to 2.7.",
       "time": "03:00",
-      "home": "Yhdysvallat",
+      "home": null,
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -2858,7 +2880,7 @@
       "stage": "R32",
       "date": "la 4.7.",
       "time": "01:00",
-      "home": "Argentiina",
+      "home": null,
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -3142,6 +3164,7 @@
     "anthony elanga": 2,
     "ayase ueda": 2,
     "junya ito": 1,
+    "daizen maeda": 1,
     "hazem mastouri": 1,
     "jan paul van hecke": 1,
     "emam ashour": 1,
