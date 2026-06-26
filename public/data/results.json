@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T20:20:27.435Z",
+  "lastUpdated": "2026-06-26T20:30:36.592Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -433,6 +433,16 @@
       "group": "I",
       "homeScore": 1,
       "awayScore": 3,
+      "minute": null,
+      "status": "IN_PLAY"
+    },
+    {
+      "id": "g62",
+      "home": "Senegal",
+      "away": "Irak",
+      "group": "I",
+      "homeScore": 2,
+      "awayScore": 0,
       "minute": null,
       "status": "IN_PLAY"
     }
@@ -3264,7 +3274,7 @@
     "leo østigard": 1,
     "ousmane dembele": 4,
     "marcus holmgren pedersen": 1,
-    "ismaila sarr": 2,
+    "ismaila sarr": 3,
     "lionel messi": 5,
     "romano schmid": 1,
     "marko arnautovic": 1,
