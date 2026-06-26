@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T04:10:30.846Z",
+  "lastUpdated": "2026-06-26T04:20:30.024Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -1978,7 +1978,43 @@
     "g59": {
       "homeScore": 3,
       "awayScore": 2,
-      "scorers": []
+      "scorers": [
+        {
+          "name": "Arda Güler",
+          "side": "home",
+          "minute": "10",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Baris Alper Yilmaz",
+          "side": "home",
+          "minute": "31",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Kaan Ayhan",
+          "side": "home",
+          "minute": "90+8",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Auston Trusty",
+          "side": "away",
+          "minute": "3",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Sebastian Berhalter",
+          "side": "away",
+          "minute": "49",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
     },
     "g60": {
       "homeScore": 0,
@@ -3159,6 +3195,11 @@
     "connor metcalfe": 1,
     "alex freeman": 1,
     "matias galarza": 1,
+    "arda guler": 1,
+    "baris alper yilmaz": 1,
+    "kaan ayhan": 1,
+    "auston trusty": 1,
+    "sebastian berhalter": 1,
     "felix nmecha": 1,
     "nico schlotterbeck": 1,
     "kai havertz": 2,
