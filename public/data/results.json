@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T03:00:43.906Z",
+  "lastUpdated": "2026-06-26T03:20:31.061Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -430,9 +430,9 @@
       "away": "Yhdysvallat",
       "group": "D",
       "homeScore": 2,
-      "awayScore": 1,
+      "awayScore": 2,
       "minute": null,
-      "status": "PAUSED"
+      "status": "IN_PLAY"
     },
     {
       "id": "g60",
@@ -442,7 +442,7 @@
       "homeScore": 0,
       "awayScore": 0,
       "minute": null,
-      "status": "PAUSED"
+      "status": "IN_PLAY"
     }
   ],
   "matchResults": {
