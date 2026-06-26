@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T00:50:27.737Z",
+  "lastUpdated": "2026-06-26T01:00:42.222Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -57,7 +57,8 @@
     "g52": "2",
     "g53": "1",
     "g55": "1",
-    "g56": "2"
+    "g56": "2",
+    "g58": "2"
   },
   "matchSchedule": {
     "g1": {
@@ -422,16 +423,6 @@
     }
   },
   "live": [
-    {
-      "id": "g58",
-      "home": "Tunisia",
-      "away": "Hollanti",
-      "group": "F",
-      "homeScore": 1,
-      "awayScore": 3,
-      "minute": null,
-      "status": "IN_PLAY"
-    },
     {
       "id": "g57",
       "home": "Japani",
@@ -1937,6 +1928,40 @@
           "owngoal": false
         }
       ]
+    },
+    "g58": {
+      "homeScore": 1,
+      "awayScore": 3,
+      "scorers": [
+        {
+          "name": "Hazem Mastouri",
+          "side": "home",
+          "minute": "54",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Ellyes Skhiri",
+          "side": "away",
+          "minute": "3",
+          "penalty": false,
+          "owngoal": true
+        },
+        {
+          "name": "Brian Brobbey",
+          "side": "away",
+          "minute": "7",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Jan Paul van Hecke",
+          "side": "away",
+          "minute": "62",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
     }
   },
   "groupStandings": {
@@ -2199,14 +2224,14 @@
     "F": [
       {
         "team": "Hollanti",
-        "played": 2,
-        "won": 1,
+        "played": 3,
+        "won": 2,
         "drawn": 1,
         "lost": 0,
-        "gf": 7,
-        "ga": 3,
-        "gd": 4,
-        "points": 4
+        "gf": 10,
+        "ga": 4,
+        "gd": 6,
+        "points": 7
       },
       {
         "team": "Japani",
@@ -2232,13 +2257,13 @@
       },
       {
         "team": "Tunisia",
-        "played": 2,
+        "played": 3,
         "won": 0,
         "drawn": 0,
-        "lost": 2,
-        "gf": 1,
-        "ga": 9,
-        "gd": -8,
+        "lost": 3,
+        "gf": 2,
+        "ga": 12,
+        "gd": -10,
         "points": 0
       }
     ],
@@ -2592,6 +2617,7 @@
     },
     "F": {
       "eliminatedFromFirst": [
+        "Ruotsi",
         "Tunisia"
       ],
       "eliminatedFromTop2": [
@@ -3116,6 +3142,8 @@
     "anthony elanga": 2,
     "ayase ueda": 2,
     "junya ito": 1,
+    "hazem mastouri": 1,
+    "jan paul van hecke": 1,
     "emam ashour": 1,
     "ramin rezaeian": 1,
     "mohammad mohebbi": 1,
