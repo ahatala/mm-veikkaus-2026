@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T19:50:26.515Z",
+  "lastUpdated": "2026-06-26T20:00:47.281Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -425,7 +425,18 @@
       "ts": 1782612000000
     }
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g61",
+      "home": "Norja",
+      "away": "Ranska",
+      "group": "I",
+      "homeScore": 1,
+      "awayScore": 3,
+      "minute": null,
+      "status": "PAUSED"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
