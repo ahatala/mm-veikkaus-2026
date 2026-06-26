@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T20:30:36.592Z",
+  "lastUpdated": "2026-06-26T20:40:26.649Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -441,7 +441,7 @@
       "home": "Senegal",
       "away": "Irak",
       "group": "I",
-      "homeScore": 2,
+      "homeScore": 3,
       "awayScore": 0,
       "minute": null,
       "status": "IN_PLAY"
