@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-27T18:40:28.833Z",
+  "lastUpdated": "2026-06-27T19:10:30.887Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -67,7 +67,7 @@
     "g64": "2",
     "g63": "X",
     "g66": "2",
-    "g65": "X"
+    "g65": "2"
   },
   "matchSchedule": {
     "g1": {
@@ -2177,7 +2177,7 @@
     },
     "g65": {
       "homeScore": 1,
-      "awayScore": 1,
+      "awayScore": 2,
       "scorers": [
         {
           "name": "Mahmoud Saber",
@@ -2235,8 +2235,8 @@
     ],
     "G": [
       "Belgia",
-      "Egypti",
       "Iran",
+      "Egypti",
       "Uusi-Seelanti"
     ],
     "H": [
@@ -2588,26 +2588,26 @@
         "points": 5
       },
       {
-        "team": "Egypti",
+        "team": "Iran",
         "played": 3,
         "won": 1,
         "drawn": 2,
         "lost": 0,
-        "gf": 5,
+        "gf": 4,
         "ga": 3,
-        "gd": 2,
+        "gd": 1,
         "points": 5
       },
       {
-        "team": "Iran",
+        "team": "Egypti",
         "played": 3,
-        "won": 0,
-        "drawn": 3,
-        "lost": 0,
-        "gf": 3,
-        "ga": 3,
-        "gd": 0,
-        "points": 3
+        "won": 1,
+        "drawn": 1,
+        "lost": 1,
+        "gf": 5,
+        "ga": 4,
+        "gd": 1,
+        "points": 4
       },
       {
         "team": "Uusi-Seelanti",
@@ -2833,7 +2833,7 @@
     ],
     "G": [
       "Belgia",
-      "Egypti"
+      "Iran"
     ],
     "H": [
       "Espanja",
@@ -2910,11 +2910,11 @@
     },
     "G": {
       "eliminatedFromFirst": [
-        "Iran",
+        "Egypti",
         "Uusi-Seelanti"
       ],
       "eliminatedFromTop2": [
-        "Iran",
+        "Egypti",
         "Uusi-Seelanti"
       ]
     },
@@ -3034,7 +3034,7 @@
       "stage": "R32",
       "date": "ti 30.6.",
       "time": "20:00",
-      "home": "Norsunluurannikko",
+      "home": null,
       "away": null,
       "homeScore": null,
       "awayScore": null,
