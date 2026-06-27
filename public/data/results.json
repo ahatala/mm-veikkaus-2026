@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-27T20:50:31.182Z",
+  "lastUpdated": "2026-06-27T21:10:31.370Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -431,7 +431,18 @@
       "ts": 1782612000000
     }
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g67",
+      "home": "Panama",
+      "away": "Englanti",
+      "group": "L",
+      "homeScore": 0,
+      "awayScore": 0,
+      "minute": null,
+      "status": "IN_PLAY"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
