@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-27T22:50:25.706Z",
+  "lastUpdated": "2026-06-27T23:00:44.260Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -67,7 +67,8 @@
     "g64": "2",
     "g63": "X",
     "g66": "2",
-    "g65": "X"
+    "g65": "X",
+    "g67": "2"
   },
   "matchSchedule": {
     "g1": {
@@ -432,16 +433,6 @@
     }
   },
   "live": [
-    {
-      "id": "g67",
-      "home": "Panama",
-      "away": "Englanti",
-      "group": "L",
-      "homeScore": 0,
-      "awayScore": 2,
-      "minute": null,
-      "status": "IN_PLAY"
-    },
     {
       "id": "g68",
       "home": "Kroatia",
@@ -2215,6 +2206,26 @@
           "owngoal": false
         }
       ]
+    },
+    "g67": {
+      "homeScore": 0,
+      "awayScore": 2,
+      "scorers": [
+        {
+          "name": "Jude Bellingham",
+          "side": "away",
+          "minute": "62",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Harry Kane",
+          "side": "away",
+          "minute": "67",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
     }
   },
   "groupStandings": {
@@ -2783,14 +2794,14 @@
     "L": [
       {
         "team": "Englanti",
-        "played": 2,
-        "won": 1,
+        "played": 3,
+        "won": 2,
         "drawn": 1,
         "lost": 0,
-        "gf": 4,
+        "gf": 6,
         "ga": 2,
-        "gd": 2,
-        "points": 4
+        "gd": 4,
+        "points": 7
       },
       {
         "team": "Ghana",
@@ -2816,13 +2827,13 @@
       },
       {
         "team": "Panama",
-        "played": 2,
+        "played": 3,
         "won": 0,
         "drawn": 0,
-        "lost": 2,
+        "lost": 3,
         "gf": 0,
-        "ga": 2,
-        "gd": -2,
+        "ga": 4,
+        "gd": -4,
         "points": 0
       }
     ]
@@ -2982,6 +2993,7 @@
     },
     "L": {
       "eliminatedFromFirst": [
+        "Kroatia",
         "Panama"
       ],
       "eliminatedFromTop2": [
@@ -3007,8 +3019,8 @@
       "stage": "R32",
       "date": "su 28.6.",
       "time": "22:00",
-      "home": "Etelä-Afrikka",
-      "away": "Kanada",
+      "home": null,
+      "away": null,
       "homeScore": null,
       "awayScore": null,
       "finished": false,
@@ -3019,8 +3031,8 @@
       "stage": "R32",
       "date": "ma 29.6.",
       "time": "20:00",
-      "home": "Brasilia",
-      "away": "Japani",
+      "home": null,
+      "away": null,
       "homeScore": null,
       "awayScore": null,
       "finished": false,
@@ -3031,7 +3043,7 @@
       "stage": "R32",
       "date": "ma 29.6.",
       "time": "23:30",
-      "home": "Saksa",
+      "home": null,
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -3043,8 +3055,8 @@
       "stage": "R32",
       "date": "ti 30.6.",
       "time": "04:00",
-      "home": "Hollanti",
-      "away": "Marokko",
+      "home": null,
+      "away": null,
       "homeScore": null,
       "awayScore": null,
       "finished": false,
@@ -3055,7 +3067,7 @@
       "stage": "R32",
       "date": "ti 30.6.",
       "time": "20:00",
-      "home": "Norsunluurannikko",
+      "home": null,
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -3079,7 +3091,7 @@
       "stage": "R32",
       "date": "ke 1.7.",
       "time": "04:00",
-      "home": "Meksiko",
+      "home": null,
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -3115,8 +3127,8 @@
       "stage": "R32",
       "date": "to 2.7.",
       "time": "03:00",
-      "home": "Yhdysvallat",
-      "away": "Bosnia-Hertsegovina",
+      "home": null,
+      "away": null,
       "homeScore": null,
       "awayScore": null,
       "finished": false,
@@ -3151,7 +3163,7 @@
       "stage": "R32",
       "date": "pe 3.7.",
       "time": "06:00",
-      "home": "Sveitsi",
+      "home": null,
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -3163,7 +3175,7 @@
       "stage": "R32",
       "date": "pe 3.7.",
       "time": "21:00",
-      "home": "Australia",
+      "home": null,
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -3175,7 +3187,7 @@
       "stage": "R32",
       "date": "la 4.7.",
       "time": "01:00",
-      "home": "Argentiina",
+      "home": null,
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -3552,7 +3564,7 @@
   },
   "specialReasons": {
     "sq1": "Avausottelu Meksiko–Etelä-Afrikka 2–0 (2 maalia)",
-    "sq2": "Jatkoon: Yhdysvallat, Kanada, Meksiko",
+    "sq2": "Jatkoon: Yhdysvallat, Meksiko",
     "sq3": "Argentiina voitti lohkon J",
     "sq5": "Saksa–Curaçao 7–1",
     "sq6": "Jatkoon: Kap Verde",
