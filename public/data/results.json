@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-27T03:10:27.943Z",
+  "lastUpdated": "2026-06-27T03:20:32.509Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -435,8 +435,8 @@
       "home": "Egypti",
       "away": "Iran",
       "group": "G",
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": 1,
+      "awayScore": 1,
       "minute": null,
       "status": "IN_PLAY"
     }
@@ -3373,7 +3373,7 @@
     "hazem mastouri": 1,
     "jan paul van hecke": 1,
     "emam ashour": 1,
-    "ramin rezaeian": 1,
+    "ramin rezaeian": 2,
     "mohammad mohebbi": 1,
     "elijah just": 2,
     "finn surman": 1,
