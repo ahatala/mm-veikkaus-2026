@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-27T02:50:34.372Z",
+  "lastUpdated": "2026-06-27T03:10:27.943Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -429,7 +429,18 @@
       "ts": 1782612000000
     }
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g65",
+      "home": "Egypti",
+      "away": "Iran",
+      "group": "G",
+      "homeScore": 0,
+      "awayScore": 0,
+      "minute": null,
+      "status": "IN_PLAY"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
