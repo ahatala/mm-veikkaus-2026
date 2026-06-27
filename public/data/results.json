@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-27T23:00:44.260Z",
+  "lastUpdated": "2026-06-27T23:10:30.364Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -68,7 +68,8 @@
     "g63": "X",
     "g66": "2",
     "g65": "X",
-    "g67": "2"
+    "g67": "2",
+    "g68": "1"
   },
   "matchSchedule": {
     "g1": {
@@ -432,18 +433,7 @@
       "ts": 1782612000000
     }
   },
-  "live": [
-    {
-      "id": "g68",
-      "home": "Kroatia",
-      "away": "Ghana",
-      "group": "L",
-      "homeScore": 2,
-      "awayScore": 1,
-      "minute": null,
-      "status": "IN_PLAY"
-    }
-  ],
+  "live": [],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -2226,6 +2216,33 @@
           "owngoal": false
         }
       ]
+    },
+    "g68": {
+      "homeScore": 2,
+      "awayScore": 1,
+      "scorers": [
+        {
+          "name": "Petar Sucic",
+          "side": "home",
+          "minute": "31",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Nikola Vlasic",
+          "side": "home",
+          "minute": "83",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Derrick Luckassen",
+          "side": "away",
+          "minute": "73",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
     }
   },
   "groupStandings": {
@@ -2282,6 +2299,12 @@
       "Norja",
       "Senegal",
       "Irak"
+    ],
+    "L": [
+      "Englanti",
+      "Kroatia",
+      "Ghana",
+      "Panama"
     ]
   },
   "groupTable": {
@@ -2804,26 +2827,26 @@
         "points": 7
       },
       {
-        "team": "Ghana",
-        "played": 2,
-        "won": 1,
-        "drawn": 1,
-        "lost": 0,
-        "gf": 1,
-        "ga": 0,
-        "gd": 1,
-        "points": 4
-      },
-      {
         "team": "Kroatia",
-        "played": 2,
-        "won": 1,
+        "played": 3,
+        "won": 2,
         "drawn": 0,
         "lost": 1,
-        "gf": 3,
-        "ga": 4,
-        "gd": -1,
-        "points": 3
+        "gf": 5,
+        "ga": 5,
+        "gd": 0,
+        "points": 6
+      },
+      {
+        "team": "Ghana",
+        "played": 3,
+        "won": 1,
+        "drawn": 1,
+        "lost": 1,
+        "gf": 2,
+        "ga": 2,
+        "gd": 0,
+        "points": 4
       },
       {
         "team": "Panama",
@@ -2874,6 +2897,10 @@
     "I": [
       "Ranska",
       "Norja"
+    ],
+    "L": [
+      "Englanti",
+      "Kroatia"
     ]
   },
   "groupClinch": {
@@ -2994,9 +3021,11 @@
     "L": {
       "eliminatedFromFirst": [
         "Kroatia",
+        "Ghana",
         "Panama"
       ],
       "eliminatedFromTop2": [
+        "Ghana",
         "Panama"
       ]
     }
@@ -3537,6 +3566,9 @@
     "petar musa": 1,
     "caleb yirenkyi": 1,
     "ante budimir": 1,
+    "petar sucic": 1,
+    "nikola vlasic": 1,
+    "derrick luckassen": 1,
     "maximiliano araujo": 2,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
