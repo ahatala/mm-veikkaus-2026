@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-27T00:30:36.261Z",
+  "lastUpdated": "2026-06-27T01:00:41.591Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -427,7 +427,28 @@
       "ts": 1782612000000
     }
   },
-  "live": [],
+  "live": [
+    {
+      "id": "g64",
+      "home": "Uruguay",
+      "away": "Espanja",
+      "group": "H",
+      "homeScore": 0,
+      "awayScore": 1,
+      "minute": null,
+      "status": "PAUSED"
+    },
+    {
+      "id": "g63",
+      "home": "Kap Verde",
+      "away": "Saudi-Arabia",
+      "group": "H",
+      "homeScore": 0,
+      "awayScore": 0,
+      "minute": null,
+      "status": "PAUSED"
+    }
+  ],
   "matchResults": {
     "g1": {
       "homeScore": 2,
