@@ -196,7 +196,7 @@ onBeforeUnmount(() => {
             <!-- knockout match: no 1/X/2; show who benefits per team -->
             <div
               v-else :key="it.k.id"
-              class="match ko" :class="{ played: it.k.finished, anchor: it.k.id === anchorId }"
+              class="match ko" :class="{ played: it.k.finished, anchor: it.k.id === anchorId, 'ko-tbd': !it.k.home || !it.k.away }"
               :data-anchor="it.k.id === anchorId"
             >
               <div class="meta">{{ KO_LABEL[it.k.stage] }}<template v-if="it.k.time"> · {{ it.k.time }}</template></div>
@@ -363,8 +363,8 @@ onBeforeUnmount(() => {
 .prow.pending .prow-names { color: var(--muted); }
 
 /* ---- knockout match: reuses the group .picksrows/.prow styling (1/2 rows, winner highlighted) ---- */
-.match.ko { border-style: dashed; }
-.match.ko.played { border-style: solid; }
+/* solid border like everything else once the pairing is known; dashed only while teams are TBD. */
+.match.ko.ko-tbd { border-style: dashed; }
 .ko-muted { color: var(--muted); font-size: 12px; margin: 8px 0 0; font-style: italic; }
 
 /* ---- narrow screens: date becomes a sticky header (no left column); 'Nyt' floats bottom-right ---- */
