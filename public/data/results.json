@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-28T04:00:47.357Z",
+  "lastUpdated": "2026-06-28T04:10:29.887Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -71,7 +71,9 @@
     "g67": "2",
     "g68": "1",
     "g69": "X",
-    "g70": "1"
+    "g70": "1",
+    "g72": "2",
+    "g71": "X"
   },
   "matchSchedule": {
     "g1": {
@@ -435,28 +437,7 @@
       "ts": 1782612000000
     }
   },
-  "live": [
-    {
-      "id": "g72",
-      "home": "Jordania",
-      "away": "Argentiina",
-      "group": "J",
-      "homeScore": 1,
-      "awayScore": 3,
-      "minute": null,
-      "status": "IN_PLAY"
-    },
-    {
-      "id": "g71",
-      "home": "Algeria",
-      "away": "Itävalta",
-      "group": "J",
-      "homeScore": 3,
-      "awayScore": 2,
-      "minute": null,
-      "status": "IN_PLAY"
-    }
-  ],
+  "live": [],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -2305,6 +2286,88 @@
           "owngoal": false
         }
       ]
+    },
+    "g72": {
+      "homeScore": 1,
+      "awayScore": 3,
+      "scorers": [
+        {
+          "name": "Mousa Al-Tamari",
+          "side": "home",
+          "minute": "55",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Giovani Lo Celso",
+          "side": "away",
+          "minute": "19",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Lautaro Martínez",
+          "side": "away",
+          "minute": "31",
+          "penalty": true,
+          "owngoal": false
+        },
+        {
+          "name": "Lionel Messi",
+          "side": "away",
+          "minute": "80",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
+    },
+    "g71": {
+      "homeScore": 3,
+      "awayScore": 3,
+      "scorers": [
+        {
+          "name": "Rafik Belghali",
+          "side": "home",
+          "minute": "45",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Riyad Mahrez",
+          "side": "home",
+          "minute": "60",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Riyad Mahrez",
+          "side": "home",
+          "minute": "90+3",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Marko Arnautovic",
+          "side": "away",
+          "minute": "28",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Marcel Sabitzer",
+          "side": "away",
+          "minute": "55",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Sasa Kalajdzic",
+          "side": "away",
+          "minute": "90+6",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
     }
   },
   "groupStandings": {
@@ -2361,6 +2424,12 @@
       "Norja",
       "Senegal",
       "Irak"
+    ],
+    "J": [
+      "Argentiina",
+      "Itävalta",
+      "Algeria",
+      "Jordania"
     ],
     "K": [
       "Kolumbia",
@@ -2793,46 +2862,46 @@
     "J": [
       {
         "team": "Argentiina",
-        "played": 2,
-        "won": 2,
+        "played": 3,
+        "won": 3,
         "drawn": 0,
         "lost": 0,
-        "gf": 5,
-        "ga": 0,
-        "gd": 5,
-        "points": 6
+        "gf": 8,
+        "ga": 1,
+        "gd": 7,
+        "points": 9
       },
       {
         "team": "Itävalta",
-        "played": 2,
+        "played": 3,
         "won": 1,
-        "drawn": 0,
+        "drawn": 1,
         "lost": 1,
-        "gf": 3,
-        "ga": 3,
+        "gf": 6,
+        "ga": 6,
         "gd": 0,
-        "points": 3
+        "points": 4
       },
       {
         "team": "Algeria",
-        "played": 2,
+        "played": 3,
         "won": 1,
-        "drawn": 0,
+        "drawn": 1,
         "lost": 1,
-        "gf": 2,
-        "ga": 4,
+        "gf": 5,
+        "ga": 7,
         "gd": -2,
-        "points": 3
+        "points": 4
       },
       {
         "team": "Jordania",
-        "played": 2,
+        "played": 3,
         "won": 0,
         "drawn": 0,
-        "lost": 2,
-        "gf": 2,
-        "ga": 5,
-        "gd": -3,
+        "lost": 3,
+        "gf": 3,
+        "ga": 8,
+        "gd": -5,
         "points": 0
       }
     ],
@@ -2965,6 +3034,10 @@
     "I": [
       "Ranska",
       "Norja"
+    ],
+    "J": [
+      "Argentiina",
+      "Itävalta"
     ],
     "K": [
       "Kolumbia",
@@ -3625,6 +3698,13 @@
     "nizar al-rashdan": 1,
     "nadhir benbouali": 1,
     "amine gouiri": 1,
+    "rafik belghali": 1,
+    "riyad mahrez": 2,
+    "marcel sabitzer": 1,
+    "sasa kalajdzic": 1,
+    "mousa al-tamari": 1,
+    "giovani lo celso": 1,
+    "lautaro martinez": 1,
     "joao neves": 1,
     "yoane wissa": 3,
     "abbosbek fayzullaev": 1,
@@ -3647,7 +3727,6 @@
     "nikola vlasic": 1,
     "derrick luckassen": 1,
     "maximiliano araujo": 2,
-    "riyad mahrez": 2,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
     "gio reyna": 1,
