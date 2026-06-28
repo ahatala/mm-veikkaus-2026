@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-28T01:30:34.220Z",
+  "lastUpdated": "2026-06-28T01:40:27.426Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -69,7 +69,9 @@
     "g66": "2",
     "g65": "X",
     "g67": "2",
-    "g68": "1"
+    "g68": "1",
+    "g69": "X",
+    "g70": "1"
   },
   "matchSchedule": {
     "g1": {
@@ -433,28 +435,7 @@
       "ts": 1782612000000
     }
   },
-  "live": [
-    {
-      "id": "g69",
-      "home": "Kolumbia",
-      "away": "Portugali",
-      "group": "K",
-      "homeScore": 0,
-      "awayScore": 0,
-      "minute": null,
-      "status": "IN_PLAY"
-    },
-    {
-      "id": "g70",
-      "home": "Kongon DR",
-      "away": "Uzbekistan",
-      "group": "K",
-      "homeScore": 3,
-      "awayScore": 1,
-      "minute": null,
-      "status": "IN_PLAY"
-    }
-  ],
+  "live": [],
   "matchResults": {
     "g1": {
       "homeScore": 2,
@@ -2264,6 +2245,45 @@
           "owngoal": false
         }
       ]
+    },
+    "g69": {
+      "homeScore": 0,
+      "awayScore": 0,
+      "scorers": []
+    },
+    "g70": {
+      "homeScore": 3,
+      "awayScore": 1,
+      "scorers": [
+        {
+          "name": "Yoane Wissa",
+          "side": "home",
+          "minute": "68",
+          "penalty": true,
+          "owngoal": false
+        },
+        {
+          "name": "Fiston Mayele",
+          "side": "home",
+          "minute": "78",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Yoane Wissa",
+          "side": "home",
+          "minute": "90+1",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Eldor Shomurodov",
+          "side": "away",
+          "minute": "10",
+          "penalty": false,
+          "owngoal": false
+        }
+      ]
     }
   },
   "groupStandings": {
@@ -2320,6 +2340,12 @@
       "Norja",
       "Senegal",
       "Irak"
+    ],
+    "K": [
+      "Kolumbia",
+      "Portugali",
+      "Kongon DR",
+      "Uzbekistan"
     ],
     "L": [
       "Englanti",
@@ -2792,46 +2818,46 @@
     "K": [
       {
         "team": "Kolumbia",
-        "played": 2,
+        "played": 3,
         "won": 2,
-        "drawn": 0,
+        "drawn": 1,
         "lost": 0,
         "gf": 4,
         "ga": 1,
         "gd": 3,
-        "points": 6
+        "points": 7
       },
       {
         "team": "Portugali",
-        "played": 2,
+        "played": 3,
         "won": 1,
-        "drawn": 1,
+        "drawn": 2,
         "lost": 0,
         "gf": 6,
         "ga": 1,
         "gd": 5,
-        "points": 4
+        "points": 5
       },
       {
         "team": "Kongon DR",
-        "played": 2,
-        "won": 0,
+        "played": 3,
+        "won": 1,
         "drawn": 1,
         "lost": 1,
-        "gf": 1,
-        "ga": 2,
-        "gd": -1,
-        "points": 1
+        "gf": 4,
+        "ga": 3,
+        "gd": 1,
+        "points": 4
       },
       {
         "team": "Uzbekistan",
-        "played": 2,
+        "played": 3,
         "won": 0,
         "drawn": 0,
-        "lost": 2,
-        "gf": 1,
-        "ga": 8,
-        "gd": -7,
+        "lost": 3,
+        "gf": 2,
+        "ga": 11,
+        "gd": -9,
         "points": 0
       }
     ],
@@ -2918,6 +2944,10 @@
     "I": [
       "Ranska",
       "Norja"
+    ],
+    "K": [
+      "Kolumbia",
+      "Portugali"
     ],
     "L": [
       "Englanti",
@@ -3032,10 +3062,12 @@
     },
     "K": {
       "eliminatedFromFirst": [
+        "Portugali",
         "Kongon DR",
         "Uzbekistan"
       ],
       "eliminatedFromTop2": [
+        "Kongon DR",
         "Uzbekistan"
       ]
     },
@@ -3061,6 +3093,7 @@
     "Uusi-Seelanti",
     "Irak",
     "Jordania",
+    "Uzbekistan",
     "Panama"
   ],
   "knockoutMatches": [
@@ -3580,6 +3613,8 @@
     "cristiano ronaldo": 2,
     "nuno mendes": 1,
     "rafael leao": 1,
+    "fiston mayele": 1,
+    "eldor shomurodov": 1,
     "harry kane": 3,
     "jude bellingham": 2,
     "marcus rashford": 1,
