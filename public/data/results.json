@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-28T03:30:39.975Z",
+  "lastUpdated": "2026-06-28T03:50:26.854Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -442,7 +442,7 @@
       "away": "Argentiina",
       "group": "J",
       "homeScore": 1,
-      "awayScore": 2,
+      "awayScore": 3,
       "minute": null,
       "status": "IN_PLAY"
     },
@@ -3618,7 +3618,7 @@
     "habib diarra": 1,
     "pape gueye": 2,
     "iliman ndiaye": 1,
-    "lionel messi": 5,
+    "lionel messi": 6,
     "romano schmid": 1,
     "marko arnautovic": 2,
     "ali olwan": 1,
