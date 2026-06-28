@@ -67,12 +67,17 @@ const byDay = computed(() => {
   return days
 })
 
-// Anchor = the live match if any, else the next unplayed (else the last match).
+// Anchor (cyan highlight + "Nyt" target): the in-play match, else the next unplayed fixture across
+// BOTH group and knockout matches in chronological order, else the very last one. Uses the same
+// ordered list the UI renders, so once the group stage is done it advances to the next knockout match.
+const idOf = (it: ListItem) => (it.type === 'group' ? it.g.match.id : it.k.id)
 const anchorId = computed(() => {
-  const ms = store.computed!.matches
-  const liveIds = new Set(store.computed!.live.map((l) => l.match.id))
-  const liveM = ms.find((m) => liveIds.has(m.match.id))
-  return (liveM ?? ms.find((m) => m.actual == null) ?? ms[ms.length - 1])?.match.id ?? null
+  const items = byDay.value.flatMap((d) => d.items)
+  const live = items.find((it) => it.type === 'group' && it.g.isLive)
+  if (live) return idOf(live)
+  const next = items.find((it) => (it.type === 'group' ? it.g.actual == null : !it.k.finished))
+  const pick = next ?? items[items.length - 1]
+  return pick ? idOf(pick) : null
 })
 
 // --- picks grouped by sign into compact full-width rows (1 / X / 2) ---
@@ -191,7 +196,8 @@ onBeforeUnmount(() => {
             <!-- knockout match: no 1/X/2; show who benefits per team -->
             <div
               v-else :key="it.k.id"
-              class="match ko" :class="{ played: it.k.finished }"
+              class="match ko" :class="{ played: it.k.finished, anchor: it.k.id === anchorId }"
+              :data-anchor="it.k.id === anchorId"
             >
               <div class="meta">{{ KO_LABEL[it.k.stage] }}<template v-if="it.k.time"> · {{ it.k.time }}</template></div>
 
