@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-28T19:10:33.374Z",
+  "lastUpdated": "2026-06-28T21:00:44.172Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3204,11 +3204,11 @@
       "home": "Etelä-Afrikka",
       "away": "Kanada",
       "homeScore": 0,
-      "awayScore": 0,
-      "finished": false,
-      "live": true,
+      "awayScore": 1,
+      "finished": true,
+      "live": false,
       "minute": null,
-      "winner": null
+      "winner": "AWAY"
     },
     {
       "id": "k537423",
@@ -3795,6 +3795,7 @@
     "petar sucic": 1,
     "nikola vlasic": 1,
     "derrick luckassen": 1,
+    "stephan eustaquio": 1,
     "maximiliano araujo": 2,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
