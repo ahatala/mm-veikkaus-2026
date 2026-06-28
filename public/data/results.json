@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-28T13:59:04.005Z",
+  "lastUpdated": "2026-06-28T19:10:33.374Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3203,10 +3203,10 @@
       "time": "22:00",
       "home": "Etelä-Afrikka",
       "away": "Kanada",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "finished": false,
-      "live": false,
+      "live": true,
       "minute": null,
       "winner": null
     },
