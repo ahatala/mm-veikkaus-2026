@@ -22,6 +22,9 @@ function isCorrect(set: TeamSetResult, name: string, team: string): boolean {
 // Teams already out of the tournament: a pick on one can no longer score (a "lost cause").
 const eliminated = computed(() => new Set(c.value.eliminated.map((t) => key(t))))
 const isDead = (team: string) => eliminated.value.has(key(team))
+// Sort contestants by their points in the given round (highest first); ties keep participant order.
+const rankedBy = (points: Record<string, number>) =>
+  [...participants.value].sort((a, b) => (points[b] ?? 0) - (points[a] ?? 0))
 const championActual = computed(() => c.value.champion.actual)
 </script>
 
@@ -39,7 +42,7 @@ const championActual = computed(() => c.value.champion.actual)
     <table>
       <thead><tr><th>Nimi</th><th>Veikkaukset</th><th class="num">Pisteet</th></tr></thead>
       <tbody>
-        <tr v-for="name in participants" :key="name">
+        <tr v-for="name in rankedBy(r.set.points)" :key="name">
           <td>{{ name }}</td>
           <td>
             <div class="chips">
@@ -60,7 +63,7 @@ const championActual = computed(() => c.value.champion.actual)
     <table>
       <thead><tr><th>Nimi</th><th>Veikkaus</th><th class="num">Pisteet</th></tr></thead>
       <tbody>
-        <tr v-for="name in participants" :key="name">
+        <tr v-for="name in rankedBy(c.champion.points)" :key="name">
           <td>{{ name }}</td>
           <td>
             <span class="chip" :class="{
