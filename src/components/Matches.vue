@@ -73,7 +73,7 @@ const byDay = computed(() => {
 const idOf = (it: ListItem) => (it.type === 'group' ? it.g.match.id : it.k.id)
 const anchorId = computed(() => {
   const items = byDay.value.flatMap((d) => d.items)
-  const live = items.find((it) => it.type === 'group' && it.g.isLive)
+  const live = items.find((it) => (it.type === 'group' ? it.g.isLive : it.k.live))
   if (live) return idOf(live)
   const next = items.find((it) => (it.type === 'group' ? it.g.actual == null : !it.k.finished))
   const pick = next ?? items[items.length - 1]
@@ -196,19 +196,23 @@ onBeforeUnmount(() => {
             <!-- knockout match: no 1/X/2; show who benefits per team -->
             <div
               v-else :key="it.k.id"
-              class="match ko" :class="{ played: it.k.finished, anchor: it.k.id === anchorId, 'ko-tbd': !it.k.home || !it.k.away }"
+              class="match ko" :class="{ played: it.k.finished, live: it.k.live, anchor: it.k.id === anchorId, 'ko-tbd': !it.k.home || !it.k.away }"
               :data-anchor="it.k.id === anchorId"
             >
-              <div class="meta">{{ KO_LABEL[it.k.stage] }}<template v-if="it.k.time"> · {{ it.k.time }}</template></div>
+              <div class="meta">
+                {{ KO_LABEL[it.k.stage] }}
+                <template v-if="it.k.live"> · <span class="live-dot"></span><span class="live-label">{{ it.k.minute ? `${it.k.minute}'` : 'LIVE' }}</span></template>
+                <template v-else-if="it.k.time"> · {{ it.k.time }}</template>
+              </div>
 
               <div class="grid">
-                <span class="team home" :class="{ win: it.k.winner === 'HOME' }">
+                <span class="team home" :class="{ win: it.k.finished && it.k.winner === 'HOME' }">
                   <span class="tn">{{ it.k.home ?? 'TBD' }}</span>
                   <img v-if="it.k.home && flagCode(it.k.home)" class="flag" :src="flagUrl(it.k.home)" alt="" loading="lazy" />
                 </span>
                 <span v-if="it.k.homeScore != null" class="score">{{ it.k.homeScore }}–{{ it.k.awayScore }}</span>
                 <span v-else class="score pending">–</span>
-                <span class="team away" :class="{ win: it.k.winner === 'AWAY' }">
+                <span class="team away" :class="{ win: it.k.finished && it.k.winner === 'AWAY' }">
                   <img v-if="it.k.away && flagCode(it.k.away)" class="flag" :src="flagUrl(it.k.away)" alt="" loading="lazy" />
                   <span class="tn">{{ it.k.away ?? 'TBD' }}</span>
                 </span>

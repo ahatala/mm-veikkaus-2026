@@ -284,13 +284,16 @@ function build(inter) {
   const now = Date.now()
   const sign = (h, a) => (h > a ? '1' : h < a ? '2' : 'X')
 
-  // Reliable "this match is over" results from the secondary source (openfootball), keyed by team pair.
-  // football-data's free tier sometimes sticks at IN_PLAY long after a match ends, so we trust these.
+  // Reliable "this match is over" results from the secondary source (openfootball). football-data's
+  // free tier sometimes sticks at IN_PLAY long after a match ends, so we trust these as the final.
+  // ofFinished: group matches keyed by team pair. ofFinal: every stage keyed by stage|pair, carrying
+  // the winner too (knockout matches can be decided on penalties with a level score).
   const ofFinished = {}
+  const ofFinal = {}
   for (const m of inter.secondaryMatches ?? []) {
-    if (m.stage === 'GROUP' && m.finished && m.home && m.away && m.homeScore != null) {
-      ofFinished[`${m.home}|${m.away}`] = { homeScore: m.homeScore, awayScore: m.awayScore }
-    }
+    if (!m.finished || !m.home || !m.away || m.homeScore == null) continue
+    if (m.stage === 'GROUP') ofFinished[`${m.home}|${m.away}`] = { homeScore: m.homeScore, awayScore: m.awayScore }
+    ofFinal[`${m.stage}|${m.home}|${m.away}`] = { homeScore: m.homeScore, awayScore: m.awayScore, winner: m.winner ?? null }
   }
 
   const live = []
@@ -336,37 +339,53 @@ function build(inter) {
     }
   }
 
+  // Teams that have reached a stage = anyone appearing in that stage's fixtures, in EITHER feed (so a
+  // team still advances even if football-data lags on populating the next round).
   const teamsInStage = (stage) => {
     const set = []
-    for (const m of inter.matches) {
-      if (m.stage !== stage) continue
-      for (const t of [m.home, m.away]) if (t && !set.includes(t)) set.push(t)
+    const scan = (arr) => {
+      for (const m of arr) {
+        if (m.stage !== stage) continue
+        for (const t of [m.home, m.away]) if (t && !set.includes(t)) set.push(t)
+      }
     }
+    scan(inter.matches)
+    scan(inter.secondaryMatches ?? [])
     return set
   }
-  const finalMatch = inter.matches.find((m) => m.stage === 'FINAL')
-  const champion = finalMatch?.finished
-    ? (finalMatch.winner === 'HOME' ? finalMatch.home : finalMatch.winner === 'AWAY' ? finalMatch.away : null)
-    : null
 
-  // Knockout fixtures (R32→Final) for the Ottelut tab. Teams are null until the bracket fills in; the
-  // app shows them as upcoming until then. No 1/X/2 bets here — the UI maps the teams to knockout picks.
+  // Knockout fixtures (R32→Final) for the Ottelut tab — tracked exactly like group matches: same
+  // result trust order (football-data FINISHED → openfootball final → stale in-play), and live in-play
+  // score/minute. Teams are null until the bracket fills in. No 1/X/2 bets; the UI maps teams to picks.
   const koRaw = inter.matches.filter((m) => KO_STAGE_ORDER[m.stage])
   koRaw.sort((a, b) => (tsOf(a) - tsOf(b)) || (KO_STAGE_ORDER[a.stage] - KO_STAGE_ORDER[b.stage]))
+  const winnerOf = (r) => r.winner ?? (r.homeScore > r.awayScore ? 'HOME' : r.homeScore < r.awayScore ? 'AWAY' : null)
   const knockoutMatches = koRaw.map((m, i) => {
     const { date, time } = fiDateTime(m)
+    const of = (m.home && m.away) ? ofFinal[`${m.stage}|${m.home}|${m.away}`] : null
+    let result = null // { homeScore, awayScore, winner }
+    if (m.finished && m.homeScore != null) result = { homeScore: m.homeScore, awayScore: m.awayScore, winner: m.winner ?? null }
+    else if (of) result = of
+    else if (isStaleLive(m, now) && m.homeScore != null) result = { homeScore: m.homeScore, awayScore: m.awayScore, winner: m.winner ?? null }
+    const live = !result && isLiveNow(m, now) && m.homeScore != null && !of
     return {
       id: `k${m.id ?? i}`,
       stage: m.stage,
       date, time,
       home: m.home ?? null,
       away: m.away ?? null,
-      homeScore: m.finished ? (m.homeScore ?? null) : null,
-      awayScore: m.finished ? (m.awayScore ?? null) : null,
-      finished: !!m.finished,
-      winner: m.winner === 'HOME' || m.winner === 'AWAY' ? m.winner : null,
+      homeScore: result ? result.homeScore : (live ? (m.homeScore ?? 0) : null),
+      awayScore: result ? result.awayScore : (live ? (m.awayScore ?? 0) : null),
+      finished: !!result,
+      live: !!live,
+      minute: live ? (m.minute ?? null) : null,
+      winner: result ? winnerOf(result) : null,
     }
   })
+  const finalKo = knockoutMatches.find((k) => k.stage === 'FINAL')
+  const champion = finalKo?.finished
+    ? (finalKo.winner === 'HOME' ? finalKo.home : finalKo.winner === 'AWAY' ? finalKo.away : null)
+    : null
 
   const standings = inter.standings ?? deriveStandings(inter.matches)
   const groupTable = groupTables(effGroupMatches) // current standings (every group), for display

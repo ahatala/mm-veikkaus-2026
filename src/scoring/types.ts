@@ -43,6 +43,9 @@ export interface KnockoutMatch {
   homeScore: number | null
   awayScore: number | null
   finished: boolean
+  /** in play right now (score/minute are the running ones) */
+  live: boolean
+  minute: string | number | null
   winner: 'HOME' | 'AWAY' | null
 }
 
@@ -243,6 +246,8 @@ export interface KnockoutMatchResult {
   homeScore: number | null
   awayScore: number | null
   finished: boolean
+  live: boolean
+  minute: string | number | null
   winner: 'HOME' | 'AWAY' | null
   /** what winning this match scores its backers (null for R32 and the 3rd-place match) */
   prize: { label: string; points: number } | null
