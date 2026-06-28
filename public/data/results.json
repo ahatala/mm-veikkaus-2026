@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-28T01:20:28.521Z",
+  "lastUpdated": "2026-06-28T01:30:34.220Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -449,7 +449,7 @@
       "home": "Kongon DR",
       "away": "Uzbekistan",
       "group": "K",
-      "homeScore": 2,
+      "homeScore": 3,
       "awayScore": 1,
       "minute": null,
       "status": "IN_PLAY"
@@ -3572,7 +3572,7 @@
     "nadhir benbouali": 1,
     "amine gouiri": 1,
     "joao neves": 1,
-    "yoane wissa": 2,
+    "yoane wissa": 3,
     "abbosbek fayzullaev": 1,
     "daniel munoz": 2,
     "luis diaz": 1,
