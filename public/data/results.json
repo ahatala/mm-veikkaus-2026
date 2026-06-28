@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-28T02:20:26.157Z",
+  "lastUpdated": "2026-06-28T02:30:35.958Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -442,7 +442,7 @@
       "away": "Argentiina",
       "group": "J",
       "homeScore": 0,
-      "awayScore": 0,
+      "awayScore": 1,
       "minute": null,
       "status": "IN_PLAY"
     }
@@ -3610,7 +3610,7 @@
     "iliman ndiaye": 1,
     "lionel messi": 5,
     "romano schmid": 1,
-    "marko arnautovic": 1,
+    "marko arnautovic": 2,
     "ali olwan": 1,
     "nizar al-rashdan": 1,
     "nadhir benbouali": 1,
