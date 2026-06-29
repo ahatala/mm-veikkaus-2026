@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-29T18:30:43.633Z",
+  "lastUpdated": "2026-06-29T19:10:32.339Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3194,7 +3194,8 @@
     "Jordania",
     "Panama",
     "Uzbekistan",
-    "Etelä-Afrikka"
+    "Etelä-Afrikka",
+    "Japani"
   ],
   "knockoutMatches": [
     {
@@ -3218,12 +3219,12 @@
       "time": "20:00",
       "home": "Brasilia",
       "away": "Japani",
-      "homeScore": 1,
+      "homeScore": 2,
       "awayScore": 1,
-      "finished": false,
-      "live": true,
+      "finished": true,
+      "live": false,
       "minute": null,
-      "winner": null
+      "winner": "HOME"
     },
     {
       "id": "k537415",
@@ -3797,6 +3798,9 @@
     "nikola vlasic": 1,
     "derrick luckassen": 1,
     "stephan eustaquio": 1,
+    "casemiro": 1,
+    "gabriel martinelli": 1,
+    "kaishu sano": 1,
     "maximiliano araujo": 2,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
