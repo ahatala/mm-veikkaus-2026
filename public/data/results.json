@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-29T17:10:28.034Z",
+  "lastUpdated": "2026-06-29T17:40:34.395Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3219,7 +3219,7 @@
       "home": "Brasilia",
       "away": "Japani",
       "homeScore": 0,
-      "awayScore": 0,
+      "awayScore": 1,
       "finished": false,
       "live": true,
       "minute": null,
