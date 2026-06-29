@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-29T22:50:28.361Z",
+  "lastUpdated": "2026-06-29T23:30:37.410Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3233,12 +3233,12 @@
       "time": "23:30",
       "home": "Saksa",
       "away": "Paraguay",
-      "homeScore": 2,
-      "awayScore": 1,
-      "finished": false,
-      "live": true,
+      "homeScore": 5,
+      "awayScore": 6,
+      "finished": true,
+      "live": false,
       "minute": null,
-      "winner": null
+      "winner": "AWAY"
     },
     {
       "id": "k537418",
@@ -3821,6 +3821,7 @@
     "sq1": "Kyllä",
     "sq2": "Kyllä",
     "sq3": "Kyllä",
+    "sq4": "Kyllä",
     "sq5": "Kyllä",
     "sq6": "Kyllä",
     "sq7": "Kyllä",
@@ -3830,6 +3831,7 @@
     "sq1": "Avausottelu Meksiko–Etelä-Afrikka 2–0 (2 maalia)",
     "sq2": "Jatkoon: Yhdysvallat, Kanada, Meksiko",
     "sq3": "Argentiina voitti lohkon J",
+    "sq4": "Saksa–Paraguay ratkesi rangaistuspotkukilpailulla",
     "sq5": "Saksa–Curaçao 7–1",
     "sq6": "Jatkoon: Kap Verde",
     "sq7": "Messi ja Ronaldo teki maalin",
