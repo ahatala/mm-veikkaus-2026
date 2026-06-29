@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-29T21:50:29.095Z",
+  "lastUpdated": "2026-06-29T22:00:46.697Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3233,7 +3233,7 @@
       "time": "23:30",
       "home": "Saksa",
       "away": "Paraguay",
-      "homeScore": 0,
+      "homeScore": 1,
       "awayScore": 1,
       "finished": false,
       "live": true,
