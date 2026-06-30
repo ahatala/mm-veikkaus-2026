@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T06:00:46.498Z",
+  "lastUpdated": "2026-06-30T06:20:29.070Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3195,7 +3195,9 @@
     "Panama",
     "Uzbekistan",
     "Etelä-Afrikka",
-    "Japani"
+    "Japani",
+    "Saksa",
+    "Hollanti"
   ],
   "knockoutMatches": [
     {
@@ -3428,7 +3430,7 @@
       "date": "la 4.7.",
       "time": "20:00",
       "home": "Kanada",
-      "away": null,
+      "away": "Marokko",
       "homeScore": null,
       "awayScore": null,
       "finished": false,
@@ -3441,7 +3443,7 @@
       "stage": "R16",
       "date": "su 5.7.",
       "time": "00:00",
-      "home": null,
+      "home": "Paraguay",
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -3455,7 +3457,7 @@
       "stage": "R16",
       "date": "su 5.7.",
       "time": "23:00",
-      "home": null,
+      "home": "Brasilia",
       "away": null,
       "homeScore": null,
       "awayScore": null,
