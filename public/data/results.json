@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T01:10:29.993Z",
+  "lastUpdated": "2026-06-30T02:40:30.346Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3247,7 +3247,7 @@
       "time": "04:00",
       "home": "Hollanti",
       "away": "Marokko",
-      "homeScore": 0,
+      "homeScore": 1,
       "awayScore": 0,
       "finished": false,
       "live": true,
@@ -3720,7 +3720,7 @@
     "mattias svanberg": 1,
     "omar rekik": 1,
     "brian brobbey": 3,
-    "cody gakpo": 2,
+    "cody gakpo": 3,
     "anthony elanga": 2,
     "ayase ueda": 2,
     "junya ito": 1,
