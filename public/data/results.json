@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T19:00:47.771Z",
+  "lastUpdated": "2026-06-30T19:10:34.412Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3197,7 +3197,8 @@
     "Etelä-Afrikka",
     "Japani",
     "Saksa",
-    "Hollanti"
+    "Hollanti",
+    "Norsunluurannikko"
   ],
   "knockoutMatches": [
     {
@@ -3265,10 +3266,10 @@
       "away": "Norja",
       "homeScore": 1,
       "awayScore": 2,
-      "finished": false,
-      "live": true,
+      "finished": true,
+      "live": false,
       "minute": null,
-      "winner": null
+      "winner": "AWAY"
     },
     {
       "id": "k537416",
@@ -3805,6 +3806,7 @@
     "casemiro": 1,
     "gabriel martinelli": 1,
     "kaishu sano": 1,
+    "antonio nusa": 1,
     "maximiliano araujo": 2,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
