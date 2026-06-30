@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T18:50:31.048Z",
+  "lastUpdated": "2026-06-30T19:00:47.771Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3264,7 +3264,7 @@
       "home": "Norsunluurannikko",
       "away": "Norja",
       "homeScore": 1,
-      "awayScore": 1,
+      "awayScore": 2,
       "finished": false,
       "live": true,
       "minute": null,
