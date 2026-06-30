@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T18:20:31.322Z",
+  "lastUpdated": "2026-06-30T18:40:30.529Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3263,7 +3263,7 @@
       "time": "20:00",
       "home": "Norsunluurannikko",
       "away": "Norja",
-      "homeScore": 0,
+      "homeScore": 1,
       "awayScore": 1,
       "finished": false,
       "live": true,
@@ -3706,7 +3706,7 @@
     "nathaniel brown": 1,
     "deniz undav": 3,
     "livano comenencia": 1,
-    "amad diallo": 1,
+    "amad diallo": 2,
     "franck kessie": 1,
     "nicolas pepe": 2,
     "nilson angulo": 1,
