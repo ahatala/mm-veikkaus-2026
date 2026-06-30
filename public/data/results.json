@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T03:00:46.566Z",
+  "lastUpdated": "2026-06-30T03:50:30.776Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3247,10 +3247,10 @@
       "time": "04:00",
       "home": "Hollanti",
       "away": "Marokko",
-      "homeScore": 1,
-      "awayScore": 1,
-      "finished": false,
-      "live": true,
+      "homeScore": 2,
+      "awayScore": 2,
+      "finished": true,
+      "live": false,
       "minute": null,
       "winner": null
     },
