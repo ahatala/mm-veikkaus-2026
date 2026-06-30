@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T22:10:31.938Z",
+  "lastUpdated": "2026-06-30T22:20:31.650Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3197,7 +3197,8 @@
     "Etelä-Afrikka",
     "Japani",
     "Saksa",
-    "Hollanti"
+    "Hollanti",
+    "Norsunluurannikko"
   ],
   "knockoutMatches": [
     {
@@ -3277,10 +3278,10 @@
       "time": "00:00",
       "home": "Ranska",
       "away": "Ruotsi",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 2,
+      "awayScore": 0,
       "finished": false,
-      "live": false,
+      "live": true,
       "minute": null,
       "winner": null
     },
@@ -3751,7 +3752,7 @@
     "helio varela": 1,
     "alex baena": 1,
     "kylian mbappe": 5,
-    "bradley barcola": 1,
+    "bradley barcola": 2,
     "ibrahim mbaye": 1,
     "aymen hussein": 1,
     "erling haaland": 5,
