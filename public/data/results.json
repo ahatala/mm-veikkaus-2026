@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T21:50:29.609Z",
+  "lastUpdated": "2026-06-30T22:00:47.114Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3278,7 +3278,7 @@
       "time": "00:00",
       "home": "Ranska",
       "away": "Ruotsi",
-      "homeScore": 1,
+      "homeScore": 0,
       "awayScore": 0,
       "finished": false,
       "live": true,
@@ -3751,7 +3751,7 @@
     "kevin pina": 1,
     "helio varela": 1,
     "alex baena": 1,
-    "kylian mbappe": 4,
+    "kylian mbappe": 5,
     "bradley barcola": 1,
     "ibrahim mbaye": 1,
     "aymen hussein": 1,
