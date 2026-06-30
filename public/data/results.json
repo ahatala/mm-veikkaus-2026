@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T21:10:31.440Z",
+  "lastUpdated": "2026-06-30T21:50:29.609Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3278,7 +3278,7 @@
       "time": "00:00",
       "home": "Ranska",
       "away": "Ruotsi",
-      "homeScore": 0,
+      "homeScore": 1,
       "awayScore": 0,
       "finished": false,
       "live": true,
