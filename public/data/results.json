@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T22:50:34.939Z",
+  "lastUpdated": "2026-06-30T23:00:47.005Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3197,7 +3197,9 @@
     "Etelä-Afrikka",
     "Japani",
     "Saksa",
-    "Hollanti"
+    "Hollanti",
+    "Norsunluurannikko",
+    "Ruotsi"
   ],
   "knockoutMatches": [
     {
@@ -3279,10 +3281,10 @@
       "away": "Ruotsi",
       "homeScore": 3,
       "awayScore": 0,
-      "finished": false,
-      "live": true,
+      "finished": true,
+      "live": false,
       "minute": null,
-      "winner": null
+      "winner": "HOME"
     },
     {
       "id": "k537425",
