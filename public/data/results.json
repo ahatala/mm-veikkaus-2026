@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01T22:00:48.659Z",
+  "lastUpdated": "2026-07-01T22:50:32.726Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3480,7 +3480,7 @@
       "time": "23:00",
       "home": "Belgia",
       "away": "Senegal",
-      "homeScore": 2,
+      "homeScore": 3,
       "awayScore": 2,
       "finished": false,
       "live": true,
@@ -4017,6 +4017,7 @@
     "antonio nusa": 1,
     "brian cipenga": 1,
     "maximiliano araujo": 2,
+    "youri tielemans": 2,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
     "gio reyna": 1,
@@ -4029,8 +4030,7 @@
     "nathan-dylan saliba": 1,
     "agustin canobbio": 1,
     "mostafa ziko": 1,
-    "marcus pedersen": 1,
-    "nizar al rashdan": 1
+    "marcus pedersen": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
