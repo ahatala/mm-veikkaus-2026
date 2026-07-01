@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01T17:50:32.131Z",
+  "lastUpdated": "2026-07-01T18:00:50.036Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3441,7 +3441,7 @@
       "time": "19:00",
       "home": "Englanti",
       "away": "Kongon DR",
-      "homeScore": 1,
+      "homeScore": 2,
       "awayScore": 1,
       "finished": false,
       "live": true,
