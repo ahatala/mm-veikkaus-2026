@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01T18:00:50.036Z",
+  "lastUpdated": "2026-07-01T18:10:30.857Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3200,7 +3200,8 @@
     "Hollanti",
     "Norsunluurannikko",
     "Ruotsi",
-    "Ecuador"
+    "Ecuador",
+    "Kongon DR"
   ],
   "knockoutMatches": [
     {
@@ -3443,12 +3444,34 @@
       "away": "Kongon DR",
       "homeScore": 2,
       "awayScore": 1,
-      "finished": false,
-      "live": true,
+      "finished": true,
+      "live": false,
       "minute": null,
-      "decidedIn": null,
-      "scorers": [],
-      "winner": null
+      "decidedIn": "REGULAR",
+      "scorers": [
+        {
+          "name": "Harry Kane",
+          "side": "home",
+          "minute": "75",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Harry Kane",
+          "side": "home",
+          "minute": "86",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Brian Cipenga",
+          "side": "away",
+          "minute": "7",
+          "penalty": false,
+          "owngoal": false
+        }
+      ],
+      "winner": "HOME"
     },
     {
       "id": "k537422",
@@ -3992,6 +4015,7 @@
     "gabriel martinelli": 1,
     "kaishu sano": 1,
     "antonio nusa": 1,
+    "brian cipenga": 1,
     "maximiliano araujo": 2,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
