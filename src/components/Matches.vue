@@ -95,11 +95,15 @@ function colClass(m: MatchResult, s: string): string {
 const minuteLabel = (g: GoalEvent) =>
   `${g.minute ? `${g.minute}'` : ''}${g.penalty ? ' (pen)' : ''}${g.owngoal ? ' (og)' : ''}`.trim()
 
+// how a knockout tie was settled — a short marker shown after the score
+const decidedLabel = (d: string | null) =>
+  d === 'PENALTIES' ? 'rp' : d === 'EXTRA_TIME' ? 'ja' : ''
+
 // One entry per scorer, with all their goal times merged: "Havertz 12', 45' (pen)".
-function scorersOn(m: MatchResult, side: 'home' | 'away'): string {
+function scorersOn(scorers: GoalEvent[], side: 'home' | 'away'): string {
   const order: string[] = []
   const byName = new Map<string, GoalEvent[]>()
-  for (const g of m.scorers) {
+  for (const g of scorers) {
     if (g.side !== side) continue
     if (!byName.has(g.name)) { byName.set(g.name, []); order.push(g.name) }
     byName.get(g.name)!.push(g)
@@ -178,9 +182,9 @@ onBeforeUnmount(() => {
                 </span>
 
                 <template v-if="it.g.actual && it.g.scorers.length">
-                  <span class="scorers home">{{ scorersOn(it.g, 'home') }}</span>
+                  <span class="scorers home">{{ scorersOn(it.g.scorers, 'home') }}</span>
                   <span class="scorers mid">⚽</span>
-                  <span class="scorers away">{{ scorersOn(it.g, 'away') }}</span>
+                  <span class="scorers away">{{ scorersOn(it.g.scorers, 'away') }}</span>
                 </template>
               </div>
 
@@ -210,12 +214,20 @@ onBeforeUnmount(() => {
                   <span class="tn">{{ it.k.home ?? 'TBD' }}</span>
                   <img v-if="it.k.home && flagCode(it.k.home)" class="flag" :src="flagUrl(it.k.home)" alt="" loading="lazy" />
                 </span>
-                <span v-if="it.k.homeScore != null" class="score">{{ it.k.homeScore }}–{{ it.k.awayScore }}</span>
+                <span v-if="it.k.homeScore != null" class="score">
+                  {{ it.k.homeScore }}–{{ it.k.awayScore }}<span v-if="it.k.finished && decidedLabel(it.k.decidedIn)" class="decided">{{ decidedLabel(it.k.decidedIn) }}</span>
+                </span>
                 <span v-else class="score pending">–</span>
                 <span class="team away" :class="{ win: it.k.finished && it.k.winner === 'AWAY' }">
                   <img v-if="it.k.away && flagCode(it.k.away)" class="flag" :src="flagUrl(it.k.away)" alt="" loading="lazy" />
                   <span class="tn">{{ it.k.away ?? 'TBD' }}</span>
                 </span>
+
+                <template v-if="it.k.scorers && it.k.scorers.length">
+                  <span class="scorers home">{{ scorersOn(it.k.scorers, 'home') }}</span>
+                  <span class="scorers mid">⚽</span>
+                  <span class="scorers away">{{ scorersOn(it.k.scorers, 'away') }}</span>
+                </template>
               </div>
 
               <p v-if="!it.k.home && !it.k.away" class="ko-muted">{{ koPending(it.k.stage) }}</p>
@@ -335,6 +347,8 @@ onBeforeUnmount(() => {
 }
 .score { text-align: center; font-variant-numeric: tabular-nums; font-weight: 700; }
 .score.pending { color: var(--muted); font-weight: 500; }
+/* "rp"/"ja" marker under a knockout score decided on penalties / in extra time */
+.decided { display: block; font-size: 9.5px; font-weight: 700; color: var(--muted); letter-spacing: .04em; text-transform: uppercase; }
 .scorers { font-size: 11.5px; color: var(--muted); overflow-wrap: anywhere; }
 .scorers.home { text-align: right; }
 .scorers.away { text-align: left; }

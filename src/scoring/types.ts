@@ -46,7 +46,10 @@ export interface KnockoutMatch {
   /** in play right now (score/minute are the running ones) */
   live: boolean
   minute: string | number | null
+  /** how a finished match was decided: 'REGULAR' | 'EXTRA_TIME' | 'PENALTIES' (null until finished) */
+  decidedIn: string | null
   winner: 'HOME' | 'AWAY' | null
+  scorers: GoalEvent[]
 }
 
 export interface GroupTop2 {
@@ -248,7 +251,9 @@ export interface KnockoutMatchResult {
   finished: boolean
   live: boolean
   minute: string | number | null
+  decidedIn: string | null
   winner: 'HOME' | 'AWAY' | null
+  scorers: GoalEvent[]
   /** what winning this match scores its backers (null for R32 and the 3rd-place match) */
   prize: { label: string; points: number } | null
   homeBackers: KnockoutBacker[]

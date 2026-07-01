@@ -87,16 +87,20 @@ async function fromFootballData(token) {
   ])
   const matches = (matchesRes.matches ?? []).map((m) => {
     const dur = (m.score?.duration ?? '').toUpperCase()
+    const pen = m.score?.penalties ?? {}
     const decidedIn = /PENALT/.test(dur) || m.score?.penalties ? 'PENALTIES' : /EXTRA/.test(dur) ? 'EXTRA_TIME' : 'REGULAR'
     const w = m.score?.winner
+    // football-data folds the shootout into fullTime (1-1 + pens 3-4 -> "4-5"), so subtract it back out
+    // to get the on-field score; the winner still reflects the shootout. Non-shootout matches: pen = {}.
+    const ft = m.score?.fullTime ?? {}
     return {
       id: m.id ?? null,
       stage: FD_STAGE[m.stage] ?? m.stage,
       group: m.group ? m.group.replace(/^GROUP_/, '') : null,
       home: toFinnish(m.homeTeam?.name),
       away: toFinnish(m.awayTeam?.name),
-      homeScore: m.score?.fullTime?.home ?? null,
-      awayScore: m.score?.fullTime?.away ?? null,
+      homeScore: ft.home != null ? ft.home - (pen.home ?? 0) : null,
+      awayScore: ft.away != null ? ft.away - (pen.away ?? 0) : null,
       finished: m.status === 'FINISHED',
       status: m.status ?? null,
       utcDate: m.utcDate ?? null,
@@ -150,18 +154,21 @@ async function fromOpenfootball() {
     }
     const home = toFinnish(m.team1)
     const away = toFinnish(m.team2)
-    if (home && away && goals.length) eventsByPair[`${home}|${away}`] = goals
-    // ft = after 90', et = after extra time, p = penalty shootout. Use the deepest level for the winner.
+    const stage = ofStage(`${m.group ?? ''} ${m.round ?? ''}`)
+    // Goal events keyed by stage|pair so a group + knockout rematch of the same teams can't collide.
+    if (home && away && goals.length) eventsByPair[`${stage}|${home}|${away}`] = goals
+    // ft = after 90', et = after extra time, p = penalty shootout. On-field score = et ?? ft (excludes
+    // the shootout); the winner still uses the deepest level (shootout wins the tie).
     const decidedIn = sc.p ? 'PENALTIES' : sc.et ? 'EXTRA_TIME' : 'REGULAR'
     const winner = !finished ? null : sc.p ? side(sc.p) : sc.et ? side(sc.et) : side(ft)
-    const stageStr = `${m.group ?? ''} ${m.round ?? ''}`
+    const onfield = sc.et ?? ft
     return {
       id: m.num ?? null,
-      stage: ofStage(stageStr),
+      stage,
       group: /^Group ([A-L])/.exec(m.group ?? '')?.[1] ?? null,
       home, away,
-      homeScore: finished ? ft[0] : null,
-      awayScore: finished ? ft[1] : null,
+      homeScore: finished ? onfield[0] : null,
+      awayScore: finished ? onfield[1] : null,
       finished,
       status: finished ? 'FINISHED' : 'SCHEDULED', // openfootball has no in-play data
       date: m.date ?? null,
@@ -293,7 +300,7 @@ function build(inter) {
   for (const m of inter.secondaryMatches ?? []) {
     if (!m.finished || !m.home || !m.away || m.homeScore == null) continue
     if (m.stage === 'GROUP') ofFinished[`${m.home}|${m.away}`] = { homeScore: m.homeScore, awayScore: m.awayScore }
-    ofFinal[`${m.stage}|${m.home}|${m.away}`] = { homeScore: m.homeScore, awayScore: m.awayScore, winner: m.winner ?? null }
+    ofFinal[`${m.stage}|${m.home}|${m.away}`] = { homeScore: m.homeScore, awayScore: m.awayScore, winner: m.winner ?? null, decidedIn: m.decidedIn ?? 'REGULAR' }
   }
 
   const live = []
@@ -329,7 +336,7 @@ function build(inter) {
 
     if (result) {
       groupMatches[id] = sign(result.homeScore, result.awayScore)
-      matchResults[id] = { ...result, scorers: events[pair] ?? [] }
+      matchResults[id] = { ...result, scorers: events[`GROUP|${pair}`] ?? [] }
     } else if (isLiveNow(m, now) && !ofFinished[pair]) {
       live.push({
         id, home: m.home, away: m.away, group: m.group,
@@ -363,11 +370,12 @@ function build(inter) {
   const knockoutMatches = koRaw.map((m, i) => {
     const { date, time } = fiDateTime(m)
     const of = (m.home && m.away) ? ofFinal[`${m.stage}|${m.home}|${m.away}`] : null
-    let result = null // { homeScore, awayScore, winner }
-    if (m.finished && m.homeScore != null) result = { homeScore: m.homeScore, awayScore: m.awayScore, winner: m.winner ?? null }
+    let result = null // { homeScore, awayScore, winner, decidedIn }
+    if (m.finished && m.homeScore != null) result = { homeScore: m.homeScore, awayScore: m.awayScore, winner: m.winner ?? null, decidedIn: m.decidedIn ?? 'REGULAR' }
     else if (of) result = of
-    else if (isStaleLive(m, now) && m.homeScore != null) result = { homeScore: m.homeScore, awayScore: m.awayScore, winner: m.winner ?? null }
+    else if (isStaleLive(m, now) && m.homeScore != null) result = { homeScore: m.homeScore, awayScore: m.awayScore, winner: m.winner ?? null, decidedIn: m.decidedIn ?? 'REGULAR' }
     const live = !result && isLiveNow(m, now) && m.homeScore != null && !of
+    const scorers = (m.home && m.away) ? (events[`${m.stage}|${m.home}|${m.away}`] ?? []) : []
     return {
       id: `k${m.id ?? i}`,
       stage: m.stage,
@@ -379,6 +387,8 @@ function build(inter) {
       finished: !!result,
       live: !!live,
       minute: live ? (m.minute ?? null) : null,
+      decidedIn: result ? (result.decidedIn ?? 'REGULAR') : null,
+      scorers,
       winner: result ? winnerOf(result) : null,
     }
   })

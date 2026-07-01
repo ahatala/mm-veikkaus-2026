@@ -14,7 +14,8 @@ const bets = {
 
 const km = (o: Partial<KnockoutMatch>): KnockoutMatch => ({
   id: 'k1', stage: 'R16', date: 'su 28.6.', time: '19:00', home: 'Meksiko', away: 'Brasilia',
-  homeScore: null, awayScore: null, finished: false, live: false, minute: null, winner: null, ...o,
+  homeScore: null, awayScore: null, finished: false, live: false, minute: null,
+  decidedIn: null, winner: null, scorers: [], ...o,
 })
 
 describe('scoreKnockoutMatches', () => {
