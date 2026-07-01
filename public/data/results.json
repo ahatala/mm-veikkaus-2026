@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01T09:30:42.217Z",
+  "lastUpdated": "2026-07-01T09:40:33.553Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3659,8 +3659,8 @@
     "champion": null
   },
   "goldenBootGoals": {
-    "julian quinones": 2,
-    "raul jimenez": 1,
+    "julian quinones": 3,
+    "raul jimenez": 2,
     "hwang in-beom": 1,
     "oh hyeon-gyu": 1,
     "ladislav krejci": 1,
@@ -3709,7 +3709,7 @@
     "nathaniel brown": 1,
     "deniz undav": 3,
     "livano comenencia": 1,
-    "amad diallo": 1,
+    "amad diallo": 2,
     "franck kessie": 1,
     "nicolas pepe": 2,
     "nilson angulo": 1,
@@ -3753,11 +3753,11 @@
     "kevin pina": 1,
     "helio varela": 1,
     "alex baena": 1,
-    "kylian mbappe": 4,
-    "bradley barcola": 1,
+    "kylian mbappe": 6,
+    "bradley barcola": 2,
     "ibrahim mbaye": 1,
     "aymen hussein": 1,
-    "erling haaland": 4,
+    "erling haaland": 5,
     "leo østigard": 1,
     "ousmane dembele": 4,
     "marcus holmgren pedersen": 1,
