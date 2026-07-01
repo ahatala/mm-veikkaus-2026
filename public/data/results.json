@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01T22:50:32.726Z",
+  "lastUpdated": "2026-07-01T23:00:48.711Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3201,7 +3201,8 @@
     "Norsunluurannikko",
     "Ruotsi",
     "Ecuador",
-    "Kongon DR"
+    "Kongon DR",
+    "Senegal"
   ],
   "knockoutMatches": [
     {
@@ -3482,12 +3483,48 @@
       "away": "Senegal",
       "homeScore": 3,
       "awayScore": 2,
-      "finished": false,
-      "live": true,
+      "finished": true,
+      "live": false,
       "minute": null,
-      "decidedIn": null,
-      "scorers": [],
-      "winner": null
+      "decidedIn": "REGULAR",
+      "scorers": [
+        {
+          "name": "Romelu Lukaku",
+          "side": "home",
+          "minute": "86",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Youri Tielemans",
+          "side": "home",
+          "minute": "89",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Youri Tielemans",
+          "side": "home",
+          "minute": "120+5",
+          "penalty": true,
+          "owngoal": false
+        },
+        {
+          "name": "Habib Diarra",
+          "side": "away",
+          "minute": "25",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Ismaïla Sarr",
+          "side": "away",
+          "minute": "51",
+          "penalty": false,
+          "owngoal": false
+        }
+      ],
+      "winner": "HOME"
     },
     {
       "id": "k537421",
@@ -4016,8 +4053,8 @@
     "kaishu sano": 1,
     "antonio nusa": 1,
     "brian cipenga": 1,
-    "maximiliano araujo": 2,
     "youri tielemans": 2,
+    "maximiliano araujo": 2,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
     "gio reyna": 1,
