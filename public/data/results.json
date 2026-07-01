@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01T21:50:31.042Z",
+  "lastUpdated": "2026-07-01T22:00:48.659Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3480,7 +3480,7 @@
       "time": "23:00",
       "home": "Belgia",
       "away": "Senegal",
-      "homeScore": 0,
+      "homeScore": 2,
       "awayScore": 2,
       "finished": false,
       "live": true,
