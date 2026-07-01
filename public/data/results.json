@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01T20:10:36.731Z",
+  "lastUpdated": "2026-07-01T20:30:43.483Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3481,7 +3481,7 @@
       "home": "Belgia",
       "away": "Senegal",
       "homeScore": 0,
-      "awayScore": 0,
+      "awayScore": 1,
       "finished": false,
       "live": true,
       "minute": null,
@@ -3970,7 +3970,7 @@
     "ismaila sarr": 3,
     "thelo aasgaard": 1,
     "desire doue": 1,
-    "habib diarra": 1,
+    "habib diarra": 2,
     "pape gueye": 2,
     "iliman ndiaye": 1,
     "lionel messi": 6,
