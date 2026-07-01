@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01T03:40:35.265Z",
+  "lastUpdated": "2026-07-01T04:10:36.345Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3199,7 +3199,8 @@
     "Saksa",
     "Hollanti",
     "Norsunluurannikko",
-    "Ruotsi"
+    "Ruotsi",
+    "Ecuador"
   ],
   "knockoutMatches": [
     {
@@ -3295,10 +3296,10 @@
       "away": "Ecuador",
       "homeScore": 2,
       "awayScore": 0,
-      "finished": false,
-      "live": true,
+      "finished": true,
+      "live": false,
       "minute": null,
-      "winner": null
+      "winner": "HOME"
     },
     {
       "id": "k537426",
