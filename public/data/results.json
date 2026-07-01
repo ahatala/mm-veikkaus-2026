@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01T06:10:32.470Z",
+  "lastUpdated": "2026-07-01T06:20:33.837Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3447,7 +3447,7 @@
       "date": "su 5.7.",
       "time": "00:00",
       "home": "Paraguay",
-      "away": null,
+      "away": "Ranska",
       "homeScore": null,
       "awayScore": null,
       "finished": false,
@@ -3461,7 +3461,7 @@
       "date": "su 5.7.",
       "time": "23:00",
       "home": "Brasilia",
-      "away": null,
+      "away": "Norja",
       "homeScore": null,
       "awayScore": null,
       "finished": false,
