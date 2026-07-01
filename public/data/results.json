@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01T00:40:33.169Z",
+  "lastUpdated": "2026-07-01T01:10:33.280Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3293,10 +3293,10 @@
       "time": "04:00",
       "home": "Meksiko",
       "away": "Ecuador",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "finished": false,
-      "live": false,
+      "live": true,
       "minute": null,
       "winner": null
     },
