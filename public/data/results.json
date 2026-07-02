@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-02T19:40:34.703Z",
+  "lastUpdated": "2026-07-02T20:00:49.435Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3565,10 +3565,10 @@
       "time": "22:00",
       "home": "Espanja",
       "away": "Itävalta",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 0,
       "finished": false,
-      "live": false,
+      "live": true,
       "minute": null,
       "decidedIn": null,
       "scorers": [],
