@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-02T00:40:35.639Z",
+  "lastUpdated": "2026-07-02T00:50:33.293Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3486,7 +3486,7 @@
       "finished": true,
       "live": false,
       "minute": null,
-      "decidedIn": "EXTRA_TIME",
+      "decidedIn": "REGULAR",
       "scorers": [
         {
           "name": "Romelu Lukaku",
@@ -3533,7 +3533,7 @@
       "time": "03:00",
       "home": "Yhdysvallat",
       "away": "Bosnia-Hertsegovina",
-      "homeScore": 0,
+      "homeScore": 1,
       "awayScore": 0,
       "finished": false,
       "live": true,
@@ -3933,7 +3933,7 @@
     "soufiane rahimi": 1,
     "gessime yassine": 1,
     "wilson isidor": 1,
-    "folarin balogun": 2,
+    "folarin balogun": 3,
     "giovanni reyna": 1,
     "mauricio": 1,
     "nestory irankunda": 1,
