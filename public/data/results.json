@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-02T06:10:40.278Z",
+  "lastUpdated": "2026-07-02T06:20:35.764Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3487,7 +3487,7 @@
       "finished": true,
       "live": false,
       "minute": null,
-      "decidedIn": "REGULAR",
+      "decidedIn": "EXTRA_TIME",
       "scorers": [
         {
           "name": "Romelu Lukaku",
@@ -3707,8 +3707,8 @@
       "stage": "R16",
       "date": "ma 6.7.",
       "time": "03:00",
-      "home": null,
-      "away": null,
+      "home": "Meksiko",
+      "away": "Englanti",
       "homeScore": null,
       "awayScore": null,
       "finished": false,
@@ -3739,8 +3739,8 @@
       "stage": "R16",
       "date": "ti 7.7.",
       "time": "03:00",
-      "home": null,
-      "away": null,
+      "home": "Yhdysvallat",
+      "away": "Belgia",
       "homeScore": null,
       "awayScore": null,
       "finished": false,
