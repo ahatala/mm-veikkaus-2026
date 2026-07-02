@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-02T21:10:30.475Z",
+  "lastUpdated": "2026-07-02T23:10:32.026Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3604,10 +3604,10 @@
       "time": "02:00",
       "home": "Portugali",
       "away": "Kroatia",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "finished": false,
-      "live": false,
+      "live": true,
       "minute": null,
       "decidedIn": null,
       "scorers": [],
