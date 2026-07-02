@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-02T01:30:47.655Z",
+  "lastUpdated": "2026-07-02T01:50:32.931Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3486,7 +3486,7 @@
       "finished": true,
       "live": false,
       "minute": null,
-      "decidedIn": "EXTRA_TIME",
+      "decidedIn": "REGULAR",
       "scorers": [
         {
           "name": "Romelu Lukaku",
