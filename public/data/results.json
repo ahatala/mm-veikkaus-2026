@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-02T21:00:48.560Z",
+  "lastUpdated": "2026-07-02T21:10:30.475Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3203,7 +3203,8 @@
     "Ecuador",
     "Kongon DR",
     "Senegal",
-    "Bosnia-Hertsegovina"
+    "Bosnia-Hertsegovina",
+    "Itävalta"
   ],
   "knockoutMatches": [
     {
@@ -3567,12 +3568,34 @@
       "away": "Itävalta",
       "homeScore": 3,
       "awayScore": 0,
-      "finished": false,
-      "live": true,
+      "finished": true,
+      "live": false,
       "minute": null,
-      "decidedIn": null,
-      "scorers": [],
-      "winner": null
+      "decidedIn": "REGULAR",
+      "scorers": [
+        {
+          "name": "Mikel Oyarzabal",
+          "side": "home",
+          "minute": "36",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Pedro Porro",
+          "side": "home",
+          "minute": "66",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Mikel Oyarzabal",
+          "side": "home",
+          "minute": "89",
+          "penalty": false,
+          "owngoal": false
+        }
+      ],
+      "winner": "HOME"
     },
     {
       "id": "k537419",
@@ -4071,6 +4094,7 @@
     "brian cipenga": 1,
     "malik tillman": 1,
     "youri tielemans": 2,
+    "pedro porro": 1,
     "maximiliano araujo": 2,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
