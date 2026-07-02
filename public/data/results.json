@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-02T02:00:46.830Z",
+  "lastUpdated": "2026-07-02T02:20:31.852Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3202,7 +3202,8 @@
     "Ruotsi",
     "Ecuador",
     "Kongon DR",
-    "Senegal"
+    "Senegal",
+    "Bosnia-Hertsegovina"
   ],
   "knockoutMatches": [
     {
@@ -3486,7 +3487,7 @@
       "finished": true,
       "live": false,
       "minute": null,
-      "decidedIn": "EXTRA_TIME",
+      "decidedIn": "REGULAR",
       "scorers": [
         {
           "name": "Romelu Lukaku",
@@ -3535,12 +3536,27 @@
       "away": "Bosnia-Hertsegovina",
       "homeScore": 2,
       "awayScore": 0,
-      "finished": false,
-      "live": true,
+      "finished": true,
+      "live": false,
       "minute": null,
-      "decidedIn": null,
-      "scorers": [],
-      "winner": null
+      "decidedIn": "REGULAR",
+      "scorers": [
+        {
+          "name": "Folarin Balogun",
+          "side": "home",
+          "minute": "45",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Malik Tillman",
+          "side": "home",
+          "minute": "82",
+          "penalty": false,
+          "owngoal": false
+        }
+      ],
+      "winner": "HOME"
     },
     {
       "id": "k537420",
@@ -4053,6 +4069,7 @@
     "kaishu sano": 1,
     "antonio nusa": 1,
     "brian cipenga": 1,
+    "malik tillman": 1,
     "youri tielemans": 2,
     "maximiliano araujo": 2,
     "in-beom hwang": 1,
