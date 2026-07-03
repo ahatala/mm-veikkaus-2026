@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-03T01:10:38.380Z",
+  "lastUpdated": "2026-07-03T01:20:33.663Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3606,12 +3606,34 @@
       "away": "Kroatia",
       "homeScore": 2,
       "awayScore": 2,
-      "finished": false,
-      "live": true,
+      "finished": true,
+      "live": false,
       "minute": null,
-      "decidedIn": null,
-      "scorers": [],
-      "winner": null
+      "decidedIn": "REGULAR",
+      "scorers": [
+        {
+          "name": "Cristiano Ronaldo",
+          "side": "home",
+          "minute": "68",
+          "penalty": true,
+          "owngoal": false
+        },
+        {
+          "name": "Gonçalo Ramos",
+          "side": "home",
+          "minute": "90+4",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Ivan Perisic",
+          "side": "away",
+          "minute": "53",
+          "penalty": false,
+          "owngoal": false
+        }
+      ],
+      "winner": "DRAW"
     },
     {
       "id": "k537429",
@@ -4094,6 +4116,8 @@
     "brian cipenga": 1,
     "malik tillman": 1,
     "youri tielemans": 2,
+    "goncalo ramos": 1,
+    "ivan perisic": 1,
     "pedro porro": 1,
     "maximiliano araujo": 2,
     "in-beom hwang": 1,
