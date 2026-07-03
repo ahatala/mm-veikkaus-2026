@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-03T01:20:33.663Z",
+  "lastUpdated": "2026-07-03T01:30:42.204Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3204,7 +3204,8 @@
     "Kongon DR",
     "Senegal",
     "Bosnia-Hertsegovina",
-    "Itävalta"
+    "Itävalta",
+    "Kroatia"
   ],
   "knockoutMatches": [
     {
@@ -3605,7 +3606,7 @@
       "home": "Portugali",
       "away": "Kroatia",
       "homeScore": 2,
-      "awayScore": 2,
+      "awayScore": 1,
       "finished": true,
       "live": false,
       "minute": null,
@@ -3633,7 +3634,7 @@
           "owngoal": false
         }
       ],
-      "winner": "DRAW"
+      "winner": "HOME"
     },
     {
       "id": "k537429",
