@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-03T15:00:56.215Z",
+  "lastUpdated": "2026-07-03T18:10:34.250Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3675,10 +3675,10 @@
       "time": "21:00",
       "home": "Australia",
       "away": "Egypti",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "finished": false,
-      "live": false,
+      "live": true,
       "minute": null,
       "decidedIn": null,
       "scorers": [],
