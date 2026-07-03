@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-03T18:10:34.250Z",
+  "lastUpdated": "2026-07-03T18:20:35.823Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3676,7 +3676,7 @@
       "home": "Australia",
       "away": "Egypti",
       "homeScore": 0,
-      "awayScore": 0,
+      "awayScore": 1,
       "finished": false,
       "live": true,
       "minute": null,
@@ -4053,7 +4053,7 @@
     "daizen maeda": 1,
     "hazem mastouri": 1,
     "jan paul van hecke": 1,
-    "emam ashour": 1,
+    "emam ashour": 2,
     "ramin rezaeian": 2,
     "mohammad mohebbi": 1,
     "elijah just": 3,
