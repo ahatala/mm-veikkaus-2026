@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-03T05:10:32.131Z",
+  "lastUpdated": "2026-07-03T15:00:56.215Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3393,16 +3393,16 @@
           "owngoal": false
         },
         {
-          "name": "Bradley Barcola",
+          "name": "Kylian Mbappé",
           "side": "home",
-          "minute": "53",
+          "minute": "74",
           "penalty": false,
           "owngoal": false
         },
         {
-          "name": "Kylian Mbappé",
+          "name": "Bradley Barcola",
           "side": "home",
-          "minute": "74",
+          "minute": "53",
           "penalty": false,
           "owngoal": false
         }
@@ -3583,16 +3583,16 @@
           "owngoal": false
         },
         {
-          "name": "Pedro Porro",
+          "name": "Mikel Oyarzabal",
           "side": "home",
-          "minute": "66",
+          "minute": "89",
           "penalty": false,
           "owngoal": false
         },
         {
-          "name": "Mikel Oyarzabal",
+          "name": "Pedro Porro",
           "side": "home",
-          "minute": "89",
+          "minute": "66",
           "penalty": false,
           "owngoal": false
         }
