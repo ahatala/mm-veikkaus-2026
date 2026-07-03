@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-03T03:10:40.405Z",
+  "lastUpdated": "2026-07-03T03:20:31.905Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3643,7 +3643,7 @@
       "time": "06:00",
       "home": "Sveitsi",
       "away": "Algeria",
-      "homeScore": 0,
+      "homeScore": 1,
       "awayScore": 0,
       "finished": false,
       "live": true,
@@ -3977,7 +3977,7 @@
     "thapelo maseko": 1,
     "cyle larin": 2,
     "jovo lukic": 1,
-    "breel embolo": 1,
+    "breel embolo": 2,
     "johan manzambi": 3,
     "ruben vargas": 2,
     "granit xhaka": 1,
