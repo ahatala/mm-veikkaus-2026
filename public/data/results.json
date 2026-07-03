@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-03T03:20:31.905Z",
+  "lastUpdated": "2026-07-03T04:10:32.063Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3643,10 +3643,10 @@
       "time": "06:00",
       "home": "Sveitsi",
       "away": "Algeria",
-      "homeScore": 1,
-      "awayScore": 0,
+      "homeScore": null,
+      "awayScore": null,
       "finished": false,
-      "live": true,
+      "live": false,
       "minute": null,
       "decidedIn": null,
       "scorers": [],
