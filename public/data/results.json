@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-03T21:00:50.607Z",
+  "lastUpdated": "2026-07-03T21:10:38.603Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3681,7 +3681,22 @@
       "live": false,
       "minute": null,
       "decidedIn": "PENALTIES",
-      "scorers": [],
+      "scorers": [
+        {
+          "name": "Mohamed Hany",
+          "side": "home",
+          "minute": "55",
+          "penalty": false,
+          "owngoal": true
+        },
+        {
+          "name": "Emam Ashour",
+          "side": "away",
+          "minute": "13",
+          "penalty": false,
+          "owngoal": false
+        }
+      ],
       "winner": "AWAY"
     },
     {
