@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-04T22:40:39.136Z",
+  "lastUpdated": "2026-07-04T23:10:38.863Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3210,7 +3210,8 @@
     "Australia",
     "Kap Verde",
     "Ghana",
-    "Kanada"
+    "Kanada",
+    "Paraguay"
   ],
   "knockoutMatches": [
     {
@@ -3826,12 +3827,20 @@
       "away": "Ranska",
       "homeScore": 0,
       "awayScore": 1,
-      "finished": false,
-      "live": true,
+      "finished": true,
+      "live": false,
       "minute": null,
-      "decidedIn": null,
-      "scorers": [],
-      "winner": null
+      "decidedIn": "REGULAR",
+      "scorers": [
+        {
+          "name": "Kylian Mbappé",
+          "side": "away",
+          "minute": "70",
+          "penalty": true,
+          "owngoal": false
+        }
+      ],
+      "winner": "AWAY"
     },
     {
       "id": "k537377",
