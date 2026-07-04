@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-04T19:00:53.952Z",
+  "lastUpdated": "2026-07-04T19:10:36.061Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3209,7 +3209,8 @@
     "Algeria",
     "Australia",
     "Kap Verde",
-    "Ghana"
+    "Ghana",
+    "Kanada"
   ],
   "knockoutMatches": [
     {
@@ -3786,13 +3787,35 @@
       "home": "Kanada",
       "away": "Marokko",
       "homeScore": 0,
-      "awayScore": 2,
-      "finished": false,
-      "live": true,
+      "awayScore": 3,
+      "finished": true,
+      "live": false,
       "minute": null,
-      "decidedIn": null,
-      "scorers": [],
-      "winner": null
+      "decidedIn": "REGULAR",
+      "scorers": [
+        {
+          "name": "Azzedine Ounahi",
+          "side": "away",
+          "minute": "50",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Azzedine Ounahi",
+          "side": "away",
+          "minute": "82",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Soufiane Rahimi",
+          "side": "away",
+          "minute": "90+8",
+          "penalty": false,
+          "owngoal": false
+        }
+      ],
+      "winner": "AWAY"
     },
     {
       "id": "k537375",
@@ -4070,7 +4093,7 @@
     "john mcginn": 1,
     "matheus cunha": 3,
     "achraf hakimi": 1,
-    "soufiane rahimi": 1,
+    "soufiane rahimi": 2,
     "gessime yassine": 1,
     "wilson isidor": 1,
     "folarin balogun": 3,
@@ -4203,8 +4226,8 @@
     "deroy duarte": 1,
     "sidny lopes cabral": 1,
     "jhon arias": 1,
-    "maximiliano araujo": 2,
     "azzedine ounahi": 2,
+    "maximiliano araujo": 2,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
     "gio reyna": 1,
