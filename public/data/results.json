@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-04T00:40:42.462Z",
+  "lastUpdated": "2026-07-04T00:50:33.151Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3206,7 +3206,8 @@
     "Bosnia-Hertsegovina",
     "Itävalta",
     "Kroatia",
-    "Algeria"
+    "Algeria",
+    "Kap Verde"
   ],
   "knockoutMatches": [
     {
@@ -3708,12 +3709,48 @@
       "away": "Kap Verde",
       "homeScore": 3,
       "awayScore": 2,
-      "finished": false,
-      "live": true,
+      "finished": true,
+      "live": false,
       "minute": null,
-      "decidedIn": null,
-      "scorers": [],
-      "winner": null
+      "decidedIn": "EXTRA_TIME",
+      "scorers": [
+        {
+          "name": "Lionel Messi",
+          "side": "home",
+          "minute": "29",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Lisandro Martínez",
+          "side": "home",
+          "minute": "92",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Diney Borges",
+          "side": "home",
+          "minute": "111",
+          "penalty": false,
+          "owngoal": true
+        },
+        {
+          "name": "Deroy Duarte",
+          "side": "away",
+          "minute": "59",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Sidny Lopes Cabral",
+          "side": "away",
+          "minute": "103",
+          "penalty": false,
+          "owngoal": false
+        }
+      ],
+      "winner": "HOME"
     },
     {
       "id": "k537430",
@@ -4152,6 +4189,9 @@
     "ivan perisic": 1,
     "pedro porro": 1,
     "dan ndoye": 1,
+    "lisandro martinez": 1,
+    "deroy duarte": 1,
+    "sidny lopes cabral": 1,
     "maximiliano araujo": 2,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
