@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-04T06:20:38.387Z",
+  "lastUpdated": "2026-07-04T17:10:37.904Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3785,10 +3785,10 @@
       "time": "20:00",
       "home": "Kanada",
       "away": "Marokko",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "finished": false,
-      "live": false,
+      "live": true,
       "minute": null,
       "decidedIn": null,
       "scorers": [],
