@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-04T22:00:51.043Z",
+  "lastUpdated": "2026-07-04T22:40:39.136Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3825,7 +3825,7 @@
       "home": "Paraguay",
       "away": "Ranska",
       "homeScore": 0,
-      "awayScore": 0,
+      "awayScore": 1,
       "finished": false,
       "live": true,
       "minute": null,
@@ -4159,7 +4159,7 @@
     "kevin pina": 1,
     "helio varela": 1,
     "alex baena": 1,
-    "kylian mbappe": 6,
+    "kylian mbappe": 7,
     "bradley barcola": 2,
     "ibrahim mbaye": 1,
     "aymen hussein": 1,
