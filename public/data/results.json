@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-03T23:30:45.632Z",
+  "lastUpdated": "2026-07-04T00:20:41.848Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3706,7 +3706,7 @@
       "time": "01:00",
       "home": "Argentiina",
       "away": "Kap Verde",
-      "homeScore": 1,
+      "homeScore": 2,
       "awayScore": 1,
       "finished": false,
       "live": true,
