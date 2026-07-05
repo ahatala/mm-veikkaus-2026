@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-05T05:50:36.896Z",
+  "lastUpdated": "2026-07-05T06:10:43.562Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3210,7 +3210,8 @@
     "Australia",
     "Kap Verde",
     "Ghana",
-    "Kanada"
+    "Kanada",
+    "Paraguay"
   ],
   "knockoutMatches": [
     {
@@ -3942,8 +3943,8 @@
       "stage": "QF",
       "date": "to 9.7.",
       "time": "23:00",
-      "home": null,
-      "away": null,
+      "home": "Ranska",
+      "away": "Marokko",
       "homeScore": null,
       "awayScore": null,
       "finished": false,
@@ -4067,7 +4068,10 @@
     }
   ],
   "knockout": {
-    "quarterfinalists": [],
+    "quarterfinalists": [
+      "Ranska",
+      "Marokko"
+    ],
     "semifinalists": [],
     "finalists": [],
     "champion": null
