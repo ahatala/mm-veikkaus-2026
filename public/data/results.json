@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-05T06:10:43.562Z",
+  "lastUpdated": "2026-07-05T20:10:37.104Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3849,10 +3849,10 @@
       "time": "23:00",
       "home": "Brasilia",
       "away": "Norja",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "finished": false,
-      "live": false,
+      "live": true,
       "minute": null,
       "decidedIn": null,
       "scorers": [],
