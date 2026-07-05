@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-05T22:10:37.586Z",
+  "lastUpdated": "2026-07-05T22:20:40.699Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3856,7 +3856,29 @@
       "live": false,
       "minute": null,
       "decidedIn": "REGULAR",
-      "scorers": [],
+      "scorers": [
+        {
+          "name": "Neymar",
+          "side": "home",
+          "minute": "90+10",
+          "penalty": true,
+          "owngoal": false
+        },
+        {
+          "name": "Erling Haaland",
+          "side": "away",
+          "minute": "79",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Erling Haaland",
+          "side": "away",
+          "minute": "90",
+          "penalty": false,
+          "owngoal": false
+        }
+      ],
       "winner": "AWAY"
     },
     {
@@ -4240,6 +4262,7 @@
     "sidny lopes cabral": 1,
     "jhon arias": 1,
     "azzedine ounahi": 2,
+    "neymar": 1,
     "maximiliano araujo": 2,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
