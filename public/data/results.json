@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-05T22:00:53.580Z",
+  "lastUpdated": "2026-07-05T22:10:37.586Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3211,7 +3211,8 @@
     "Kap Verde",
     "Ghana",
     "Kanada",
-    "Paraguay"
+    "Paraguay",
+    "Brasilia"
   ],
   "knockoutMatches": [
     {
@@ -3849,14 +3850,14 @@
       "time": "23:00",
       "home": "Brasilia",
       "away": "Norja",
-      "homeScore": null,
-      "awayScore": null,
-      "finished": false,
+      "homeScore": 1,
+      "awayScore": 2,
+      "finished": true,
       "live": false,
       "minute": null,
-      "decidedIn": null,
+      "decidedIn": "REGULAR",
       "scorers": [],
-      "winner": null
+      "winner": "AWAY"
     },
     {
       "id": "k537378",
