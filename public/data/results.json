@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-06T03:10:40.651Z",
+  "lastUpdated": "2026-07-06T06:10:38.778Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -4035,8 +4035,8 @@
       "stage": "QF",
       "date": "su 12.7.",
       "time": "00:00",
-      "home": null,
-      "away": null,
+      "home": "Norja",
+      "away": "Englanti",
       "homeScore": null,
       "awayScore": null,
       "finished": false,
@@ -4130,7 +4130,9 @@
   "knockout": {
     "quarterfinalists": [
       "Ranska",
-      "Marokko"
+      "Marokko",
+      "Norja",
+      "Englanti"
     ],
     "semifinalists": [],
     "finalists": [],
