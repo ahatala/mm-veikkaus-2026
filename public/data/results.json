@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-05T23:30:46.248Z",
+  "lastUpdated": "2026-07-06T01:10:44.152Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3888,10 +3888,10 @@
       "time": "04:00",
       "home": "Meksiko",
       "away": "Englanti",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "finished": false,
-      "live": false,
+      "live": true,
       "minute": null,
       "decidedIn": null,
       "scorers": [],
