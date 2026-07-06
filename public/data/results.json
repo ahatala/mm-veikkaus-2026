@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-06T01:40:34.534Z",
+  "lastUpdated": "2026-07-06T01:50:40.156Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3888,8 +3888,8 @@
       "time": "04:00",
       "home": "Meksiko",
       "away": "Englanti",
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": 1,
+      "awayScore": 2,
       "finished": false,
       "live": true,
       "minute": null,
@@ -4100,7 +4100,7 @@
     "champion": null
   },
   "goldenBootGoals": {
-    "julian quinones": 3,
+    "julian quinones": 4,
     "raul jimenez": 2,
     "hwang in-beom": 1,
     "oh hyeon-gyu": 1,
