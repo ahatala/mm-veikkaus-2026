@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-06T02:40:38.995Z",
+  "lastUpdated": "2026-07-06T03:10:40.651Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3212,7 +3212,8 @@
     "Ghana",
     "Kanada",
     "Paraguay",
-    "Brasilia"
+    "Brasilia",
+    "Meksiko"
   ],
   "knockoutMatches": [
     {
@@ -3890,12 +3891,48 @@
       "away": "Englanti",
       "homeScore": 2,
       "awayScore": 3,
-      "finished": false,
-      "live": true,
+      "finished": true,
+      "live": false,
       "minute": null,
-      "decidedIn": null,
-      "scorers": [],
-      "winner": null
+      "decidedIn": "REGULAR",
+      "scorers": [
+        {
+          "name": "Julián Quiñones",
+          "side": "home",
+          "minute": "42",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Raúl Jiménez",
+          "side": "home",
+          "minute": "69",
+          "penalty": true,
+          "owngoal": false
+        },
+        {
+          "name": "Jude Bellingham",
+          "side": "away",
+          "minute": "36",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Jude Bellingham",
+          "side": "away",
+          "minute": "38",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Harry Kane",
+          "side": "away",
+          "minute": "60",
+          "penalty": true,
+          "owngoal": false
+        }
+      ],
+      "winner": "AWAY"
     },
     {
       "id": "k537379",
