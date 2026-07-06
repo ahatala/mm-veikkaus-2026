@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-06T21:00:57.822Z",
+  "lastUpdated": "2026-07-06T21:10:48.265Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3213,7 +3213,8 @@
     "Kanada",
     "Paraguay",
     "Brasilia",
-    "Meksiko"
+    "Meksiko",
+    "Portugali"
   ],
   "knockoutMatches": [
     {
@@ -3943,12 +3944,20 @@
       "away": "Espanja",
       "homeScore": 0,
       "awayScore": 1,
-      "finished": false,
-      "live": true,
+      "finished": true,
+      "live": false,
       "minute": null,
-      "decidedIn": null,
-      "scorers": [],
-      "winner": null
+      "decidedIn": "REGULAR",
+      "scorers": [
+        {
+          "name": "Mikel Merino",
+          "side": "away",
+          "minute": "90+1",
+          "penalty": false,
+          "owngoal": false
+        }
+      ],
+      "winner": "AWAY"
     },
     {
       "id": "k537380",
@@ -4302,6 +4311,7 @@
     "jhon arias": 1,
     "azzedine ounahi": 2,
     "neymar": 1,
+    "mikel merino": 1,
     "maximiliano araujo": 2,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
