@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-06T06:10:38.778Z",
+  "lastUpdated": "2026-07-06T20:00:57.282Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3941,10 +3941,10 @@
       "time": "22:00",
       "home": "Portugali",
       "away": "Espanja",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "finished": false,
-      "live": false,
+      "live": true,
       "minute": null,
       "decidedIn": null,
       "scorers": [],
