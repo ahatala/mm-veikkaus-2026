@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-06T01:50:40.156Z",
+  "lastUpdated": "2026-07-06T02:30:44.718Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3889,7 +3889,7 @@
       "home": "Meksiko",
       "away": "Englanti",
       "homeScore": 1,
-      "awayScore": 2,
+      "awayScore": 3,
       "finished": false,
       "live": true,
       "minute": null,
@@ -4233,7 +4233,7 @@
     "rafael leao": 1,
     "fiston mayele": 1,
     "eldor shomurodov": 1,
-    "harry kane": 5,
+    "harry kane": 6,
     "jude bellingham": 4,
     "marcus rashford": 1,
     "martin baturina": 1,
