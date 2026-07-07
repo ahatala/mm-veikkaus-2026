@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-07T00:20:42.496Z",
+  "lastUpdated": "2026-07-07T00:40:41.810Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3966,8 +3966,8 @@
       "time": "03:00",
       "home": "Yhdysvallat",
       "away": "Belgia",
-      "homeScore": 0,
-      "awayScore": 1,
+      "homeScore": 1,
+      "awayScore": 2,
       "finished": false,
       "live": true,
       "minute": null,
@@ -4299,7 +4299,7 @@
     "kaishu sano": 1,
     "antonio nusa": 1,
     "brian cipenga": 1,
-    "malik tillman": 1,
+    "malik tillman": 2,
     "youri tielemans": 2,
     "goncalo ramos": 1,
     "ivan perisic": 1,
@@ -4313,6 +4313,7 @@
     "neymar": 1,
     "mikel merino": 1,
     "maximiliano araujo": 2,
+    "charles de ketelaere": 2,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
     "gio reyna": 1,
@@ -4323,8 +4324,7 @@
     "mohammad mohebi": 1,
     "ibrahim m'baye": 1,
     "nathan-dylan saliba": 1,
-    "agustin canobbio": 1,
-    "mostafa ziko": 1
+    "agustin canobbio": 1
   },
   "specialAnswers": {
     "sq1": "Kyllä",
