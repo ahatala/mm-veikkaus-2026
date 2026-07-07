@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-07T18:10:53.346Z",
+  "lastUpdated": "2026-07-07T18:20:57.845Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -4026,7 +4026,43 @@
       "live": false,
       "minute": null,
       "decidedIn": "REGULAR",
-      "scorers": [],
+      "scorers": [
+        {
+          "name": "Cristian Romero",
+          "side": "home",
+          "minute": "79",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Lionel Messi",
+          "side": "home",
+          "minute": "83",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Enzo Fernández",
+          "side": "home",
+          "minute": "90+2",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Yasser Ibrahim",
+          "side": "away",
+          "minute": "15",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Mostafa Zico",
+          "side": "away",
+          "minute": "67",
+          "penalty": false,
+          "owngoal": false
+        }
+      ],
       "winner": "HOME"
     },
     {
@@ -4266,7 +4302,7 @@
     "mohammad mohebbi": 1,
     "elijah just": 3,
     "finn surman": 1,
-    "mostafa zico": 1,
+    "mostafa zico": 2,
     "mohamed salah": 1,
     "trezeguet": 1,
     "mahmoud saber": 1,
@@ -4354,6 +4390,9 @@
     "mikel merino": 1,
     "charles de ketelaere": 2,
     "hans vanaken": 1,
+    "cristian romero": 1,
+    "enzo fernandez": 1,
+    "yasser ibrahim": 1,
     "maximiliano araujo": 2,
     "mostafa ziko": 2,
     "in-beom hwang": 1,
