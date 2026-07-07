@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-07T18:01:13.786Z",
+  "lastUpdated": "2026-07-07T18:10:53.346Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3215,7 +3215,8 @@
     "Brasilia",
     "Meksiko",
     "Portugali",
-    "Yhdysvallat"
+    "Yhdysvallat",
+    "Egypti"
   ],
   "knockoutMatches": [
     {
@@ -4021,12 +4022,12 @@
       "away": "Egypti",
       "homeScore": 3,
       "awayScore": 2,
-      "finished": false,
-      "live": true,
+      "finished": true,
+      "live": false,
       "minute": null,
-      "decidedIn": null,
+      "decidedIn": "REGULAR",
       "scorers": [],
-      "winner": null
+      "winner": "HOME"
     },
     {
       "id": "k537382",
