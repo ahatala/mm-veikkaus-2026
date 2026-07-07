@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-07T17:01:11.905Z",
+  "lastUpdated": "2026-07-07T17:31:07.700Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -4020,7 +4020,7 @@
       "home": "Argentiina",
       "away": "Egypti",
       "homeScore": 0,
-      "awayScore": 1,
+      "awayScore": 2,
       "finished": false,
       "live": true,
       "minute": null,
