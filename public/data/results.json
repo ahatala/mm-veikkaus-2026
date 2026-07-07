@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-07T17:40:52.112Z",
+  "lastUpdated": "2026-07-07T17:50:56.900Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -4019,7 +4019,7 @@
       "time": "19:00",
       "home": "Argentiina",
       "away": "Egypti",
-      "homeScore": 0,
+      "homeScore": 1,
       "awayScore": 2,
       "finished": false,
       "live": true,
@@ -4295,7 +4295,7 @@
     "habib diarra": 2,
     "pape gueye": 2,
     "iliman ndiaye": 1,
-    "lionel messi": 7,
+    "lionel messi": 8,
     "romano schmid": 1,
     "marko arnautovic": 2,
     "ali olwan": 1,
