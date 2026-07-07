@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-07T02:00:57.965Z",
+  "lastUpdated": "2026-07-07T02:10:39.143Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3214,7 +3214,8 @@
     "Paraguay",
     "Brasilia",
     "Meksiko",
-    "Portugali"
+    "Portugali",
+    "Yhdysvallat"
   ],
   "knockoutMatches": [
     {
@@ -3967,13 +3968,49 @@
       "home": "Yhdysvallat",
       "away": "Belgia",
       "homeScore": 1,
-      "awayScore": 3,
-      "finished": false,
-      "live": true,
+      "awayScore": 4,
+      "finished": true,
+      "live": false,
       "minute": null,
-      "decidedIn": null,
-      "scorers": [],
-      "winner": null
+      "decidedIn": "REGULAR",
+      "scorers": [
+        {
+          "name": "Malik Tillman",
+          "side": "home",
+          "minute": "31",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Charles De Ketelaere",
+          "side": "away",
+          "minute": "9",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Charles De Ketelaere",
+          "side": "away",
+          "minute": "33",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Hans Vanaken",
+          "side": "away",
+          "minute": "57",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Romelu Lukaku",
+          "side": "away",
+          "minute": "90+3",
+          "penalty": false,
+          "owngoal": false
+        }
+      ],
+      "winner": "AWAY"
     },
     {
       "id": "k537381",
@@ -4312,8 +4349,9 @@
     "azzedine ounahi": 2,
     "neymar": 1,
     "mikel merino": 1,
-    "maximiliano araujo": 2,
     "charles de ketelaere": 2,
+    "hans vanaken": 1,
+    "maximiliano araujo": 2,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
     "gio reyna": 1,
