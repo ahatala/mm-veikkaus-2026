@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-07T22:31:02.976Z",
+  "lastUpdated": "2026-07-07T22:50:55.452Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -4072,14 +4072,14 @@
       "time": "23:00",
       "home": "Sveitsi",
       "away": "Kolumbia",
-      "homeScore": 0,
+      "homeScore": 1,
       "awayScore": 0,
-      "finished": false,
-      "live": true,
+      "finished": true,
+      "live": false,
       "minute": null,
-      "decidedIn": null,
+      "decidedIn": "PENALTIES",
       "scorers": [],
-      "winner": null
+      "winner": "HOME"
     },
     {
       "id": "k537383",
