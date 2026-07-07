@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-07T00:10:55.167Z",
+  "lastUpdated": "2026-07-07T00:20:42.496Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3967,7 +3967,7 @@
       "home": "Yhdysvallat",
       "away": "Belgia",
       "homeScore": 0,
-      "awayScore": 0,
+      "awayScore": 1,
       "finished": false,
       "live": true,
       "minute": null,
