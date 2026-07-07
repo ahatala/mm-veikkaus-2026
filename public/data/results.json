@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-07T22:01:06.927Z",
+  "lastUpdated": "2026-07-07T22:31:02.976Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -4074,12 +4074,12 @@
       "away": "Kolumbia",
       "homeScore": 0,
       "awayScore": 0,
-      "finished": true,
-      "live": false,
+      "finished": false,
+      "live": true,
       "minute": null,
-      "decidedIn": "REGULAR",
+      "decidedIn": null,
       "scorers": [],
-      "winner": "DRAW"
+      "winner": null
     },
     {
       "id": "k537383",
