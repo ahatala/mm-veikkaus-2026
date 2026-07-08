@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-07T22:50:55.452Z",
+  "lastUpdated": "2026-07-08T06:10:52.441Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3216,7 +3216,8 @@
     "Meksiko",
     "Portugali",
     "Yhdysvallat",
-    "Egypti"
+    "Egypti",
+    "Kolumbia"
   ],
   "knockoutMatches": [
     {
@@ -4072,7 +4073,7 @@
       "time": "23:00",
       "home": "Sveitsi",
       "away": "Kolumbia",
-      "homeScore": 1,
+      "homeScore": 0,
       "awayScore": 0,
       "finished": true,
       "live": false,
@@ -4134,8 +4135,8 @@
       "stage": "QF",
       "date": "su 12.7.",
       "time": "04:00",
-      "home": null,
-      "away": null,
+      "home": "Argentiina",
+      "away": "Sveitsi",
       "homeScore": null,
       "awayScore": null,
       "finished": false,
@@ -4217,7 +4218,9 @@
       "Espanja",
       "Belgia",
       "Norja",
-      "Englanti"
+      "Englanti",
+      "Argentiina",
+      "Sveitsi"
     ],
     "semifinalists": [],
     "finalists": [],
