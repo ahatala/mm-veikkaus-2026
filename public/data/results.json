@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-08T06:10:52.441Z",
+  "lastUpdated": "2026-07-09T20:10:52.822Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -4089,10 +4089,10 @@
       "time": "23:00",
       "home": "Ranska",
       "away": "Marokko",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "finished": false,
-      "live": false,
+      "live": true,
       "minute": null,
       "decidedIn": null,
       "scorers": [],
