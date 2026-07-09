@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-09T20:10:52.822Z",
+  "lastUpdated": "2026-07-09T21:30:58.312Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -4089,7 +4089,7 @@
       "time": "23:00",
       "home": "Ranska",
       "away": "Marokko",
-      "homeScore": 0,
+      "homeScore": 1,
       "awayScore": 0,
       "finished": false,
       "live": true,
@@ -4321,7 +4321,7 @@
     "kevin pina": 1,
     "helio varela": 1,
     "alex baena": 1,
-    "kylian mbappe": 7,
+    "kylian mbappe": 8,
     "bradley barcola": 2,
     "ibrahim mbaye": 1,
     "aymen hussein": 1,
