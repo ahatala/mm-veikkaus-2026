@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-10T21:01:05.184Z",
+  "lastUpdated": "2026-07-10T21:10:58.680Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3218,7 +3218,8 @@
     "Yhdysvallat",
     "Egypti",
     "Kolumbia",
-    "Marokko"
+    "Marokko",
+    "Belgia"
   ],
   "knockoutMatches": [
     {
@@ -4123,12 +4124,34 @@
       "away": "Belgia",
       "homeScore": 2,
       "awayScore": 1,
-      "finished": false,
-      "live": true,
+      "finished": true,
+      "live": false,
       "minute": null,
-      "decidedIn": null,
-      "scorers": [],
-      "winner": null
+      "decidedIn": "REGULAR",
+      "scorers": [
+        {
+          "name": "Fabián Ruiz",
+          "side": "home",
+          "minute": "30",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Mikel Merino",
+          "side": "home",
+          "minute": "88",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Charles De Ketelaere",
+          "side": "away",
+          "minute": "41",
+          "penalty": false,
+          "owngoal": false
+        }
+      ],
+      "winner": "HOME"
     },
     {
       "id": "k537385",
@@ -4414,6 +4437,7 @@
     "cristian romero": 1,
     "enzo fernandez": 1,
     "yasser ibrahim": 1,
+    "fabian ruiz": 1,
     "maximiliano araujo": 2,
     "mostafa ziko": 2,
     "in-beom hwang": 1,
