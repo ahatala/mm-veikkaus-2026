@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-10T19:40:53.523Z",
+  "lastUpdated": "2026-07-10T19:50:51.545Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -4122,7 +4122,7 @@
       "home": "Espanja",
       "away": "Belgia",
       "homeScore": 1,
-      "awayScore": 0,
+      "awayScore": 1,
       "finished": false,
       "live": true,
       "minute": null,
@@ -4409,7 +4409,7 @@
     "azzedine ounahi": 2,
     "neymar": 1,
     "mikel merino": 1,
-    "charles de ketelaere": 2,
+    "charles de ketelaere": 3,
     "hans vanaken": 1,
     "cristian romero": 1,
     "enzo fernandez": 1,
