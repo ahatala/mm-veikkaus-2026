@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-10T19:10:59.162Z",
+  "lastUpdated": "2026-07-10T19:40:53.523Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -4121,7 +4121,7 @@
       "time": "22:00",
       "home": "Espanja",
       "away": "Belgia",
-      "homeScore": 0,
+      "homeScore": 1,
       "awayScore": 0,
       "finished": false,
       "live": true,
