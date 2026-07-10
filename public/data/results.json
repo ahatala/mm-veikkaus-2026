@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-09T22:10:49.576Z",
+  "lastUpdated": "2026-07-10T06:10:58.531Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -4167,7 +4167,7 @@
       "stage": "SF",
       "date": "ti 14.7.",
       "time": "22:00",
-      "home": null,
+      "home": "Ranska",
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -4238,7 +4238,9 @@
       "Argentiina",
       "Sveitsi"
     ],
-    "semifinalists": [],
+    "semifinalists": [
+      "Ranska"
+    ],
     "finalists": [],
     "champion": null
   },
