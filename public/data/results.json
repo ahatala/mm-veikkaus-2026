@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-11T06:20:55.191Z",
+  "lastUpdated": "2026-07-11T21:10:57.838Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -4160,10 +4160,10 @@
       "time": "00:00",
       "home": "Norja",
       "away": "Englanti",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "finished": false,
-      "live": false,
+      "live": true,
       "minute": null,
       "decidedIn": null,
       "scorers": [],
