@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-11T21:20:50.500Z",
+  "lastUpdated": "2026-07-11T21:50:46.242Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -4159,7 +4159,7 @@
       "time": "00:00",
       "home": "Norja",
       "away": "Englanti",
-      "homeScore": 0,
+      "homeScore": 1,
       "awayScore": 0,
       "finished": false,
       "live": true,
@@ -4402,7 +4402,7 @@
     "fiston mayele": 1,
     "eldor shomurodov": 1,
     "harry kane": 6,
-    "jude bellingham": 4,
+    "jude bellingham": 5,
     "marcus rashford": 1,
     "martin baturina": 1,
     "petar musa": 1,
