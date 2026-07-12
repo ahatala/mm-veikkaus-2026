@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-12T04:01:04.909Z",
+  "lastUpdated": "2026-07-12T06:20:51.187Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3213,6 +3213,7 @@
     "Kanada",
     "Paraguay",
     "Brasilia",
+    "Meksiko",
     "Portugali",
     "Yhdysvallat",
     "Egypti",
@@ -4258,8 +4259,8 @@
       "stage": "SF",
       "date": "ke 15.7.",
       "time": "22:00",
-      "home": null,
-      "away": null,
+      "home": "Englanti",
+      "away": "Argentiina",
       "homeScore": null,
       "awayScore": null,
       "finished": false,
@@ -4315,7 +4316,9 @@
     ],
     "semifinalists": [
       "Ranska",
-      "Espanja"
+      "Espanja",
+      "Englanti",
+      "Argentiina"
     ],
     "finalists": [],
     "champion": null
