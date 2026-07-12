@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-11T23:20:53.679Z",
+  "lastUpdated": "2026-07-12T00:01:14.631Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3218,7 +3218,8 @@
     "Egypti",
     "Kolumbia",
     "Marokko",
-    "Belgia"
+    "Belgia",
+    "Norja"
   ],
   "knockoutMatches": [
     {
@@ -4161,12 +4162,34 @@
       "away": "Englanti",
       "homeScore": 1,
       "awayScore": 2,
-      "finished": false,
-      "live": true,
+      "finished": true,
+      "live": false,
       "minute": null,
-      "decidedIn": null,
-      "scorers": [],
-      "winner": null
+      "decidedIn": "EXTRA_TIME",
+      "scorers": [
+        {
+          "name": "Andreas Schjelderup",
+          "side": "home",
+          "minute": "36",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Jude Bellingham",
+          "side": "away",
+          "minute": "45+2",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Jude Bellingham",
+          "side": "away",
+          "minute": "93",
+          "penalty": false,
+          "owngoal": false
+        }
+      ],
+      "winner": "AWAY"
     },
     {
       "id": "k537386",
@@ -4438,6 +4461,7 @@
     "enzo fernandez": 1,
     "yasser ibrahim": 1,
     "fabian ruiz": 1,
+    "andreas schjelderup": 1,
     "maximiliano araujo": 2,
     "mostafa ziko": 2,
     "in-beom hwang": 1,
