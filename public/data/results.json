@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-12T03:50:49.525Z",
+  "lastUpdated": "2026-07-12T04:01:04.909Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3219,7 +3219,8 @@
     "Kolumbia",
     "Marokko",
     "Belgia",
-    "Norja"
+    "Norja",
+    "Sveitsi"
   ],
   "knockoutMatches": [
     {
@@ -4200,12 +4201,41 @@
       "away": "Sveitsi",
       "homeScore": 3,
       "awayScore": 1,
-      "finished": false,
-      "live": true,
+      "finished": true,
+      "live": false,
       "minute": null,
-      "decidedIn": null,
-      "scorers": [],
-      "winner": null
+      "decidedIn": "EXTRA_TIME",
+      "scorers": [
+        {
+          "name": "Alexis Mac Allister",
+          "side": "home",
+          "minute": "10",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Julián Álvarez",
+          "side": "home",
+          "minute": "112",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Lautaro Martínez",
+          "side": "home",
+          "minute": "120+1",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Dan Ndoye",
+          "side": "away",
+          "minute": "67",
+          "penalty": false,
+          "owngoal": false
+        }
+      ],
+      "winner": "HOME"
     },
     {
       "id": "k537387",
@@ -4462,6 +4492,8 @@
     "yasser ibrahim": 1,
     "fabian ruiz": 1,
     "andreas schjelderup": 1,
+    "alexis mac allister": 1,
+    "julian alvarez": 1,
     "maximiliano araujo": 2,
     "mostafa ziko": 2,
     "in-beom hwang": 1,
