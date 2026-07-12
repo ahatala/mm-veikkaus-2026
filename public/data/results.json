@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-12T00:01:14.631Z",
+  "lastUpdated": "2026-07-12T01:10:53.945Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -4198,10 +4198,10 @@
       "time": "04:00",
       "home": "Argentiina",
       "away": "Sveitsi",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "finished": false,
-      "live": false,
+      "live": true,
       "minute": null,
       "decidedIn": null,
       "scorers": [],
