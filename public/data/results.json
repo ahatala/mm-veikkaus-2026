@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-14T20:31:10.556Z",
+  "lastUpdated": "2026-07-14T21:10:55.752Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3221,7 +3221,8 @@
     "Marokko",
     "Belgia",
     "Norja",
-    "Sveitsi"
+    "Sveitsi",
+    "Ranska"
   ],
   "knockoutMatches": [
     {
@@ -4247,12 +4248,27 @@
       "away": "Espanja",
       "homeScore": 0,
       "awayScore": 2,
-      "finished": false,
-      "live": true,
+      "finished": true,
+      "live": false,
       "minute": null,
-      "decidedIn": null,
-      "scorers": [],
-      "winner": null
+      "decidedIn": "REGULAR",
+      "scorers": [
+        {
+          "name": "Mikel Oyarzabal",
+          "side": "away",
+          "minute": "22",
+          "penalty": true,
+          "owngoal": false
+        },
+        {
+          "name": "Pedro Porro",
+          "side": "away",
+          "minute": "58",
+          "penalty": false,
+          "owngoal": false
+        }
+      ],
+      "winner": "AWAY"
     },
     {
       "id": "k537388",
