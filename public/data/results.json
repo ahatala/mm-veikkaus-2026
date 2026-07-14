@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-14T19:10:54.283Z",
+  "lastUpdated": "2026-07-14T19:31:03.817Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -4246,7 +4246,7 @@
       "home": "Ranska",
       "away": "Espanja",
       "homeScore": 0,
-      "awayScore": 0,
+      "awayScore": 1,
       "finished": false,
       "live": true,
       "minute": null,
@@ -4413,7 +4413,7 @@
     "abdulelah al-amri": 1,
     "maxi araujo": 2,
     "lamine yamal": 1,
-    "mikel oyarzabal": 4,
+    "mikel oyarzabal": 5,
     "agustin cano": 1,
     "kevin pina": 1,
     "helio varela": 1,
