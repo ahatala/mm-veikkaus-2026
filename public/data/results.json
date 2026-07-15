@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-15T21:01:13.919Z",
+  "lastUpdated": "2026-07-15T21:10:56.427Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3222,7 +3222,8 @@
     "Belgia",
     "Norja",
     "Sveitsi",
-    "Ranska"
+    "Ranska",
+    "Englanti"
   ],
   "knockoutMatches": [
     {
@@ -4279,12 +4280,34 @@
       "away": "Argentiina",
       "homeScore": 1,
       "awayScore": 2,
-      "finished": false,
-      "live": true,
+      "finished": true,
+      "live": false,
       "minute": null,
-      "decidedIn": null,
-      "scorers": [],
-      "winner": null
+      "decidedIn": "REGULAR",
+      "scorers": [
+        {
+          "name": "Anthony Gordon",
+          "side": "home",
+          "minute": "55",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Enzo Fernández",
+          "side": "away",
+          "minute": "86",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Lautaro Martínez",
+          "side": "away",
+          "minute": "92",
+          "penalty": false,
+          "owngoal": false
+        }
+      ],
+      "winner": "AWAY"
     },
     {
       "id": "k537389",
@@ -4337,7 +4360,8 @@
       "Argentiina"
     ],
     "finalists": [
-      "Espanja"
+      "Espanja",
+      "Argentiina"
     ],
     "champion": null
   },
@@ -4515,6 +4539,7 @@
     "andreas schjelderup": 1,
     "alexis mac allister": 1,
     "julian alvarez": 1,
+    "anthony gordon": 1,
     "maximiliano araujo": 2,
     "mostafa ziko": 2,
     "in-beom hwang": 1,
