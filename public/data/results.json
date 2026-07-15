@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-15T06:20:53.593Z",
+  "lastUpdated": "2026-07-15T19:11:01.464Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -4277,10 +4277,10 @@
       "time": "22:00",
       "home": "Englanti",
       "away": "Argentiina",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "finished": false,
-      "live": false,
+      "live": true,
       "minute": null,
       "decidedIn": null,
       "scorers": [],
