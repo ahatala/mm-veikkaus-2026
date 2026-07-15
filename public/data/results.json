@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-14T21:10:55.752Z",
+  "lastUpdated": "2026-07-15T06:20:53.593Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -4291,7 +4291,7 @@
       "stage": "3RD",
       "date": "su 19.7.",
       "time": "00:00",
-      "home": null,
+      "home": "Ranska",
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -4307,7 +4307,7 @@
       "stage": "FINAL",
       "date": "su 19.7.",
       "time": "22:00",
-      "home": null,
+      "home": "Espanja",
       "away": null,
       "homeScore": null,
       "awayScore": null,
@@ -4336,7 +4336,9 @@
       "Englanti",
       "Argentiina"
     ],
-    "finalists": [],
+    "finalists": [
+      "Espanja"
+    ],
     "champion": null
   },
   "goldenBootGoals": {
