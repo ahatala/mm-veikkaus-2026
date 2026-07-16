@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-15T21:10:56.427Z",
+  "lastUpdated": "2026-07-16T06:10:57.981Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -4315,7 +4315,7 @@
       "date": "su 19.7.",
       "time": "00:00",
       "home": "Ranska",
-      "away": null,
+      "away": "Englanti",
       "homeScore": null,
       "awayScore": null,
       "finished": false,
@@ -4331,7 +4331,7 @@
       "date": "su 19.7.",
       "time": "22:00",
       "home": "Espanja",
-      "away": null,
+      "away": "Argentiina",
       "homeScore": null,
       "awayScore": null,
       "finished": false,
