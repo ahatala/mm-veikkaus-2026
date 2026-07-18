@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-18T22:20:32.452Z",
+  "lastUpdated": "2026-07-18T22:30:43.263Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -4316,7 +4316,7 @@
       "time": "00:00",
       "home": "Ranska",
       "away": "Englanti",
-      "homeScore": 1,
+      "homeScore": 2,
       "awayScore": 4,
       "finished": false,
       "live": true,
@@ -4460,7 +4460,7 @@
     "kevin pina": 1,
     "helio varela": 1,
     "alex baena": 1,
-    "kylian mbappe": 9,
+    "kylian mbappe": 10,
     "bradley barcola": 3,
     "ibrahim mbaye": 1,
     "aymen hussein": 1,
