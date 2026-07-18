@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-18T21:10:37.234Z",
+  "lastUpdated": "2026-07-18T21:30:49.387Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -4317,7 +4317,7 @@
       "home": "Ranska",
       "away": "Englanti",
       "homeScore": 0,
-      "awayScore": 1,
+      "awayScore": 2,
       "finished": false,
       "live": true,
       "minute": null,
