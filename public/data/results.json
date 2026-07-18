@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-18T23:00:52.100Z",
+  "lastUpdated": "2026-07-18T23:10:38.818Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -4316,14 +4316,85 @@
       "time": "00:00",
       "home": "Ranska",
       "away": "Englanti",
-      "homeScore": 3,
-      "awayScore": 5,
-      "finished": false,
-      "live": true,
+      "homeScore": 4,
+      "awayScore": 6,
+      "finished": true,
+      "live": false,
       "minute": null,
-      "decidedIn": null,
-      "scorers": [],
-      "winner": null
+      "decidedIn": "REGULAR",
+      "scorers": [
+        {
+          "name": "Kylian Mbappé",
+          "side": "home",
+          "minute": "48",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Bradley Barcola",
+          "side": "home",
+          "minute": "54",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Kylian Mbappé",
+          "side": "home",
+          "minute": "66",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Ousmane Dembélé",
+          "side": "home",
+          "minute": "90+6",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Declan Rice",
+          "side": "away",
+          "minute": "3",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Ezri Konsa",
+          "side": "away",
+          "minute": "18",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Bukayo Saka",
+          "side": "away",
+          "minute": "37",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Bukayo Saka",
+          "side": "away",
+          "minute": "45+1",
+          "penalty": false,
+          "owngoal": false
+        },
+        {
+          "name": "Bukayo Saka",
+          "side": "away",
+          "minute": "87",
+          "penalty": true,
+          "owngoal": false
+        },
+        {
+          "name": "Jude Bellingham",
+          "side": "away",
+          "minute": "90+8",
+          "penalty": false,
+          "owngoal": false
+        }
+      ],
+      "winner": "AWAY"
     },
     {
       "id": "k537390",
@@ -4500,7 +4571,7 @@
     "fiston mayele": 1,
     "eldor shomurodov": 1,
     "harry kane": 6,
-    "jude bellingham": 6,
+    "jude bellingham": 7,
     "marcus rashford": 1,
     "martin baturina": 1,
     "petar musa": 1,
@@ -4540,6 +4611,8 @@
     "alexis mac allister": 1,
     "julian alvarez": 1,
     "anthony gordon": 1,
+    "declan rice": 1,
+    "ezri konsa": 1,
     "bukayo saka": 3,
     "maximiliano araujo": 2,
     "mostafa ziko": 2,
