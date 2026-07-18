@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-18T21:30:49.387Z",
+  "lastUpdated": "2026-07-18T21:50:31.459Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -4317,7 +4317,7 @@
       "home": "Ranska",
       "away": "Englanti",
       "homeScore": 0,
-      "awayScore": 2,
+      "awayScore": 3,
       "finished": false,
       "live": true,
       "minute": null,
@@ -4542,6 +4542,7 @@
     "anthony gordon": 1,
     "maximiliano araujo": 2,
     "mostafa ziko": 2,
+    "bukayo saka": 2,
     "in-beom hwang": 1,
     "hyun-gyu oh": 1,
     "gio reyna": 1,
