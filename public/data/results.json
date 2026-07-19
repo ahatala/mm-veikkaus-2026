@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-19T20:00:49.099Z",
+  "lastUpdated": "2026-07-19T21:50:34.224Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -4403,10 +4403,10 @@
       "time": "22:00",
       "home": "Espanja",
       "away": "Argentiina",
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": null,
+      "awayScore": null,
       "finished": false,
-      "live": true,
+      "live": false,
       "minute": null,
       "decidedIn": null,
       "scorers": [],
