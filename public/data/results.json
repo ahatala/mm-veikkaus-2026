@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-19T21:50:34.224Z",
+  "lastUpdated": "2026-07-19T22:10:35.671Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -3223,7 +3223,8 @@
     "Norja",
     "Sveitsi",
     "Ranska",
-    "Englanti"
+    "Englanti",
+    "Argentiina"
   ],
   "knockoutMatches": [
     {
@@ -4403,14 +4404,14 @@
       "time": "22:00",
       "home": "Espanja",
       "away": "Argentiina",
-      "homeScore": null,
-      "awayScore": null,
-      "finished": false,
+      "homeScore": 1,
+      "awayScore": 0,
+      "finished": true,
       "live": false,
       "minute": null,
-      "decidedIn": null,
+      "decidedIn": "EXTRA_TIME",
       "scorers": [],
-      "winner": null
+      "winner": "HOME"
     }
   ],
   "knockout": {
@@ -4434,7 +4435,7 @@
       "Espanja",
       "Argentiina"
     ],
-    "champion": null
+    "champion": "Espanja"
   },
   "goldenBootGoals": {
     "julian quinones": 4,
@@ -4635,7 +4636,8 @@
     "sq5": "Kyllä",
     "sq6": "Kyllä",
     "sq7": "Kyllä",
-    "sq8": "Kyllä"
+    "sq8": "Kyllä",
+    "sq9": "Kyllä"
   },
   "specialReasons": {
     "sq1": "Avausottelu Meksiko–Etelä-Afrikka 2–0 (2 maalia)",
@@ -4645,6 +4647,7 @@
     "sq5": "Saksa–Curaçao 7–1",
     "sq6": "Jatkoon: Kap Verde",
     "sq7": "Messi ja Ronaldo teki maalin",
-    "sq8": "Lohkovoittaja Euroopan/Etelä-Amerikan ulkopuolelta: Meksiko (lohko A), Yhdysvallat (lohko D)"
+    "sq8": "Lohkovoittaja Euroopan/Etelä-Amerikan ulkopuolelta: Meksiko (lohko A), Yhdysvallat (lohko D)",
+    "sq9": "Finaali ratkesi jatkoajalla"
   }
 }
