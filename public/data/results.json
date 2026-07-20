@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-19T22:10:35.671Z",
+  "lastUpdated": "2026-07-20T11:00:56.094Z",
   "source": "football-data.org",
   "groupMatches": {
     "g1": "1",
@@ -4410,7 +4410,15 @@
       "live": false,
       "minute": null,
       "decidedIn": "EXTRA_TIME",
-      "scorers": [],
+      "scorers": [
+        {
+          "name": "Ferran Torres",
+          "side": "home",
+          "minute": "106",
+          "penalty": false,
+          "owngoal": false
+        }
+      ],
       "winner": "HOME"
     }
   ],
@@ -4615,6 +4623,7 @@
     "declan rice": 1,
     "ezri konsa": 1,
     "bukayo saka": 3,
+    "ferran torres": 1,
     "maximiliano araujo": 2,
     "mostafa ziko": 2,
     "in-beom hwang": 1,
